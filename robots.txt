@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://dynxlabs.com/sitemap.xml
