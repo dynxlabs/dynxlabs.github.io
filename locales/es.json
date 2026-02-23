@@ -184,6 +184,27 @@
     "a8": "Cada proyecto incluye un período de soporte post-lanzamiento de 30 días sin costo adicional. Monitoreamos los sistemas, resolvemos casos límite y realizamos ajustes mientras tu equipo se adapta. Más allá de eso, ofrecemos planes de mantenimiento continuo para empresas que quieren un socio técnico a largo plazo — no solo un proveedor."
   },
 
+  "research": {
+    "title": "Próximamente",
+    "subtitle": "Estamos documentando los sistemas que construimos y los patrones que descubrimos en la frontera de la automatización con IA. Papers, casos de estudio e insights técnicos — lanzando pronto.",
+    "notifyBtn": "Recibir Notificación por WhatsApp",
+    "notifyHint": "Te avisaremos cuando publiquemos el primer paper."
+  },
+
+  "products": {
+    "title": "En Desarrollo",
+    "subtitle": "Estamos construyendo una suite de productos nativos de IA diseñados para automatizar las operaciones que la mayoría de los negocios ejecutan manualmente hoy. Cada uno listo para producción, probado y construido para escalar.",
+    "badge": "En Desarrollo",
+    "p1Name": "DYNX Ops",
+    "p1Desc": "Un hub de operaciones con IA que monitorea tus flujos de trabajo, detecta cuellos de botella en tiempo real y despacha respuestas automatizadas — sin intervención humana.",
+    "p2Name": "DYNX Pulse",
+    "p2Desc": "Un dashboard de inteligencia de negocios en tiempo real que extrae datos de todas tus herramientas, muestra KPIs críticos y genera resúmenes ejecutivos automatizados con LLMs.",
+    "p3Name": "DYNX Connect",
+    "p3Desc": "Una capa de integración sin código que conecta tus herramientas existentes — CRM, ERP, plataformas de comunicación — en un único pipeline de datos unificado sin fricciones.",
+    "notifyBtn": "Obtener Acceso Anticipado por WhatsApp",
+    "notifyHint": "Sé el primero en saber cuando lancemos."
+  },
+
   "comingSoon": {
     "badge": "Próximamente",
     "subtitle": "Estamos trabajando en algo que vale la pena esperar.",
@@ -196,5 +217,13 @@
     "title": "Ruta No Encontrada",
     "subtitle": "La página que buscas no existe o ha sido movida.",
     "cta": "Volver al Inicio"
+  },
+
+  "notfound": {
+    "badge": "Página No Encontrada",
+    "title": "Esta página no existe.",
+    "subtitle": "La página que buscas puede haber sido movida, renombrada o nunca existió. Te ayudamos a volver.",
+    "homeBtn": "Volver al Inicio",
+    "faqBtn": "Ver FAQ"
   }
 }
