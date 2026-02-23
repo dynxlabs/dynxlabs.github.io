@@ -184,6 +184,27 @@
     "a8": "Every project includes a 30-day post-launch support period at no additional cost. We monitor systems, resolve edge cases, and make adjustments as your team settles in. Beyond that, we offer ongoing maintenance plans for businesses that want a long-term technical partner — not just a vendor."
   },
 
+  "research": {
+    "title": "Coming Soon",
+    "subtitle": "We are documenting the systems we build and the patterns we discover at the frontier of AI automation. Papers, case studies, and technical insights — launching soon.",
+    "notifyBtn": "Get Notified on WhatsApp",
+    "notifyHint": "We will message you when the first paper drops."
+  },
+
+  "products": {
+    "title": "In Development",
+    "subtitle": "We are building a suite of AI-native products designed to automate the operations most businesses run manually today. Each one production-ready, battle-tested, and built to scale.",
+    "badge": "In Development",
+    "p1Name": "DYNX Ops",
+    "p1Desc": "An AI operations hub that monitors your workflows, detects bottlenecks in real time, and dispatches automated responses — without human intervention.",
+    "p2Name": "DYNX Pulse",
+    "p2Desc": "A real-time business intelligence dashboard that pulls data from all your tools, surfaces critical KPIs, and generates automated executive summaries powered by LLMs.",
+    "p3Name": "DYNX Connect",
+    "p3Desc": "A no-code integration layer that connects your existing tools — CRM, ERP, communication platforms — into a single unified data pipeline with zero friction.",
+    "notifyBtn": "Get Early Access on WhatsApp",
+    "notifyHint": "Be the first to know when we launch."
+  },
+
   "comingSoon": {
     "badge": "Coming Soon",
     "subtitle": "We are working on something worth waiting for.",
@@ -196,5 +217,13 @@
     "title": "Route Not Found",
     "subtitle": "The page you are looking for does not exist or has been moved.",
     "cta": "Back to Home"
+  },
+
+  "notfound": {
+    "badge": "Page Not Found",
+    "title": "This page doesn't exist.",
+    "subtitle": "The page you're looking for may have been moved, renamed, or never existed. Let's get you back on track.",
+    "homeBtn": "Back to Home",
+    "faqBtn": "Visit FAQ"
   }
 }
