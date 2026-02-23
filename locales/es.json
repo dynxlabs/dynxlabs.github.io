@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "method": "Nuestro Método",
+    "about": "Nosotros",
+    "stack": "Tecnologías",
+    "products": "Productos",
+    "research": "Research",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "startProject": "Iniciar Proyecto"
+  },
+
+  "hero": {
+    "headline1": "Automate the Work.",
+    "headline2": "Accelerate the Business.",
+    "subheadline": "Construimos software impulsado por IA que permite a los equipos automatizar operaciones, integrar herramientas y tomar decisiones más rápidas basadas en datos confiables.",
+    "ctaPrimary": "Iniciar Proyecto",
+    "ctaSecondary": "Ver Capacidades de IA"
+  },
+
+  "about": {
+    "badge": "Sobre DYNX Labs",
+    "title": "Construido para Transformar la Forma en que Operan los Negocios",
+    "mission": "Nuestra misión es arquitectar la transición hacia operaciones autónomas. En DYNX Labs, transformamos flujos de trabajo manuales en infraestructuras digitales escalables, permitiendo que la inteligencia artificial sea el motor del rendimiento empresarial."
+  },
+
+  "services": {
+    "badge": "Lo que Construimos",
+    "title": "Capacidades Core",
+    "description": "Diseñamos y desplegamos sistemas inteligentes adaptados a tu stack tecnológico que escalan con tu compañía.",
+    "ai": {
+      "title": "AI Agents",
+      "description": "Agentes de inteligencia artificial para operaciones internas que aprenden, se adaptan y ejecutan tareas complejas de forma automática."
+    },
+    "workflow": {
+      "title": "Workflow Automation",
+      "description": "Eliminamos procesos repetitivos conectando tus herramientas actuales para crear flujos de trabajo autónomos y eficientes."
+    },
+    "dashboards": {
+      "title": "Dashboards & Reporting",
+      "description": "Visualización de datos en tiempo real con insights accionables generados automáticamente por IA para decisiones estratégicas."
+    },
+    "integrations": {
+      "title": "System Integrations",
+      "description": "Conectamos tus sistemas actuales creando ecosistemas unificados que comunican datos sin fricciones."
+    },
+    "bi": {
+      "title": "Business Intelligence",
+      "description": "Sistemas que transforman datos crudos en decisiones estratégicas automatizadas."
+    },
+    "saas": {
+      "title": "Custom SaaS",
+      "description": "Desarrollo de software como servicio a medida, diseñado específicamente para las necesidades únicas de tu negocio."
+    }
+  },
+
+  "method": {
+    "badge": "Nuestro Proceso",
+    "title": "Discovery to Scale",
+    "subtitle": "Un enfoque sistemático para transformar operaciones manuales en sistemas autónomos e inteligentes.",
+    "step1Number": "01",
+    "step1Title": "Discovery & Analysis",
+    "step1Description": "Auditoría integral de tus flujos de trabajo actuales para identificar cuellos de botella y oportunidades de automatización específicas de tu industria.",
+    "step2Number": "02",
+    "step2Title": "Strategic Design",
+    "step2Description": "Arquitectura de una solución de IA a medida, seleccionando las tecnologías óptimas y definiendo los puntos de integración con tu stack actual.",
+    "step3Number": "03",
+    "step3Title": "Implementation",
+    "step3Description": "Despliegue de soluciones listas para producción con pruebas exhaustivas, capacitación del personal y monitoreo 24/7 para garantizar eficiencia operacional inmediata."
+  },
+
+  "trust": {
+    "badge": "Por qué DYNX Labs",
+    "title": "Construido Diferente",
+    "agileTitle": "Agile & Fast",
+    "agileDesc": "Como equipo eficiente, nos movemos rápido y nos adaptamos a tus necesidades sin burocracia corporativa.",
+    "aiFirstTitle": "AI-First",
+    "aiFirstDesc": "La inteligencia artificial no es un accesorio — está integrada en cada solución que arquitectamos.",
+    "secureTitle": "Secure by Design",
+    "secureDesc": "La seguridad no es una capa adicional — está embebida en cada capa de nuestra arquitectura.",
+    "partnersTitle": "Partners, Not Vendors",
+    "partnersDesc": "Nos involucramos directamente en tu éxito. Tu crecimiento es el motor del nuestro."
+  },
+
+  "stack": {
+    "badge": "Nuestro Stack",
+    "title": "Tecnologías con las que Trabajamos",
+    "description": "Combinamos los modelos de IA más capaces del mundo con infraestructura cloud y herramientas battle-tested para entregar sistemas de automatización listos para producción.",
+    "aiTitle": "AI & LLMs",
+    "aiDescription": "Orquestamos los modelos de IA más capaces del mundo — seleccionando el correcto para cada tarea.",
+    "backendTitle": "Backend & Automation",
+    "backendDescription": "Python es nuestro lenguaje principal para pipelines de IA, scripts de automatización y APIs.",
+    "cloudTitle": "Cloud & Infrastructure",
+    "cloudDescription": "Desplegamos en AWS y Google Cloud — confiabilidad enterprise desde el primer día."
+  },
+
+  "cta": {
+    "badge": "Comenzar",
+    "title": "¿Listo para Automatizar tus Operaciones?",
+    "subtitle": "Reduce el trabajo manual y convierte tus flujos de trabajo en sistemas escalables. Contáctanos por WhatsApp y agenda una sesión de descubrimiento gratuita.",
+    "button": "Iniciar Proyecto por WhatsApp",
+    "responseTime": "Respuesta en menos de 24 horas"
+  },
+
+  "footer": {
+    "tagline": "Automate the Work. Accelerate the Business.",
+    "companyTitle": "Compañía",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "method": "Nuestro Método",
+    "stack": "Tecnologías",
+    "products": "Productos",
+    "research": "Research",
+    "faq": "FAQ",
+    "legalTitle": "Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "careers": "Trabaja con Nosotros",
+    "copyright": "© {year} DYNX Labs. Todos los derechos reservados."
+  },
+
+  "cookie": {
+    "text": "Utilizamos cookies esenciales para garantizar la mejor experiencia en nuestro sitio. Al continuar, aceptas nuestra",
+    "policyLink": "Política de Privacidad",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
+  },
+
+  "whatsapp": {
+    "ariaLabel": "Contáctanos por WhatsApp",
+    "tooltip": "Chatear por WhatsApp"
+  },
+
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: Enero 2026",
+    "section1Title": "Información Recopilada",
+    "section1Content": "Recopilamos datos proporcionados directamente por ti — nombre, email y mensajes. No utilizamos cookies de rastreo ni recolectamos datos personales sin consentimiento explícito.",
+    "section2Title": "Uso de la Información",
+    "section2Content": "Tu información se utiliza exclusivamente para responder consultas, proveer los servicios contratados y comunicarnos sobre proyectos activos. No vendemos ni compartimos tus datos con terceros bajo ninguna circunstancia.",
+    "section3Title": "Servicios de Terceros",
+    "section3Content": "Nuestras soluciones integran modelos de IA de líderes mundiales — Anthropic, OpenAI y Google — e infraestructura cloud de AWS y Google Cloud. Estos servicios operan bajo sus respectivas políticas de privacidad.",
+    "section4Title": "Tus Derechos",
+    "section4Content": "Tienes derecho a solicitar el acceso, corrección o eliminación de tu información personal en cualquier momento contactándonos directamente."
+  },
+
+  "terms": {
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última actualización: Enero 2026",
+    "section1Title": "Servicios",
+    "section1Content": "DYNX Labs provee software de automatización e integraciones de flujos de trabajo. El alcance y entregables de cada proyecto se definen individualmente mediante un acuerdo de proyecto firmado previo al inicio.",
+    "section2Title": "Propiedad Intelectual",
+    "section2Content": "Tras el pago total, el cliente posee todos los entregables finales del proyecto. DYNX Labs retiene la propiedad completa de sus metodologías, frameworks y herramientas internas propietarias utilizadas durante el desarrollo.",
+    "section3Title": "Confidencialidad",
+    "section3Content": "Tratamos todos los procesos de negocio, estructuras de datos e información operacional del cliente como estrictamente confidenciales. Esta obligación permanece vigente indefinidamente tras la conclusión de cualquier proyecto.",
+    "section4Title": "Limitación de Responsabilidad",
+    "section4Content": "La responsabilidad total por cualquier reclamo derivado de nuestros servicios está limitada al monto pagado por el cliente por el servicio específico contratado que origine dicho reclamo."
+  },
+
+  "faq": {
+    "pageTitle": "Preguntas Frecuentes",
+    "pageSubtitle": "Todo lo que necesitas saber antes de comenzar.",
+    "backHome": "Volver al Inicio",
+    "cat1Title": "Inversión y Precios",
+    "q1": "¿Cómo funciona el modelo de inversión?",
+    "a1": "Cada negocio tiene una complejidad diferente — una lista de precios fija no te haría justicia. Tras una sesión de descubrimiento gratuita de 45 minutos donde mapeamos tus flujos de trabajo y objetivos en detalle, entregamos una propuesta personalizada. La mayoría de proyectos de automatización para pequeñas y medianas empresas se ubican entre $500 y $5,000 USD según alcance e integraciones.",
+    "q2": "¿Ofrecen estructuras de pago por etapas?",
+    "a2": "Sí. Para proyectos de mayor envergadura estructuramos los pagos en hitos: una parte al inicio, otra en la entrega intermedia y el pago final tras el despliegue exitoso. Solo pagas por resultados que puedes ver y validar.",
+    "cat2Title": "Proceso y Tiempos",
+    "q3": "¿Cuánto tiempo toma una implementación completa?",
+    "a3": "Automatizaciones simples — como conectar dos herramientas o eliminar una tarea repetitiva — pueden estar en producción en 1 a 2 semanas. Sistemas complejos con múltiples integraciones y agentes de IA a medida requieren entre 3 y 6 semanas. Siempre comenzamos con una fase de descubrimiento enfocada para que no haya sorpresas de ningún lado.",
+    "q4": "¿Cómo es concretamente la fase de descubrimiento?",
+    "a4": "Es un análisis estructurado y profundo de tus operaciones. Mapeamos cada flujo de trabajo, identificamos cuellos de botella y cuantificamos el tiempo que tu equipo está perdiendo en tareas manuales. Al final, tienes una imagen clara de tus oportunidades de automatización — independientemente de si avanzas con nosotros.",
+    "cat3Title": "Requerimientos Técnicos",
+    "q5": "¿Necesita nuestro equipo conocimientos técnicos para operar los sistemas?",
+    "a5": "En absoluto. Cada sistema que construimos está diseñado para las personas que realmente lo van a usar — no para ingenieros. Recibes dashboards limpios, interfaces simples, documentación completa y capacitación práctica. Si tu equipo puede usar una hoja de cálculo, puede operar lo que construimos.",
+    "q6": "¿Se puede integrar con las herramientas que ya usamos?",
+    "a6": "En la gran mayoría de los casos, sí. Trabajamos con los ecosistemas de negocio más comunes — Google Workspace, Notion, Airtable, Shopify, WhatsApp, QuickBooks, Slack y muchos otros. Durante el descubrimiento auditamos tu stack actual y confirmamos la compatibilidad antes de comprometer una sola línea de código.",
+    "cat4Title": "Seguridad y Privacidad",
+    "q7": "¿Cómo manejan los datos y procesos de nuestro negocio?",
+    "a7": "Cada proyecto opera bajo estricta confidencialidad. Tus flujos de trabajo, estructuras de datos y lógica de negocio nunca son compartidos, reutilizados ni referenciados fuera de tu proyecto. Tratamos tu conocimiento operacional como el activo competitivo que es.",
+    "q8": "¿Qué ocurre después de entregar el proyecto?",
+    "a8": "Cada proyecto incluye un período de soporte post-lanzamiento de 30 días sin costo adicional. Monitoreamos los sistemas, resolvemos casos límite y realizamos ajustes mientras tu equipo se adapta. Más allá de eso, ofrecemos planes de mantenimiento continuo para empresas que quieren un socio técnico a largo plazo — no solo un proveedor."
+  },
+
+  "comingSoon": {
+    "badge": "Próximamente",
+    "subtitle": "Estamos trabajando en algo que vale la pena esperar.",
+    "cta": "Recibir Notificación por WhatsApp",
+    "backHome": "Volver al Inicio"
+  },
+
+  "notFound": {
+    "code": "404",
+    "title": "Ruta No Encontrada",
+    "subtitle": "La página que buscas no existe o ha sido movida.",
+    "cta": "Volver al Inicio"
+  }
+}
