@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://dynxlabs.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/?lang=es"/>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://dynxlabs.com/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/faq?lang=es"/>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Products -->
+  <url>
+    <loc>https://dynxlabs.com/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/products"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/products?lang=es"/>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Research -->
+  <url>
+    <loc>https://dynxlabs.com/research</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/research"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/research?lang=es"/>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

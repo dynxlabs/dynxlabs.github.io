@@ -1,0 +1,10 @@
+# robots.txt — DYNX Labs
+# https://dynxlabs.com
+
+User-agent: *
+Allow: /
+
+Disallow: /assets/
+Disallow: /locales/
+
+Sitemap: https://dynxlabs.com/sitemap_index.xml
