@@ -99,8 +99,8 @@
     "badge": "Comenzar",
     "title": "¿Listo para Automatizar tus Operaciones?",
     "subtitle": "Reduce el trabajo manual y convierte tus flujos de trabajo en sistemas escalables. Contáctanos por WhatsApp y agenda una sesión de descubrimiento gratuita.",
-    "button": "Iniciar Proyecto por WhatsApp",
-    "responseTime": "Respuesta en menos de 24 horas"
+    "button": "Quiero Automatizar mi Negocio",
+    "responseTime": "Tu competencia ya está automatizando. ¿Y tú?"
   },
 
   "footer": {
@@ -227,3 +227,4 @@
     "faqBtn": "Ver FAQ"
   }
 }
+
