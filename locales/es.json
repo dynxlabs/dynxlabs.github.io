@@ -164,24 +164,24 @@
     "backHome": "Volver al Inicio",
     "cat1Title": "Inversión y Precios",
     "q1": "¿Cómo funciona el modelo de inversión?",
-    "a1": "Cada negocio tiene una complejidad diferente — una lista de precios fija no te haría justicia. Tras una sesión de descubrimiento gratuita de 45 minutos donde mapeamos tus flujos de trabajo y objetivos en detalle, entregamos una propuesta personalizada. La mayoría de proyectos de automatización para pequeñas y medianas empresas se ubican entre $500 y $5,000 USD según alcance e integraciones.",
+    "a1": "El precio de cada proyecto refleja su complejidad real. Antes de hablar de números, agendamos una sesión gratuita de 45 minutos para mapear tus flujos de trabajo y entregarte una propuesta que tenga sentido para tu negocio.",
     "q2": "¿Ofrecen estructuras de pago por etapas?",
     "a2": "Sí. Para proyectos de mayor envergadura estructuramos los pagos en hitos: una parte al inicio, otra en la entrega intermedia y el pago final tras el despliegue exitoso. Solo pagas por resultados que puedes ver y validar.",
     "cat2Title": "Proceso y Tiempos",
     "q3": "¿Cuánto tiempo toma una implementación completa?",
-    "a3": "Automatizaciones simples — como conectar dos herramientas o eliminar una tarea repetitiva — pueden estar en producción en 1 a 2 semanas. Sistemas complejos con múltiples integraciones y agentes de IA a medida requieren entre 3 y 6 semanas. Siempre comenzamos con una fase de descubrimiento enfocada para que no haya sorpresas de ningún lado.",
+    "a3": "Cada implementación tiene su propio ritmo — determinado por la complejidad de tus flujos, el número de integraciones y el nivel de personalización requerido. Lo que sí garantizamos es que nunca sacrificamos calidad por velocidad.",
     "q4": "¿Cómo es concretamente la fase de descubrimiento?",
     "a4": "Es un análisis estructurado y profundo de tus operaciones. Mapeamos cada flujo de trabajo, identificamos cuellos de botella y cuantificamos el tiempo que tu equipo está perdiendo en tareas manuales. Al final, tienes una imagen clara de tus oportunidades de automatización — independientemente de si avanzas con nosotros.",
     "cat3Title": "Requerimientos Técnicos",
     "q5": "¿Necesita nuestro equipo conocimientos técnicos para operar los sistemas?",
     "a5": "En absoluto. Cada sistema que construimos está diseñado para las personas que realmente lo van a usar — no para ingenieros. Recibes dashboards limpios, interfaces simples, documentación completa y capacitación práctica. Si tu equipo puede usar una hoja de cálculo, puede operar lo que construimos.",
     "q6": "¿Se puede integrar con las herramientas que ya usamos?",
-    "a6": "En la gran mayoría de los casos, sí. Trabajamos con los ecosistemas de negocio más comunes — Google Workspace, Notion, Airtable, Shopify, WhatsApp, QuickBooks, Slack y muchos otros. Durante el descubrimiento auditamos tu stack actual y confirmamos la compatibilidad antes de comprometer una sola línea de código.",
+    "a6": "Si tiene API, probablemente podemos conectarla. Trabajamos con Google Workspace, WhatsApp y los ecosistemas de negocio más comunes usando n8n y Make como motor de integración. Antes de comprometer cualquier solución, auditamos tu stack actual y confirmamos la compatibilidad.",
     "cat4Title": "Seguridad y Privacidad",
     "q7": "¿Cómo manejan los datos y procesos de nuestro negocio?",
     "a7": "Cada proyecto opera bajo estricta confidencialidad. Tus flujos de trabajo, estructuras de datos y lógica de negocio nunca son compartidos, reutilizados ni referenciados fuera de tu proyecto. Tratamos tu conocimiento operacional como el activo competitivo que es.",
     "q8": "¿Qué ocurre después de entregar el proyecto?",
-    "a8": "Cada proyecto incluye un período de soporte post-lanzamiento de 30 días sin costo adicional. Monitoreamos los sistemas, resolvemos casos límite y realizamos ajustes mientras tu equipo se adapta. Más allá de eso, ofrecemos planes de mantenimiento continuo para empresas que quieren un socio técnico a largo plazo — no solo un proveedor."
+    "a8": "Cada proyecto viene acompañado de un plan de servicio anual. Porque construir el sistema es solo el comienzo — lo que realmente importa es que funcione, escale y evolucione junto a tu operación. Estamos contigo en cada paso."
   },
 
   "research": {
@@ -227,4 +227,5 @@
     "faqBtn": "Ver FAQ"
   }
 }
+
 
