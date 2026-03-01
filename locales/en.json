@@ -164,24 +164,24 @@
     "backHome": "Back to Home",
     "cat1Title": "Pricing & Investment",
     "q1": "How does your pricing work?",
-    "a1": "Every business has different complexity — a fixed price list would be doing you a disservice. After a free 45-minute discovery session where we map your workflows and goals in detail, we deliver a tailored proposal. Most automation projects for small and mid-size businesses fall between $500–$5,000 USD depending on scope and integrations.",
+    "a1": "The price of each project reflects its real complexity. Before talking numbers, we schedule a free 45-minute session to map your workflows and deliver a proposal that actually makes sense for your business.",
     "q2": "Do you offer phased payment structures?",
     "a2": "Yes. For larger projects we structure payments in milestones: a portion upfront to begin, another at mid-point delivery, and the final payment upon successful deployment. You only pay for results you can see and validate.",
     "cat2Title": "Process & Timeline",
     "q3": "How long does a full implementation take?",
-    "a3": "Simple automations — like connecting two tools or eliminating a repetitive task — can be live in 1 to 2 weeks. Complex systems with multiple integrations and custom AI agents typically take 3 to 6 weeks. We always begin with a focused discovery phase so there are zero surprises on either side.",
+    "a3": "Every implementation has its own pace — determined by the complexity of your workflows, the number of integrations, and the level of customization required. What we do guarantee is that we never sacrifice quality for speed.",
     "q4": "What does the discovery phase actually look like?",
     "a4": "It is a structured deep-dive into your operations. We map every workflow, identify bottlenecks, and quantify the time your team is losing to manual tasks. By the end, you have a clear picture of your automation opportunities — regardless of whether you move forward with us.",
     "cat3Title": "Technical Requirements",
     "q5": "Does our team need technical knowledge to operate the systems?",
     "a5": "None whatsoever. Every system we build is designed for the people who will actually use it — not for engineers. You get clean dashboards, simple interfaces, full documentation, and hands-on training. If your team can use a spreadsheet, they can run what we build.",
     "q6": "Can you integrate with the tools we already use?",
-    "a6": "In the vast majority of cases, yes. We work with the most common business ecosystems — Google Workspace, Notion, Airtable, Shopify, WhatsApp, QuickBooks, Slack, and many others. During discovery we audit your current stack and confirm compatibility before committing to a single line of code.",
+    "a6": "If it has an API, we can most likely connect it. We work with Google Workspace, WhatsApp, and the most common business ecosystems using n8n and Make as our integration engine. Before committing to any solution, we audit your current stack and confirm compatibility.",
     "cat4Title": "Security & Privacy",
     "q7": "How do you handle our business data and processes?",
     "a7": "Every engagement operates under strict confidentiality. Your workflows, data structures, and business logic are never shared, repurposed, or referenced outside your project. We treat your operational knowledge as the competitive asset it is.",
     "q8": "What happens after the project is delivered?",
-    "a8": "Every project includes a 30-day post-launch support period at no additional cost. We monitor systems, resolve edge cases, and make adjustments as your team settles in. Beyond that, we offer ongoing maintenance plans for businesses that want a long-term technical partner — not just a vendor."
+    "a8": "Every project comes with an annual service plan. Because building the system is just the beginning — what truly matters is that it works, scales, and evolves alongside your operation. We are with you at every step."
   },
 
   "research": {
@@ -227,4 +227,5 @@
     "faqBtn": "Visit FAQ"
   }
 }
+
 
