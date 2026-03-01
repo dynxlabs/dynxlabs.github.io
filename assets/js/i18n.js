@@ -20,15 +20,11 @@ const I18n = (() => {
 
   /* ----------------------------------------------------------
      DETECT INITIAL LANGUAGE
-     Priority: 1) localStorage  2) browser lang  3) default
+     Priority: 1) localStorage  2) default
   ---------------------------------------------------------- */
   function detectLanguage() {
     const stored = localStorage.getItem('dynx_lang');
     if (stored && SUPPORTED.includes(stored)) return stored;
-
-    const browser = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
-    if (SUPPORTED.includes(browser)) return browser;
-
     return DEFAULT;
   }
 
@@ -160,5 +156,6 @@ const I18n = (() => {
      PUBLIC API
   ---------------------------------------------------------- */
   return { init, changeLanguage, get };
+
 
 })();
