@@ -99,8 +99,8 @@
     "badge": "Get Started",
     "title": "Ready to Automate Your Operations?",
     "subtitle": "Reduce manual work and turn your workflows into scalable systems. Contact us via WhatsApp and get a free discovery session.",
-    "button": "I Want to Automate My Business",
-    "responseTime": "Your competition is already automating. Are you?"
+    "button": "Start Project on WhatsApp",
+    "responseTime": "Response in less than 24 hours"
   },
 
   "footer": {
@@ -113,6 +113,7 @@
     "products": "Products",
     "research": "Research",
     "faq": "FAQ",
+    "contact": "Contact",
     "legalTitle": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -164,45 +165,24 @@
     "backHome": "Back to Home",
     "cat1Title": "Pricing & Investment",
     "q1": "How does your pricing work?",
-    "a1": "The price of each project reflects its real complexity. Before talking numbers, we schedule a free 45-minute session to map your workflows and deliver a proposal that actually makes sense for your business.",
+    "a1": "Every business has different complexity — a fixed price list would be doing you a disservice. After a free 45-minute discovery session where we map your workflows and goals in detail, we deliver a tailored proposal. Most automation projects for small and mid-size businesses fall between $500–$5,000 USD depending on scope and integrations.",
     "q2": "Do you offer phased payment structures?",
     "a2": "Yes. For larger projects we structure payments in milestones: a portion upfront to begin, another at mid-point delivery, and the final payment upon successful deployment. You only pay for results you can see and validate.",
     "cat2Title": "Process & Timeline",
     "q3": "How long does a full implementation take?",
-    "a3": "Every implementation has its own pace — determined by the complexity of your workflows, the number of integrations, and the level of customization required. What we do guarantee is that we never sacrifice quality for speed.",
+    "a3": "Simple automations — like connecting two tools or eliminating a repetitive task — can be live in 1 to 2 weeks. Complex systems with multiple integrations and custom AI agents typically take 3 to 6 weeks. We always begin with a focused discovery phase so there are zero surprises on either side.",
     "q4": "What does the discovery phase actually look like?",
     "a4": "It is a structured deep-dive into your operations. We map every workflow, identify bottlenecks, and quantify the time your team is losing to manual tasks. By the end, you have a clear picture of your automation opportunities — regardless of whether you move forward with us.",
     "cat3Title": "Technical Requirements",
     "q5": "Does our team need technical knowledge to operate the systems?",
     "a5": "None whatsoever. Every system we build is designed for the people who will actually use it — not for engineers. You get clean dashboards, simple interfaces, full documentation, and hands-on training. If your team can use a spreadsheet, they can run what we build.",
     "q6": "Can you integrate with the tools we already use?",
-    "a6": "If it has an API, we can most likely connect it. We work with Google Workspace, WhatsApp, and the most common business ecosystems using n8n and Make as our integration engine. Before committing to any solution, we audit your current stack and confirm compatibility.",
+    "a6": "In the vast majority of cases, yes. We work with the most common business ecosystems — Google Workspace, Notion, Airtable, Shopify, WhatsApp, QuickBooks, Slack, and many others. During discovery we audit your current stack and confirm compatibility before committing to a single line of code.",
     "cat4Title": "Security & Privacy",
     "q7": "How do you handle our business data and processes?",
     "a7": "Every engagement operates under strict confidentiality. Your workflows, data structures, and business logic are never shared, repurposed, or referenced outside your project. We treat your operational knowledge as the competitive asset it is.",
     "q8": "What happens after the project is delivered?",
-    "a8": "Every project comes with an annual service plan. Because building the system is just the beginning — what truly matters is that it works, scales, and evolves alongside your operation. We are with you at every step."
-  },
-
-  "research": {
-    "title": "Coming Soon",
-    "subtitle": "We are documenting the systems we build and the patterns we discover at the frontier of AI automation. Papers, case studies, and technical insights — launching soon.",
-    "notifyBtn": "Get Notified on WhatsApp",
-    "notifyHint": "We will message you when the first paper drops."
-  },
-
-  "products": {
-    "title": "In Development",
-    "subtitle": "We are building a suite of AI-native products designed to automate the operations most businesses run manually today. Each one production-ready, battle-tested, and built to scale.",
-    "badge": "In Development",
-    "p1Name": "DYNX Ops",
-    "p1Desc": "An AI operations hub that monitors your workflows, detects bottlenecks in real time, and dispatches automated responses — without human intervention.",
-    "p2Name": "DYNX Pulse",
-    "p2Desc": "A real-time business intelligence dashboard that pulls data from all your tools, surfaces critical KPIs, and generates automated executive summaries powered by LLMs.",
-    "p3Name": "DYNX Connect",
-    "p3Desc": "A no-code integration layer that connects your existing tools — CRM, ERP, communication platforms — into a single unified data pipeline with zero friction.",
-    "notifyBtn": "Get Early Access on WhatsApp",
-    "notifyHint": "Be the first to know when we launch."
+    "a8": "Every project includes a 30-day post-launch support period at no additional cost. We monitor systems, resolve edge cases, and make adjustments as your team settles in. Beyond that, we offer ongoing maintenance plans for businesses that want a long-term technical partner — not just a vendor."
   },
 
   "comingSoon": {
@@ -219,13 +199,41 @@
     "cta": "Back to Home"
   },
 
-  "notfound": {
-    "badge": "Page Not Found",
-    "title": "This page doesn't exist.",
-    "subtitle": "The page you're looking for may have been moved, renamed, or never existed. Let's get you back on track.",
-    "homeBtn": "Back to Home",
-    "faqBtn": "Visit FAQ"
+  "contact": {
+    "badge": "Get Started",
+    "title": "Ready to Automate Your Operations?",
+    "subtitle": "Fill out the form and we'll reach out within 24 hours — or start a conversation directly on WhatsApp.",
+    "fieldCompany": "Company Name",
+    "placeholderCompany": "ACME Corp",
+    "fieldContact": "Contact Name",
+    "placeholderContact": "Jane Smith",
+    "fieldRegion": "Region",
+    "selectRegion": "Select region",
+    "fieldComuna": "Location",
+    "selectComuna": "Select region first",
+    "selectComunaList": "Select location",
+    "fieldPhone": "Phone",
+    "fieldEmail": "Email",
+    "placeholderEmail": "jane@company.com",
+    "errRequired": "Required field",
+    "errEmail": "Enter a valid email",
+    "fieldProcess": "What process do you want to automate?",
+    "selectProcess": "Select an option",
+    "processOpt1": "Reports & Dashboards",
+    "processOpt2": "Tool & System Integrations",
+    "processOpt3": "Customer Management (CRM)",
+    "processOpt4": "Billing & Administrative Processes",
+    "processOpt5": "Customer Support",
+    "processOpt6": "Inventory Management",
+    "processOpt7": "Marketing & Communications",
+    "processOpt8": "Other",
+    "fieldOther": "Tell us more",
+    "placeholderOther": "Describe briefly what you need to automate...",
+    "submitBtn": "I Want to Automate My Business",
+    "divider": "or if you prefer to talk now",
+    "waBtn": "Your competition is already automating. Are you?",
+    "hint": "Your data is handled with strict confidentiality. We will never share it with third parties.",
+    "successTitle": "Message received.",
+    "successSubtitle": "We'll be in touch within 24 hours. In the meantime, feel free to reach us on WhatsApp."
   }
 }
-
-
