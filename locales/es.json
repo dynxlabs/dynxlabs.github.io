@@ -99,8 +99,8 @@
     "badge": "Comenzar",
     "title": "¿Listo para Automatizar tus Operaciones?",
     "subtitle": "Reduce el trabajo manual y convierte tus flujos de trabajo en sistemas escalables. Contáctanos por WhatsApp y agenda una sesión de descubrimiento gratuita.",
-    "button": "Quiero Automatizar mi Negocio",
-    "responseTime": "Tu competencia ya está automatizando. ¿Y tú?"
+    "button": "Iniciar Proyecto por WhatsApp",
+    "responseTime": "Respuesta en menos de 24 horas"
   },
 
   "footer": {
@@ -113,6 +113,7 @@
     "products": "Productos",
     "research": "Research",
     "faq": "FAQ",
+    "contact": "Contacto",
     "legalTitle": "Legal",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",
@@ -164,45 +165,24 @@
     "backHome": "Volver al Inicio",
     "cat1Title": "Inversión y Precios",
     "q1": "¿Cómo funciona el modelo de inversión?",
-    "a1": "El precio de cada proyecto refleja su complejidad real. Antes de hablar de números, agendamos una sesión gratuita de 45 minutos para mapear tus flujos de trabajo y entregarte una propuesta que tenga sentido para tu negocio.",
+    "a1": "Cada negocio tiene una complejidad diferente — una lista de precios fija no te haría justicia. Tras una sesión de descubrimiento gratuita de 45 minutos donde mapeamos tus flujos de trabajo y objetivos en detalle, entregamos una propuesta personalizada. La mayoría de proyectos de automatización para pequeñas y medianas empresas se ubican entre $500 y $5,000 USD según alcance e integraciones.",
     "q2": "¿Ofrecen estructuras de pago por etapas?",
     "a2": "Sí. Para proyectos de mayor envergadura estructuramos los pagos en hitos: una parte al inicio, otra en la entrega intermedia y el pago final tras el despliegue exitoso. Solo pagas por resultados que puedes ver y validar.",
     "cat2Title": "Proceso y Tiempos",
     "q3": "¿Cuánto tiempo toma una implementación completa?",
-    "a3": "Cada implementación tiene su propio ritmo — determinado por la complejidad de tus flujos, el número de integraciones y el nivel de personalización requerido. Lo que sí garantizamos es que nunca sacrificamos calidad por velocidad.",
+    "a3": "Automatizaciones simples — como conectar dos herramientas o eliminar una tarea repetitiva — pueden estar en producción en 1 a 2 semanas. Sistemas complejos con múltiples integraciones y agentes de IA a medida requieren entre 3 y 6 semanas. Siempre comenzamos con una fase de descubrimiento enfocada para que no haya sorpresas de ningún lado.",
     "q4": "¿Cómo es concretamente la fase de descubrimiento?",
     "a4": "Es un análisis estructurado y profundo de tus operaciones. Mapeamos cada flujo de trabajo, identificamos cuellos de botella y cuantificamos el tiempo que tu equipo está perdiendo en tareas manuales. Al final, tienes una imagen clara de tus oportunidades de automatización — independientemente de si avanzas con nosotros.",
     "cat3Title": "Requerimientos Técnicos",
     "q5": "¿Necesita nuestro equipo conocimientos técnicos para operar los sistemas?",
     "a5": "En absoluto. Cada sistema que construimos está diseñado para las personas que realmente lo van a usar — no para ingenieros. Recibes dashboards limpios, interfaces simples, documentación completa y capacitación práctica. Si tu equipo puede usar una hoja de cálculo, puede operar lo que construimos.",
     "q6": "¿Se puede integrar con las herramientas que ya usamos?",
-    "a6": "Si tiene API, probablemente podemos conectarla. Trabajamos con Google Workspace, WhatsApp y los ecosistemas de negocio más comunes usando n8n y Make como motor de integración. Antes de comprometer cualquier solución, auditamos tu stack actual y confirmamos la compatibilidad.",
+    "a6": "En la gran mayoría de los casos, sí. Trabajamos con los ecosistemas de negocio más comunes — Google Workspace, Notion, Airtable, Shopify, WhatsApp, QuickBooks, Slack y muchos otros. Durante el descubrimiento auditamos tu stack actual y confirmamos la compatibilidad antes de comprometer una sola línea de código.",
     "cat4Title": "Seguridad y Privacidad",
     "q7": "¿Cómo manejan los datos y procesos de nuestro negocio?",
     "a7": "Cada proyecto opera bajo estricta confidencialidad. Tus flujos de trabajo, estructuras de datos y lógica de negocio nunca son compartidos, reutilizados ni referenciados fuera de tu proyecto. Tratamos tu conocimiento operacional como el activo competitivo que es.",
     "q8": "¿Qué ocurre después de entregar el proyecto?",
-    "a8": "Cada proyecto viene acompañado de un plan de servicio anual. Porque construir el sistema es solo el comienzo — lo que realmente importa es que funcione, escale y evolucione junto a tu operación. Estamos contigo en cada paso."
-  },
-
-  "research": {
-    "title": "Próximamente",
-    "subtitle": "Estamos documentando los sistemas que construimos y los patrones que descubrimos en la frontera de la automatización con IA. Papers, casos de estudio e insights técnicos — lanzando pronto.",
-    "notifyBtn": "Recibir Notificación por WhatsApp",
-    "notifyHint": "Te avisaremos cuando publiquemos el primer paper."
-  },
-
-  "products": {
-    "title": "En Desarrollo",
-    "subtitle": "Estamos construyendo una suite de productos nativos de IA diseñados para automatizar las operaciones que la mayoría de los negocios ejecutan manualmente hoy. Cada uno listo para producción, probado y construido para escalar.",
-    "badge": "En Desarrollo",
-    "p1Name": "DYNX Ops",
-    "p1Desc": "Un hub de operaciones con IA que monitorea tus flujos de trabajo, detecta cuellos de botella en tiempo real y despacha respuestas automatizadas — sin intervención humana.",
-    "p2Name": "DYNX Pulse",
-    "p2Desc": "Un dashboard de inteligencia de negocios en tiempo real que extrae datos de todas tus herramientas, muestra KPIs críticos y genera resúmenes ejecutivos automatizados con LLMs.",
-    "p3Name": "DYNX Connect",
-    "p3Desc": "Una capa de integración sin código que conecta tus herramientas existentes — CRM, ERP, plataformas de comunicación — en un único pipeline de datos unificado sin fricciones.",
-    "notifyBtn": "Obtener Acceso Anticipado por WhatsApp",
-    "notifyHint": "Sé el primero en saber cuando lancemos."
+    "a8": "Cada proyecto incluye un período de soporte post-lanzamiento de 30 días sin costo adicional. Monitoreamos los sistemas, resolvemos casos límite y realizamos ajustes mientras tu equipo se adapta. Más allá de eso, ofrecemos planes de mantenimiento continuo para empresas que quieren un socio técnico a largo plazo — no solo un proveedor."
   },
 
   "comingSoon": {
@@ -219,13 +199,41 @@
     "cta": "Volver al Inicio"
   },
 
-  "notfound": {
-    "badge": "Página No Encontrada",
-    "title": "Esta página no existe.",
-    "subtitle": "La página que buscas puede haber sido movida, renombrada o nunca existió. Te ayudamos a volver.",
-    "homeBtn": "Volver al Inicio",
-    "faqBtn": "Ver FAQ"
+  "contact": {
+    "badge": "Comenzar",
+    "title": "¿Listo para Automatizar tus Operaciones?",
+    "subtitle": "Completa el formulario y te contactamos en menos de 24 horas — o inicia una conversación directamente por WhatsApp.",
+    "fieldCompany": "Nombre de la Empresa",
+    "placeholderCompany": "ACME Corp",
+    "fieldContact": "Nombre de Contacto",
+    "placeholderContact": "Juan Pérez",
+    "fieldRegion": "Región",
+    "selectRegion": "Selecciona una región",
+    "fieldComuna": "Comuna",
+    "selectComuna": "Selecciona primero la región",
+    "selectComunaList": "Selecciona una comuna",
+    "fieldPhone": "Teléfono",
+    "fieldEmail": "Correo Electrónico",
+    "placeholderEmail": "juan@empresa.com",
+    "errRequired": "Campo obligatorio",
+    "errEmail": "Ingresa un correo válido",
+    "fieldProcess": "¿Qué proceso quieres automatizar?",
+    "selectProcess": "Selecciona una opción",
+    "processOpt1": "Reportes y Dashboards",
+    "processOpt2": "Integración de Herramientas y Sistemas",
+    "processOpt3": "Gestión de Clientes (CRM)",
+    "processOpt4": "Facturación y Procesos Administrativos",
+    "processOpt5": "Atención al Cliente",
+    "processOpt6": "Gestión de Inventario",
+    "processOpt7": "Marketing y Comunicaciones",
+    "processOpt8": "Otro",
+    "fieldOther": "Cuéntanos más",
+    "placeholderOther": "Describe brevemente qué necesitas automatizar...",
+    "submitBtn": "Quiero Automatizar mi Negocio",
+    "divider": "o si prefieres hablar ahora",
+    "waBtn": "Tu competencia ya está automatizando. ¿Y tú?",
+    "hint": "Tus datos se tratan con estricta confidencialidad. Nunca los compartiremos con terceros.",
+    "successTitle": "Mensaje recibido.",
+    "successSubtitle": "Te contactaremos en menos de 24 horas. Mientras tanto, puedes escribirnos por WhatsApp."
   }
 }
-
-
