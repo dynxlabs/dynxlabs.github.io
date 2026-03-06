@@ -10,7 +10,6 @@
     "contact": "Contact",
     "startProject": "Start Project"
   },
-
   "hero": {
     "headline1": "Automate the Work.",
     "headline2": "Accelerate the Business.",
@@ -18,13 +17,11 @@
     "ctaPrimary": "Start Project",
     "ctaSecondary": "View AI Capabilities"
   },
-
   "about": {
     "badge": "About DYNX Labs",
     "title": "Built to Transform How Businesses Operate",
     "mission": "Our mission is to architect the transition towards autonomous operations. At DYNX Labs, we transform manual workflows into scalable digital infrastructures, enabling artificial intelligence to be the engine of business performance."
   },
-
   "services": {
     "badge": "What We Build",
     "title": "Core Capabilities",
@@ -54,7 +51,6 @@
       "description": "Custom software as a service development, designed specifically for your business's unique needs."
     }
   },
-
   "method": {
     "badge": "Our Process",
     "title": "Discovery to Scale",
@@ -69,7 +65,6 @@
     "step3Title": "Implementation",
     "step3Description": "Deployment of production-ready solutions with comprehensive testing, staff training, and 24/7 monitoring to ensure immediate operational efficiency."
   },
-
   "trust": {
     "badge": "Why DYNX Labs",
     "title": "Built Different",
@@ -82,7 +77,6 @@
     "partnersTitle": "Partners, Not Vendors",
     "partnersDesc": "We get directly involved in your success. Your growth is the engine of ours."
   },
-
   "stack": {
     "badge": "Our Stack",
     "title": "Technologies We Build With",
@@ -94,7 +88,6 @@
     "cloudTitle": "Cloud & Infrastructure",
     "cloudDescription": "We deploy on AWS and Google Cloud — enterprise-grade reliability from day one."
   },
-
   "cta": {
     "badge": "Get Started",
     "title": "Ready to Automate Your Operations?",
@@ -102,7 +95,6 @@
     "button": "Start Project on WhatsApp",
     "responseTime": "Response in less than 24 hours"
   },
-
   "footer": {
     "tagline": "Automate the Work. Accelerate the Business.",
     "companyTitle": "Company",
@@ -120,19 +112,16 @@
     "careers": "Careers",
     "copyright": "© {year} DYNX Labs. All rights reserved."
   },
-
   "cookie": {
     "text": "We use essential cookies to ensure you get the best experience on our website. By continuing, you agree to our",
     "policyLink": "Privacy Policy",
     "accept": "Accept",
     "decline": "Decline"
   },
-
   "whatsapp": {
     "ariaLabel": "Contact us on WhatsApp",
     "tooltip": "Chat on WhatsApp"
   },
-
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: January 2026",
@@ -145,7 +134,6 @@
     "section4Title": "Your Rights",
     "section4Content": "You have the right to request access to, correction of, or deletion of your personal information at any time by contacting us directly."
   },
-
   "terms": {
     "title": "Terms of Service",
     "lastUpdated": "Last updated: January 2026",
@@ -158,7 +146,6 @@
     "section4Title": "Limitation of Liability",
     "section4Content": "Total liability for any claim arising from our services is limited to the amount paid by the client for the specific contracted service giving rise to that claim."
   },
-
   "faq": {
     "pageTitle": "Frequently Asked Questions",
     "pageSubtitle": "Everything you need to know before getting started.",
@@ -184,21 +171,18 @@
     "q8": "What happens after the project is delivered?",
     "a8": "Every project includes a 30-day post-launch support period at no additional cost. We monitor systems, resolve edge cases, and make adjustments as your team settles in. Beyond that, we offer ongoing maintenance plans for businesses that want a long-term technical partner — not just a vendor."
   },
-
   "comingSoon": {
     "badge": "Coming Soon",
     "subtitle": "We are working on something worth waiting for.",
     "cta": "Get Notified via WhatsApp",
     "backHome": "Back to Home"
   },
-
   "notFound": {
     "code": "404",
     "title": "Route Not Found",
     "subtitle": "The page you are looking for does not exist or has been moved.",
     "cta": "Back to Home"
   },
-
   "contact": {
     "badge": "Get Started",
     "title": "Ready to Automate Your Operations?",
@@ -235,5 +219,24 @@
     "hint": "Your data is handled with strict confidentiality. We will never share it with third parties.",
     "successTitle": "Message received.",
     "successSubtitle": "We'll be in touch within 24 hours. In the meantime, feel free to reach us on WhatsApp."
+  },
+  "research": {
+    "title": "Research",
+    "subtitle": "Insights on AI automation, workflow design, and intelligent systems.",
+    "notifyBtn": "Notify me via WhatsApp",
+    "notifyHint": "We'll let you know when new content is published."
+  },
+  "products": {
+    "badge": "In Development",
+    "title": "Products",
+    "subtitle": "Internal tools we're building to automate the most common business operations.",
+    "p1Name": "DYNX Ops",
+    "p1Desc": "An AI-powered operations hub that centralizes your team's workflows, tasks, and automations in one place.",
+    "p2Name": "DYNX Pulse",
+    "p2Desc": "Real-time business intelligence dashboard that surfaces the metrics that actually matter to your operation.",
+    "p3Name": "DYNX Connect",
+    "p3Desc": "No-code integration layer that connects your existing tools without writing a single line of code.",
+    "notifyBtn": "Notify me via WhatsApp",
+    "notifyHint": "We'll let you know when products launch."
   }
 }
