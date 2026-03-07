@@ -92,7 +92,7 @@
     "badge": "Get Started",
     "title": "Ready to Automate Your Operations?",
     "subtitle": "Reduce manual work and turn your workflows into scalable systems. Contact us via WhatsApp and get a free discovery session.",
-    "button": "Start Project on WhatsApp",
+    "button": "Start Project",
     "responseTime": "Response in less than 24 hours"
   },
   "footer": {
@@ -240,3 +240,4 @@
     "notifyHint": "We'll let you know when products launch."
   }
 }
+
