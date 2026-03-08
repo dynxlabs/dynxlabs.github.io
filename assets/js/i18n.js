@@ -129,6 +129,7 @@ const I18n = (() => {
     updateHTMLLang(lang);
     updateLangButtons(lang);
     applyToDOM();
+    window.dispatchEvent(new CustomEvent('dynx-lang-changed', { detail: lang }));
   }
 
   /* ----------------------------------------------------------
@@ -159,3 +160,4 @@ const I18n = (() => {
 
 
 })();
+
