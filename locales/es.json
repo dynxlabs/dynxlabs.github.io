@@ -6,6 +6,7 @@
     "stack": "Tecnologías",
     "products": "Productos",
     "research": "Research",
+    "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contacto",
     "startProject": "Iniciar Proyecto"
@@ -104,6 +105,7 @@
     "stack": "Tecnologías",
     "products": "Productos",
     "research": "Research",
+    "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contacto",
     "legalTitle": "Legal",
@@ -240,5 +242,6 @@
     "notifyHint": "Te avisaremos cuando los productos estén disponibles."
   }
 }
+
 
 
