@@ -6,6 +6,7 @@
     "stack": "Tech Stack",
     "products": "Products",
     "research": "Research",
+    "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contact",
     "startProject": "Start Project"
@@ -104,6 +105,7 @@
     "stack": "Tech Stack",
     "products": "Products",
     "research": "Research",
+    "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contact",
     "legalTitle": "Legal",
@@ -240,5 +242,6 @@
     "notifyHint": "We'll let you know when products launch."
   }
 }
+
 
 
