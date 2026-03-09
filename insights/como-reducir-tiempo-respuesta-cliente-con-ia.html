@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>How to Reduce Customer Response Time with AI — DYNX Labs</title>
+  <meta name="description" content="Every hour a client waits is an hour they consider your competitor. Response time is a revenue metric — and AI can cut yours from hours to minutes." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://dynxlabs.com/insights/como-reducir-tiempo-respuesta-cliente-con-ia" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://dynxlabs.com/insights/como-reducir-tiempo-respuesta-cliente-con-ia" />
+  <meta property="og:title" content="How to Reduce Customer Response Time with AI — DYNX Labs" />
+  <meta property="og:description" content="Every hour a client waits is an hour they consider your competitor. Response time is a revenue metric — and AI can cut yours from hours to minutes." />
+  <meta property="og:image" content="https://dynxlabs.com/assets/images/og-image.png" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <style>
+    .article-topbar{position:fixed;top:72px;left:0;right:0;z-index:90;background:rgba(0,0,0,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 24px;height:44px;display:flex;align-items:center;justify-content:space-between;}
+    .article-topbar__breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .article-topbar__breadcrumb a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+    .article-topbar__breadcrumb a:hover{color:#fff;}
+    .article-topbar__breadcrumb span{color:rgba(255,255,255,0.25);}
+    .article-topbar__breadcrumb strong{color:rgba(255,255,255,0.7);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:400px;}
+    .explore-wrap{position:relative;flex-shrink:0;}
+    .explore-btn{display:flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:rgba(255,255,255,0.7);font-size:13px;font-family:inherit;cursor:pointer;transition:background 0.2s,color 0.2s;white-space:nowrap;}
+    .explore-btn:hover{background:rgba(255,255,255,0.1);color:#fff;}
+    .explore-btn svg{width:12px;height:12px;transition:transform 0.2s;}
+    .explore-btn.open svg{transform:rotate(180deg);}
+    .explore-dropdown{position:absolute;top:calc(100% + 8px);right:0;width:300px;background:#111;border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:12px;display:none;flex-direction:column;gap:4px;box-shadow:0 20px 60px rgba(0,0,0,0.6);z-index:1100;max-height:70vh;overflow-y:auto;}
+    .explore-dropdown.open{display:flex;}
+    .explore-section{padding:8px 4px 4px;}
+    .explore-section__label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:6px;padding:0 8px;}
+    .explore-search-wrap{position:relative;margin-bottom:4px;}
+    .explore-search-wrap svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:13px;height:13px;color:rgba(255,255,255,0.3);pointer-events:none;}
+    #explore-search{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px 10px 8px 30px;color:#fff;font-size:12px;font-family:inherit;outline:none;}
+    #explore-search::placeholder{color:rgba(255,255,255,0.3);}
+    .explore-article-link{display:flex;align-items:flex-start;gap:10px;padding:8px;border-radius:8px;text-decoration:none;transition:background 0.15s;cursor:pointer;}
+    .explore-article-link:hover{background:rgba(255,255,255,0.06);}
+    .explore-article-link__dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+    .explore-article-link__title{font-size:12px;color:rgba(255,255,255,0.65);line-height:1.4;}
+    .explore-divider{height:1px;background:rgba(255,255,255,0.06);margin:4px 0;}
+    .explore-share-row{display:flex;gap:6px;padding:4px;flex-wrap:wrap;}
+    .explore-share-btn{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:7px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:11px;font-family:inherit;cursor:pointer;text-decoration:none;transition:background 0.15s,color 0.15s;}
+    .explore-share-btn:hover{background:rgba(255,255,255,0.1);color:#fff;}
+    .explore-share-btn svg{width:13px;height:13px;flex-shrink:0;}
+    .explore-copy-btn{display:flex;align-items:center;gap:8px;width:100%;padding:8px;border-radius:8px;background:none;border:none;color:rgba(255,255,255,0.5);font-size:12px;font-family:inherit;cursor:pointer;transition:background 0.15s,color 0.15s;text-align:left;}
+    .explore-copy-btn:hover{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.85);}
+    .explore-copy-btn svg{width:14px;height:14px;flex-shrink:0;}
+    .article-page{padding-top:116px;min-height:100vh;}
+    .article-hero__color{height:8px;width:100%;}
+    .article-hero__inner{max-width:720px;margin:0 auto;padding:48px 24px 40px;}
+    .article-hero__badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px;border:1px solid;margin-bottom:20px;}
+    .article-hero__title{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;letter-spacing:-0.03em;color:#fff;line-height:1.15;margin-bottom:16px;}
+    .article-hero__summary{font-size:1.1rem;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:28px;}
+    .article-hero__meta{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.35);flex-wrap:wrap;}
+    .article-hero__copy-link{background:none;border:none;color:rgba(255,255,255,0.3);font-size:12px;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:5px;padding:0;transition:color 0.2s;margin-left:8px;}
+    .article-hero__copy-link:hover{color:rgba(255,255,255,0.7);}
+    .article-hero__copy-link svg{width:13px;height:13px;}
+    .article-divider{max-width:720px;margin:0 auto 40px;padding:0 24px;border:none;border-top:1px solid rgba(255,255,255,0.07);}
+    .article-body{max-width:720px;margin:0 auto;padding:0 24px 64px;}
+    .article-body h2{font-size:1.5rem;font-weight:700;color:#fff;letter-spacing:-0.02em;margin:48px 0 16px;line-height:1.25;}
+    .article-body h3{font-size:1.15rem;font-weight:600;color:rgba(255,255,255,0.9);letter-spacing:-0.01em;margin:32px 0 12px;}
+    .article-body p{font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:20px;}
+    .article-body strong{color:rgba(255,255,255,0.9);font-weight:600;}
+    .article-body ul,.article-body ol{padding-left:20px;margin-bottom:20px;}
+    .article-body ul li,.article-body ol li{color:rgba(255,255,255,0.65);font-size:1rem;line-height:1.75;margin-bottom:6px;}
+    .article-body ul li::marker{color:rgba(255,255,255,0.25);}
+    .article-body ol li::marker{color:rgba(255,255,255,0.35);font-weight:600;}
+    .article-body blockquote{border-left:3px solid rgba(255,255,255,0.15);padding:12px 20px;margin:24px 0;background:rgba(255,255,255,0.03);border-radius:0 8px 8px 0;}
+    .article-body blockquote p{color:rgba(255,255,255,0.55);font-style:italic;margin:0;}
+    .article-body table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;}
+    .article-body th{text-align:left;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);font-weight:600;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;}
+    .article-body td{padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);vertical-align:top;}
+    .article-body tr:last-child td{border-bottom:none;}
+    .article-visual{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;margin:32px 0;}
+    .article-visual__title{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px;}
+    .flow-step{display:flex;align-items:center;gap:0;margin-bottom:0;}
+    .flow-node{flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 16px;text-align:center;}
+    .flow-node__label{font-size:12px;font-weight:600;color:rgba(255,255,255,0.8);line-height:1.3;}
+    .flow-node__sub{font-size:10px;color:rgba(255,255,255,0.35);margin-top:3px;}
+    .flow-arrow{flex-shrink:0;padding:0 8px;color:rgba(255,255,255,0.25);font-size:16px;}
+    .flow-wrap{display:flex;align-items:center;flex-wrap:wrap;gap:4px;}
+    .before-after{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .ba-col{border-radius:10px;padding:16px;}
+    .ba-col--before{background:rgba(255,60,60,0.06);border:1px solid rgba(255,60,60,0.15);}
+    .ba-col--after{background:rgba(60,255,120,0.06);border:1px solid rgba(60,255,120,0.15);}
+    .ba-col__header{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px;}
+    .ba-col--before .ba-col__header{color:rgba(255,100,100,0.7);}
+    .ba-col--after .ba-col__header{color:rgba(60,255,120,0.7);}
+    .ba-item{font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:6px;display:flex;align-items:flex-start;gap:6px;line-height:1.4;}
+    .ba-item::before{content:"•";flex-shrink:0;margin-top:1px;}
+    .ba-col--before .ba-item::before{color:rgba(255,100,100,0.5);}
+    .ba-col--after .ba-item::before{color:rgba(60,255,120,0.5);}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0;}
+    .stat-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px;text-align:center;}
+    .stat-box__number{font-size:2rem;font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1;margin-bottom:4px;}
+    .stat-box__label{font-size:11px;color:rgba(255,255,255,0.35);line-height:1.3;}
+    .task-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+    .task-item{display:flex;align-items:flex-start;gap:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px 20px;}
+    .task-item__num{font-size:1.5rem;font-weight:800;color:rgba(255,255,255,0.12);letter-spacing:-0.04em;flex-shrink:0;line-height:1;min-width:32px;}
+    .task-item__body{flex:1;}
+    .task-item__title{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;}
+    .task-item__desc{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.5;}
+    .task-item__time{font-size:12px;font-weight:600;margin-top:6px;}
+    .article-lang{display:none;}
+    .article-lang.active{display:block;}
+    .article-related{max-width:1100px;margin:0 auto;padding:56px 24px 80px;border-top:1px solid rgba(255,255,255,0.06);}
+    .article-related__header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px;gap:16px;flex-wrap:wrap;}
+    .article-related__title{font-size:1.4rem;font-weight:700;color:#fff;letter-spacing:-0.02em;}
+    .article-related__link{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
+    .article-related__link:hover{color:rgba(255,255,255,0.7);}
+    .article-related__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+    .article-cta{max-width:720px;margin:0 auto 80px;padding:0 24px;}
+    .article-cta__inner{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:40px;text-align:center;}
+    .article-cta__title{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-0.02em;}
+    .article-cta__subtitle{font-size:0.9rem;color:rgba(255,255,255,0.4);margin-bottom:24px;line-height:1.6;}
+    .article-cta__btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:#fff;color:#000;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;transition:opacity 0.2s,transform 0.2s;}
+    .article-cta__btn:hover{opacity:0.9;transform:translateY(-1px);}
+    .reading-progress{position:fixed;top:0;left:0;height:2px;background:#fff;z-index:200;width:0%;transition:width 0.1s linear;}
+    .insight-card{display:block;text-decoration:none;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.03);transition:border-color 0.2s,transform 0.2s,background 0.2s;}
+    .insight-card:hover{border-color:rgba(255,255,255,0.14);transform:translateY(-2px);background:rgba(255,255,255,0.05);}
+    .insight-card--grid .insight-card__color-bar{height:120px;position:relative;overflow:hidden;}
+    .insight-card__color-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.06) 0%,transparent 60%);}
+    .insight-card--grid .insight-card__body{padding:16px;}
+    .insight-card__badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid;margin-bottom:8px;}
+    .insight-card__title{font-size:13px;font-weight:700;color:#fff;line-height:1.4;margin-bottom:8px;}
+    .insight-card__meta{display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,0.3);}
+    @media(max-width:600px){
+      .article-topbar__breadcrumb strong{max-width:160px;}
+      .article-hero__inner{padding:32px 16px 28px;}
+      .article-body{padding:0 16px 48px;}
+      .before-after{grid-template-columns:1fr;}
+      .stat-row{grid-template-columns:repeat(2,1fr);}
+      .flow-wrap{flex-direction:column;}
+      .flow-arrow{transform:rotate(90deg);}
+    }
+  </style>
+</head>
+<body>
+<div class="reading-progress" id="reading-progress"></div>
+<a href="https://wa.me/56984657801" class="whatsapp-float" aria-label="Contact us on WhatsApp" target="_blank" rel="noopener noreferrer">
+  <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">Chat on WhatsApp</span>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner glass-strong">
+    <a href="/" class="navbar-logo" aria-label="DYNX Labs — Home"><img src="/assets/icons/logo.svg" alt="DYNX Labs" width="120" height="32" /></a>
+    <div class="navbar-links" role="menubar">
+      <a href="/#about" role="menuitem" data-i18n="nav.about">About Us</a>
+      <a href="/#services" role="menuitem" data-i18n="nav.services">Services</a>
+      <a href="/#method" role="menuitem" data-i18n="nav.method">Our Method</a>
+      <a href="/#stack" role="menuitem" data-i18n="nav.stack">Tech Stack</a>
+      <a href="/products" role="menuitem" data-i18n="nav.products">Products</a>
+      <a href="/research" role="menuitem" data-i18n="nav.research">Research</a>
+      <a href="/insights" role="menuitem" data-i18n="nav.insights">Insights</a>
+      <a href="/contact" role="menuitem" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="navbar-actions">
+      <div class="lang-selector glass" role="group" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a href="https://wa.me/56984657801" class="btn-nav magnetic-btn" target="_blank" rel="noopener noreferrer" data-i18n="nav.startProject">Start Project</a>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
+    </div>
+    <div id="mobile-nav" class="mobile-nav" role="menu">
+      <a href="/#about" role="menuitem" data-i18n="nav.about">About Us</a>
+      <a href="/#services" role="menuitem" data-i18n="nav.services">Services</a>
+      <a href="/#method" role="menuitem" data-i18n="nav.method">Our Method</a>
+      <a href="/#stack" role="menuitem" data-i18n="nav.stack">Tech Stack</a>
+      <a href="/products" role="menuitem" data-i18n="nav.products">Products</a>
+      <a href="/research" role="menuitem" data-i18n="nav.research">Research</a>
+      <a href="/insights" role="menuitem" data-i18n="nav.insights">Insights</a>
+      <a href="/contact" role="menuitem" data-i18n="nav.contact">Contact</a>
+    </div>
+  </div>
+</nav>
+<div class="article-topbar">
+  <div class="article-topbar__breadcrumb">
+    <a href="/insights">Insights</a>
+    <span>/</span>
+    <strong id="breadcrumb-title"></strong>
+  </div>
+  <div class="explore-wrap">
+    <button class="explore-btn" id="explore-btn" aria-expanded="false">Explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+    <div class="explore-dropdown" id="explore-dropdown">
+      <div class="explore-section"><div class="explore-section__label">Search</div><div class="explore-search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="search" id="explore-search" placeholder="Search articles…" autocomplete="off" /></div><div id="explore-search-results"></div></div>
+      <div class="explore-divider"></div>
+      <div class="explore-section"><div class="explore-section__label" id="explore-cat-label">In this category</div><div id="explore-cat-articles"></div></div>
+      <div class="explore-divider"></div>
+      <div class="explore-section"><div class="explore-section__label">Most read</div><div id="explore-mostread"></div></div>
+      <div class="explore-divider"></div>
+      <div class="explore-section"><div class="explore-section__label">Share</div>
+        <div class="explore-share-row">
+          <a id="share-linkedin" href="#" target="_blank" rel="noopener noreferrer" class="explore-share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+          <a id="share-x" href="#" target="_blank" rel="noopener noreferrer" class="explore-share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>X</a>
+          <a id="share-threads" href="#" target="_blank" rel="noopener noreferrer" class="explore-share-btn"><svg viewBox="0 0 192 192" fill="currentColor" width="13" height="13"><path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"/></svg>Threads</a>
+          <a id="share-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="explore-share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
+        </div>
+      </div>
+      <div class="explore-divider"></div>
+      <button class="explore-copy-btn" id="copy-markdown-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg><span id="copy-markdown-label">Copy as Markdown</span></button>
+    </div>
+  </div>
+</div>
+<main class="article-page" id="article-main">
+  <div class="article-hero">
+    <div class="article-hero__color" style="background:#7a3010"></div>
+    <div class="article-hero__inner">
+      <div class="article-hero__badge" id="article-badge" style="background:#7a301022;color:#7a3010;border-color:#7a301055"></div>
+      <h1 class="article-hero__title" id="article-title"></h1>
+      <p class="article-hero__summary" id="article-summary"></p>
+      <div class="article-hero__meta">
+        <span id="article-date"></span>
+        <span class="article-hero__meta-dot">·</span>
+        <span id="article-readtime"></span>
+        <button class="article-hero__copy-link" id="copy-link-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg><span id="copy-link-label">Copy link</span></button>
+      </div>
+    </div>
+  </div>
+  <hr class="article-divider" />
+  <article class="article-body" id="article-content">
+    <div class="article-lang" data-lang="en">
+<p>Every hour a client waits for a response is an hour their problem is still unsolved — and an hour they're considering your competitor. Response time isn't just a service metric. It's a revenue metric.</p>
+
+<h2>Why Response Times Are Slow</h2>
+<p>Slow response times almost never come from a lack of effort. They come from structure — or the absence of it. The three most common causes:</p>
+<ul>
+  <li><strong>Manual triage:</strong> Someone has to read every incoming message and decide who should handle it. That person is usually busy doing something else.</li>
+  <li><strong>Information silos:</strong> The agent who receives the request doesn't have the context to answer it, and needs to chase it down from another system or person.</li>
+  <li><strong>No prioritization:</strong> Urgent requests wait in the same queue as low-priority ones. Everything takes the same time regardless of importance.</li>
+</ul>
+
+<div class="article-visual">
+  <div class="article-visual__title">What the typical support flow looks like</div>
+  <div class="flow-wrap">
+    <div class="flow-node"><div class="flow-node__label">Client sends request</div><div class="flow-node__sub">Email / WhatsApp / Form</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="flow-node__label">Lands in shared inbox</div><div class="flow-node__sub">No owner</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="flow-node__label">Manual triage</div><div class="flow-node__sub">1–4 hrs later</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="flow-node__label">Assigned to agent</div><div class="flow-node__sub">Context hunt begins</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="flow-node__label">First response</div><div class="flow-node__sub">3–8 hrs average</div></div>
+  </div>
+</div>
+
+<h2>What AI Changes in This Flow</h2>
+<p>AI doesn't replace your support team. It removes the friction that slows them down. Here's what intelligent automation changes at each step:</p>
+
+<table>
+  <thead><tr><th>Step</th><th>Without AI</th><th>With AI</th></tr></thead>
+  <tbody>
+    <tr><td>Triage</td><td>Manual, delayed 1–4h</td><td>Instant classification by topic and urgency</td></tr>
+    <tr><td>Context gathering</td><td>Agent searches CRM, email, spreadsheets</td><td>Client profile surfaced automatically</td></tr>
+    <tr><td>Routine responses</td><td>Agent writes reply from scratch</td><td>AI drafts response, agent reviews</td></tr>
+    <tr><td>Routing</td><td>Manual assignment, often wrong</td><td>Routed to correct person instantly</td></tr>
+    <tr><td>First response time</td><td>3–8 hours</td><td>Under 15 minutes</td></tr>
+  </tbody>
+</table>
+
+<h2>A Real Implementation</h2>
+<p>A professional services firm was averaging 4.5 hours to first response on client requests. Requests came in via email and WhatsApp, were manually copied into a spreadsheet, and assigned by a coordinator who was part-time on this task.</p>
+<p>The implementation: an n8n workflow that captures all incoming channels, uses an LLM to classify request type and urgency, pulls the client record from their CRM, and routes to the correct agent with a pre-filled context card. Routine requests — status updates, scheduling, document requests — are handled automatically.</p>
+
+<div class="stat-row">
+  <div class="stat-box"><div class="stat-box__number">4.5h</div><div class="stat-box__label">Average response before</div></div>
+  <div class="stat-box"><div class="stat-box__number">18min</div><div class="stat-box__label">Average response after</div></div>
+  <div class="stat-box"><div class="stat-box__number">60%</div><div class="stat-box__label">Requests handled automatically</div></div>
+</div>
+
+<h2>What You Actually Need to Start</h2>
+<p>You don't need to rebuild your entire support infrastructure. The minimum viable version of this requires three things: a centralized inbox (all channels feeding into one place), a basic CRM or client database, and a workflow tool like n8n or Make. The AI layer sits on top — it reads, classifies, and routes. Your team focuses on the conversations that actually need a human.</p>
+
+<blockquote><p>The goal isn't to remove humans from support. It's to make sure humans are only handling what humans should be handling.</p></blockquote>
+
+<h2>The Hidden Cost Nobody Calculates</h2>
+<p>Every slow response compounds. A client who waits 6 hours for an answer doesn't just feel ignored in that moment — they start evaluating alternatives. Response time is one of the top three reasons clients leave service providers, and one of the cheapest problems to fix once you have the right infrastructure in place.</p>
+</div>
+    <div class="article-lang" data-lang="es">
+<p>Cada hora que un cliente espera una respuesta es una hora en que su problema sigue sin resolverse — y una hora en que está considerando a tu competidor. El tiempo de respuesta no es solo una métrica de servicio. Es una métrica de ingresos.</p>
+
+<h2>Por qué los tiempos de respuesta son lentos</h2>
+<p>Los tiempos de respuesta lentos casi nunca vienen de falta de esfuerzo. Vienen de la estructura — o de su ausencia. Las tres causas más comunes:</p>
+<ul>
+  <li><strong>Triage manual:</strong> Alguien tiene que leer cada mensaje entrante y decidir quién debe manejarlo. Esa persona generalmente está ocupada haciendo otra cosa.</li>
+  <li><strong>Silos de información:</strong> El agente que recibe la solicitud no tiene el contexto para responderla, y necesita buscarlo en otro sistema o persona.</li>
+  <li><strong>Sin priorización:</strong> Las solicitudes urgentes esperan en la misma cola que las de baja prioridad. Todo toma el mismo tiempo sin importar su importancia.</li>
+</ul>
+
+<div class="article-visual">
+  <div class="article-visual__title">Cómo luce el flujo de soporte típico</div>
+  <div class="flow-wrap">
+    <div class="flow-node"><div class="flow-node__label">Cliente envía solicitud</div><div class="flow-node__sub">Email / WhatsApp / Formulario</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="flow-node__label">Llega a bandeja compartida</div><div class="flow-node__sub">Sin responsable</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="flow-node__label">Triage manual</div><div class="flow-node__sub">1–4 hrs después</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="flow-node__label">Asignado a agente</div><div class="flow-node__sub">Empieza búsqueda de contexto</div></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-node"><div class="flow-node__label">Primera respuesta</div><div class="flow-node__sub">Promedio: 3–8 hrs</div></div>
+  </div>
+</div>
+
+<h2>Qué cambia la IA en este flujo</h2>
+<p>La IA no reemplaza a tu equipo de soporte. Elimina la fricción que los ralentiza. Esto es lo que cambia la automatización inteligente en cada paso:</p>
+
+<table>
+  <thead><tr><th>Paso</th><th>Sin IA</th><th>Con IA</th></tr></thead>
+  <tbody>
+    <tr><td>Triage</td><td>Manual, demorado 1–4h</td><td>Clasificación instantánea por tema y urgencia</td></tr>
+    <tr><td>Recopilación de contexto</td><td>Agente busca en CRM, email, planillas</td><td>Perfil del cliente surfaceado automáticamente</td></tr>
+    <tr><td>Respuestas rutinarias</td><td>Agente escribe respuesta desde cero</td><td>IA redacta borrador, agente revisa</td></tr>
+    <tr><td>Enrutamiento</td><td>Asignación manual, a menudo incorrecta</td><td>Enrutado a la persona correcta al instante</td></tr>
+    <tr><td>Tiempo primera respuesta</td><td>3–8 horas</td><td>Menos de 15 minutos</td></tr>
+  </tbody>
+</table>
+
+<h2>Una implementación real</h2>
+<p>Una firma de servicios profesionales promediaba 4.5 horas para primera respuesta en solicitudes de clientes. Las solicitudes llegaban por email y WhatsApp, se copiaban manualmente a una planilla, y las asignaba una coordinadora que dedicaba tiempo parcial a esta tarea.</p>
+<p>La implementación: un workflow en n8n que captura todos los canales entrantes, usa un LLM para clasificar el tipo de solicitud y urgencia, extrae el registro del cliente desde su CRM, y enruta al agente correcto con una tarjeta de contexto pre-completada. Las solicitudes rutinarias — actualizaciones de estado, agendamiento, solicitudes de documentos — se manejan automáticamente.</p>
+
+<div class="stat-row">
+  <div class="stat-box"><div class="stat-box__number">4.5h</div><div class="stat-box__label">Respuesta promedio antes</div></div>
+  <div class="stat-box"><div class="stat-box__number">18min</div><div class="stat-box__label">Respuesta promedio después</div></div>
+  <div class="stat-box"><div class="stat-box__number">60%</div><div class="stat-box__label">Solicitudes manejadas automáticamente</div></div>
+</div>
+
+<h2>Qué necesitas realmente para empezar</h2>
+<p>No necesitas reconstruir toda tu infraestructura de soporte. La versión mínima viable requiere tres cosas: una bandeja centralizada (todos los canales alimentando un solo lugar), un CRM o base de datos de clientes básica, y una herramienta de workflow como n8n o Make. La capa de IA se pone encima — lee, clasifica y enruta. Tu equipo se enfoca en las conversaciones que realmente necesitan un humano.</p>
+
+<blockquote><p>El objetivo no es eliminar humanos del soporte. Es asegurarse de que los humanos solo manejen lo que los humanos deben manejar.</p></blockquote>
+
+<h2>El costo oculto que nadie calcula</h2>
+<p>Cada respuesta lenta se acumula. Un cliente que espera 6 horas por una respuesta no solo se siente ignorado en ese momento — empieza a evaluar alternativas. El tiempo de respuesta es una de las tres principales razones por las que los clientes abandonan a sus proveedores de servicios, y uno de los problemas más baratos de resolver una vez que tienes la infraestructura correcta en su lugar.</p>
+</div>
+  </article>
+  <div class="article-cta"><div class="article-cta__inner">
+    <h2 class="article-cta__title" id="cta-title">Ready to automate your operations?</h2>
+    <p class="article-cta__subtitle" id="cta-subtitle">Talk to us directly on WhatsApp and get a free discovery session.</p>
+    <a href="https://wa.me/56984657801" class="article-cta__btn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span id="cta-btn-text">Start Project on WhatsApp</span></a>
+  </div></div>
+  <section class="article-related">
+    <div class="article-related__header"><h2 class="article-related__title" id="related-title">Related articles</h2><a href="/insights" class="article-related__link">View all →</a></div>
+    <div class="article-related__grid" id="related-grid"></div>
+  </section>
+</main>
+<footer role="contentinfo"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><a href="/" class="footer-logo"><img src="/assets/icons/logo.svg" alt="DYNX Labs" width="120" height="28" /></a><p class="footer-tagline" data-i18n="footer.tagline">Automate the Work. Accelerate the Business.</p><div class="footer-social" role="list"><a href="https://www.linkedin.com/company/dynxlabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="https://github.com/dynxlabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a><a href="https://x.com/dynxlabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a><a href="https://wa.me/56984657801" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a></div></div>
+<div><h3 class="footer-col-title" data-i18n="footer.companyTitle">Company</h3><ul class="footer-links"><li><a href="/#about" data-i18n="footer.about">About Us</a></li><li><a href="/#services" data-i18n="footer.services">Services</a></li><li><a href="/#method" data-i18n="footer.method">Our Method</a></li><li><a href="/#stack" data-i18n="footer.stack">Tech Stack</a></li><li><a href="/products" data-i18n="footer.products">Products</a></li><li><a href="/research" data-i18n="footer.research">Research</a></li><li><a href="/insights" data-i18n="footer.insights">Insights</a></li><li><a href="/faq" data-i18n="footer.faq">FAQ</a></li><li><a href="/contact" data-i18n="footer.contact">Contact</a></li></ul></div>
+<div><h3 class="footer-col-title" data-i18n="footer.legalTitle">Legal</h3><ul class="footer-links"><li><button data-modal-open="modal-privacy" data-i18n="footer.privacy">Privacy Policy</button></li><li><button data-modal-open="modal-terms" data-i18n="footer.terms">Terms of Service</button></li><li><a href="https://www.linkedin.com/company/dynxlabs/jobs" target="_blank" rel="noopener noreferrer" data-i18n="footer.careers">Careers</a></li></ul></div>
+</div><div class="footer-bottom"><p class="footer-copyright" data-i18n="footer.copyright">© 2026 DYNX Labs. All rights reserved.</p></div></div></footer>
+<div id="modal-privacy" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title" aria-hidden="true"><div class="modal-box"><div class="modal-header"><h2 id="modal-privacy-title" class="modal-title" data-i18n="privacy.title">Privacy Policy</h2><button class="modal-close" data-modal-close aria-label="Close">&#x2715;</button></div><p class="modal-date" data-i18n="privacy.lastUpdated"></p><div class="modal-section"><h3 class="modal-section-title" data-i18n="privacy.section1Title"></h3><p class="modal-section-content" data-i18n="privacy.section1Content"></p></div><div class="modal-section"><h3 class="modal-section-title" data-i18n="privacy.section2Title"></h3><p class="modal-section-content" data-i18n="privacy.section2Content"></p></div><div class="modal-section"><h3 class="modal-section-title" data-i18n="privacy.section3Title"></h3><p class="modal-section-content" data-i18n="privacy.section3Content"></p></div><div class="modal-section"><h3 class="modal-section-title" data-i18n="privacy.section4Title"></h3><p class="modal-section-content" data-i18n="privacy.section4Content"></p></div></div></div>
+<div id="modal-terms" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-terms-title" aria-hidden="true"><div class="modal-box"><div class="modal-header"><h2 id="modal-terms-title" class="modal-title" data-i18n="terms.title">Terms of Service</h2><button class="modal-close" data-modal-close aria-label="Close">&#x2715;</button></div><p class="modal-date" data-i18n="terms.lastUpdated"></p><div class="modal-section"><h3 class="modal-section-title" data-i18n="terms.section1Title"></h3><p class="modal-section-content" data-i18n="terms.section1Content"></p></div><div class="modal-section"><h3 class="modal-section-title" data-i18n="terms.section2Title"></h3><p class="modal-section-content" data-i18n="terms.section2Content"></p></div><div class="modal-section"><h3 class="modal-section-title" data-i18n="terms.section3Title"></h3><p class="modal-section-content" data-i18n="terms.section3Content"></p></div><div class="modal-section"><h3 class="modal-section-title" data-i18n="terms.section4Title"></h3><p class="modal-section-content" data-i18n="terms.section4Content"></p></div></div></div>
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie consent"><p class="cookie-text"><span data-i18n="cookie.text">We use essential cookies to ensure you get the best experience on our website. By continuing, you agree to our</span><button data-modal-open="modal-privacy" style="background:none;border:none;color:#fff;text-decoration:underline;cursor:pointer;font-size:inherit;padding:0;margin-left:4px;" data-i18n="cookie.policyLink">Privacy Policy</button>.</p><div class="cookie-actions"><button id="cookie-accept" class="cookie-btn cookie-btn-accept" data-i18n="cookie.accept">Accept</button><button id="cookie-decline" class="cookie-btn cookie-btn-decline" data-i18n="cookie.decline">Decline</button></div></div>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/insights-data.js"></script>
+<script src="/assets/js/insights.js"></script>
+<script>
+const ARTICLE_SLUG = 'como-reducir-tiempo-respuesta-cliente-con-ia';
+const CATEGORY_COLOR = '#7a3010';
+const CTA_TEXT = {
+  en: { title: 'Ready to automate your operations?', subtitle: 'Talk to us directly on WhatsApp and get a free discovery session.', btn: 'Start Project on WhatsApp' },
+  es: { title: '¿Listo para automatizar tus operaciones?', subtitle: 'Escríbenos directamente por WhatsApp y agenda una sesión de descubrimiento gratuita.', btn: 'Iniciar Proyecto por WhatsApp' }
+};
+document.addEventListener('DOMContentLoaded', () => {
+  const DI = window.DYNX_Insights;
+  if (!DI) return;
+  DI.incrementView(ARTICLE_SLUG);
+  let lang = localStorage.getItem('dynx_lang') || 'en';
+  const article = DI.getArticleBySlug(ARTICLE_SLUG);
+  function applyLang(l) {
+    lang = l;
+    if (article) {
+      document.getElementById('article-title').textContent    = DI.getArticleField(article, 'title');
+      document.getElementById('article-summary').textContent  = DI.getArticleField(article, 'summary');
+      document.getElementById('article-date').textContent     = DI.formatDate(article.date);
+      document.getElementById('article-readtime').textContent = article.readTime[l] || article.readTime.en;
+      document.getElementById('article-badge').textContent    = DI.getCategoryLabel(article.category);
+      document.getElementById('breadcrumb-title').textContent = DI.getArticleField(article, 'title');
+    }
+    document.querySelectorAll('.article-lang').forEach(el => el.classList.toggle('active', el.dataset.lang === l));
+    const cta = CTA_TEXT[l] || CTA_TEXT.en;
+    document.getElementById('cta-title').textContent    = cta.title;
+    document.getElementById('cta-subtitle').textContent = cta.subtitle;
+    document.getElementById('cta-btn-text').textContent = cta.btn;
+    document.getElementById('related-title').textContent = l === 'es' ? 'Artículos relacionados' : 'Related articles';
+    document.getElementById('explore-cat-label').textContent = l === 'es' ? 'En esta categoría' : 'In this category';
+    document.getElementById('copy-link-label').textContent   = l === 'es' ? 'Copiar enlace' : 'Copy link';
+    document.getElementById('copy-markdown-label').textContent = l === 'es' ? 'Copiar como Markdown' : 'Copy as Markdown';
+  }
+  applyLang(lang);
+  window.addEventListener('dynx-lang-changed', (e) => applyLang(e.detail || localStorage.getItem('dynx_lang') || 'en'));
+  const url = encodeURIComponent(window.location.href);
+  const getTitle = () => encodeURIComponent(document.getElementById('article-title').textContent);
+  document.getElementById('share-linkedin').href  = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+  document.getElementById('share-x').href         = `https://x.com/intent/tweet?url=${url}&text=${getTitle()}`;
+  document.getElementById('share-threads').href   = `https://www.threads.net/intent/post?text=${getTitle()}%20${url}`;
+  document.getElementById('share-whatsapp').href  = `https://wa.me/?text=${getTitle()}%20${url}`;
+  document.getElementById('copy-link-btn').addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const label = document.getElementById('copy-link-label');
+      label.textContent = lang === 'es' ? '¡Copiado!' : 'Copied!';
+      setTimeout(() => { label.textContent = lang === 'es' ? 'Copiar enlace' : 'Copy link'; }, 2000);
+    });
+  });
+  const exploreBtn = document.getElementById('explore-btn');
+  const exploreDropdown = document.getElementById('explore-dropdown');
+  exploreBtn.addEventListener('click', (e) => { e.stopPropagation(); const o = exploreDropdown.classList.toggle('open'); exploreBtn.classList.toggle('open', o); exploreBtn.setAttribute('aria-expanded', o); });
+  document.addEventListener('click', (e) => { if (!exploreDropdown.contains(e.target) && e.target !== exploreBtn) { exploreDropdown.classList.remove('open'); exploreBtn.classList.remove('open'); exploreBtn.setAttribute('aria-expanded', false); } });
+  const catArticles = DI.getRelated(ARTICLE_SLUG, 6);
+  document.getElementById('explore-cat-articles').innerHTML = catArticles.length === 0 ? `<p style="font-size:12px;color:rgba(255,255,255,0.3);padding:4px 8px;">${lang==='es'?'Sin más artículos.':'No more articles.'}</p>` : catArticles.map(a => `<a href="/insights/${a.slug}" class="explore-article-link"><span class="explore-article-link__dot" style="background:${CATEGORY_COLOR}"></span><span class="explore-article-link__title">${DI.getArticleField(a,'title')}</span></a>`).join('');
+  const mostRead = DI.getMostRead();
+  if (mostRead) document.getElementById('explore-mostread').innerHTML = `<a href="/insights/${mostRead.slug}" class="explore-article-link explore-article-link--mostread"><span class="explore-article-link__dot" style="background:${DI.getCategoryColor(mostRead.category)}"></span><span class="explore-article-link__title">${DI.getArticleField(mostRead,'title')}</span></a>`;
+  const exploreSearch = document.getElementById('explore-search');
+  const exploreResults = document.getElementById('explore-search-results');
+  exploreSearch.addEventListener('input', () => {
+    const q = exploreSearch.value.trim().toLowerCase();
+    if (!q) { exploreResults.innerHTML = ''; return; }
+    const results = INSIGHTS_ARTICLES.filter(a => DI.getArticleField(a,'title').toLowerCase().includes(q)).slice(0,4);
+    exploreResults.innerHTML = results.map(a => `<a href="/insights/${a.slug}" class="explore-article-link"><span class="explore-article-link__dot" style="background:${DI.getCategoryColor(a.category)}"></span><span class="explore-article-link__title">${DI.getArticleField(a,'title')}</span></a>`).join('') || `<p style="font-size:12px;color:rgba(255,255,255,0.3);padding:4px 8px;">${lang==='es'?'Sin resultados.':'No results.'}</p>`;
+  });
+  document.getElementById('copy-markdown-btn').addEventListener('click', () => {
+    const activeBlock = document.querySelector(`.article-lang[data-lang="${lang}"]`);
+    let md = `# ${document.getElementById('article-title').textContent}\n\n`;
+    if (activeBlock) activeBlock.querySelectorAll('h2,h3,p,li,blockquote').forEach(el => {
+      const t = el.tagName.toLowerCase();
+      if (t==='h2') md+=`## ${el.textContent.trim()}\n\n`;
+      else if (t==='h3') md+=`### ${el.textContent.trim()}\n\n`;
+      else if (t==='p'&&!el.closest('blockquote')) md+=`${el.textContent.trim()}\n\n`;
+      else if (t==='li') md+=`- ${el.textContent.trim()}\n`;
+      else if (t==='blockquote') md+=`> ${el.textContent.trim()}\n\n`;
+    });
+    navigator.clipboard.writeText(md).then(() => {
+      const label = document.getElementById('copy-markdown-label');
+      label.textContent = lang==='es'?'¡Copiado!':'Copied!';
+      setTimeout(()=>{label.textContent=lang==='es'?'Copiar como Markdown':'Copy as Markdown';},2000);
+    });
+  });
+  const related = DI.getRelated(ARTICLE_SLUG, 4);
+  const fallback = INSIGHTS_ARTICLES.filter(a => a.slug !== ARTICLE_SLUG && !related.find(r=>r.slug===a.slug)).slice(0, Math.max(0, 4-related.length));
+  document.getElementById('related-grid').innerHTML = [...related,...fallback].map(a => {
+    const c = DI.getCategoryColor(a.category);
+    return `<a href="/insights/${a.slug}" class="insight-card insight-card--grid"><div class="insight-card__color-bar" style="background:${c}"><div class="insight-card__color-overlay"></div></div><div class="insight-card__body"><span class="insight-card__badge" style="background:${c}22;color:${c};border-color:${c}44">${DI.getCategoryLabel(a.category)}</span><h3 class="insight-card__title">${DI.getArticleField(a,'title')}</h3><div class="insight-card__meta"><span>${DI.formatDate(a.date)}</span><span style="opacity:.4">·</span><span>${a.readTime[lang]||a.readTime.en}</span></div></div></a>`;
+  }).join('');
+  const bar = document.getElementById('reading-progress');
+  window.addEventListener('scroll', () => { const d = document.documentElement; bar.style.width = d.scrollHeight > d.clientHeight ? (d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%' : '0%'; });
+});
+</script>
+</body></html>
