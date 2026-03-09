@@ -6,7 +6,6 @@
     "stack": "Tecnologías",
     "products": "Productos",
     "research": "Research",
-    "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contacto",
     "startProject": "Iniciar Proyecto"
@@ -93,8 +92,8 @@
     "badge": "Comenzar",
     "title": "¿Listo para Automatizar tus Operaciones?",
     "subtitle": "Reduce el trabajo manual y convierte tus flujos de trabajo en sistemas escalables. Contáctanos por WhatsApp y agenda una sesión de descubrimiento gratuita.",
-    "button": "Iniciar Proyecto",
-    "responseTime": "Directo a la persona correcta"
+    "button": "Iniciar Proyecto por WhatsApp",
+    "responseTime": "Respuesta en menos de 24 horas"
   },
   "footer": {
     "tagline": "Automate the Work. Accelerate the Business.",
@@ -105,7 +104,6 @@
     "stack": "Tecnologías",
     "products": "Productos",
     "research": "Research",
-    "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contacto",
     "legalTitle": "Legal",
@@ -222,26 +220,11 @@
     "successTitle": "Mensaje recibido.",
     "successSubtitle": "Te contactaremos en menos de 24 horas. Mientras tanto, puedes escribirnos por WhatsApp."
   },
-  "research": {
-    "title": "Investigación",
-    "subtitle": "Insights sobre automatización con IA, diseño de workflows y sistemas inteligentes.",
-    "notifyBtn": "Notifícame por WhatsApp",
-    "notifyHint": "Te avisaremos cuando publiquemos nuevo contenido."
-  },
-  "products": {
-    "badge": "En Desarrollo",
-    "title": "Productos",
-    "subtitle": "Herramientas internas que estamos construyendo para automatizar las operaciones más comunes.",
-    "p1Name": "DYNX Ops",
-    "p1Desc": "Un hub de operaciones impulsado por IA que centraliza los workflows, tareas y automatizaciones de tu equipo en un solo lugar.",
-    "p2Name": "DYNX Pulse",
-    "p2Desc": "Dashboard de inteligencia de negocio en tiempo real que muestra las métricas que realmente importan para tu operación.",
-    "p3Name": "DYNX Connect",
-    "p3Desc": "Capa de integración sin código que conecta tus herramientas actuales sin escribir una sola línea de código.",
-    "notifyBtn": "Notifícame por WhatsApp",
-    "notifyHint": "Te avisaremos cuando los productos estén disponibles."
+  "insights": {
+    "subtitle": "Análisis, casos reales y guías prácticas sobre IA, automatización y sistemas inteligentes.",
+    "searchPlaceholder": "Buscar artículos…",
+    "filterSort": "Filtrar & Ordenar",
+    "filters": "Filtros",
+    "apply": "Aplicar"
   }
 }
-
-
-
