@@ -8,7 +8,7 @@
   'use strict';
 
   // ─── State ───────────────────────────────────────────
-  let currentLang       = localStorage.getItem('dynx-lang') || 'en';
+  let currentLang       = localStorage.getItem('dynx_lang') || 'en';
   let currentView       = localStorage.getItem('dynx-insights-view') || 'grid';
   let selectedCategories = [];
   let currentSort       = 'newest';
@@ -270,7 +270,7 @@
 
   // ─── Lang sync ────────────────────────────────────────
   function syncLang() {
-    const stored = localStorage.getItem('dynx-lang') || 'en';
+    const stored = localStorage.getItem('dynx_lang') || 'en';
     if (stored !== currentLang) {
       currentLang = stored;
       renderFilters();
@@ -289,8 +289,8 @@
     updateCount();
 
     // Re-render on lang change
-    window.addEventListener('dynx-lang-changed', () => {
-      currentLang = localStorage.getItem('dynx-lang') || 'en';
+    window.addEventListener('dynx-lang-changed', (e) => {
+      currentLang = e.detail || localStorage.getItem('dynx_lang') || 'en';
       renderFilters();
       renderCards();
       updateCount();
@@ -323,7 +323,7 @@
     getCategoryColor,
     formatDate,
     getArticleField,
-    getCurrentLang: () => localStorage.getItem('dynx-lang') || 'en'
+    getCurrentLang: () => localStorage.getItem('dynx_lang') || 'en'
   };
 
 })();
