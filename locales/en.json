@@ -6,7 +6,6 @@
     "stack": "Tech Stack",
     "products": "Products",
     "research": "Research",
-    "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contact",
     "startProject": "Start Project"
@@ -93,8 +92,8 @@
     "badge": "Get Started",
     "title": "Ready to Automate Your Operations?",
     "subtitle": "Reduce manual work and turn your workflows into scalable systems. Contact us via WhatsApp and get a free discovery session.",
-    "button": "Start Project",
-    "responseTime": "Straight to the right person"
+    "button": "Start Project on WhatsApp",
+    "responseTime": "Response in less than 24 hours"
   },
   "footer": {
     "tagline": "Automate the Work. Accelerate the Business.",
@@ -105,7 +104,6 @@
     "stack": "Tech Stack",
     "products": "Products",
     "research": "Research",
-    "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contact",
     "legalTitle": "Legal",
@@ -222,26 +220,11 @@
     "successTitle": "Message received.",
     "successSubtitle": "We'll be in touch within 24 hours. In the meantime, feel free to reach us on WhatsApp."
   },
-  "research": {
-    "title": "Research",
-    "subtitle": "Insights on AI automation, workflow design, and intelligent systems.",
-    "notifyBtn": "Notify me via WhatsApp",
-    "notifyHint": "We'll let you know when new content is published."
-  },
-  "products": {
-    "badge": "In Development",
-    "title": "Products",
-    "subtitle": "Internal tools we're building to automate the most common business operations.",
-    "p1Name": "DYNX Ops",
-    "p1Desc": "An AI-powered operations hub that centralizes your team's workflows, tasks, and automations in one place.",
-    "p2Name": "DYNX Pulse",
-    "p2Desc": "Real-time business intelligence dashboard that surfaces the metrics that actually matter to your operation.",
-    "p3Name": "DYNX Connect",
-    "p3Desc": "No-code integration layer that connects your existing tools without writing a single line of code.",
-    "notifyBtn": "Notify me via WhatsApp",
-    "notifyHint": "We'll let you know when products launch."
+  "insights": {
+    "subtitle": "Analysis, real cases and practical guides on AI, automation and intelligent systems.",
+    "searchPlaceholder": "Search articles…",
+    "filterSort": "Filter & Sort",
+    "filters": "Filters",
+    "apply": "Apply"
   }
 }
-
-
-
