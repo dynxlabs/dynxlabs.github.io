@@ -589,14 +589,14 @@
         </div>
         <h1 class="insights-header__title">Insights</h1>
         <p class="insights-header__subtitle">
-          Analysis, real cases and practical guides on AI, automation and intelligent systems.
+          <span data-i18n="insights.subtitle">Analysis, real cases and practical guides on AI, automation and intelligent systems.</span>
         </p>
       </div>
       <div class="insights-search-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
         </svg>
-        <input type="search" id="insights-search" placeholder="Search articles…" autocomplete="off" />
+        <input type="search" id="insights-search" placeholder="Search articles…" data-i18n="insights.searchPlaceholder" data-i18n-placeholder autocomplete="off" />
       </div>
     </div>
   </div>
@@ -608,7 +608,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/>
         </svg>
-        Filters
+        <span data-i18n="insights.filters">Filters</span>
       </button>
       <span id="insights-count"></span>
     </div>
@@ -635,7 +635,7 @@
 
     <!-- Sidebar (desktop) -->
     <aside class="insights-sidebar" aria-label="Filters">
-      <div class="insights-sidebar__title">Filter &amp; Sort</div>
+      <div class="insights-sidebar__title" data-i18n="insights.filterSort">Filter &amp; Sort</div>
       <div id="insights-filters"></div>
     </aside>
 
@@ -650,11 +650,11 @@
 <div id="filter-overlay" class="filter-overlay" aria-hidden="true"></div>
 <div id="filter-drawer" class="filter-drawer" role="dialog" aria-label="Filters">
   <div class="filter-drawer__header">
-    <span class="filter-drawer__title">Filter &amp; Sort</span>
+    <span class="filter-drawer__title" data-i18n="insights.filterSort">Filter &amp; Sort</span>
     <button id="filter-drawer-close" class="filter-drawer__close" aria-label="Close">&#x2715;</button>
   </div>
   <div id="insights-filters-mobile"></div>
-  <button id="filter-apply" class="filter-apply">Apply</button>
+  <button id="filter-apply" class="filter-apply" data-i18n="insights.apply">Apply</button>
 </div>
 
 <!-- Footer -->
