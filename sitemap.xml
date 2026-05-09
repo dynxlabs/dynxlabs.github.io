@@ -9,57 +9,9 @@
     <loc>https://dynxlabs.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/?lang=es"/>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- ═══════════════════════════════════════════
-       HOME SECTIONS (ANCHORS)
-  ═══════════════════════════════════════════ -->
-  <url>
-    <loc>https://dynxlabs.com/#services</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/#services"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/?lang=es#services"/>
-    <lastmod>2026-03-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://dynxlabs.com/#contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/#contact"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/?lang=es#contact"/>
-    <lastmod>2026-03-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://dynxlabs.com/#about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/#about"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/?lang=es#about"/>
-    <lastmod>2026-03-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://dynxlabs.com/#stack</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/#stack"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/?lang=es#stack"/>
-    <lastmod>2026-03-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://dynxlabs.com/#method</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/#method"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/?lang=es#method"/>
-    <lastmod>2026-03-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
   </url>
 
   <!-- ═══════════════════════════════════════════
@@ -69,7 +21,7 @@
     <loc>https://dynxlabs.com/contact</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/contact"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/contact?lang=es"/>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -78,7 +30,7 @@
     <loc>https://dynxlabs.com/insights</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights?lang=es"/>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -87,7 +39,7 @@
     <loc>https://dynxlabs.com/products</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/products"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/products?lang=es"/>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -96,7 +48,7 @@
     <loc>https://dynxlabs.com/research</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/research"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/research?lang=es"/>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -105,10 +57,9 @@
     <loc>https://dynxlabs.com/faq</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/faq"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/faq?lang=es"/>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
 </urlset>
-
