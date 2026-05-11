@@ -1,8 +1,8 @@
 /* ============================================================
-   DYNX Labs — Internationalization System
+   DYNX Labs — Internationalization System (FIXED)
    File: assets/js/i18n.js
-   Version: 1.0.0
-   ============================================================ */
+   Version: 1.1.0 (production-safe)
+============================================================ */
 
 const I18n = (() => {
 
@@ -12,15 +12,11 @@ const I18n = (() => {
   let currentLang = 'en';
   let translations = {};
 
-  /* ----------------------------------------------------------
-     SUPPORTED LANGUAGES
-  ---------------------------------------------------------- */
   const SUPPORTED = ['en', 'es'];
-  const DEFAULT   = 'en';
+  const DEFAULT = 'en';
 
   /* ----------------------------------------------------------
-     DETECT INITIAL LANGUAGE
-     Priority: 1) localStorage  2) default
+     DETECT LANGUAGE
   ---------------------------------------------------------- */
   function detectLanguage() {
     const stored = localStorage.getItem('dynx_lang');
@@ -29,91 +25,106 @@ const I18n = (() => {
   }
 
   /* ----------------------------------------------------------
-     LOAD JSON FILE FOR A GIVEN LANG
+     LOAD TRANSLATIONS
   ---------------------------------------------------------- */
   async function loadTranslations(lang) {
     try {
       const res = await fetch(`/locales/${lang}.json`);
-      if (!res.ok) throw new Error(`Failed to load ${lang}.json — status ${res.status}`);
+      if (!res.ok) throw new Error(`Failed ${lang}.json (${res.status})`);
       return await res.json();
     } catch (err) {
-      console.error('[I18n] Translation load error:', err);
+      console.error('[I18n] load error:', err);
       return null;
     }
   }
 
   /* ----------------------------------------------------------
-     GET NESTED VALUE FROM OBJECT USING DOT NOTATION
-     e.g. get('hero.headline1') → translations.hero.headline1
+     SAFE GET (NO KEYS LEAKING)
   ---------------------------------------------------------- */
   function get(key) {
     const parts = key.split('.');
     let value = translations;
+
     for (const part of parts) {
-      if (value === undefined || value === null) return key;
+      if (!value || typeof value !== 'object') return '';
       value = value[part];
     }
-    return value !== undefined ? String(value) : key;
+
+    if (value === undefined || value === null) return '';
+    return String(value);
   }
 
   /* ----------------------------------------------------------
-     REPLACE DYNAMIC TOKENS
-     Supports: {year}
+     TOKENS
   ---------------------------------------------------------- */
   function processTokens(str) {
+    if (typeof str !== 'string') return '';
     return str.replace('{year}', new Date().getFullYear());
   }
 
   /* ----------------------------------------------------------
-     APPLY TRANSLATIONS TO DOM
-     Reads [data-i18n="key"] attributes on every element
+     VALIDATION (prevents showing broken keys)
+  ---------------------------------------------------------- */
+  function isInvalid(value) {
+    if (!value) return true;
+    if (value.trim() === '') return true;
+    if (value.includes('.') && /^[a-zA-Z]+\.[a-zA-Z]/.test(value)) return true;
+    return false;
+  }
+
+  /* ----------------------------------------------------------
+     APPLY TO DOM
   ---------------------------------------------------------- */
   function applyToDOM() {
     const elements = document.querySelectorAll('[data-i18n]');
 
     elements.forEach(el => {
-      const key   = el.getAttribute('data-i18n');
-      const raw   = get(key);
+      const key = el.getAttribute('data-i18n');
+      if (!key) return;
+
+      const raw = get(key);
       const value = processTokens(raw);
 
-      /* aria-label targets */
+      // aria-label
       if (el.hasAttribute('data-i18n-aria')) {
-        el.setAttribute('aria-label', value);
+        if (!isInvalid(value)) {
+          el.setAttribute('aria-label', value);
+        }
         return;
       }
 
-      /* placeholder targets */
+      // placeholder
       if (el.hasAttribute('data-i18n-placeholder')) {
-        el.setAttribute('placeholder', value);
+        if (!isInvalid(value)) {
+          el.setAttribute('placeholder', value);
+        }
         return;
       }
 
-      /* default: set textContent */
-      el.textContent = value;
+      // text
+      if (!isInvalid(value)) {
+        el.textContent = value;
+      }
     });
   }
 
   /* ----------------------------------------------------------
-     UPDATE LANG BUTTON UI
+     UI HELPERS
   ---------------------------------------------------------- */
   function updateLangButtons(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
-      const isActive = btn.getAttribute('data-lang') === lang;
-      btn.classList.toggle('active', isActive);
-      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      const active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
   }
 
-  /* ----------------------------------------------------------
-     UPDATE HTML lang ATTRIBUTE
-  ---------------------------------------------------------- */
   function updateHTMLLang(lang) {
     document.documentElement.setAttribute('lang', lang);
   }
 
   /* ----------------------------------------------------------
-     PUBLIC: CHANGE LANGUAGE
-     Called by lang buttons in the navbar
+     CHANGE LANGUAGE
   ---------------------------------------------------------- */
   async function changeLanguage(lang) {
     if (!SUPPORTED.includes(lang)) return;
@@ -122,35 +133,44 @@ const I18n = (() => {
     const loaded = await loadTranslations(lang);
     if (!loaded) return;
 
-    translations  = loaded;
-    currentLang   = lang;
+    translations = loaded;
+    currentLang = lang;
 
     localStorage.setItem('dynx_lang', lang);
+
     updateHTMLLang(lang);
     updateLangButtons(lang);
     applyToDOM();
-    window.dispatchEvent(new CustomEvent('dynx-lang-changed', { detail: lang }));
+
+    window.dispatchEvent(
+      new CustomEvent('dynx-lang-changed', { detail: lang })
+    );
   }
 
   /* ----------------------------------------------------------
-     PUBLIC: INIT
-     Called once on DOMContentLoaded from main.js
+     INIT (SAFE MODE)
   ---------------------------------------------------------- */
   async function init() {
-    const lang   = detectLanguage();
+    const lang = detectLanguage();
     const loaded = await loadTranslations(lang);
 
     if (!loaded) {
-      console.warn('[I18n] Could not load translations. Falling back to static HTML text.');
+      console.warn('[I18n] fallback mode (no translations loaded)');
+      translations = {};
+      applyToDOM(); // no crash, keep static HTML
       return;
     }
 
-    translations  = loaded;
-    currentLang   = lang;
+    translations = loaded;
+    currentLang = lang;
 
     updateHTMLLang(lang);
     updateLangButtons(lang);
-    applyToDOM();
+
+    // important: wait next tick to ensure DOM is ready
+    requestAnimationFrame(() => {
+      applyToDOM();
+    });
   }
 
   /* ----------------------------------------------------------
@@ -158,6 +178,4 @@ const I18n = (() => {
   ---------------------------------------------------------- */
   return { init, changeLanguage, get };
 
-
 })();
-
