@@ -1,0 +1,14 @@
+{
+  "slug": "que-es-un-llm-y-como-puede-trabajar-en-tu-operacion",
+  "category": "inteligencia-artificial",
+  "date": "2026-03-08",
+  "readTime": { "en": "5 min read", "es": "5 min de lectura" },
+  "en": {
+    "title": "What Is an LLM and How Can It Work Inside Your Operation?",
+    "summary": "Large Language Models are the engine behind AI tools you already use. Understanding how they work helps you decide where to apply them in your business."
+  },
+  "es": {
+    "title": "Qué es un LLM y cómo puede trabajar dentro de tu operación",
+    "summary": "Los Large Language Models son el motor detrás de las herramientas de IA que ya usas. Entender cómo funcionan te ayuda a decidir dónde aplicarlos en tu negocio."
+  }
+}

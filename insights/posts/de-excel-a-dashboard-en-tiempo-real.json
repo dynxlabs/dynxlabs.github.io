@@ -1,0 +1,14 @@
+{
+  "slug": "de-excel-a-dashboard-en-tiempo-real",
+  "category": "casos-reales",
+  "date": "2026-03-08",
+  "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+  "en": {
+    "title": "From Manual Excel to Real-Time Dashboard: A Real Case",
+    "summary": "A company was spending 6 hours a week consolidating data in Excel. We automated the entire process in 3 days. Here's how."
+  },
+  "es": {
+    "title": "De Excel manual a dashboard en tiempo real: un caso real",
+    "summary": "Una empresa gastaba 6 horas semanales consolidando datos en Excel. Automatizamos todo el proceso en 3 días. Así lo hicimos."
+  }
+}
