@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-12T21:35:49.898Z",
-  "total": 8,
+  "generatedAt": "2026-05-12T21:44:45.322Z",
+  "total": 9,
   "categories": {
     "automatizacion": {
       "color": "#7a3010",
@@ -141,6 +141,23 @@
       "es": {
         "title": "Qué es un LLM y cómo puede trabajar dentro de tu operación",
         "summary": "Los Large Language Models son el motor detrás de las herramientas de IA que ya usas. Entender cómo funcionan te ayuda a decidir dónde aplicarlos en tu negocio."
+      }
+    },
+    {
+      "slug": "que-es-un-trigger-y-por-que-importa",
+      "category": "automatizacion",
+      "date": "2026-03-08",
+      "readTime": {
+        "en": "4 min read",
+        "es": "4 min de lectura"
+      },
+      "en": {
+        "title": "What Is a Trigger and Why Does It Matter So Much?",
+        "summary": "Triggers are the starting point of almost every automation. Understanding them helps you design workflows that actually run when they should."
+      },
+      "es": {
+        "title": "Qué es un trigger y por qué importa tanto",
+        "summary": "Los triggers son el punto de partida de casi toda automatización. Entenderlos te ayuda a diseñar workflows que realmente se ejecutan cuando deben."
       }
     },
     {
