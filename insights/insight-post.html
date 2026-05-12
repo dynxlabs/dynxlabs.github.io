@@ -488,9 +488,14 @@
   }
 
   function getSlugFromPath() {
-    const parts = window.location.pathname.replace(/\/$/, '').split('/');
-    return parts[parts.length - 1];
+  const stored = sessionStorage.getItem('dynx_redirect_slug');
+  if (stored) {
+    sessionStorage.removeItem('dynx_redirect_slug');
+    return stored;
   }
+  const parts = window.location.pathname.replace(/\/$/, '').split('/');
+  return parts[parts.length - 1];
+}
 
   function incrementView(slug) {
     const key = 'dynx-views-' + slug;
