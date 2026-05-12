@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-12T21:18:24.488Z",
-  "total": 7,
+  "generatedAt": "2026-05-12T21:35:49.898Z",
+  "total": 8,
   "categories": {
     "automatizacion": {
       "color": "#7a3010",
@@ -56,6 +56,23 @@
       "es": {
         "title": "Cómo los AI Agents están reemplazando tareas administrativas",
         "summary": "Los AI agents no solo responden preguntas, ejecutan tareas, toman decisiones y operan de forma autónoma. Te explicamos qué son y por dónde empezar."
+      }
+    },
+    {
+      "slug": "como-escribir-un-buen-prompt",
+      "category": "inteligencia-artificial",
+      "date": "2026-03-08",
+      "readTime": {
+        "en": "5 min read",
+        "es": "5 min de lectura"
+      },
+      "en": {
+        "title": "How to Write a Good Prompt",
+        "summary": "A good prompt gets better results from AI. Here’s a practical framework you can use to write clearer, more effective prompts."
+      },
+      "es": {
+        "title": "Cómo escribir un buen prompt",
+        "summary": "Un buen prompt mejora los resultados de la IA. Aquí tienes un framework práctico para escribir prompts más claros y efectivos."
       }
     },
     {
