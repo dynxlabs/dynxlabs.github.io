@@ -4,19 +4,33 @@
  * ═══════════════════════════════════════════════════════
  *
  * HOW TO ADD A NEW ARTICLE:
- * 1. Copy one of the objects below
- * 2. Paste it at the TOP of the `articles` array (newest first)
- * 3. Fill in all fields (both "en" and "es")
- * 4. Set a unique `slug` (URL-friendly, no spaces, no accents)
- * 5. Save and push to GitHub
+ * 1. Copy one of the objects below.
+ * 2. Paste it at the TOP of the `INSIGHTS_ARTICLES` array (newest first).
+ * 3. Fill in all fields in both English and Spanish.
+ * 4. Set a unique `slug` (URL-friendly, no spaces, no accents).
+ * 5. Save and push to GitHub.
+ *
+ * CÓMO AGREGAR UN NUEVO ARTÍCULO:
+ * 1. Copia uno de los objetos de abajo.
+ * 2. Pégalo al INICIO del array `INSIGHTS_ARTICLES` (más nuevos primero).
+ * 3. Completa todos los campos en inglés y español.
+ * 4. Define un `slug` único (amigable para URL, sin espacios ni acentos).
+ * 5. Guarda y sube los cambios a GitHub.
  *
  * CATEGORIES (predefined — contact team to add new ones):
- *   "automatizacion"        → color: #7a3010
+ *   "automatizacion"          → color: #7a3010
  *   "inteligencia-artificial" → color: #233444
- *   "casos-reales"          → color: #0d3320
- *   "workflows"             → color: #2a1040
+ *   "casos-reales"            → color: #0d3320
+ *   "workflows"               → color: #2a1040
+ *
+ * CATEGORÍAS (predefinidas — contactar al equipo para agregar nuevas):
+ *   "automatizacion"          → color: #7a3010
+ *   "inteligencia-artificial" → color: #233444
+ *   "casos-reales"            → color: #0d3320
+ *   "workflows"               → color: #2a1040
  *
  * READ TIME: estimate ~200 words per minute
+ * TIEMPO DE LECTURA: estima ~200 palabras por minuto
  * ═══════════════════════════════════════════════════════
  */
 
@@ -44,7 +58,21 @@ const INSIGHTS_CATEGORIES = {
 };
 
 const INSIGHTS_ARTICLES = [
-
+  {
+    slug: "como-escribir-un-buen-prompt",
+    category: "automatizacion",
+    date: "2026-05-12",
+    readTime: { en: "5 min read", es: "5 min de lectura" },
+    views: 0,
+    en: {
+      title: "How to Write a Good Prompt",
+      summary: "Clear prompts get better results. Learn the simple structure that helps AI understand what you need, how you want it, and in what format."
+    },
+    es: {
+      title: "Cómo escribir un buen prompt",
+      summary: "Los prompts claros generan mejores resultados. Aprende la estructura simple que ayuda a la IA a entender qué necesitas, cómo lo quieres y en qué formato."
+    }
+  },
   {
     slug: "que-es-un-trigger-y-por-que-importa",
     category: "automatizacion",
