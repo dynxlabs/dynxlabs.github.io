@@ -45,6 +45,21 @@ const INSIGHTS_CATEGORIES = {
 
 const INSIGHTS_ARTICLES = [
   {
+  slug: "como-escribir-un-buen-prompt",
+  category: "automatizacion",
+  date: "2026-05-12",
+  readTime: { en: "5 min read", es: "5 min de lectura" },
+  views: 0,
+  en: {
+    title: "How to Write a Good Prompt",
+    summary: "Clear prompts get better results. Learn the simple structure that helps AI understand what you need, how you want it, and in what format."
+  },
+  es: {
+    title: "Cómo escribir un buen prompt",
+    summary: "Los prompts claros generan mejores resultados. Aprende la estructura simple que ayuda a la IA a entender qué necesitas, cómo lo quieres y en qué formato."
+  }
+}
+  {
     slug: "que-es-un-trigger-y-por-que-importa",
     category: "automatizacion",
     date: "2026-03-08",
