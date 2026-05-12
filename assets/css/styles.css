@@ -508,7 +508,7 @@ p { line-height: 1.7; }
   padding-inline: 1.5rem;
   max-width: 72rem;
   margin-inline: auto;
-  padding-top: 6rem;
+  padding-top: 10rem;
 }
 
 .hero-logo {
@@ -1474,6 +1474,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  padding-top: 8rem;
   text-align: center;
 }
 
@@ -1503,6 +1504,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  padding-top: 8rem;
   text-align: center;
 }
 
