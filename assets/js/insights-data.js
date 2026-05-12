@@ -45,6 +45,21 @@ const INSIGHTS_CATEGORIES = {
 
 const INSIGHTS_ARTICLES = [
   {
+    slug: "que-es-un-trigger-y-por-que-importa",
+    category: "automatizacion",
+    date: "2026-03-08",
+    readTime: { en: "4 min read", es: "4 min de lectura" },
+    views: 0,
+    en: {
+      title: "What Is a Trigger and Why Does It Matter So Much?",
+      summary: "Triggers are the starting point of almost every automation. Understanding them helps you design workflows that actually run when they should."
+    },
+    es: {
+      title: "Qué es un trigger y por qué importa tanto",
+      summary: "Los triggers son el punto de partida de casi toda automatización. Entenderlos te ayuda a diseñar workflows que realmente se ejecutan cuando deben."
+    }
+  },
+  {
     slug: "diferencia-automatizacion-inteligencia-artificial",
     category: "inteligencia-artificial",
     date: "2026-03-08",
