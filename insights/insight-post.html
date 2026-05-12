@@ -488,14 +488,16 @@
   }
 
   function getSlugFromPath() {
-  const stored = sessionStorage.getItem('dynx_redirect_slug');
-  if (stored) {
-    sessionStorage.removeItem('dynx_redirect_slug');
-    return stored;
+    // 1. Query param ?slug=xxx (from generated index.html redirect)
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('slug')) return params.get('slug');
+    // 2. sessionStorage fallback
+    const stored = sessionStorage.getItem('dynx_redirect_slug');
+    if (stored) { sessionStorage.removeItem('dynx_redirect_slug'); return stored; }
+    // 3. Last path segment
+    const parts = window.location.pathname.replace(/\/$/, '').split('/');
+    return parts[parts.length - 1];
   }
-  const parts = window.location.pathname.replace(/\/$/, '').split('/');
-  return parts[parts.length - 1];
-}
 
   function incrementView(slug) {
     const key = 'dynx-views-' + slug;
