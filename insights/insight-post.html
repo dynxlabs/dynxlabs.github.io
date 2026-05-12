@@ -34,7 +34,6 @@
   <style>
     .post-page { min-height: 100vh; padding-top: 80px; }
 
-    /* ── Hero ── */
     .post-hero {
       padding: 64px 24px 48px;
       max-width: 800px;
@@ -94,7 +93,6 @@
 
     .post-hero__meta-dot { opacity: 0.4; }
 
-    /* Color bar */
     .post-color-bar {
       height: 3px;
       max-width: 800px;
@@ -103,14 +101,12 @@
       opacity: 0.7;
     }
 
-    /* ── Content ── */
     .post-content {
       max-width: 800px;
       margin: 0 auto;
       padding: 48px 24px 80px;
     }
 
-    /* Article body typography */
     .post-body {
       color: rgba(255,255,255,0.75);
       font-size: 1rem;
@@ -132,13 +128,9 @@
       margin: 2rem 0 0.75rem;
     }
 
-    .post-body p {
-      margin-bottom: 1.25rem;
-    }
+    .post-body p { margin-bottom: 1.25rem; }
 
-    .post-body ul, .post-body ol {
-      margin: 0 0 1.25rem 1.5rem;
-    }
+    .post-body ul, .post-body ol { margin: 0 0 1.25rem 1.5rem; }
 
     .post-body li { margin-bottom: 0.5rem; }
 
@@ -158,7 +150,6 @@
       font-style: italic;
     }
 
-    /* Coming soon placeholder */
     .post-placeholder {
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.07);
@@ -167,10 +158,7 @@
       text-align: center;
     }
 
-    .post-placeholder__icon {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-    }
+    .post-placeholder__icon { font-size: 2.5rem; margin-bottom: 16px; }
 
     .post-placeholder__title {
       font-size: 1.1rem;
@@ -206,7 +194,6 @@
       color: #fff;
     }
 
-    /* Divider */
     .post-divider {
       max-width: 800px;
       margin: 0 auto;
@@ -214,7 +201,6 @@
       border-top: 1px solid rgba(255,255,255,0.07);
     }
 
-    /* ── Related ── */
     .post-related {
       max-width: 800px;
       margin: 0 auto;
@@ -272,7 +258,6 @@
       color: rgba(255,255,255,0.3);
     }
 
-    /* ── Loading / Error ── */
     .post-loading, .post-error {
       display: flex;
       flex-direction: column;
@@ -488,13 +473,10 @@
   }
 
   function getSlugFromPath() {
-    // 1. Query param ?slug=xxx (from generated index.html redirect)
     const params = new URLSearchParams(window.location.search);
     if (params.get('slug')) return params.get('slug');
-    // 2. sessionStorage fallback
     const stored = sessionStorage.getItem('dynx_redirect_slug');
     if (stored) { sessionStorage.removeItem('dynx_redirect_slug'); return stored; }
-    // 3. Last path segment
     const parts = window.location.pathname.replace(/\/$/, '').split('/');
     return parts[parts.length - 1];
   }
@@ -515,24 +497,22 @@
   }
 
   function renderPost(article, manifest) {
-    const lang  = getLang();
-    const data  = article[lang] || article.en;
-    const color = getCategoryColor(article.category);
+    const lang     = getLang();
+    const data     = article[lang] || article.en;
+    const color    = getCategoryColor(article.category);
     const catLabel = getCategoryLabel(article.category, lang);
     const readTime = article.readTime[lang] || article.readTime.en;
     const dateStr  = formatDate(article.date, lang);
 
-    // Update SEO meta
-    document.getElementById('page-title').textContent        = data.title + ' — DYNX Insights';
-    document.getElementById('meta-description').content      = data.summary;
-    document.getElementById('meta-canonical').href           = `https://dynxlabs.com/insights/${article.slug}`;
-    document.getElementById('meta-alt-en').href              = `https://dynxlabs.com/insights/${article.slug}`;
-    document.getElementById('meta-alt-es').href              = `https://dynxlabs.com/insights/${article.slug}?lang=es`;
-    document.getElementById('og-title').content              = data.title;
-    document.getElementById('og-description').content        = data.summary;
-    document.getElementById('og-url').content                = `https://dynxlabs.com/insights/${article.slug}`;
+    document.getElementById('page-title').textContent   = data.title + ' — DYNX Insights';
+    document.getElementById('meta-description').content = data.summary;
+    document.getElementById('meta-canonical').href      = `https://dynxlabs.com/insights/${article.slug}`;
+    document.getElementById('meta-alt-en').href         = `https://dynxlabs.com/insights/${article.slug}`;
+    document.getElementById('meta-alt-es').href         = `https://dynxlabs.com/insights/${article.slug}?lang=es`;
+    document.getElementById('og-title').content         = data.title;
+    document.getElementById('og-description').content   = data.summary;
+    document.getElementById('og-url').content           = `https://dynxlabs.com/insights/${article.slug}`;
 
-    // Related articles (same category, exclude current)
     const related = (manifest.articles || [])
       .filter(a => a.slug !== article.slug && a.category === article.category)
       .slice(0, 3);
@@ -554,16 +534,15 @@
         </div>
       </section>` : '';
 
-    // Article body — show placeholder if no body content
-    const bodyHtml = article.body
-      ? `<div class="post-body">${article.body[lang] || article.body.en || ''}</div>`
+    const bodyHtml = data.body
+      ? `<div class="post-body">${data.body}</div>`
       : `<div class="post-placeholder">
           <div class="post-placeholder__icon">✍️</div>
           <div class="post-placeholder__title">${lang === 'es' ? 'Contenido próximamente' : 'Full article coming soon'}</div>
           <p class="post-placeholder__text">
             ${lang === 'es'
               ? 'Estamos preparando el contenido completo de este artículo. Mientras tanto, contáctanos si tienes preguntas.'
-              : 'We\'re preparing the full content for this article. In the meantime, reach out if you have questions.'}
+              : "We're preparing the full content for this article. In the meantime, reach out if you have questions."}
           </p>
           <a href="https://wa.me/56984657801" target="_blank" rel="noopener noreferrer" class="post-placeholder__cta">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -609,20 +588,28 @@
     incrementView(slug);
 
     try {
-      const res = await fetch('/insights/manifest.json');
-      if (!res.ok) throw new Error('manifest not found');
-      const manifest = await res.json();
+      const [manifestRes, postRes] = await Promise.all([
+        fetch('/insights/manifest.json'),
+        fetch(`/insights/posts/${slug}.json`)
+      ]);
+
+      if (!manifestRes.ok) throw new Error('manifest not found');
+      const manifest = await manifestRes.json();
 
       const article = (manifest.articles || []).find(a => a.slug === slug);
-
       if (!article) {
         renderError(`No article found with slug "${slug}".`);
         return;
       }
 
+      if (postRes.ok) {
+        const postData = await postRes.json();
+        if (postData.en?.body) article.en.body = postData.en.body;
+        if (postData.es?.body) article.es.body = postData.es.body;
+      }
+
       renderPost(article, manifest);
 
-      // Re-render on lang change
       window.addEventListener('dynx-lang-changed', () => {
         renderPost(article, manifest);
       });
