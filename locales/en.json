@@ -126,15 +126,15 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: January 2026",
+    "lastUpdated": "Last updated: June 2026",
     "section1Title": "Information We Collect",
-    "section1Content": "We collect data provided directly by you — name, email, and messages. We do not use tracking cookies or collect personal data without explicit consent.",
+    "section1Content": "We collect data provided directly by you through our website and WhatsApp Business channel. This includes: name, company name, email, phone number, region, city, and a description of the process or need you wish to automate. We do not use tracking cookies or collect personal data without explicit consent.",
     "section2Title": "How We Use Your Information",
-    "section2Content": "Your information is used exclusively to respond to inquiries, provide contracted services, and communicate about active projects. We do not sell or share your data with third parties under any circumstances.",
-    "section3Title": "Third-Party Services",
-    "section3Content": "Our solutions integrate AI models from world leaders — Anthropic, OpenAI, and Google — and cloud infrastructure from AWS and Google Cloud. These services operate under their respective privacy policies.",
+    "section2Content": "Your information is used exclusively to prepare personalized quotes, respond to inquiries, provide contracted services, and communicate about active projects. We do not sell or share your data with third parties under any circumstances, except the infrastructure providers described below.",
+    "section3Title": "Data Storage & Third-Party Services",
+    "section3Content": "Data collected through our digital channels is stored in Google Sheets, operated under Google LLC infrastructure, with access restricted exclusively to the DYNX Labs internal team. Our solutions also integrate AI models from Anthropic, OpenAI, and Google, and cloud infrastructure from AWS and Google Cloud. Our WhatsApp channel operates through the official Meta WhatsApp Business Platform API. These services operate under their respective privacy policies and do not use your data to train their models.",
     "section4Title": "Your Rights",
-    "section4Content": "You have the right to request access to, correction of, or deletion of your personal information at any time by contacting us directly."
+    "section4Content": "In accordance with Chilean Law No. 21,719 on Personal Data Protection, you have the right to request access to, correction of, deletion of, or opposition to the processing of your personal information at any time by contacting us directly. We will respond within the legally established timeframe."
   },
   "terms": {
     "title": "Terms of Service",
