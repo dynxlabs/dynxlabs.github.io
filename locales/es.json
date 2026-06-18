@@ -126,15 +126,15 @@
   },
   "privacy": {
     "title": "Política de Privacidad",
-    "lastUpdated": "Última actualización: Enero 2026",
+    "lastUpdated": "Última actualización: Junio 2026",
     "section1Title": "Información Recopilada",
-    "section1Content": "Recopilamos datos proporcionados directamente por ti — nombre, email y mensajes. No utilizamos cookies de rastreo ni recolectamos datos personales sin consentimiento explícito.",
+    "section1Content": "Recopilamos datos proporcionados directamente por ti a través de nuestro sitio web y canal de WhatsApp Business. Esto incluye: nombre, nombre de empresa, email, teléfono, región, comuna y descripción del proceso o necesidad que deseas automatizar. No utilizamos cookies de rastreo ni recolectamos datos personales sin consentimiento explícito.",
     "section2Title": "Uso de la Información",
-    "section2Content": "Tu información se utiliza exclusivamente para responder consultas, proveer los servicios contratados y comunicarnos sobre proyectos activos. No vendemos ni compartimos tus datos con terceros bajo ninguna circunstancia.",
-    "section3Title": "Servicios de Terceros",
-    "section3Content": "Nuestras soluciones integran modelos de IA de líderes mundiales — Anthropic, OpenAI y Google — e infraestructura cloud de AWS y Google Cloud. Estos servicios operan bajo sus respectivas políticas de privacidad.",
+    "section2Content": "Tu información se utiliza exclusivamente para preparar cotizaciones personalizadas, responder consultas, proveer los servicios contratados y comunicarnos sobre proyectos activos. No vendemos ni compartimos tus datos con terceros bajo ninguna circunstancia, salvo los proveedores de infraestructura descritos a continuación.",
+    "section3Title": "Almacenamiento y Servicios de Terceros",
+    "section3Content": "Los datos recopilados a través de nuestros canales digitales se almacenan en Google Sheets, operado bajo la infraestructura de Google LLC, con acceso restringido exclusivamente al equipo interno de DYNX Labs. Nuestras soluciones también integran modelos de IA de Anthropic, OpenAI y Google, e infraestructura cloud de AWS y Google Cloud. El canal de WhatsApp opera a través de la API oficial de Meta (WhatsApp Business Platform). Estos servicios operan bajo sus respectivas políticas de privacidad y no utilizan tus datos para entrenar sus modelos.",
     "section4Title": "Tus Derechos",
-    "section4Content": "Tienes derecho a solicitar el acceso, corrección o eliminación de tu información personal en cualquier momento contactándonos directamente."
+    "section4Content": "De acuerdo con la Ley N° 21.719 de Protección de Datos Personales de Chile, tienes derecho a solicitar en cualquier momento el acceso, corrección, eliminación u oposición al tratamiento de tu información personal contactándonos directamente. Responderemos en los plazos legalmente establecidos."
   },
   "terms": {
     "title": "Términos de Servicio",
