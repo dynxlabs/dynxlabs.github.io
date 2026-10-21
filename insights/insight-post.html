@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -484,12 +484,6 @@
     return parts[parts.length - 1];
   }
 
-  function incrementView(slug) {
-    const key = 'dynx-views-' + slug;
-    const count = parseInt(localStorage.getItem(key) || '0') + 1;
-    localStorage.setItem(key, count);
-  }
-
   function renderError(msg) {
     document.getElementById('post-main').innerHTML = `
       <div class="post-error">
@@ -515,6 +509,29 @@
     document.getElementById('og-title').content         = data.title;
     document.getElementById('og-description').content   = data.summary;
     document.getElementById('og-url').content           = `https://dynxlabs.com/insights/${article.slug}`;
+
+    document.getElementById('html-root').lang = lang === 'es' ? 'es' : 'en';
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": data.title,
+      "description": data.summary,
+      "datePublished": article.date,
+      "author": { "@type": "Organization", "name": "DYNX Labs", "url": "https://dynxlabs.com" },
+      "publisher": { "@type": "Organization", "name": "DYNX Labs", "url": "https://dynxlabs.com", "logo": { "@type": "ImageObject", "url": "https://dynxlabs.com/assets/images/og-image.png" } },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": `https://dynxlabs.com/insights/${article.slug}` },
+      "inLanguage": lang === 'es' ? 'es' : 'en',
+      "image": "https://dynxlabs.com/assets/images/og-image.png"
+    };
+    let ldScript = document.getElementById('json-ld-article');
+    if (!ldScript) {
+      ldScript = document.createElement('script');
+      ldScript.type = 'application/ld+json';
+      ldScript.id = 'json-ld-article';
+      document.head.appendChild(ldScript);
+    }
+    ldScript.textContent = JSON.stringify(jsonLd);
 
     const related = (manifest.articles || [])
       .filter(a => a.slug !== article.slug && a.category === article.category)
@@ -587,8 +604,6 @@
       window.location.href = '/insights';
       return;
     }
-
-    incrementView(slug);
 
     try {
       const [manifestRes, postRes] = await Promise.all([

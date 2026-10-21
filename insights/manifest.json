@@ -1,5 +1,5 @@
-{
-  "generatedAt": "2026-05-12T21:44:45.322Z",
+﻿{
+  "generatedAt": "2026-10-21T00:00:00.000Z",
   "total": 9,
   "categories": {
     "automatizacion": {
@@ -27,154 +27,154 @@
     {
       "slug": "5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer",
       "category": "automatizacion",
-      "date": "2026-03-08",
-      "readTime": {
-        "en": "4 min read",
-        "es": "4 min de lectura"
-      },
-      "en": {
-        "title": "5 Repetitive Tasks Your Team Shouldn't Be Doing Manually",
-        "summary": "If your team is still doing these 5 tasks by hand, you're losing time and money every day. The good news: all of them can be automated today."
-      },
-      "es": {
-        "title": "5 tareas repetitivas que tu equipo no debería estar haciendo manualmente",
-        "summary": "Si tu equipo sigue haciendo estas 5 tareas a mano, estás perdiendo tiempo y dinero cada día. La buena noticia: todas se pueden automatizar hoy mismo."
-      }
-    },
-    {
-      "slug": "ai-agents-reemplazando-tareas-administrativas",
-      "category": "inteligencia-artificial",
-      "date": "2026-03-08",
-      "readTime": {
-        "en": "6 min read",
-        "es": "6 min de lectura"
-      },
-      "en": {
-        "title": "How AI Agents Are Replacing Administrative Tasks",
-        "summary": "AI agents don't just answer questions — they execute tasks, make decisions, and operate autonomously. We explain what they are and where to start."
-      },
-      "es": {
-        "title": "Cómo los AI Agents están reemplazando tareas administrativas",
-        "summary": "Los AI agents no solo responden preguntas, ejecutan tareas, toman decisiones y operan de forma autónoma. Te explicamos qué son y por dónde empezar."
-      }
-    },
-    {
-      "slug": "como-escribir-un-buen-prompt",
-      "category": "inteligencia-artificial",
-      "date": "2026-03-08",
+      "date": "2026-01-27",
       "readTime": {
         "en": "5 min read",
         "es": "5 min de lectura"
       },
       "en": {
-        "title": "How to Write a Good Prompt",
-        "summary": "A good prompt gets better results from AI. Here’s a practical framework you can use to write clearer, more effective prompts."
+        "title": "5 Repetitive Tasks Your Team Is Still Doing Manually (And How to Automate Them Today)",
+        "summary": "Data entry, report generation, invoice processing, email follow-ups, and file organization — five tasks that cost teams 15+ hours per week. Each one can be automated in under a day with the right tools."
       },
       "es": {
-        "title": "Cómo escribir un buen prompt",
-        "summary": "Un buen prompt mejora los resultados de la IA. Aquí tienes un framework práctico para escribir prompts más claros y efectivos."
-      }
-    },
-    {
-      "slug": "como-reducir-tiempo-respuesta-cliente-con-ia",
-      "category": "automatizacion",
-      "date": "2026-03-08",
-      "readTime": {
-        "en": "6 min read",
-        "es": "6 min de lectura"
-      },
-      "en": {
-        "title": "How to Reduce Customer Response Time With AI",
-        "summary": "Every minute a customer waits is a minute your competition can act. We show you how to set up an AI system that responds 24/7."
-      },
-      "es": {
-        "title": "Cómo reducir el tiempo de respuesta al cliente con IA",
-        "summary": "Cada minuto que un cliente espera es un minuto que tu competencia puede actuar. Te mostramos cómo montar un sistema de IA que responde 24/7."
-      }
-    },
-    {
-      "slug": "de-excel-a-dashboard-en-tiempo-real",
-      "category": "casos-reales",
-      "date": "2026-03-08",
-      "readTime": {
-        "en": "7 min read",
-        "es": "7 min de lectura"
-      },
-      "en": {
-        "title": "From Manual Excel to Real-Time Dashboard: A Real Case",
-        "summary": "A company was spending 6 hours a week consolidating data in Excel. We automated the entire process in 3 days. Here's how."
-      },
-      "es": {
-        "title": "De Excel manual a dashboard en tiempo real: un caso real",
-        "summary": "Una empresa gastaba 6 horas semanales consolidando datos en Excel. Automatizamos todo el proceso en 3 días. Así lo hicimos."
-      }
-    },
-    {
-      "slug": "diferencia-automatizacion-inteligencia-artificial",
-      "category": "inteligencia-artificial",
-      "date": "2026-03-08",
-      "readTime": {
-        "en": "5 min read",
-        "es": "5 min de lectura"
-      },
-      "en": {
-        "title": "Automation vs Artificial Intelligence: What's the Difference?",
-        "summary": "Two terms everyone uses, but few know how to tell apart. Understanding the distinction can transform how you plan your operations."
-      },
-      "es": {
-        "title": "Diferencia entre automatización e inteligencia artificial",
-        "summary": "Dos términos que todos usan pero pocos saben distinguir. Entender la diferencia puede transformar cómo planeas tus operaciones."
-      }
-    },
-    {
-      "slug": "que-es-un-llm-y-como-puede-trabajar-en-tu-operacion",
-      "category": "inteligencia-artificial",
-      "date": "2026-03-08",
-      "readTime": {
-        "en": "5 min read",
-        "es": "5 min de lectura"
-      },
-      "en": {
-        "title": "What Is an LLM and How Can It Work Inside Your Operation?",
-        "summary": "Large Language Models are the engine behind AI tools you already use. Understanding how they work helps you decide where to apply them in your business."
-      },
-      "es": {
-        "title": "Qué es un LLM y cómo puede trabajar dentro de tu operación",
-        "summary": "Los Large Language Models son el motor detrás de las herramientas de IA que ya usas. Entender cómo funcionan te ayuda a decidir dónde aplicarlos en tu negocio."
+        "title": "5 tareas repetitivas que tu equipo sigue haciendo a mano (y cómo automatizarlas hoy)",
+        "summary": "Ingreso de datos, generación de reportes, procesamiento de facturas, seguimiento de emails y organización de archivos — cinco tareas que cuestan más de 15 horas semanales. Cada una se puede automatizar en menos de un día con las herramientas correctas."
       }
     },
     {
       "slug": "que-es-un-trigger-y-por-que-importa",
       "category": "automatizacion",
-      "date": "2026-03-08",
+      "date": "2026-02-10",
       "readTime": {
-        "en": "4 min read",
-        "es": "4 min de lectura"
+        "en": "5 min read",
+        "es": "5 min de lectura"
       },
       "en": {
-        "title": "What Is a Trigger and Why Does It Matter So Much?",
-        "summary": "Triggers are the starting point of almost every automation. Understanding them helps you design workflows that actually run when they should."
+        "title": "What Is a Trigger and Why Is It the Foundation of Every Automation?",
+        "summary": "Every automation starts with a trigger — the event that sets the workflow in motion. Learn how triggers work in tools like Make, Zapier, and n8n, and how to choose the right one for each use case."
       },
       "es": {
-        "title": "Qué es un trigger y por qué importa tanto",
-        "summary": "Los triggers son el punto de partida de casi toda automatización. Entenderlos te ayuda a diseñar workflows que realmente se ejecutan cuando deben."
+        "title": "Qué es un trigger y por qué es la base de toda automatización",
+        "summary": "Toda automatización comienza con un trigger — el evento que pone el workflow en marcha. Aprende cómo funcionan los triggers en herramientas como Make, Zapier y n8n, y cómo elegir el correcto para cada caso."
       }
     },
     {
       "slug": "que-es-un-workflow-y-por-que-importa",
       "category": "workflows",
-      "date": "2026-03-08",
+      "date": "2026-02-24",
       "readTime": {
-        "en": "4 min read",
-        "es": "4 min de lectura"
+        "en": "5 min read",
+        "es": "5 min de lectura"
       },
       "en": {
         "title": "What Is a Workflow and Why Does It Matter for Your Business?",
-        "summary": "Before automating anything, you need to understand what a workflow is. Here's a practical explanation with real examples."
+        "summary": "Before automating anything, you need to map the workflow behind it. This practical guide explains what workflows are, how to document them, and how to identify which ones are ready for automation."
       },
       "es": {
         "title": "Qué es un workflow y por qué importa en tu negocio",
-        "summary": "Antes de automatizar cualquier cosa, necesitas entender qué es un workflow. Aquí una explicación práctica con ejemplos reales."
+        "summary": "Antes de automatizar cualquier cosa, necesitas mapear el workflow detrás. Esta guía práctica explica qué son los workflows, cómo documentarlos y cómo identificar cuáles están listos para automatizar."
+      }
+    },
+    {
+      "slug": "diferencia-automatizacion-inteligencia-artificial",
+      "category": "inteligencia-artificial",
+      "date": "2026-03-10",
+      "readTime": {
+        "en": "5 min read",
+        "es": "5 min de lectura"
+      },
+      "en": {
+        "title": "Automation vs Artificial Intelligence: What's the Real Difference?",
+        "summary": "Automation follows rules. AI learns patterns. Confusing them leads to wrong tool choices and failed projects. This guide explains the distinction with real examples so you can plan your operations correctly."
+      },
+      "es": {
+        "title": "Automatización vs Inteligencia Artificial: cuál es la diferencia real",
+        "summary": "La automatización sigue reglas. La IA aprende patrones. Confundirlas lleva a elegir herramientas incorrectas y proyectos fallidos. Esta guía explica la diferencia con ejemplos reales para que planifiques tus operaciones correctamente."
+      }
+    },
+    {
+      "slug": "que-es-un-llm-y-como-puede-trabajar-en-tu-operacion",
+      "category": "inteligencia-artificial",
+      "date": "2026-03-17",
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
+      "en": {
+        "title": "What Is an LLM and How Can It Work Inside Your Business Operation?",
+        "summary": "Large Language Models power the AI tools you already use — from ChatGPT to code assistants. Understanding their strengths and limits helps you decide where to deploy them for real business impact."
+      },
+      "es": {
+        "title": "Qué es un LLM y cómo puede trabajar dentro de tu operación empresarial",
+        "summary": "Los Large Language Models impulsan las herramientas de IA que ya usas — desde ChatGPT hasta asistentes de código. Entender sus fortalezas y límites te ayuda a decidir dónde desplegarlos para impacto real en tu negocio."
+      }
+    },
+    {
+      "slug": "de-excel-a-dashboard-en-tiempo-real",
+      "category": "casos-reales",
+      "date": "2026-03-31",
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
+      "en": {
+        "title": "From Manual Excel to Real-Time Dashboard in 3 Days: A Case Study",
+        "summary": "A logistics company spent 6 hours every week copying data between spreadsheets. We automated the entire pipeline — ingestion, transformation, and visualization — in 3 working days. Full technical breakdown inside."
+      },
+      "es": {
+        "title": "De Excel manual a dashboard en tiempo real en 3 días: un caso real",
+        "summary": "Una empresa de logística gastaba 6 horas semanales copiando datos entre planillas. Automatizamos todo el pipeline — ingesta, transformación y visualización — en 3 días hábiles. Desglose técnico completo incluido."
+      }
+    },
+    {
+      "slug": "como-reducir-tiempo-respuesta-cliente-con-ia",
+      "category": "automatizacion",
+      "date": "2026-04-14",
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
+      "en": {
+        "title": "How to Reduce Customer Response Time From Hours to Seconds With AI",
+        "summary": "Companies using AI-powered response systems cut average reply time from 4 hours to under 30 seconds. We break down the architecture, tools, and implementation steps to build your own 24/7 support system."
+      },
+      "es": {
+        "title": "Cómo reducir el tiempo de respuesta al cliente de horas a segundos con IA",
+        "summary": "Las empresas con sistemas de respuesta con IA redujeron el tiempo promedio de 4 horas a menos de 30 segundos. Desglosamos la arquitectura, herramientas y pasos para construir tu propio sistema de soporte 24/7."
+      }
+    },
+    {
+      "slug": "ai-agents-reemplazando-tareas-administrativas",
+      "category": "inteligencia-artificial",
+      "date": "2026-04-28",
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
+      "en": {
+        "title": "How AI Agents Are Replacing Administrative Tasks in 2026",
+        "summary": "AI agents go beyond chatbots — they execute multi-step tasks, make decisions from data, and operate autonomously. Here's how companies are deploying them to eliminate 40+ hours of admin work per month."
+      },
+      "es": {
+        "title": "Cómo los AI Agents están reemplazando tareas administrativas en 2026",
+        "summary": "Los AI agents van más allá de los chatbots: ejecutan tareas de múltiples pasos, toman decisiones basadas en datos y operan de forma autónoma. Así es como las empresas los usan para eliminar más de 40 horas mensuales de trabajo administrativo."
+      }
+    },
+    {
+      "slug": "como-escribir-un-buen-prompt",
+      "category": "inteligencia-artificial",
+      "date": "2026-05-12",
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
+      "en": {
+        "title": "How to Write a Good Prompt: A Practical Framework for Better AI Results",
+        "summary": "Most AI output problems are prompt problems. Learn the 5-part structure (role, task, context, constraints, format) that turns vague requests into precise, repeatable results."
+      },
+      "es": {
+        "title": "Cómo escribir un buen prompt: framework práctico para mejores resultados con IA",
+        "summary": "La mayoría de los problemas con IA son problemas de prompt. Aprende la estructura de 5 partes (rol, tarea, contexto, restricciones, formato) que convierte peticiones vagas en resultados precisos y repetibles."
       }
     }
   ]

@@ -14,28 +14,6 @@
   let currentSort       = 'newest';
   let searchQuery       = '';
 
-  // ─── View counter (localStorage) ─────────────────────
-  function incrementView(slug) {
-    const key = 'dynx-views-' + slug;
-    const count = parseInt(localStorage.getItem(key) || '0') + 1;
-    localStorage.setItem(key, count);
-    return count;
-  }
-
-  function getViews(slug) {
-    return parseInt(localStorage.getItem('dynx-views-' + slug) || '0');
-  }
-
-  function getMostRead() {
-    let top = null;
-    let topViews = -1;
-    INSIGHTS_ARTICLES.forEach(a => {
-      const v = getViews(a.slug);
-      if (v > topViews) { topViews = v; top = a; }
-    });
-    return top;
-  }
-
   // ─── Helpers ──────────────────────────────────────────
   function formatDate(dateStr) {
     const d = new Date(dateStr + 'T00:00:00');
@@ -115,7 +93,7 @@
         <a href="/insights/${article.slug}" 
            class="insight-card ${isGrid ? 'insight-card--grid' : 'insight-card--list'}"
            data-slug="${article.slug}"
-           onclick="if(typeof incrementView==='function') incrementView('${article.slug}')">
+          >
           <div class="insight-card__color-bar" style="background:${color}">
             <div class="insight-card__color-overlay"></div>
           </div>
@@ -212,13 +190,18 @@
     });
   }
 
-  // ─── Search ───────────────────────────────────────────
+  // ─── Search (debounced) ────────────────────────────────
   function initSearch() {
     const input = document.getElementById('insights-search');
     if (!input) return;
+    let debounceTimer;
     input.addEventListener('input', () => {
-      searchQuery = input.value;
-      renderCards();
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        searchQuery = input.value;
+        renderCards();
+        updateCount();
+      }, 200);
     });
   }
 
@@ -268,17 +251,6 @@
       : `${n} article${n !== 1 ? 's' : ''}`;
   }
 
-  // ─── Lang sync ────────────────────────────────────────
-  function syncLang() {
-    const stored = localStorage.getItem('dynx_lang') || 'en';
-    if (stored !== currentLang) {
-      currentLang = stored;
-      renderFilters();
-      renderCards();
-      updateCount();
-    }
-  }
-
   // ─── Init ─────────────────────────────────────────────
   function init() {
     renderFilters();
@@ -288,16 +260,12 @@
     renderCards();
     updateCount();
 
-    // Re-render on lang change
     window.addEventListener('dynx-lang-changed', (e) => {
       currentLang = e.detail || localStorage.getItem('dynx_lang') || 'en';
       renderFilters();
       renderCards();
       updateCount();
     });
-
-    // Observe lang button clicks as fallback
-    setInterval(syncLang, 500);
   }
 
   if (document.readyState === 'loading') {
@@ -316,9 +284,6 @@
         .filter(a => a.slug !== slug && a.category === current.category)
         .slice(0, limit);
     },
-    getMostRead,
-    incrementView,
-    getViews,
     getCategoryLabel,
     getCategoryColor,
     formatDate,
