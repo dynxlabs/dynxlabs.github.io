@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:00:00.000Z",
+  "generatedAt": "2026-10-22T23:50:28.952Z",
   "total": 29,
   "categories": {
     "automatizacion": {
@@ -28,280 +28,340 @@
       "slug": "multimodal-ai-texto-imagen-voz",
       "category": "inteligencia-artificial",
       "date": "2027-07-20",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "Multimodal AI: When Text, Image, and Voice Converge",
-        "summary": "Multimodal AI processes text, images, audio, and video in a single model. Real enterprise applications in customer service, manufacturing, retail, and healthcare."
+        "title": "Multimodal AI: When Your AI Understands Text, Image, and Voice",
+        "summary": "Most business information is not text — it is photos, voice notes, scanned documents, and video calls. Multimodal AI processes all of these together, eliminating the manual conversions your team does dozens of times per day."
       },
       "es": {
-        "title": "IA multimodal: cuando texto, imagen y voz convergen",
-        "summary": "La IA multimodal procesa texto, imagen, audio y video en un solo modelo. Aplicaciones empresariales reales en atención al cliente, manufactura, retail y salud."
+        "title": "Multimodal AI: cuando tu IA entiende texto, imagen y voz",
+        "summary": "La mayor parte de la información empresarial no es texto — son fotos, notas de voz, documentos escaneados y videollamadas. La IA multimodal procesa todo eso junto, eliminando las conversiones manuales que tu equipo hace docenas de veces al día."
       }
     },
     {
       "slug": "slms-vs-llms-modelo-pequeno-mejor",
       "category": "inteligencia-artificial",
       "date": "2027-07-06",
-      "readTime": { "en": "6 min read", "es": "6 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "SLMs vs LLMs: When a Smaller Model Is Better",
-        "summary": "You don't always need GPT-4. Small Language Models are faster, cheaper, and more private. When to choose an SLM, when an LLM, and how to combine them."
+        "title": "SLMs vs LLMs: When a Smaller Model Is the Better Choice",
+        "summary": "The assumption that bigger AI models are always better is costing companies money, speed, and privacy. Small Language Models handle 80% of business tasks at a fraction of the cost — if you know when to use them."
       },
       "es": {
-        "title": "SLMs vs LLMs: cuándo un modelo pequeño es mejor",
-        "summary": "No siempre necesitas el modelo más grande. Los Small Language Models son más rápidos, baratos y privados. Cuándo elegir un SLM, cuándo un LLM, y cómo combinarlos."
+        "title": "SLMs vs LLMs: cuándo un modelo más pequeño es la mejor opción",
+        "summary": "La suposición de que los modelos de IA más grandes siempre son mejores le está costando a las empresas dinero, velocidad y privacidad. Los Small Language Models resuelven el 80% de las tareas de negocio a una fracción del costo."
       }
     },
     {
       "slug": "ciberseguridad-e-ia-amenazas-defensas",
       "category": "inteligencia-artificial",
       "date": "2027-06-22",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "7 min read",
+        "es": "7 min de lectura"
+      },
       "en": {
-        "title": "Cybersecurity and AI: New Threats, New Defenses",
-        "summary": "AI empowers both attackers and defenders. Generative phishing, deepfakes, and adaptive malware vs. anomaly detection, automated response, and zero trust."
+        "title": "Cybersecurity and AI: Threats and Defenses in 2026",
+        "summary": "AI is making cyberattacks more personalized, scalable, and harder to detect — while simultaneously powering the best defenses. Understanding both sides of this arms race is essential for any business operating online."
       },
       "es": {
-        "title": "Ciberseguridad e IA: nuevas amenazas, nuevas defensas",
-        "summary": "La IA potencia tanto a atacantes como a defensores. Phishing generativo, deepfakes y malware adaptativo vs. detección de anomalías, respuesta automatizada y zero trust."
+        "title": "Ciberseguridad e IA: amenazas y defensas en 2026",
+        "summary": "La IA hace que los ciberataques sean más personalizados, escalables y difíciles de detectar — mientras al mismo tiempo potencia las mejores defensas. Entender ambos lados de esta carrera armamentista es esencial para cualquier empresa."
       }
     },
     {
       "slug": "ai-governance-reglas-antes-de-escalar",
       "category": "inteligencia-artificial",
       "date": "2027-06-08",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "7 min read",
+        "es": "7 min de lectura"
+      },
       "en": {
-        "title": "AI Governance: Why You Need Rules Before You Scale",
-        "summary": "Scaling AI without governance is accumulating risk. A practical AI governance framework for companies: policies, roles, auditing, bias mitigation, and regulatory compliance."
+        "title": "AI Governance: Setting the Rules Before You Scale",
+        "summary": "Most companies adopt AI tools faster than they write the rules for using them. That gap between adoption and governance is where the biggest risks hide — data leaks, compliance violations, and decisions nobody can explain."
       },
       "es": {
-        "title": "AI governance: por qué necesitas reglas antes de escalar",
-        "summary": "Sin governance, escalar IA es acumular riesgo. Marco práctico de AI governance para empresas: políticas, roles, auditoría, sesgo y cumplimiento regulatorio."
+        "title": "AI governance: establecer las reglas antes de escalar",
+        "summary": "La mayoría de las empresas adoptan herramientas de IA más rápido de lo que escriben las reglas para usarlas. Esa brecha entre adopción y gobernanza es donde se esconden los mayores riesgos — filtraciones de datos, violaciones de cumplimiento y decisiones que nadie puede explicar."
       }
     },
     {
       "slug": "ia-para-rrhh-screening-onboarding",
       "category": "casos-reales",
       "date": "2027-05-25",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "AI for HR: From CV Screening to Automated Onboarding",
-        "summary": "AI is transforming human resources: intelligent CV filtering, candidate matching, personalized onboarding, and turnover analysis. Tools and ethical considerations."
+        "title": "AI for HR: Ethical and Practical Applications in Screening, Onboarding, and Engagement",
+        "summary": "AI can transform HR operations — from screening resumes to predicting attrition — but only when deployed with clear ethical guardrails. Here's where it adds real value and where human judgment must stay in the loop."
       },
       "es": {
-        "title": "IA para RRHH: del screening de CVs al onboarding automatizado",
-        "summary": "La IA transforma recursos humanos: filtrado inteligente de CVs, matching de candidatos, onboarding personalizado y análisis de rotación. Herramientas y ética."
+        "title": "IA para RRHH: aplicaciones éticas y prácticas en screening, onboarding y engagement",
+        "summary": "La IA puede transformar las operaciones de RRHH — desde filtrar currículums hasta predecir rotación — pero solo con límites éticos claros. Aquí es donde agrega valor real y dónde el criterio humano debe mantenerse."
       }
     },
     {
       "slug": "knowledge-management-con-ia",
       "category": "inteligencia-artificial",
       "date": "2027-05-11",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "Knowledge Management With AI: Capture What Your Team Knows Before They Leave",
-        "summary": "Critical knowledge lives in people's heads, not in documents. AI can capture it, organize it, and make it accessible. Strategies and tools."
+        "title": "Knowledge Management With AI: Help Your Team Find What They Need",
+        "summary": "The information exists — in Slack threads, Google Docs, email chains, and people's heads. AI-powered knowledge management makes it findable. Here's how semantic search, retrieval-augmented generation, and internal assistants actually work."
       },
       "es": {
-        "title": "Knowledge management con IA: captura lo que tu equipo sabe antes de que se vaya",
-        "summary": "El conocimiento crítico vive en la cabeza de personas, no en documentos. La IA puede capturarlo, organizarlo y hacerlo accesible. Estrategias y herramientas."
+        "title": "Knowledge management con IA: que tu equipo encuentre lo que necesita",
+        "summary": "La información existe — en hilos de Slack, Google Docs, cadenas de email y en la cabeza de las personas. La gestión de conocimiento con IA la hace encontrable. Así funcionan la búsqueda semántica, la generación con recuperación y los asistentes internos."
       }
     },
     {
       "slug": "procesamiento-inteligente-documentos",
       "category": "automatizacion",
       "date": "2027-04-27",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "Intelligent Document Processing: From PDF to Actionable Data",
-        "summary": "Invoices, contracts, forms: AI extracts data from unstructured documents using OCR, NLP, and LLMs. Architecture, tools, and ROI of intelligent processing."
+        "title": "Intelligent Document Processing: Extracting Data From Invoices, Contracts, and Forms Automatically",
+        "summary": "Your team is still copying numbers from PDFs into spreadsheets. Intelligent Document Processing uses AI to extract, classify, and validate data from any document — invoices, contracts, forms. Here's how it works and when it's worth it."
       },
       "es": {
-        "title": "Procesamiento inteligente de documentos: de PDF a datos accionables",
-        "summary": "Facturas, contratos, formularios: la IA extrae datos de documentos no estructurados con OCR, NLP y LLMs. Arquitectura, herramientas y ROI del procesamiento inteligente."
+        "title": "Procesamiento inteligente de documentos: extraer datos de facturas, contratos y formularios automáticamente",
+        "summary": "Tu equipo sigue copiando números de PDFs a planillas. El procesamiento inteligente de documentos usa IA para extraer, clasificar y validar datos de cualquier documento — facturas, contratos, formularios. Así funciona y cuándo vale la pena."
       }
     },
     {
       "slug": "ia-en-ventas-b2b-lead-scoring-cierre",
       "category": "casos-reales",
       "date": "2027-04-13",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "7 min read",
+        "es": "7 min de lectura"
+      },
       "en": {
-        "title": "AI in B2B Sales: From Lead Scoring to Predictive Closing",
-        "summary": "AI transforms B2B sales: automated lead scoring, close prediction, outreach personalization, and pipeline analytics. Real cases and tools."
+        "title": "AI in B2B Sales: From Lead Scoring to AI-Assisted Closing",
+        "summary": "AI is reshaping B2B sales from first touch to signed contract. Learn how machine learning scores leads, AI assistants coach reps in real time, and CRM intelligence predicts which deals will close — with concrete metrics."
       },
       "es": {
-        "title": "IA en ventas B2B: del lead scoring al cierre predictivo",
-        "summary": "La IA transforma las ventas B2B: lead scoring automatizado, predicción de cierre, personalización de outreach y análisis de pipeline. Casos y herramientas reales."
+        "title": "IA en ventas B2B: del lead scoring al cierre asistido por IA",
+        "summary": "La IA está transformando las ventas B2B desde el primer contacto hasta el contrato firmado. Cómo el machine learning califica leads, los asistentes de IA asesoran vendedores en tiempo real y la inteligencia del CRM predice qué negocios van a cerrar — con métricas concretas."
       }
     },
     {
       "slug": "low-code-no-code-automatizacion-sin-it",
       "category": "automatizacion",
       "date": "2027-03-30",
-      "readTime": { "en": "6 min read", "es": "6 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "Low-Code and No-Code: Automation Without Depending on IT",
-        "summary": "Make, Zapier, Power Automate, n8n: low-code and no-code platforms let you automate without programming. When to use them, when not to, and how to choose."
+        "title": "Low-Code and No-Code: Democratizing Automation Without Depending on IT",
+        "summary": "Business teams are building their own automations — and IT can't keep up with the demand anyway. Here's how no-code and low-code platforms work, when each makes sense, and how to enable teams without creating chaos."
       },
       "es": {
-        "title": "Low-code y no-code: automatización sin depender de IT",
-        "summary": "Make, Zapier, Power Automate, n8n: las plataformas low-code y no-code permiten automatizar sin programar. Cuándo usarlas, cuándo no, y cómo elegir la correcta."
+        "title": "Low-code y no-code: democratizar la automatización sin depender de IT",
+        "summary": "Los equipos de negocio están construyendo sus propias automatizaciones — y de todas formas IT no da abasto con la demanda. Así funcionan las plataformas no-code y low-code, cuándo usar cada una, y cómo habilitar equipos sin generar caos."
       }
     },
     {
       "slug": "por-que-proyectos-ia-no-pasan-del-piloto",
       "category": "inteligencia-artificial",
       "date": "2027-03-16",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "Why 85% of AI Projects Never Make It Past the Pilot",
-        "summary": "Most AI pilots die before reaching production. The 7 most common mistakes and how to avoid them to scale your artificial intelligence project."
+        "title": "Why 70% of AI Projects Never Make It Past the Pilot",
+        "summary": "The demo impressed everyone. The pilot showed promise. Then nothing happened. Most AI initiatives die in the gap between proof-of-concept and production. Here are the five reasons why — and how to build pilots that actually ship."
       },
       "es": {
-        "title": "Por qué el 85% de los proyectos de IA no pasan del piloto",
-        "summary": "La mayoría de los pilotos de IA mueren antes de llegar a producción. Los 7 errores más comunes y cómo evitarlos para escalar tu proyecto de inteligencia artificial."
+        "title": "Por qué el 70% de los proyectos de IA no pasan del piloto",
+        "summary": "La demo impresionó a todos. El piloto mostró resultados prometedores. Después no pasó nada. La mayoría de las iniciativas de IA mueren entre la prueba de concepto y la producción. Estas son las cinco razones — y cómo diseñar pilotos que realmente lleguen a implementarse."
       }
     },
     {
       "slug": "quick-wins-por-donde-empezar-a-automatizar",
       "category": "automatizacion",
       "date": "2027-03-02",
-      "readTime": { "en": "6 min read", "es": "6 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
         "title": "The Quick Wins Framework: Where to Start Automating",
-        "summary": "The most common mistake: starting by automating the most complex process. Learn the impact-effort matrix and 5 questions to identify quick wins in your company."
+        "summary": "The most common automation mistake is starting with the most complex process. The Quick Wins framework helps you identify and prioritize the low-effort, high-impact tasks that build momentum and prove value fast."
       },
       "es": {
         "title": "El framework Quick Wins: por dónde empezar a automatizar",
-        "summary": "El error más común: empezar automatizando el proceso más complejo. Aprende la matriz impacto-esfuerzo y las 5 preguntas para identificar quick wins en tu empresa."
+        "summary": "El error más común en automatización es empezar por el proceso más complejo. El framework Quick Wins ayuda a identificar y priorizar las tareas de bajo esfuerzo y alto impacto que generan momentum y demuestran valor rápido."
       }
     },
     {
       "slug": "como-medir-roi-automatizacion",
       "category": "automatizacion",
       "date": "2027-02-16",
-      "readTime": { "en": "6 min read", "es": "6 min de lectura" },
+      "readTime": {
+        "en": "7 min read",
+        "es": "7 min de lectura"
+      },
       "en": {
         "title": "How to Measure the Real ROI of an Automation Project",
-        "summary": "'We saved time' is not enough — you need numbers. The complete ROI formula for automation, with hidden costs, invisible benefits, and a real example."
+        "summary": "\"We saved time\" isn't a business case. To justify automation investments and prioritize the next project, you need hard numbers. Here's the formula, the hidden costs, the hidden benefits, and a real calculation example."
       },
       "es": {
         "title": "Cómo medir el ROI real de un proyecto de automatización",
-        "summary": "'Ahorramos tiempo' no alcanza — necesitas números. La fórmula completa de ROI para automatización, con costos ocultos, beneficios invisibles y un ejemplo real."
+        "summary": "\"Ahorramos tiempo\" no es un caso de negocio. Para justificar inversiones en automatización y priorizar el siguiente proyecto, se necesitan números concretos. La fórmula, los costos ocultos, los beneficios ocultos y un ejemplo real de cálculo."
       }
     },
     {
       "slug": "que-es-un-pipeline-de-datos",
       "category": "automatizacion",
       "date": "2027-02-02",
-      "readTime": { "en": "6 min read", "es": "6 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "What Is a Data Pipeline and Why Does Your Team Need One",
-        "summary": "If someone on your team builds a weekly report by copying data from 5 sources, they already have a manual pipeline. Learn how to formalize and automate it."
+        "title": "What Is a Data Pipeline and Why Does Your Team Need One?",
+        "summary": "If someone on your team spends hours assembling a report from multiple sources with the same structure every week, that's not a report — it's a manual data pipeline waiting to be automated. Here's what pipelines are and how to build yours."
       },
       "es": {
         "title": "Qué es un pipeline de datos y por qué tu equipo necesita uno",
-        "summary": "Si alguien en tu equipo arma un reporte semanal copiando datos de 5 fuentes, ya tiene un pipeline manual. Aprende cómo formalizarlo y automatizarlo."
+        "summary": "Si alguien en tu equipo pasa horas armando un reporte con la misma estructura cada semana a partir de múltiples fuentes, eso no es un reporte — es un pipeline de datos manual esperando ser automatizado."
       }
     },
     {
       "slug": "de-silos-a-flujo-unico-integracion-datos",
       "category": "automatizacion",
       "date": "2027-01-19",
-      "readTime": { "en": "6 min read", "es": "6 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
         "title": "From Data Silos to a Single Flow: Integration for Non-Technical Teams",
-        "summary": "Data ends up in silos because each team buys different tools. Learn how to integrate them without code using Make, Zapier, and n8n with practical patterns."
+        "summary": "Every department buys its own tools, and soon your company's data lives in a dozen disconnected systems. Integration doesn't require engineering — it requires understanding where data flows and where it breaks. Here's how non-technical teams can fix it."
       },
       "es": {
         "title": "De silos de datos a un solo flujo: integración para equipos no técnicos",
-        "summary": "Los datos terminan en silos porque cada equipo compra herramientas distintas. Aprende cómo integrarlos sin código usando Make, Zapier y n8n con patrones prácticos."
+        "summary": "Cada departamento compra sus propias herramientas, y pronto los datos de tu empresa viven en una docena de sistemas desconectados. Integrarlos no requiere ingeniería — requiere entender dónde fluyen los datos y dónde se quiebran."
       }
     },
     {
       "slug": "rag-empresarial-conecta-ia-a-tu-informacion",
       "category": "inteligencia-artificial",
       "date": "2027-01-05",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "7 min read",
+        "es": "7 min de lectura"
+      },
       "en": {
-        "title": "Enterprise RAG: How to Connect Your AI to Your Own Data",
-        "summary": "LLMs don't know your company's data. RAG solves that by connecting your AI to internal documents, knowledge bases, and proprietary systems. Architecture and use cases."
+        "title": "RAG for Business: How to Connect Your AI to Your Own Information",
+        "summary": "Your AI assistant doesn't know your company's data — and that's why its answers feel generic. RAG (Retrieval-Augmented Generation) bridges the gap by connecting LLMs to your own documents, policies, and knowledge bases. Here's how it works and how to implement it."
       },
       "es": {
         "title": "RAG empresarial: cómo conectar tu IA a tu propia información",
-        "summary": "Los LLMs no conocen los datos de tu empresa. RAG resuelve eso conectando tu IA a documentos internos, bases de conocimiento y sistemas propios. Arquitectura y casos de uso."
+        "summary": "Tu asistente de IA no conoce los datos de tu empresa — por eso sus respuestas se sienten genéricas. RAG (Retrieval-Augmented Generation) conecta los LLMs a tus propios documentos, políticas y bases de conocimiento. Así funciona y así se implementa."
       }
     },
     {
       "slug": "data-quality-base-de-toda-ia",
       "category": "inteligencia-artificial",
       "date": "2026-12-22",
-      "readTime": { "en": "6 min read", "es": "6 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "Data Quality: The Foundation of Every AI Project",
-        "summary": "Bad data in, bad decisions out. The 5 dimensions of data quality, how to audit your data, and the maintenance practices that keep AI models reliable."
+        "title": "Your AI Is Only as Good as Your Data: A Practical Guide to Data Quality",
+        "summary": "Most AI projects fail because of bad data, not bad models. Learn the five dimensions of data quality — accuracy, completeness, consistency, timeliness, and validity — and how to audit and fix your data before starting any AI initiative."
       },
       "es": {
-        "title": "Data quality: la base de todo proyecto de IA",
-        "summary": "Datos malos, decisiones malas. Las 5 dimensiones de calidad de datos, cómo auditar tus datos y las prácticas de mantenimiento que mantienen los modelos de IA confiables."
+        "title": "Tu IA es tan buena como tus datos: guía práctica de data quality",
+        "summary": "La mayoría de los proyectos de IA fracasan por datos malos, no por modelos malos. Conoce las cinco dimensiones de la calidad de datos — precisión, completitud, consistencia, oportunidad y validez — y cómo auditar y corregir tus datos antes de cualquier iniciativa de IA."
       }
     },
     {
       "slug": "human-in-the-loop-autonomia-ia",
       "category": "inteligencia-artificial",
       "date": "2026-12-08",
-      "readTime": { "en": "6 min read", "es": "6 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "Human-in-the-Loop: How Much Autonomy Should You Give AI?",
-        "summary": "The 4-level autonomy spectrum for AI decisions. A framework based on reversibility, cost, regulation, and confidence to decide when humans must stay in the loop."
+        "title": "Human-in-the-Loop: When to Let AI Decide and When to Keep Control",
+        "summary": "Not every AI decision should be autonomous. Learn a practical framework — based on reversibility, error cost, and confidence thresholds — to decide where AI runs freely and where humans stay in the loop."
       },
       "es": {
-        "title": "Human-in-the-loop: cuánta autonomía darle a la IA",
-        "summary": "El espectro de 4 niveles de autonomía para decisiones de IA. Un framework basado en reversibilidad, costo, regulación y confianza para decidir cuándo los humanos deben quedarse en el loop."
+        "title": "Human-in-the-loop: cuándo dejar que la IA decida y cuándo mantener el control",
+        "summary": "No toda decisión de IA debería ser autónoma. Aprende un framework práctico — basado en reversibilidad, costo de error y umbrales de confianza — para decidir dónde la IA opera libremente y dónde los humanos se mantienen en el ciclo."
       }
     },
     {
       "slug": "ai-agents-y-apis-capa-de-ejecucion",
       "category": "inteligencia-artificial",
       "date": "2026-11-24",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "6 min read",
+        "es": "6 min de lectura"
+      },
       "en": {
-        "title": "AI Agents and APIs: The Execution Layer That Makes Intelligence Useful",
-        "summary": "An AI agent without APIs is just a chatbot. Learn how tool calling works, integration patterns with Make/Zapier/MCP, and how to design APIs that agents can use."
+        "title": "AI Agents + APIs: The Execution Layer Your Automation Is Missing",
+        "summary": "AI agents become powerful when they can call APIs and take real action in your systems. Learn the architecture behind tool-calling agents, see integration patterns with Make, Zapier, and custom code, and understand why API design is critical for reliability."
       },
       "es": {
-        "title": "AI agents y APIs: la capa de ejecución que hace útil a la inteligencia",
-        "summary": "Un AI agent sin APIs es solo un chatbot. Cómo funciona el tool calling, patrones de integración con Make/Zapier/MCP, y cómo diseñar APIs que los agentes puedan usar."
+        "title": "AI Agents + APIs: la capa de ejecución que le falta a tu automatización",
+        "summary": "Los AI agents se vuelven poderosos cuando pueden llamar APIs y ejecutar acciones reales en tus sistemas. Conoce la arquitectura de agentes con tool-calling, patrones de integración con Make, Zapier y código propio, y por qué el diseño de APIs es clave para la confiabilidad."
       }
     },
     {
       "slug": "sistemas-multi-agente-orquestacion",
       "category": "inteligencia-artificial",
       "date": "2026-11-10",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "7 min read",
+        "es": "7 min de lectura"
+      },
       "en": {
-        "title": "Multi-Agent Systems: When One AI Isn't Enough",
-        "summary": "Sequential, parallel, and hierarchical orchestration patterns for AI agents. How to build a content pipeline with specialized agents that work together."
+        "title": "Multi-Agent Systems: When One Agent Isn't Enough",
+        "summary": "Complex business processes need more than a single AI agent. Learn how multi-agent orchestration works, when to use it, and the patterns — sequential, parallel, hierarchical — that keep specialized agents working together."
       },
       "es": {
-        "title": "Sistemas multi-agente: cuando una sola IA no alcanza",
-        "summary": "Patrones de orquestación secuencial, paralela y jerárquica para AI agents. Cómo construir un pipeline de contenido con agentes especializados que trabajan juntos."
+        "title": "Sistemas multi-agente: cuando un solo agente no basta",
+        "summary": "Los procesos de negocio complejos necesitan más de un AI agent. Aprende cómo funciona la orquestación multi-agente, cuándo usarla y los patrones — secuencial, paralelo, jerárquico — que mantienen a los agentes especializados trabajando juntos."
       }
     },
     {
       "slug": "agentic-ai-de-asistentes-a-ejecutores",
       "category": "inteligencia-artificial",
       "date": "2026-10-27",
-      "readTime": { "en": "7 min read", "es": "7 min de lectura" },
+      "readTime": {
+        "en": "7 min read",
+        "es": "7 min de lectura"
+      },
       "en": {
         "title": "Agentic AI: From Assistants to Autonomous Executors",
-        "summary": "The evolution from chatbots to copilots to autonomous agents. How agentic AI uses tool calling to execute real tasks, and how to evaluate if your company is ready."
+        "summary": "AI agents don't just suggest — they act. Learn the difference between chatbots, copilots, and autonomous agents, see real examples of multi-step execution, and evaluate whether your team is ready to deploy them."
       },
       "es": {
         "title": "Agentic AI: de asistentes a ejecutores autónomos",
-        "summary": "La evolución de chatbots a copilots a agentes autónomos. Cómo la IA agéntica usa tool calling para ejecutar tareas reales, y cómo evaluar si tu empresa está lista."
+        "summary": "Los AI agents no solo sugieren — actúan. Aprende la diferencia entre chatbots, copilots y agentes autónomos, conoce ejemplos reales de ejecución multi-paso y evalúa si tu equipo está listo para implementarlos."
       }
     },
     {
