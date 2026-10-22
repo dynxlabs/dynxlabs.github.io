@@ -9,7 +9,7 @@
     <loc>https://dynxlabs.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/?lang=es"/>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,7 +21,7 @@
     <loc>https://dynxlabs.com/contact</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/contact"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/contact?lang=es"/>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -30,7 +30,7 @@
     <loc>https://dynxlabs.com/insights</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights?lang=es"/>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -39,7 +39,7 @@
     <loc>https://dynxlabs.com/products</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/products"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/products?lang=es"/>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -48,7 +48,7 @@
     <loc>https://dynxlabs.com/research</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/research"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/research?lang=es"/>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -57,66 +57,274 @@
     <loc>https://dynxlabs.com/faq</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/faq"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/faq?lang=es"/>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- ═══════════════════════════════════════════
-       INSIGHTS
+       INSIGHTS — Existing articles
   ═══════════════════════════════════════════ -->
   <url>
-    <loc>https://dynxlabs.com/insights/automatizacion-inteligente-para-pymes/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/automatizacion-inteligente-para-pymes/"/>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dynxlabs.com/insights/como-implementar-ia-sin-cambiar-tus-procesos/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/como-implementar-ia-sin-cambiar-tus-procesos/"/>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dynxlabs.com/insights/el-futuro-del-trabajo-con-ia/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/el-futuro-del-trabajo-con-ia/"/>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dynxlabs.com/insights/chatbots-vs-ai-agents/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/chatbots-vs-ai-agents/"/>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dynxlabs.com/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/"/>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://dynxlabs.com/insights/como-escribir-un-buen-prompt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/como-escribir-un-buen-prompt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/como-escribir-un-buen-prompt/"/>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://dynxlabs.com/insights/ai-agents-reemplazando-tareas-administrativas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/ai-agents-reemplazando-tareas-administrativas/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/ai-agents-reemplazando-tareas-administrativas/"/>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/como-reducir-tiempo-respuesta-cliente-con-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/como-reducir-tiempo-respuesta-cliente-con-ia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/como-reducir-tiempo-respuesta-cliente-con-ia/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/de-excel-a-dashboard-en-tiempo-real/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/de-excel-a-dashboard-en-tiempo-real/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/de-excel-a-dashboard-en-tiempo-real/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/diferencia-automatizacion-inteligencia-artificial/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/diferencia-automatizacion-inteligencia-artificial/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/diferencia-automatizacion-inteligencia-artificial/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/que-es-un-workflow-y-por-que-importa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/que-es-un-workflow-y-por-que-importa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/que-es-un-workflow-y-por-que-importa/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/que-es-un-trigger-y-por-que-importa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/que-es-un-trigger-y-por-que-importa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/que-es-un-trigger-y-por-que-importa/"/>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://dynxlabs.com/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer/"/>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ═══════════════════════════════════════════
+       INSIGHTS — New articles
+  ═══════════════════════════════════════════ -->
+  <url>
+    <loc>https://dynxlabs.com/insights/agentic-ai-de-asistentes-a-ejecutores/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/agentic-ai-de-asistentes-a-ejecutores/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/agentic-ai-de-asistentes-a-ejecutores/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/sistemas-multi-agente-orquestacion/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/sistemas-multi-agente-orquestacion/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/sistemas-multi-agente-orquestacion/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/ai-agents-y-apis-capa-de-ejecucion/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/ai-agents-y-apis-capa-de-ejecucion/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/ai-agents-y-apis-capa-de-ejecucion/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/human-in-the-loop-autonomia-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/human-in-the-loop-autonomia-ia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/human-in-the-loop-autonomia-ia/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/data-quality-base-de-toda-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/data-quality-base-de-toda-ia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/data-quality-base-de-toda-ia/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/rag-empresarial-conecta-ia-a-tu-informacion/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/rag-empresarial-conecta-ia-a-tu-informacion/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/rag-empresarial-conecta-ia-a-tu-informacion/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/de-silos-a-flujo-unico-integracion-datos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/de-silos-a-flujo-unico-integracion-datos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/de-silos-a-flujo-unico-integracion-datos/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/que-es-un-pipeline-de-datos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/que-es-un-pipeline-de-datos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/que-es-un-pipeline-de-datos/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/como-medir-roi-automatizacion/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/como-medir-roi-automatizacion/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/como-medir-roi-automatizacion/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/quick-wins-por-donde-empezar-a-automatizar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/quick-wins-por-donde-empezar-a-automatizar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/quick-wins-por-donde-empezar-a-automatizar/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/low-code-no-code-automatizacion-sin-it/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/low-code-no-code-automatizacion-sin-it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/low-code-no-code-automatizacion-sin-it/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/ia-en-ventas-b2b-lead-scoring-cierre/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/ia-en-ventas-b2b-lead-scoring-cierre/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/ia-en-ventas-b2b-lead-scoring-cierre/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/procesamiento-inteligente-documentos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/procesamiento-inteligente-documentos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/procesamiento-inteligente-documentos/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/knowledge-management-con-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/knowledge-management-con-ia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/knowledge-management-con-ia/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/ia-para-rrhh-screening-onboarding/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/ia-para-rrhh-screening-onboarding/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/ia-para-rrhh-screening-onboarding/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/ai-governance-reglas-antes-de-escalar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/ai-governance-reglas-antes-de-escalar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/ai-governance-reglas-antes-de-escalar/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/ciberseguridad-e-ia-amenazas-defensas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/ciberseguridad-e-ia-amenazas-defensas/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/ciberseguridad-e-ia-amenazas-defensas/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/slms-vs-llms-modelo-pequeno-mejor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/slms-vs-llms-modelo-pequeno-mejor/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/slms-vs-llms-modelo-pequeno-mejor/"/>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://dynxlabs.com/insights/multimodal-ai-texto-imagen-voz/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/multimodal-ai-texto-imagen-voz/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/multimodal-ai-texto-imagen-voz/"/>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
