@@ -61,7 +61,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "agentic-ai-de-asistentes-a-ejecutores",
     category: "inteligencia-artificial",
-    date: "2026-10-27",
+    date: "2026-10-01",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "Agentic AI: From Assistants to Autonomous Executors",
@@ -75,7 +75,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "sistemas-multi-agente-orquestacion",
     category: "inteligencia-artificial",
-    date: "2026-11-10",
+    date: "2026-10-02",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "Multi-Agent Systems: When One AI Isn't Enough",
@@ -89,7 +89,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "ai-agents-y-apis-capa-de-ejecucion",
     category: "inteligencia-artificial",
-    date: "2026-11-24",
+    date: "2026-10-03",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "AI Agents and APIs: The Execution Layer That Makes Intelligence Useful",
@@ -103,7 +103,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "human-in-the-loop-autonomia-ia",
     category: "inteligencia-artificial",
-    date: "2026-12-08",
+    date: "2026-10-04",
     readTime: { en: "6 min read", es: "6 min de lectura" },
     en: {
       title: "Human-in-the-Loop: How Much Autonomy Should You Give AI?",
@@ -117,7 +117,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "data-quality-base-de-toda-ia",
     category: "inteligencia-artificial",
-    date: "2026-12-22",
+    date: "2026-10-06",
     readTime: { en: "6 min read", es: "6 min de lectura" },
     en: {
       title: "Data Quality: The Foundation of Every AI Project",
@@ -131,7 +131,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "rag-empresarial-conecta-ia-a-tu-informacion",
     category: "inteligencia-artificial",
-    date: "2027-01-05",
+    date: "2026-10-07",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "Enterprise RAG: How to Connect Your AI to Your Own Data",
@@ -145,7 +145,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "de-silos-a-flujo-unico-integracion-datos",
     category: "automatizacion",
-    date: "2027-01-19",
+    date: "2026-10-08",
     readTime: { en: "6 min read", es: "6 min de lectura" },
     en: {
       title: "From Data Silos to a Single Flow: Integration for Non-Technical Teams",
@@ -159,7 +159,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "que-es-un-pipeline-de-datos",
     category: "automatizacion",
-    date: "2027-02-02",
+    date: "2026-10-09",
     readTime: { en: "6 min read", es: "6 min de lectura" },
     en: {
       title: "What Is a Data Pipeline and Why Does Your Team Need One",
@@ -173,7 +173,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "como-medir-roi-automatizacion",
     category: "automatizacion",
-    date: "2027-02-16",
+    date: "2026-10-10",
     readTime: { en: "6 min read", es: "6 min de lectura" },
     en: {
       title: "How to Measure the Real ROI of an Automation Project",
@@ -187,7 +187,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "quick-wins-por-donde-empezar-a-automatizar",
     category: "automatizacion",
-    date: "2027-03-02",
+    date: "2026-10-11",
     readTime: { en: "6 min read", es: "6 min de lectura" },
     en: {
       title: "The Quick Wins Framework: Where to Start Automating",
@@ -201,7 +201,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "por-que-proyectos-ia-no-pasan-del-piloto",
     category: "inteligencia-artificial",
-    date: "2027-03-16",
+    date: "2026-10-13",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "Why 85% of AI Projects Never Make It Past the Pilot",
@@ -215,7 +215,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "low-code-no-code-automatizacion-sin-it",
     category: "automatizacion",
-    date: "2027-03-30",
+    date: "2026-10-14",
     readTime: { en: "6 min read", es: "6 min de lectura" },
     en: {
       title: "Low-Code and No-Code: Automation Without Depending on IT",
@@ -229,7 +229,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "ia-en-ventas-b2b-lead-scoring-cierre",
     category: "casos-reales",
-    date: "2027-04-13",
+    date: "2026-10-15",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "AI in B2B Sales: From Lead Scoring to Predictive Closing",
@@ -243,7 +243,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "procesamiento-inteligente-documentos",
     category: "automatizacion",
-    date: "2027-04-27",
+    date: "2026-10-16",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "Intelligent Document Processing: From PDF to Actionable Data",
@@ -257,7 +257,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "knowledge-management-con-ia",
     category: "inteligencia-artificial",
-    date: "2027-05-11",
+    date: "2026-10-17",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "Knowledge Management With AI: Capture What Your Team Knows Before They Leave",
@@ -271,7 +271,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "ia-para-rrhh-screening-onboarding",
     category: "casos-reales",
-    date: "2027-05-25",
+    date: "2026-10-18",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "AI for HR: From CV Screening to Automated Onboarding",
@@ -285,7 +285,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "ai-governance-reglas-antes-de-escalar",
     category: "inteligencia-artificial",
-    date: "2027-06-08",
+    date: "2026-10-19",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "AI Governance: Why You Need Rules Before You Scale",
@@ -299,7 +299,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "ciberseguridad-e-ia-amenazas-defensas",
     category: "inteligencia-artificial",
-    date: "2027-06-22",
+    date: "2026-10-20",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "Cybersecurity and AI: New Threats, New Defenses",
@@ -313,7 +313,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "slms-vs-llms-modelo-pequeno-mejor",
     category: "inteligencia-artificial",
-    date: "2027-07-06",
+    date: "2026-10-21",
     readTime: { en: "6 min read", es: "6 min de lectura" },
     en: {
       title: "SLMs vs LLMs: When a Smaller Model Is Better",
@@ -327,7 +327,7 @@ const INSIGHTS_ARTICLES = [
   {
     slug: "multimodal-ai-texto-imagen-voz",
     category: "inteligencia-artificial",
-    date: "2027-07-20",
+    date: "2026-10-22",
     readTime: { en: "7 min read", es: "7 min de lectura" },
     en: {
       title: "Multimodal AI: When Text, Image, and Voice Converge",

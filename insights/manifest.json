@@ -27,7 +27,7 @@
     {
       "slug": "multimodal-ai-texto-imagen-voz",
       "category": "inteligencia-artificial",
-      "date": "2027-07-20",
+      "date": "2026-10-22",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -44,7 +44,7 @@
     {
       "slug": "slms-vs-llms-modelo-pequeno-mejor",
       "category": "inteligencia-artificial",
-      "date": "2027-07-06",
+      "date": "2026-10-21",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -61,7 +61,7 @@
     {
       "slug": "ciberseguridad-e-ia-amenazas-defensas",
       "category": "inteligencia-artificial",
-      "date": "2027-06-22",
+      "date": "2026-10-20",
       "readTime": {
         "en": "7 min read",
         "es": "7 min de lectura"
@@ -78,7 +78,7 @@
     {
       "slug": "ai-governance-reglas-antes-de-escalar",
       "category": "inteligencia-artificial",
-      "date": "2027-06-08",
+      "date": "2026-10-19",
       "readTime": {
         "en": "7 min read",
         "es": "7 min de lectura"
@@ -95,7 +95,7 @@
     {
       "slug": "ia-para-rrhh-screening-onboarding",
       "category": "casos-reales",
-      "date": "2027-05-25",
+      "date": "2026-10-18",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -112,7 +112,7 @@
     {
       "slug": "knowledge-management-con-ia",
       "category": "inteligencia-artificial",
-      "date": "2027-05-11",
+      "date": "2026-10-17",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -129,7 +129,7 @@
     {
       "slug": "procesamiento-inteligente-documentos",
       "category": "automatizacion",
-      "date": "2027-04-27",
+      "date": "2026-10-16",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -146,7 +146,7 @@
     {
       "slug": "ia-en-ventas-b2b-lead-scoring-cierre",
       "category": "casos-reales",
-      "date": "2027-04-13",
+      "date": "2026-10-15",
       "readTime": {
         "en": "7 min read",
         "es": "7 min de lectura"
@@ -163,7 +163,7 @@
     {
       "slug": "low-code-no-code-automatizacion-sin-it",
       "category": "automatizacion",
-      "date": "2027-03-30",
+      "date": "2026-10-14",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -180,7 +180,7 @@
     {
       "slug": "por-que-proyectos-ia-no-pasan-del-piloto",
       "category": "inteligencia-artificial",
-      "date": "2027-03-16",
+      "date": "2026-10-13",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -197,7 +197,7 @@
     {
       "slug": "quick-wins-por-donde-empezar-a-automatizar",
       "category": "automatizacion",
-      "date": "2027-03-02",
+      "date": "2026-10-11",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -214,7 +214,7 @@
     {
       "slug": "como-medir-roi-automatizacion",
       "category": "automatizacion",
-      "date": "2027-02-16",
+      "date": "2026-10-10",
       "readTime": {
         "en": "7 min read",
         "es": "7 min de lectura"
@@ -231,7 +231,7 @@
     {
       "slug": "que-es-un-pipeline-de-datos",
       "category": "automatizacion",
-      "date": "2027-02-02",
+      "date": "2026-10-09",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -248,7 +248,7 @@
     {
       "slug": "de-silos-a-flujo-unico-integracion-datos",
       "category": "automatizacion",
-      "date": "2027-01-19",
+      "date": "2026-10-08",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -265,7 +265,7 @@
     {
       "slug": "rag-empresarial-conecta-ia-a-tu-informacion",
       "category": "inteligencia-artificial",
-      "date": "2027-01-05",
+      "date": "2026-10-07",
       "readTime": {
         "en": "7 min read",
         "es": "7 min de lectura"
@@ -282,7 +282,7 @@
     {
       "slug": "data-quality-base-de-toda-ia",
       "category": "inteligencia-artificial",
-      "date": "2026-12-22",
+      "date": "2026-10-06",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -299,7 +299,7 @@
     {
       "slug": "human-in-the-loop-autonomia-ia",
       "category": "inteligencia-artificial",
-      "date": "2026-12-08",
+      "date": "2026-10-04",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -316,7 +316,7 @@
     {
       "slug": "ai-agents-y-apis-capa-de-ejecucion",
       "category": "inteligencia-artificial",
-      "date": "2026-11-24",
+      "date": "2026-10-03",
       "readTime": {
         "en": "6 min read",
         "es": "6 min de lectura"
@@ -333,7 +333,7 @@
     {
       "slug": "sistemas-multi-agente-orquestacion",
       "category": "inteligencia-artificial",
-      "date": "2026-11-10",
+      "date": "2026-10-02",
       "readTime": {
         "en": "7 min read",
         "es": "7 min de lectura"
@@ -350,7 +350,7 @@
     {
       "slug": "agentic-ai-de-asistentes-a-ejecutores",
       "category": "inteligencia-artificial",
-      "date": "2026-10-27",
+      "date": "2026-10-01",
       "readTime": {
         "en": "7 min read",
         "es": "7 min de lectura"
