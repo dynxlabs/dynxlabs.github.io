@@ -39,7 +39,7 @@
       sk: { es: 'Cómo trabajamos', en: 'How we work' },
       secondary: [
         { t: { es: 'Nuestro Método', en: 'Our Method' }, h: '/#method' },
-        { t: { es: 'Tech Stack', en: 'Tech Stack' }, h: '/#stack' },
+        { t: { es: 'Tecnologías', en: 'Tech Stack' }, h: '/#stack' },
         { t: { es: 'Ver todos los servicios', en: 'View all services' }, h: '/#services', arrow: true }
       ]
     },
@@ -75,14 +75,14 @@
       primary: [
         { t: { es: 'Nosotros', en: 'About Us' }, h: '/#about' },
         { t: { es: 'Nuestro Método', en: 'Our Method' }, h: '/#method' },
-        { t: { es: 'Tech Stack', en: 'Tech Stack' }, h: '/#stack' },
+        { t: { es: 'Tecnologías', en: 'Tech Stack' }, h: '/#stack' },
         { t: { es: 'FAQ', en: 'FAQ' }, h: '/faq' },
         { t: { es: 'Contacto', en: 'Contact' }, h: '/contact' }
       ],
       sk: { es: 'Conecta', en: 'Connect' },
       secondary: [
-        { t: { es: 'Careers', en: 'Careers' }, h: 'https://www.linkedin.com/company/dynxlabs/jobs', ext: true },
-        { t: { es: 'Start a project', en: 'Start a project' }, h: '/contact', arrow: true }
+        { t: { es: 'Trabaja con Nosotros', en: 'Careers' }, h: 'https://www.linkedin.com/company/dynxlabs/jobs', ext: true },
+        { t: { es: 'Inicia un proyecto', en: 'Start a project' }, h: '/contact', arrow: true }
       ]
     }
   ];
@@ -290,7 +290,7 @@
           '<button data-lang="es"' + (lang === 'es' ? ' class="on"' : '') + '>Español</button>' +
           '<button data-lang="en"' + (lang === 'en' ? ' class="on"' : '') + '>English</button>' +
         '</div>' +
-        '<a href="/contact" class="mm-dcta">' + (lang === 'es' ? 'Start Project' : 'Start Project') + ' ↗</a>' +
+        '<a href="/contact" class="mm-dcta">' + (lang === 'es' ? 'Iniciar Proyecto' : 'Start Project') + ' ↗</a>' +
       '</div>';
     drawer.querySelectorAll('.mm-dsec-h').forEach(btn => {
       btn.addEventListener('click', () => {
