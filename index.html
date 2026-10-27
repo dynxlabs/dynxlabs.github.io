@@ -112,61 +112,30 @@
 <!-- ═══════════════════════════════════════════════════════════
      NAVBAR
 ═══════════════════════════════════════════════════════════════ -->
-<nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="navbar-inner glass-strong">
-
-    <!-- Logo -->
-    <a href="/" class="navbar-logo" aria-label="DYNX Labs — Home">
-      <img src="/assets/icons/logo.svg" alt="DYNX Labs" width="120" height="32" />
-    </a>
-
-    <!-- Desktop Links -->
-    <div class="navbar-links" role="menubar">
-      <a href="#about"    role="menuitem" data-i18n="nav.about">About Us</a>
-      <a href="#services" role="menuitem" data-i18n="nav.services">Services</a>
-      <a href="/products" role="menuitem" data-i18n="nav.products">Products</a>
-      <a href="/research" role="menuitem" data-i18n="nav.research">Research</a>
-      <a href="/insights" role="menuitem" data-i18n="nav.insights">Insights</a>
-      <a href="/contact" role="menuitem" data-i18n="nav.contact">Contact</a>
+<header id="navbar" class="mm-header" role="banner">
+  <div class="mm-inner">
+    <div class="mm-left">
+      <a href="/" class="mm-logo" aria-label="DYNX Labs — Home">
+        <img src="/assets/icons/logo.svg" alt="DYNX Labs" width="120" height="32" />
+      </a>
+      <nav class="mm-nav" id="mm-nav" aria-label="Main navigation"></nav>
     </div>
-
-    <!-- Actions -->
-    <div class="navbar-actions">
-      <!-- Language Selector -->
-      <div class="lang-selector glass" role="group" aria-label="Language selector">
+    <div class="mm-actions">
+      <button class="mm-icon mm-search-m" id="mm-search-m" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <div class="lang-selector mm-lang" role="group" aria-label="Language selector">
         <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
         <button class="lang-btn"        data-lang="es" aria-pressed="false">ES</button>
       </div>
-
-      <!-- CTA Button -->
-      <a href="https://dynxlabs.com/contact" class="btn-nav magnetic-btn" target="_blank" rel="noopener noreferrer" data-i18n="nav.startProject">
-        Start Project
-      </a>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn"
-              class="mobile-menu-btn"
-              aria-label="Toggle navigation menu"
-              aria-expanded="false"
-              aria-controls="mobile-nav">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a href="/contact" class="mm-cta" data-i18n="nav.startProject">Start Project</a>
+      <button class="mm-hamb" id="mm-hamb" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
-
-    <!-- Mobile Nav Panel -->
-    <div id="mobile-nav" class="mobile-nav" role="menu">
-      <a href="#about"    role="menuitem" data-i18n="nav.about">About Us</a>
-      <a href="#services" role="menuitem" data-i18n="nav.services">Services</a>
-      <a href="/products" role="menuitem" data-i18n="nav.products">Products</a>
-      <a href="/research" role="menuitem" data-i18n="nav.research">Research</a>
-      <a href="/insights" role="menuitem" data-i18n="nav.insights">Insights</a>
-      <a href="/contact"  role="menuitem" data-i18n="nav.contact">Contact</a>
-    </div>
-
   </div>
-</nav>
+  <div class="mm-mega" id="mm-mega" aria-label="Submenu"></div>
+</header>
 
 <!-- ═══════════════════════════════════════════════════════════
      HERO SECTION
@@ -270,7 +239,7 @@
     <div class="services-grid">
 
       <!-- AI Agents -->
-      <div class="group service-card fade-up delay-100">
+      <div class="group service-card fade-up delay-100" id="ai-agents">
         <div class="gradient-border">
           <div class="gradient-border-inner service-card-inner">
             <div class="service-icon" aria-hidden="true">
@@ -287,7 +256,7 @@
       </div>
 
       <!-- Workflow Automation -->
-      <div class="group service-card fade-up delay-200">
+      <div class="group service-card fade-up delay-200" id="workflow">
         <div class="gradient-border">
           <div class="gradient-border-inner service-card-inner">
             <div class="service-icon" aria-hidden="true">
@@ -304,7 +273,7 @@
       </div>
 
       <!-- Dashboards & Reporting -->
-      <div class="group service-card fade-up delay-300">
+      <div class="group service-card fade-up delay-300" id="dashboards">
         <div class="gradient-border">
           <div class="gradient-border-inner service-card-inner">
             <div class="service-icon" aria-hidden="true">
@@ -321,7 +290,7 @@
       </div>
 
       <!-- System Integrations -->
-      <div class="group service-card fade-up delay-100">
+      <div class="group service-card fade-up delay-100" id="integrations">
         <div class="gradient-border">
           <div class="gradient-border-inner service-card-inner">
             <div class="service-icon" aria-hidden="true">
@@ -338,7 +307,7 @@
       </div>
 
       <!-- Business Intelligence -->
-      <div class="group service-card fade-up delay-200">
+      <div class="group service-card fade-up delay-200" id="bi">
         <div class="gradient-border">
           <div class="gradient-border-inner service-card-inner">
             <div class="service-icon" aria-hidden="true">
@@ -355,7 +324,7 @@
       </div>
 
       <!-- Custom SaaS -->
-      <div class="group service-card fade-up delay-300">
+      <div class="group service-card fade-up delay-300" id="saas">
         <div class="gradient-border">
           <div class="gradient-border-inner service-card-inner">
             <div class="service-icon" aria-hidden="true">
@@ -956,6 +925,7 @@
 ═══════════════════════════════════════════════════════════════ -->
 <script src="/assets/js/i18n.js"></script>
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/megamenu.js"></script>
 
 </body>
 </html>
