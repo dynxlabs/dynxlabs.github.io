@@ -112,7 +112,9 @@
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",
     "careers": "Trabaja con Nosotros",
-    "copyright": "© {year} DYNX Labs. Todos los derechos reservados."
+    "copyright": "© {year} DYNX Labs. Todos los derechos reservados.",
+    "contactTitle": "Contacto",
+    "startProject": "Inicia un proyecto"
   },
   "cookie": {
     "text": "Utilizamos cookies esenciales para garantizar la mejor experiencia en nuestro sitio. Al continuar, aceptas nuestra",
