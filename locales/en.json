@@ -114,7 +114,16 @@
     "careers": "Careers",
     "copyright": "© {year} DYNX Labs. All rights reserved.",
     "contactTitle": "Contact",
-    "startProject": "Start a project"
+    "startProject": "Start a project",
+    "solutionsTitle": "Solutions",
+    "insightsTitle": "Insights",
+    "termsTitle": "Terms & Policies",
+    "cookies": "Cookies",
+    "insAutomation": "Automation",
+    "insAI": "Artificial Intelligence",
+    "insRealCases": "Real Cases",
+    "insWorkflows": "Workflows",
+    "viewAllArticles": "View all articles"
   },
   "cookie": {
     "text": "We use essential cookies to ensure you get the best experience on our website. By continuing, you agree to our",
