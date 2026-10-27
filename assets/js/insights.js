@@ -251,14 +251,32 @@
       : `${n} article${n !== 1 ? 's' : ''}`;
   }
 
+  // ─── Hash → category (deep-link from the mega menu) ────
+  function applyHashCategory() {
+    const key = decodeURIComponent((location.hash || '').replace('#', '').trim());
+    if (key && typeof INSIGHTS_CATEGORIES !== 'undefined' && INSIGHTS_CATEGORIES[key]) {
+      selectedCategories = [key];
+      return true;
+    }
+    return false;
+  }
+
   // ─── Init ─────────────────────────────────────────────
   function init() {
+    applyHashCategory();
     renderFilters();
     initSearch();
     initViewToggle();
     initMobileDrawer();
     renderCards();
     updateCount();
+
+    window.addEventListener('hashchange', () => {
+      applyHashCategory();
+      renderFilters();
+      renderCards();
+      updateCount();
+    });
 
     window.addEventListener('dynx-lang-changed', (e) => {
       currentLang = e.detail || localStorage.getItem('dynx_lang') || 'en';
