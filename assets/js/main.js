@@ -197,15 +197,7 @@ const CookieBanner = (() => {
   const STORAGE_KEY = 'dynx_cookie_consent';
   let banner = null;
 
-  function init() {
-    banner = document.getElementById('cookie-banner');
-    if (!banner) return;
-
-    const consent = localStorage.getItem(STORAGE_KEY);
-    if (consent) return;
-
-    setTimeout(() => banner.classList.add('visible'), 1500);
-
+  function wireButtons() {
     const acceptBtn  = document.getElementById('cookie-accept');
     const declineBtn = document.getElementById('cookie-decline');
 
@@ -219,15 +211,41 @@ const CookieBanner = (() => {
         Modals.open('modal-privacy');
       });
     }
+
+    // Footer "Cookies" link → re-open the banner to manage preferences
+    document.querySelectorAll('[data-cookie-settings]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        reopen();
+      });
+    });
+  }
+
+  function init() {
+    banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+
+    // Always wire the controls so "manage cookies" works after a prior choice.
+    wireButtons();
+
+    const consent = localStorage.getItem(STORAGE_KEY);
+    if (consent) return;
+
+    setTimeout(() => banner.classList.add('visible'), 1500);
   }
 
   function handleConsent(accepted) {
     localStorage.setItem(STORAGE_KEY, accepted ? 'accepted' : 'declined');
-    banner.classList.remove('visible');
-    setTimeout(() => banner.remove(), 400);
+    if (banner) banner.classList.remove('visible');
   }
 
-  return { init };
+  // Re-show the banner (used by the footer "Cookies" link).
+  function reopen() {
+    if (!banner) banner = document.getElementById('cookie-banner');
+    if (banner) banner.classList.add('visible');
+  }
+
+  return { init, reopen };
 
 })();
 
