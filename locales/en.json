@@ -308,5 +308,31 @@
     "sec5Desc": "Production, quality and supply.",
     "sec6": "Professional services",
     "sec6Desc": "Proposals, invoicing and CRM."
+  },
+  "meta": {
+    "home": {
+      "title": "DYNX Labs — Automate the Work. Accelerate the Business.",
+      "desc": "We build AI-powered software that helps teams automate operations, integrate tools, and make faster decisions with reliable data."
+    },
+    "products": {
+      "title": "Products | DYNX Labs",
+      "desc": "Tools DYNX Labs is building to automate common operations: lead management, real-time dashboards and no-code integrations."
+    },
+    "research": {
+      "title": "Research | DYNX Labs",
+      "desc": "Research from DYNX Labs on AI agents, workflow design, LLM orchestration and automation patterns."
+    },
+    "faq": {
+      "title": "FAQ | DYNX Labs",
+      "desc": "Answers about pricing, timelines, integrations, security and support for DYNX Labs AI automation projects."
+    },
+    "contact": {
+      "title": "Contact | DYNX Labs",
+      "desc": "Tell us about your operations and we will show you what can be automated. Free 45-minute discovery session."
+    },
+    "insights": {
+      "title": "Insights | DYNX Labs",
+      "desc": "Practical guides and real cases on AI agents, automation, data and workflows for businesses."
+    }
   }
 }

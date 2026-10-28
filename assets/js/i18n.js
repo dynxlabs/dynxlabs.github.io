@@ -14,6 +14,16 @@ const I18n = (() => {
 
   const SUPPORTED = ['en', 'es'];
   const DEFAULT = 'en';
+  const SITE = 'https://dynxlabs.com';
+
+  // ?lang= in the URL wins (shareable, and how search engines reach the
+  // Spanish version). Persist it right away, before other scripts read it.
+  (function persistUrlLang() {
+    try {
+      const q = new URLSearchParams(window.location.search).get('lang');
+      if (q && SUPPORTED.includes(q)) localStorage.setItem('dynx_lang', q);
+    } catch (e) { /* storage unavailable */ }
+  })();
 
   /* ----------------------------------------------------------
      DETECT LANGUAGE
@@ -101,6 +111,14 @@ const I18n = (() => {
         return;
       }
 
+      // meta content (description, og:*, twitter:*)
+      if (el.hasAttribute('data-i18n-content')) {
+        if (!isInvalid(value)) {
+          el.setAttribute('content', value);
+        }
+        return;
+      }
+
       // text
       if (!isInvalid(value)) {
         el.textContent = value;
@@ -124,6 +142,40 @@ const I18n = (() => {
   }
 
   /* ----------------------------------------------------------
+     URL + SEO: keep ?lang= in the address bar and point the
+     canonical at the current language version
+  ---------------------------------------------------------- */
+  function syncURL(lang) {
+    try {
+      const url = new URL(window.location.href);
+      if (lang === DEFAULT) url.searchParams.delete('lang');
+      else url.searchParams.set('lang', lang);
+      if (url.href !== window.location.href) history.replaceState(history.state, '', url.href);
+    } catch (e) { /* non-http context */ }
+  }
+
+  function updateSEO(lang) {
+    const query = lang === DEFAULT ? '' : `?lang=${lang}`;
+    const href = SITE + window.location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/') + query;
+
+    // Pages that manage their own canonical (insight articles) are left alone.
+    if (!document.documentElement.hasAttribute('data-own-canonical')) {
+      let link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'canonical';
+        document.head.appendChild(link);
+      }
+      link.href = href;
+      const og = document.querySelector('meta[property="og:url"]');
+      if (og) og.setAttribute('content', href);
+    }
+
+    const locale = document.querySelector('meta[property="og:locale"]');
+    if (locale) locale.setAttribute('content', lang === 'es' ? 'es_ES' : 'en_US');
+  }
+
+  /* ----------------------------------------------------------
      CHANGE LANGUAGE
   ---------------------------------------------------------- */
   async function changeLanguage(lang) {
@@ -141,6 +193,8 @@ const I18n = (() => {
     updateHTMLLang(lang);
     updateLangButtons(lang);
     applyToDOM();
+    syncURL(lang);
+    updateSEO(lang);
 
     window.dispatchEvent(
       new CustomEvent('dynx-lang-changed', { detail: lang })
@@ -158,6 +212,7 @@ const I18n = (() => {
       console.warn('[I18n] fallback mode (no translations loaded)');
       translations = {};
       applyToDOM(); // no crash, keep static HTML
+      updateSEO(DEFAULT);
       return;
     }
 
@@ -166,6 +221,8 @@ const I18n = (() => {
 
     updateHTMLLang(lang);
     updateLangButtons(lang);
+    syncURL(lang);
+    updateSEO(lang);
 
     // important: wait next tick to ensure DOM is ready
     requestAnimationFrame(() => {

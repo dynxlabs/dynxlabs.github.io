@@ -1,24 +1,748 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" id="html-root" data-own-canonical>
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Por qué el 85% de los proyectos de IA no pasan del piloto — DYNX Insights</title>
-<meta name="description" content="La mayoría de los pilotos de IA mueren antes de llegar a producción. Los 7 errores más comunes y cómo evitarlos para escalar tu proyecto de inteligencia artificial."/>
-<link rel="canonical" href="https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/"/>
-<meta property="og:type" content="article"/>
-<meta property="og:title" content="Por qué el 85% de los proyectos de IA no pasan del piloto"/>
-<meta property="og:description" content="Los 7 errores que matan pilotos de IA antes de llegar a producción y cómo evitarlos."/>
-<meta property="og:url" content="https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/"/>
-<meta property="og:image" content="https://dynxlabs.com/assets/images/og-image.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta property="og:site_name" content="DYNX Labs"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Por qué los proyectos de IA no pasan del piloto"/>
-<meta name="twitter:description" content="7 errores comunes y cómo escalar tu piloto de IA a producción."/>
-<meta name="twitter:image" content="https://dynxlabs.com/assets/images/og-image.png"/>
-<script>window.location.replace('/insights/insight-post.html?slug=por-que-proyectos-ia-no-pasan-del-piloto');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- SEO — populated dynamically -->
+  <title id="page-title">Why 70% of AI Projects Never Make It Past the Pilot | DYNX Labs</title>
+  <meta id="meta-description" name="description" content="The demo impressed everyone. The pilot showed promise. Then nothing happened. Most AI initiatives die in the gap between proof-of-concept and production. Here are the five reasons why — and how to build pilots that actually ship." />
+  <!-- Template: generate-manifest.js pre-renders each article from this file and sets index -->
+  <meta id="meta-robots" name="robots" content="index, follow" />
+  <link id="meta-alt-en" rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/" />
+  <link id="meta-alt-es" rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/?lang=es" />
+  <link id="meta-alt-x" rel="alternate" hreflang="x-default" href="https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/" />
+  <script>
+    // Spanish readers get the pre-rendered (English) article swapped in by JS; hide it until then.
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search).get('lang');
+        var l = (q === 'es' || q === 'en') ? q : localStorage.getItem('dynx_lang');
+        if (l === 'es') document.documentElement.classList.add('post-wait');
+      } catch (e) {}
+    })();
+  </script>
+  <style>.post-wait #post-main{visibility:hidden}</style>
+  <meta id="og-title"       property="og:title"       content="Why 70% of AI Projects Never Make It Past the Pilot" />
+  <meta id="og-description" property="og:description" content="The demo impressed everyone. The pilot showed promise. Then nothing happened. Most AI initiatives die in the gap between proof-of-concept and production. Here are the five reasons why — and how to build pilots that actually ship." />
+  <meta                     property="og:type"         content="article" />
+  <meta id="og-url"         property="og:url"          content="https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/" />
+  <meta                     property="og:image"        content="https://dynxlabs.com/assets/images/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type"   content="image/png" />
+
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="icon" type="image/x-icon"  href="/assets/icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    .post-page { min-height: 100vh; padding-top: 80px; }
+
+    .post-hero {
+      padding: 96px 24px 48px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .post-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+    .post-hero__back:hover { color: rgba(255,255,255,0.8); }
+    .post-hero__back svg { width: 14px; height: 14px; }
+
+    .post-hero__badge {
+      display: block;
+      font-size: 14px;
+      color: #9a9a9a;
+      margin-bottom: 20px;
+    }
+
+    .post-hero__title {
+      font-size: clamp(2.2rem, 4.6vw, 3.5rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .post-hero__summary {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 640px;
+    }
+
+    .post-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+      flex-wrap: wrap;
+    }
+
+    .post-hero__meta-dot { opacity: 0.4; }
+
+    .post-color-bar {
+      height: 1px;
+      max-width: 752px;
+      margin: 0 auto;
+      background: #1c1c1c;
+    }
+
+    .post-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .post-body {
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .post-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .post-body h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      margin: 2rem 0 0.75rem;
+    }
+
+    .post-body p { margin-bottom: 1.25rem; }
+
+    .post-body ul, .post-body ol { margin: 0 0 1.25rem 1.5rem; }
+
+    .post-body li { margin-bottom: 0.5rem; }
+
+    .post-body strong { color: #fff; font-weight: 600; }
+
+    .post-body a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .post-body blockquote {
+      border-left: 3px solid rgba(255,255,255,0.15);
+      padding: 4px 0 4px 20px;
+      margin: 1.5rem 0;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+    }
+
+    .post-placeholder {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .post-placeholder__icon { font-size: 2.5rem; margin-bottom: 16px; }
+
+    .post-placeholder__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .post-placeholder__text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.35);
+      max-width: 360px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    .post-author {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-top: 3rem;
+    }
+    .post-author__header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .post-author__icon {
+      width: 36px;
+      height: auto;
+      flex-shrink: 0;
+    }
+    .post-author__name {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .post-author__role {
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      margin: 2px 0 0;
+    }
+    .post-author__bio {
+      color: rgba(255,255,255,0.45);
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 14px;
+    }
+    .post-author__links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .post-author__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      padding: 6px 14px;
+      transition: all 0.2s;
+    }
+    .post-author__link:hover {
+      color: rgba(255,255,255,0.8);
+      border-color: rgba(255,255,255,0.25);
+    }
+    .post-author__link svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .post-placeholder__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .post-placeholder__cta:hover {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+    }
+
+    .post-divider {
+      max-width: 800px;
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .post-related {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .post-related__title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 20px;
+    }
+
+    .post-related__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .post-related__card {
+      display: block;
+      text-decoration: none;
+      padding: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    }
+
+    .post-related__card:hover {
+      border-color: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      transform: translateY(-2px);
+    }
+
+    .post-related__card-bar {
+      display: none;
+    }
+
+    .post-related__card-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .post-related__card-meta {
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .post-loading, .post-error {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      color: rgba(255,255,255,0.35);
+      font-size: 14px;
+      gap: 12px;
+    }
+
+    .post-error__title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .post-error a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .post-hero { padding: 48px 16px 32px; }
+      .post-content { padding: 32px 16px 60px; }
+      .post-related { padding: 24px 16px 60px; }
+      .post-related__grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json" id="json-ld-article">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why 70% of AI Projects Never Make It Past the Pilot","description":"The demo impressed everyone. The pilot showed promise. Then nothing happened. Most AI initiatives die in the gap between proof-of-concept and production. Here are the five reasons why — and how to build pilots that actually ship.","datePublished":"2026-10-13","author":{"@type":"Person","name":"Arois Monsalve","jobTitle":"CEO & Founder","url":"https://www.linkedin.com/in/aroismonsalve/","worksFor":{"@type":"Organization","name":"DYNX Labs","url":"https://dynxlabs.com"}},"publisher":{"@type":"Organization","name":"DYNX Labs","url":"https://dynxlabs.com","logo":{"@type":"ImageObject","url":"https://dynxlabs.com/assets/images/og-image.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/"},"inLanguage":"en","image":"https://dynxlabs.com/assets/images/og-image.png"}</script>
+  <script type="application/ld+json" id="json-ld-breadcrumb">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"DYNX Labs","item":"https://dynxlabs.com/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://dynxlabs.com/insights"},{"@type":"ListItem","position":3,"name":"Why 70% of AI Projects Never Make It Past the Pilot","item":"https://dynxlabs.com/insights/por-que-proyectos-ia-no-pasan-del-piloto/"}]}</script>
 </head>
-<body></body>
+
+<body>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/56984657801"
+   class="whatsapp-float"
+   aria-label="Contact us on WhatsApp"
+   target="_blank"
+   rel="noopener noreferrer">
+  <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">Chat on WhatsApp</span>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<!-- Navbar -->
+<header id="navbar" class="mm-header" role="banner">
+  <div class="mm-inner">
+    <div class="mm-left">
+      <a href="/" class="mm-logo" aria-label="DYNX Labs — Home">
+        <img src="/assets/icons/logo.svg" alt="DYNX Labs" width="120" height="32" />
+      </a>
+      <nav class="mm-nav" id="mm-nav" aria-label="Main navigation"></nav>
+    </div>
+    <div class="mm-actions">
+      <button class="mm-icon mm-search-m" id="mm-search-m" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <div class="lang-selector mm-lang" role="group" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn"        data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a href="/contact" class="mm-cta" data-i18n="nav.startProject">Start Project</a>
+      <button class="mm-hamb" id="mm-hamb" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mm-mega" id="mm-mega" aria-label="Submenu"></div>
+</header>
+
+<!-- ── Main ── -->
+<main class="post-page" id="post-main">
+      <div class="post-hero">
+        <a href="/insights" class="post-hero__back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          Back to Insights
+        </a>
+        <div class="post-hero__badge">
+          Artificial Intelligence
+        </div>
+        <h1 class="post-hero__title">Why 70% of AI Projects Never Make It Past the Pilot</h1>
+        <p class="post-hero__summary">The demo impressed everyone. The pilot showed promise. Then nothing happened. Most AI initiatives die in the gap between proof-of-concept and production. Here are the five reasons why — and how to build pilots that actually ship.</p>
+        <div class="post-hero__meta">
+          <span>October 13, 2026</span>
+          <span class="post-hero__meta-dot">·</span>
+          <span>6 min read</span>
+        </div>
+      </div>
+
+      <div class="post-color-bar"></div>
+
+      <div class="post-content">
+        <div class="post-body"><p>The demo was flawless. The executive team nodded along as the AI model classified support tickets with 94% accuracy. Budget was approved within the week. Three months later, the project was quietly shelved.</p><p>This story repeats across industries. Research consistently shows that roughly 70% of AI projects never make it past the pilot stage. Not because the technology doesn't work — it usually does, in controlled conditions. The failure happens in the messy space between a successful demo and a system that runs reliably in production, every day, at scale.</p><p>Understanding why pilots fail is the first step toward building ones that succeed.</p><h2>The Five Pilot Killers</h2><p><strong>1. No clear business case.</strong> The most common mistake is starting with the technology instead of the problem. Teams build AI solutions looking for a use case, rather than identifying a painful business problem first. A pilot without a defined metric — "reduce ticket resolution time by 40%" or "cut manual data entry by 20 hours per week" — has no way to prove its value. When budget review comes around, "interesting experiment" loses to projects with clear ROI.</p><p><strong>2. Data quality issues.</strong> In the pilot, the team carefully curated a clean dataset. In production, data arrives messy, incomplete, and inconsistent. Fields are missing. Formats change without warning. Historical records have different schemas than current ones. The model that performed beautifully on clean data degrades rapidly when it encounters the chaos of real operational data.</p><p><strong>3. No integration plan.</strong> A standalone demo running in a notebook is not a product. To deliver value, AI needs to plug into existing systems — the CRM, the ERP, the ticketing platform, the communication tools people actually use. Integration is where most of the engineering effort lives, and it's routinely underestimated. If users have to copy results from one screen to another, adoption dies.</p><p><strong>4. Missing change management.</strong> Technology changes are easy. Behavior changes are hard. If an AI tool requires people to change how they work — new steps, new interfaces, new decision-making processes — and nobody has prepared them for that change, resistance is inevitable. The best AI solution in the world fails if the people who should use it don't trust it, don't understand it, or see it as a threat.</p><p><strong>5. Unrealistic expectations.</strong> Leadership expects 95% accuracy on day one. The team promises results within weeks. Nobody accounts for the iteration cycles required to tune a model to real-world conditions. When the initial production performance doesn't match the demo, confidence evaporates — even if the system just needs a few more weeks of refinement.</p><h2>What a Production-Ready Pilot Looks Like</h2><p>The difference between a pilot that ships and one that dies is not technical sophistication. It's design intent. A production-ready pilot is designed from day one to become a production system.</p><p>That means several things:</p><p><strong>Use real data from the start.</strong> Don't curate a perfect dataset. Pull data from the actual systems the model will consume in production, with all their imperfections. If the model can't handle messy data during the pilot, it certainly won't handle it later.</p><p><strong>Define the "definition of done" before you start.</strong> What specific metric needs to hit what specific threshold for this pilot to be considered successful? Who makes the go/no-go decision? What's the timeline? Most pilots lack this clarity, which means there's no moment where anyone can say "this worked, let's deploy."</p><p><strong>Build the integration, not just the model.</strong> Spend at least half your pilot effort on the plumbing: how data flows in, how predictions flow out, how users interact with results in their existing tools. A model that lives inside Jupyter is a science project. A model that writes recommendations directly into the CRM is a product.</p><p><strong>Start with one workflow, not the entire department.</strong> The most successful AI deployments we've seen start absurdly small. One team. One task. One measurable outcome. Once that works, expansion is a conversation about scaling what's proven — not a leap of faith.</p><h2>The Role of Sponsorship</h2><p>Executive sponsorship matters, but not the way most people think. The sponsor's job isn't to champion the technology — it's to protect the timeline. AI projects need iteration time. They need permission to be wrong in the first few weeks and get better. A sponsor who understands this creates space for the team to learn and adjust. A sponsor who expects perfection from the start creates pressure that leads to inflated metrics and hidden problems.</p><p>The best results come from a combination: top-down sponsorship that provides resources and air cover, plus bottom-up adoption from the people who actually do the work. Neither alone is sufficient.</p><h2>The Real Question</h2><p>Before starting your next AI pilot, ask this: "If this works, what exactly happens next?" If you can't describe the deployment path — who uses it, how it integrates, what success looks like, who maintains it — you're not ready for a pilot. You're ready for a research project. Those are valuable too, but calling them pilots creates expectations they were never designed to meet.</p></div>
+
+        <div class="post-author">
+          <div class="post-author__header">
+            <svg class="post-author__icon" viewBox="0 0 2.38 3.28" xmlns="http://www.w3.org/2000/svg"><path fill="#B3B3B3" fill-rule="nonzero" d="M0.54 2.64l1.31 -0.39 0 -0.61 0 0 0 -0.61 -1.31 -0.4 0 2.01zm0.32 0.47l-0.5 0.15c-0.03,0.01 -0.06,0.02 -0.09,0.02 -0.15,0 -0.27,-0.12 -0.27,-0.27l0 -2.74c0,-0.03 0,-0.05 0.01,-0.08 0.04,-0.14 0.19,-0.22 0.34,-0.18l1.84 0.56 0 0c0.11,0.03 0.19,0.14 0.19,0.26l0 0.81 0 0 0 0.81c0,0.11 -0.07,0.22 -0.19,0.26l-1.33 0.4z"/></svg>
+            <div>
+              <p class="post-author__name">Arois Monsalve</p>
+              <p class="post-author__role">CEO & Founder, DYNX Labs</p>
+            </div>
+          </div>
+          <p class="post-author__bio">Passionate about intelligent automation and AI applied to business operations. I help companies eliminate manual work and scale their processes with technology.</p>
+          <div class="post-author__links">
+            <a href="https://www.linkedin.com/in/aroismonsalve/" target="_blank" rel="noopener noreferrer" class="post-author__link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Follow on LinkedIn
+            </a>
+            <a href="https://dynxlabs.com" target="_blank" rel="noopener noreferrer" class="post-author__link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              dynxlabs.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+      <hr class="post-divider" />
+      <section class="post-related" aria-label="Related articles">
+        <div class="post-related__title">Related articles</div>
+        <div class="post-related__grid">
+          
+              <a href="/insights/multimodal-ai-texto-imagen-voz/" class="post-related__card">
+                <div class="post-related__card-bar"></div>
+                <div class="post-related__card-title">Multimodal AI: When Your AI Understands Text, Image, and Voice</div>
+                <div class="post-related__card-meta">6 min read</div>
+              </a>
+              <a href="/insights/slms-vs-llms-modelo-pequeno-mejor/" class="post-related__card">
+                <div class="post-related__card-bar"></div>
+                <div class="post-related__card-title">SLMs vs LLMs: When a Smaller Model Is the Better Choice</div>
+                <div class="post-related__card-meta">6 min read</div>
+              </a>
+              <a href="/insights/ciberseguridad-e-ia-amenazas-defensas/" class="post-related__card">
+                <div class="post-related__card-bar"></div>
+                <div class="post-related__card-title">Cybersecurity and AI: Threats and Defenses in 2026</div>
+                <div class="post-related__card-meta">7 min read</div>
+              </a>
+        </div>
+      </section>
+</main>
+
+<!-- Footer -->
+<footer class="ftr" role="contentinfo">
+  <div class="ftr-inner">
+    <div class="ftr-grid">
+      <div class="ftr-brand">
+        <a href="/" class="ftr-logo" aria-label="DYNX Labs — Home">
+          <img src="/assets/icons/logo.svg" alt="DYNX Labs" width="112" height="28" />
+        </a>
+        <p class="ftr-tagline" data-i18n="footer.tagline">Automate the Work. Accelerate the Business.</p>
+        <div class="ftr-social" role="list" aria-label="Social media links">
+          <a href="https://www.linkedin.com/company/dynxlabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="DYNX Labs on LinkedIn" role="listitem">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/dynx.labs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="DYNX Labs on Instagram" role="listitem">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://x.com/dynxlabs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="DYNX Labs on X" role="listitem">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+          </a>
+          <a href="https://www.threads.com/@dynx.labs" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="DYNX Labs on Threads" role="listitem">
+            <svg viewBox="0 0 192 192" aria-hidden="true"><path d="M141.537 88.988C140.71 88.592 139.87 88.21 139.019 87.845C137.537 60.538 122.616 44.905 97.562 44.745C97.448 44.744 97.336 44.744 97.222 44.744C82.236 44.744 69.773 51.141 62.102 62.781L75.881 72.233C81.612 63.538 90.605 61.685 97.229 61.685C97.305 61.685 97.382 61.685 97.458 61.686C105.707 61.738 111.932 64.137 115.961 68.814C118.893 72.219 120.854 76.925 121.825 82.864C114.511 81.621 106.601 81.239 98.145 81.723C74.325 83.095 59.011 96.988 60.04 116.292C60.562 126.084 65.44 134.508 73.775 140.011C80.822 144.663 89.899 146.938 99.332 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.014 175.059C74.204 174.89 56.954 167.575 45.738 153.317C35.236 139.966 29.808 120.682 29.605 96C29.808 71.318 35.236 52.034 45.738 38.683C56.954 24.425 74.204 17.11 97.013 16.941C119.988 17.111 137.539 24.461 149.184 38.788C154.894 45.814 159.199 54.649 162.037 64.95L178.184 60.642C174.744 47.962 169.331 37.036 161.965 27.974C147.036 9.607 125.202 0.195 97.07 0H96.957C68.882 0.194 47.292 9.642 32.788 28.079C19.882 44.486 13.224 67.316 13.001 95.933L13 96L13.001 96.068C13.224 124.684 19.882 147.514 32.788 163.921C47.292 182.358 68.882 191.806 96.957 192H97.07C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.596 141.537 88.988ZM98.441 129.507C88.001 130.095 77.154 125.409 76.62 115.372C76.223 107.93 81.916 99.626 99.081 98.637C101.047 98.523 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.074 122.242 100.233C120.264 124.935 108.662 128.946 98.441 129.507Z"/></svg>
+          </a>
+          <a href="https://wa.me/56984657801" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Contact Sales on WhatsApp" role="listitem">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+          <a href="https://t.me/AriaDynxBot" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="DYNX Labs on Telegram" role="listitem">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="ftr-col">
+        <h3 class="ftr-title" data-i18n="footer.solutionsTitle">Solutions</h3>
+        <ul class="ftr-links">
+          <li><a href="/#ai-agents"     data-i18n="services.ai.title">AI Agents</a></li>
+          <li><a href="/#workflow"      data-i18n="services.workflow.title">Workflow Automation</a></li>
+          <li><a href="/#dashboards"    data-i18n="services.dashboards.title">Dashboards &amp; Reporting</a></li>
+          <li><a href="/#integrations"  data-i18n="services.integrations.title">System Integrations</a></li>
+          <li><a href="/#bi"            data-i18n="services.bi.title">Business Intelligence</a></li>
+          <li><a href="/#saas"          data-i18n="services.saas.title">Custom SaaS</a></li>
+        </ul>
+      </div>
+
+      <div class="ftr-col">
+        <h3 class="ftr-title" data-i18n="footer.companyTitle">Company</h3>
+        <ul class="ftr-links">
+          <li><a href="/#about"   data-i18n="footer.about">About Us</a></li>
+          <li><a href="/#method"  data-i18n="footer.method">Our Method</a></li>
+          <li><a href="/#stack"   data-i18n="footer.stack">Tech Stack</a></li>
+          <li><a href="/products" data-i18n="footer.products">Products</a></li>
+          <li><a href="/research" data-i18n="footer.research">Research</a></li>
+          <li><a href="https://www.linkedin.com/company/dynxlabs/jobs" target="_blank" rel="noopener noreferrer" class="ftr-ext"><span data-i18n="footer.careers">Careers</span> <svg class="ftr-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="ftr-col">
+        <h3 class="ftr-title" data-i18n="footer.insightsTitle">Insights</h3>
+        <ul class="ftr-links">
+          <li><a href="/insights#automatizacion"          data-i18n="footer.insAutomation">Automation</a></li>
+          <li><a href="/insights#inteligencia-artificial" data-i18n="footer.insAI">Artificial Intelligence</a></li>
+          <li><a href="/insights#casos-reales"            data-i18n="footer.insRealCases">Real Cases</a></li>
+          <li><a href="/insights#workflows"               data-i18n="footer.insWorkflows">Workflows</a></li>
+          <li><a href="/insights"                         data-i18n="footer.viewAllArticles">View all articles</a></li>
+        </ul>
+      </div>
+
+      <div class="ftr-col">
+        <h3 class="ftr-title" data-i18n="footer.termsTitle">Terms &amp; Policies</h3>
+        <ul class="ftr-links">
+          <li><button type="button" data-modal-open="modal-privacy" data-i18n="footer.privacy">Privacy Policy</button></li>
+          <li><button type="button" data-modal-open="modal-terms"   data-i18n="footer.terms">Terms of Service</button></li>
+          <li><button type="button" data-cookie-settings data-i18n="footer.cookies">Cookies</button></li>
+        </ul>
+        <div class="ftr-extra">
+          <a href="/contact" data-i18n="footer.contact">Contact</a>
+          <a href="/faq"     data-i18n="footer.faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ftr-bottom">
+      <p class="ftr-copy" data-i18n="footer.copyright">&copy; 2026 DYNX Labs. All rights reserved.</p>
+      <div class="ftr-bottom-right">
+        <a href="/contact" class="ftr-cta"><span data-i18n="footer.startProject">Start a project</span> <svg class="ftr-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="lang-selector ftr-lang" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-btn"        data-lang="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Modals -->
+<div id="modal-privacy" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title" aria-hidden="true">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 id="modal-privacy-title" class="modal-title" data-i18n="privacy.title">Privacy Policy</h2>
+      <button class="modal-close" data-modal-close aria-label="Close">&#x2715;</button>
+    </div>
+    <p class="modal-date" data-i18n="privacy.lastUpdated">Last updated: January 2026</p>
+    <div class="modal-section"><h3 class="modal-section-title" data-i18n="privacy.section1Title">Information We Collect</h3><p class="modal-section-content" data-i18n="privacy.section1Content"></p></div>
+    <div class="modal-section"><h3 class="modal-section-title" data-i18n="privacy.section2Title">How We Use Your Information</h3><p class="modal-section-content" data-i18n="privacy.section2Content"></p></div>
+    <div class="modal-section"><h3 class="modal-section-title" data-i18n="privacy.section3Title">Third-Party Services</h3><p class="modal-section-content" data-i18n="privacy.section3Content"></p></div>
+    <div class="modal-section"><h3 class="modal-section-title" data-i18n="privacy.section4Title">Your Rights</h3><p class="modal-section-content" data-i18n="privacy.section4Content"></p></div>
+  </div>
+</div>
+<div id="modal-terms" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-terms-title" aria-hidden="true">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 id="modal-terms-title" class="modal-title" data-i18n="terms.title">Terms of Service</h2>
+      <button class="modal-close" data-modal-close aria-label="Close">&#x2715;</button>
+    </div>
+    <p class="modal-date" data-i18n="terms.lastUpdated">Last updated: January 2026</p>
+    <div class="modal-section"><h3 class="modal-section-title" data-i18n="terms.section1Title">Services</h3><p class="modal-section-content" data-i18n="terms.section1Content"></p></div>
+    <div class="modal-section"><h3 class="modal-section-title" data-i18n="terms.section2Title">Intellectual Property</h3><p class="modal-section-content" data-i18n="terms.section2Content"></p></div>
+    <div class="modal-section"><h3 class="modal-section-title" data-i18n="terms.section3Title">Confidentiality</h3><p class="modal-section-content" data-i18n="terms.section3Content"></p></div>
+    <div class="modal-section"><h3 class="modal-section-title" data-i18n="terms.section4Title">Limitation of Liability</h3><p class="modal-section-content" data-i18n="terms.section4Content"></p></div>
+  </div>
+</div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie consent">
+  <p class="cookie-text">
+    <span data-i18n="cookie.text">We use essential cookies to ensure you get the best experience on our website. By continuing, you agree to our</span>
+    <button data-modal-open="modal-privacy" style="background:none;border:none;color:#fff;text-decoration:underline;cursor:pointer;font-size:inherit;padding:0;margin-left:4px;" data-i18n="cookie.policyLink">Privacy Policy</button>.
+  </p>
+  <div class="cookie-actions">
+    <button id="cookie-accept"  class="cookie-btn cookie-btn-accept"  data-i18n="cookie.accept">Accept</button>
+    <button id="cookie-decline" class="cookie-btn cookie-btn-decline" data-i18n="cookie.decline">Decline</button>
+  </div>
+</div>
+
+<style>
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/megamenu.js"></script>
+
+<script src="/assets/js/insight-render.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  const R = window.InsightRender;
+
+  function getLang() {
+    const q = new URLSearchParams(window.location.search).get('lang');
+    if (q === 'es' || q === 'en') return q;
+    return localStorage.getItem('dynx_lang') || 'en';
+  }
+
+  function getSlugFromPath() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('slug')) return params.get('slug');
+    const stored = sessionStorage.getItem('dynx_redirect_slug');
+    if (stored) { sessionStorage.removeItem('dynx_redirect_slug'); return stored; }
+    const parts = window.location.pathname.replace(/\/$/, '').split('/');
+    return parts[parts.length - 1];
+  }
+
+  function reveal() {
+    document.documentElement.classList.remove('post-wait');
+  }
+
+  function setAttr(id, attr, value) {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute(attr, value);
+  }
+
+  function setJsonLd(id, data) {
+    let el = document.getElementById(id);
+    if (!el) {
+      el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(data);
+  }
+
+  function renderError(msg) {
+    document.getElementById('post-main').innerHTML = `
+      <div class="post-error">
+        <p class="post-error__title">404 — Article not found</p>
+        <p>${msg}</p>
+        <a href="/insights">← Back to Insights</a>
+      </div>`;
+    reveal();
+  }
+
+  function renderPost(article, manifest) {
+    const lang = getLang();
+    const out  = R.render(article, manifest, lang);
+
+    document.title = out.title + ' | DYNX Labs';
+    setAttr('meta-description', 'content', out.summary);
+    setAttr('meta-robots', 'content', 'index, follow');
+    setAttr('meta-alt-en', 'href', R.articleUrl(article.slug, 'en'));
+    setAttr('meta-alt-es', 'href', R.articleUrl(article.slug, 'es'));
+    setAttr('meta-alt-x', 'href', R.articleUrl(article.slug, 'en'));
+    setAttr('og-title', 'content', out.title);
+    setAttr('og-description', 'content', out.summary);
+    setAttr('og-url', 'content', out.url);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = out.url;
+
+    document.getElementById('html-root').lang = lang === 'es' ? 'es' : 'en';
+    setJsonLd('json-ld-article', out.jsonLd);
+    setJsonLd('json-ld-breadcrumb', out.breadcrumb);
+
+    document.getElementById('post-main').innerHTML = out.html;
+    reveal();
+  }
+
+  async function init() {
+    const slug = getSlugFromPath();
+
+    if (!slug || slug === 'insights') {
+      window.location.href = '/insights';
+      return;
+    }
+
+    try {
+      const [manifestRes, postRes] = await Promise.all([
+        fetch('/insights/manifest.json'),
+        fetch(`/insights/posts/${slug}.json`)
+      ]);
+
+      if (!manifestRes.ok) throw new Error('manifest not found');
+      const manifest = await manifestRes.json();
+
+      const article = (manifest.articles || []).find(a => a.slug === slug);
+      if (!article) {
+        renderError(`No article found with slug "${slug}".`);
+        return;
+      }
+
+      if (postRes.ok) {
+        const postData = await postRes.json();
+        if (postData.en?.body) article.en.body = postData.en.body;
+        if (postData.es?.body) article.es.body = postData.es.body;
+      }
+
+      renderPost(article, manifest);
+
+      window.addEventListener('dynx-lang-changed', () => {
+        renderPost(article, manifest);
+      });
+
+    } catch (err) {
+      renderError('Could not load article data. Please try again later.');
+      console.error(err);
+    }
+  }
+
+  // Never leave the page hidden if something stalls.
+  setTimeout(reveal, 4000);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
 </html>
