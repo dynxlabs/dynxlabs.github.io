@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - 'insights/posts/**.json'
+      - 'insights/insight-post.html'
+      - 'assets/js/insight-render.js'
+      - 'generate-manifest.js'
   workflow_dispatch:
 
 jobs:
@@ -18,13 +21,13 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Generate manifest
+      - name: Generate manifest, article pages and sitemap
         run: node generate-manifest.js
 
       - name: Commit manifest
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add insights/manifest.json
-          git diff --staged --quiet || git commit -m "chore: update insights manifest"
+          git add insights/manifest.json insights/*/index.html sitemap.xml
+          git diff --staged --quiet || git commit -m "chore: update insights manifest, article pages and sitemap"
           git push

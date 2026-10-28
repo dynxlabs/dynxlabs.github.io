@@ -308,5 +308,31 @@
     "sec5Desc": "Producción, calidad y abastecimiento.",
     "sec6": "Servicios profesionales",
     "sec6Desc": "Propuestas, facturación y CRM."
+  },
+  "meta": {
+    "home": {
+      "title": "DYNX Labs — Automate the Work. Accelerate the Business.",
+      "desc": "Construimos software impulsado por IA que permite a los equipos automatizar operaciones, integrar herramientas y tomar decisiones más rápidas basadas en datos confiables."
+    },
+    "products": {
+      "title": "Productos | DYNX Labs",
+      "desc": "Herramientas que DYNX Labs está construyendo para automatizar operaciones comunes: gestión de leads, dashboards en tiempo real e integraciones sin código."
+    },
+    "research": {
+      "title": "Investigación | DYNX Labs",
+      "desc": "Investigación de DYNX Labs sobre agentes de IA, diseño de workflows, orquestación de LLMs y patrones de automatización."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes | DYNX Labs",
+      "desc": "Respuestas sobre precios, plazos, integraciones, seguridad y soporte en los proyectos de automatización con IA de DYNX Labs."
+    },
+    "contact": {
+      "title": "Contacto | DYNX Labs",
+      "desc": "Cuéntanos tu operación y te mostramos qué se puede automatizar. Sesión de descubrimiento gratuita de 45 minutos."
+    },
+    "insights": {
+      "title": "Insights | DYNX Labs",
+      "desc": "Guías prácticas y casos reales sobre agentes de IA, automatización, datos y workflows para empresas."
+    }
   }
 }
