@@ -111,6 +111,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dynxlabs.com/leadership</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/leadership"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/leadership?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dynxlabs.com/leadership"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dynxlabs.com/leadership?lang=es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/leadership"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/leadership?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dynxlabs.com/leadership"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://dynxlabs.com/insights/multimodal-ai-texto-imagen-voz/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dynxlabs.com/insights/multimodal-ai-texto-imagen-voz/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dynxlabs.com/insights/multimodal-ai-texto-imagen-voz/?lang=es"/>

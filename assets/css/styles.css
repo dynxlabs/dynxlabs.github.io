@@ -1883,15 +1883,16 @@ body.mm-lock{overflow:hidden}
   .lp-faq .faq-question{font-size:17px}
 }
 
-/* Leadership (inside the manifesto section) */
-.lp-lead{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px;border-top:1px solid var(--lp-line);margin-top:96px;padding-top:40px}
-.lp-lead .lp-label{margin:0;padding-top:6px}
-.lp-lead-list{list-style:none;margin:0;padding:0}
-.lp-lead-list li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding-bottom:22px;border-bottom:1px solid var(--lp-line)}
-.lp-lead-name{display:inline-flex;align-items:center;gap:10px;font-size:22px;font-weight:500;letter-spacing:-.02em;color:#fff!important;transition:color .15s}
-.lp-lead-name:hover{color:#cfcfcf!important}
-.lp-lead-ext{width:16px;height:16px;color:var(--lp-t3);transition:transform .2s,color .2s}
-.lp-lead-name:hover .lp-lead-ext{transform:translate(2px,-2px);color:#fff}
-.lp-lead-role{font-size:15px;color:var(--lp-t2);white-space:nowrap}
-@media(max-width:900px){.lp-lead{grid-template-columns:1fr;gap:16px;margin-top:64px;padding-top:32px}}
-@media(max-width:480px){.lp-lead-list li{flex-direction:column;gap:6px}}
+/* Manifesto signature */
+.lp-sign{max-width:none!important;margin-top:40px;text-align:right;font-size:16px!important;letter-spacing:0!important;line-height:1.5!important;color:var(--lp-t2)!important}
+.lp-sign a{color:#fff!important;font-weight:500;border-bottom:1px solid var(--lp-line2);transition:border-color .15s}
+.lp-sign a:hover{border-bottom-color:#fff}
+
+/* Leadership page */
+.lp-person{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px;border-top:1px solid var(--lp-line);padding-top:40px}
+.lp-person h2{font-size:clamp(26px,2.6vw,34px);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+.lp-person-role{display:block;font-size:15px;color:var(--lp-t2);margin-top:8px}
+.lp-person .lp-tlink{margin-top:24px}
+.lp-person-bio p{font-size:17px;color:#cfcfcf;line-height:1.65;max-width:62ch}
+.lp-person-bio p+p{margin-top:20px}
+@media(max-width:900px){.lp-person{grid-template-columns:1fr;gap:24px}.lp-sign{text-align:left}}

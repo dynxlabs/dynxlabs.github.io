@@ -74,6 +74,7 @@
       pk: { es: 'Sobre DYNX Labs', en: 'About DYNX Labs' },
       primary: [
         { t: { es: 'Nosotros', en: 'About Us' }, h: '/#about' },
+        { t: { es: 'Liderazgo', en: 'Leadership' }, h: '/leadership' },
         { t: { es: 'Nuestro Método', en: 'Our Method' }, h: '/#method' },
         { t: { es: 'Tecnologías', en: 'Tech Stack' }, h: '/#stack' },
         { t: { es: 'FAQ', en: 'FAQ' }, h: '/faq' },
@@ -105,6 +106,7 @@
     { t: { es: 'Inicio', en: 'Home' }, d: { es: 'Automate the Work. Accelerate the Business.', en: 'Automate the Work. Accelerate the Business.' }, h: '/' },
     { t: { es: 'Productos', en: 'Products' }, d: { es: 'Nuestra línea de productos (en desarrollo)', en: 'Our product line (in development)' }, h: '/products' },
     { t: { es: 'Investigación', en: 'Research' }, d: { es: 'Investigación aplicada (próximamente)', en: 'Applied research (coming soon)' }, h: '/research' },
+    { t: { es: 'Liderazgo', en: 'Leadership' }, d: { es: 'Quién dirige DYNX Labs', en: 'Who leads DYNX Labs' }, h: '/leadership' },
     { t: { es: 'FAQ', en: 'FAQ' }, d: { es: 'Preguntas frecuentes', en: 'Frequently asked questions' }, h: '/faq' },
     { t: { es: 'Contacto', en: 'Contact' }, d: { es: 'Hablemos de tu proyecto', en: "Let's talk about your project" }, h: '/contact' }
   ];
