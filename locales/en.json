@@ -182,7 +182,9 @@
     "q7": "How do you handle our business data and processes?",
     "a7": "Every engagement operates under strict confidentiality. Your workflows, data structures, and business logic are never shared, repurposed, or referenced outside your project. We treat your operational knowledge as the competitive asset it is.",
     "q8": "What happens after the project is delivered?",
-    "a8": "Every project includes a 30-day post-launch support period at no additional cost. We monitor systems, resolve edge cases, and make adjustments as your team settles in. Beyond that, we offer ongoing maintenance plans for businesses that want a long-term technical partner — not just a vendor."
+    "a8": "Every project includes a 30-day post-launch support period at no additional cost. We monitor systems, resolve edge cases, and make adjustments as your team settles in. Beyond that, we offer ongoing maintenance plans for businesses that want a long-term technical partner — not just a vendor.",
+    "stillTitle": "Still have questions?",
+    "stillText": "Tell us about your operations and we will answer anything before you start."
   },
   "comingSoon": {
     "badge": "Coming Soon",
@@ -194,7 +196,8 @@
     "code": "404",
     "title": "Route Not Found",
     "subtitle": "The page you are looking for does not exist or has been moved.",
-    "cta": "Back to Home"
+    "cta": "Back to Home",
+    "faqBtn": "Visit FAQ"
   },
   "contact": {
     "badge": "Get Started",
@@ -237,7 +240,13 @@
     "title": "Research",
     "subtitle": "Insights on AI automation, workflow design, and intelligent systems.",
     "notifyBtn": "Notify me via WhatsApp",
-    "notifyHint": "We'll let you know when new content is published."
+    "notifyHint": "We'll let you know when new content is published.",
+    "topicsLabel": "What we are researching",
+    "t1": "AI agents",
+    "t2": "Workflow design",
+    "t3": "LLM orchestration",
+    "t4": "Automation patterns",
+    "t5": "Business intelligence"
   },
   "products": {
     "badge": "In Development",
@@ -250,7 +259,8 @@
     "p3Name": "DYNX Connect",
     "p3Desc": "No-code integration layer that connects your existing tools without writing a single line of code.",
     "notifyBtn": "Notify me via WhatsApp",
-    "notifyHint": "We'll let you know when products launch."
+    "notifyHint": "We'll let you know when products launch.",
+    "label": "Products"
   },
   "insights": {
     "subtitle": "Analysis, real cases and practical guides on AI, automation and intelligent systems.",

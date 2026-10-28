@@ -182,7 +182,9 @@
     "q7": "¿Cómo manejan los datos y procesos de nuestro negocio?",
     "a7": "Cada proyecto opera bajo estricta confidencialidad. Tus flujos de trabajo, estructuras de datos y lógica de negocio nunca son compartidos, reutilizados ni referenciados fuera de tu proyecto. Tratamos tu conocimiento operacional como el activo competitivo que es.",
     "q8": "¿Qué ocurre después de entregar el proyecto?",
-    "a8": "Cada proyecto incluye un período de soporte post-lanzamiento de 30 días sin costo adicional. Monitoreamos los sistemas, resolvemos casos límite y realizamos ajustes mientras tu equipo se adapta. Más allá de eso, ofrecemos planes de mantenimiento continuo para empresas que quieren un socio técnico a largo plazo — no solo un proveedor."
+    "a8": "Cada proyecto incluye un período de soporte post-lanzamiento de 30 días sin costo adicional. Monitoreamos los sistemas, resolvemos casos límite y realizamos ajustes mientras tu equipo se adapta. Más allá de eso, ofrecemos planes de mantenimiento continuo para empresas que quieren un socio técnico a largo plazo — no solo un proveedor.",
+    "stillTitle": "¿Aún tienes preguntas?",
+    "stillText": "Cuéntanos tu operación y respondemos todo antes de empezar."
   },
   "comingSoon": {
     "badge": "Próximamente",
@@ -194,7 +196,8 @@
     "code": "404",
     "title": "Ruta No Encontrada",
     "subtitle": "La página que buscas no existe o ha sido movida.",
-    "cta": "Volver al Inicio"
+    "cta": "Volver al Inicio",
+    "faqBtn": "Ver FAQ"
   },
   "contact": {
     "badge": "Comenzar",
@@ -237,7 +240,13 @@
     "title": "Investigación",
     "subtitle": "Insights sobre automatización con IA, diseño de workflows y sistemas inteligentes.",
     "notifyBtn": "Notifícame por WhatsApp",
-    "notifyHint": "Te avisaremos cuando publiquemos nuevo contenido."
+    "notifyHint": "Te avisaremos cuando publiquemos nuevo contenido.",
+    "topicsLabel": "Lo que estamos investigando",
+    "t1": "Agentes de IA",
+    "t2": "Diseño de workflows",
+    "t3": "Orquestación de LLMs",
+    "t4": "Patrones de automatización",
+    "t5": "Inteligencia de negocios"
   },
   "products": {
     "badge": "En Desarrollo",
@@ -250,7 +259,8 @@
     "p3Name": "DYNX Connect",
     "p3Desc": "Capa de integración sin código que conecta tus herramientas actuales sin escribir una sola línea de código.",
     "notifyBtn": "Notifícame por WhatsApp",
-    "notifyHint": "Te avisaremos cuando los productos estén disponibles."
+    "notifyHint": "Te avisaremos cuando los productos estén disponibles.",
+    "label": "Productos"
   },
   "insights": {
     "subtitle": "Análisis, casos reales y guías prácticas sobre IA, automatización y sistemas inteligentes.",

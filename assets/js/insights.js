@@ -82,7 +82,6 @@
     }
 
     grid.innerHTML = articles.map(article => {
-      const color   = getCategoryColor(article.category);
       const catLabel = getCategoryLabel(article.category);
       const title   = getArticleField(article, 'title');
       const summary = getArticleField(article, 'summary');
@@ -94,11 +93,11 @@
            class="insight-card ${isGrid ? 'insight-card--grid' : 'insight-card--list'}"
            data-slug="${article.slug}"
           >
-          <div class="insight-card__color-bar" style="background:${color}">
+          <div class="insight-card__color-bar">
             <div class="insight-card__color-overlay"></div>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge" style="background:${color}22; color:${color}; border-color:${color}44">
+            <span class="insight-card__badge">
               ${catLabel}
             </span>
             <h3 class="insight-card__title">${title}</h3>
@@ -148,7 +147,7 @@
             <label class="filter-option">
               <input type="checkbox" name="category" value="${cat}"
                 ${selectedCategories.includes(cat) ? 'checked' : ''} />
-              <span class="filter-option__dot" style="background:${getCategoryColor(cat)}"></span>
+              <span class="filter-option__dot"></span>
               <span>${getCategoryLabel(cat)}</span>
             </label>`).join('')}
         </div>

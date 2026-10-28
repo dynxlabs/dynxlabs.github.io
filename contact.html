@@ -76,22 +76,30 @@
       font-family: 'Inter', sans-serif;
       color: #FFFFFF;
       -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8rem 1.5rem 5rem;
+      padding: 168px 32px 128px;
       background-color: #000000;
       }
 
     .contact-wrap .contact-section {
       width: 100%;
-      max-width: 56rem;
+      max-width: 1136px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0,5fr) minmax(0,7fr);
+      gap: 72px;
+      align-items: start;
     }
 
     .contact-wrap .section-header {
-      text-align: center;
-      margin-bottom: 3.5rem;
+      text-align: left;
+      position: sticky;
+      top: 120px;
+    }
+
+    @media (max-width: 1000px) {
+      .contact-wrap { padding: 140px 20px 96px; }
+      .contact-wrap .contact-section { grid-template-columns: 1fr; gap: 48px; }
+      .contact-wrap .section-header { position: static; }
     }
 
     .contact-wrap .section-badge {
@@ -111,29 +119,25 @@
     }
 
     .contact-wrap .section-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      background: linear-gradient(135deg, #FFFFFF 0%, #B3B3B3 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
+      font-size: clamp(40px, 4.6vw, 64px);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 1.02;
+      color: #FFFFFF;
+      margin-bottom: 28px;
     }
 
     .contact-wrap .section-subtitle {
-      font-size: 1.05rem;
-      color: #B3B3B3;
-      line-height: 1.7;
-      max-width: 38rem;
-      margin-inline: auto;
+      font-size: 17px;
+      color: #9a9a9a;
+      line-height: 1.55;
+      max-width: 40ch;
     }
 
     .contact-wrap .form-card {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-lg);
+      background: #0a0a0a;
+      border: 1px solid #1c1c1c;
+      border-radius: 18px;
       padding: 2.5rem;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
@@ -408,12 +412,7 @@
 
   <!-- Header -->
   <div class="section-header">
-    <div class="section-badge">
-      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-      </svg>
-      <span data-i18n="contact.badge">Get Started</span>
-    </div>
+    <div class="lp-label" data-i18n="contact.badge">Get Started</div>
     <h1 class="section-title" data-i18n="contact.title">Ready to Automate Your Operations?</h1>
     <p class="section-subtitle" data-i18n="contact.subtitle">Fill out the form and we'll reach out within 24 hours — or start a conversation directly on WhatsApp.</p>
   </div>
