@@ -78,6 +78,7 @@ files.forEach(file => {
   html = swap(html, /<link id="meta-alt-x"[^>]*\/>/, `<link id="meta-alt-x" rel="alternate" hreflang="x-default" href="${R.articleUrl(post.slug, 'en')}" />`);
   html = swap(html, /<meta id="og-title"([^>]*)content="[^"]*" \/>/, `<meta id="og-title"       property="og:title"       content="${attr(out.title)}" />`);
   html = swap(html, /<meta id="og-description"([^>]*)content="[^"]*" \/>/, `<meta id="og-description" property="og:description" content="${attr(out.summary)}" />`);
+  html = swap(html, /<meta\s+property="og:image"\s+content="[^"]*" \/>/, `<meta                     property="og:image"        content="${R.imageUrl(post.slug)}" />`);
   html = swap(html, /<meta id="og-url"([^>]*)content="[^"]*" \/>/, `<meta id="og-url"         property="og:url"          content="${out.url}" />`);
   html = swap(html, /<\/head>/, `  ${ldTag('json-ld-article', out.jsonLd)}\n  ${ldTag('json-ld-breadcrumb', out.breadcrumb)}\n</head>`);
   html = swap(html, /<main class="post-page" id="post-main">[\s\S]*?<\/main>/, `<main class="post-page" id="post-main">${out.html}\n</main>`);
