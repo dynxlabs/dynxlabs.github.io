@@ -370,10 +370,14 @@
   "leadership": {
     "label": "Company",
     "title": "Leadership",
-    "intro": "Behind every system we build are more than twenty years of solving problems where there is no margin for error.",
-    "bio1": "A mechanical engineer by training, Arois Monsalve has spent more than 20 years working where operations cannot stop: supervising maintenance at an oil refinery, supporting commercial aircraft engines, running technology for a public institution, teaching engineering at university and coordinating teams of more than 250 people on infrastructure that millions now move through every day, including Santiago's airport and metro.",
-    "bio2": "Technology was the common thread all along. From managing IT systems to analyzing aircraft engine data, Arois kept looking for ways to let machines do the heavy lifting, and kept seeing the same thing: talented teams trapped in manual processes nobody had time to fix.",
+    "intro": "More than 20 years solving real problems. Today, building systems to solve them better.",
+    "bio1": "A mechanical engineer by training, Arois Monsalve has spent more than two decades working in environments where operational continuity, precision and responsiveness are not optional. That path spans maintenance at an oil refinery, technical support for commercial aircraft engines, technology management at a public institution, university teaching and the coordination of teams of more than 250 people on infrastructure projects such as Santiago's airport and metro.",
+    "bio2": "Along the way, Arois saw a constant: technology had enormous potential to improve how we work, yet many organizations still relied on manual processes that consume time, limit productivity and keep teams from focusing on what truly matters.",
     "linkedin": "View LinkedIn profile",
-    "bio3": "When artificial intelligence arrived, everything clicked. For the first time, a lifelong passion for technology and two decades of field experience pointed in the same direction. DYNX Labs was born from that conviction: systems that give every team back its most valuable resource, time. Not to build demos. To make things work."
+    "bio3a": "With the arrival of artificial intelligence, that conviction finally found its tool. Hands-on field experience and a lifelong passion for technology converged into a single mission: ",
+    "bio3b": "building systems that turn real operational problems into concrete solutions.",
+    "bio4a": "That is how DYNX Labs was born. Not to add technology for its own sake, nor to create demos that impress and are then forgotten, but to design and deploy systems that work in the real world, reduce repetitive work and give people back something no organization can afford to waste: ",
+    "bio4b": "their time",
+    "role": "Founder & CEO · DYNX Labs"
   }
 }

@@ -370,10 +370,14 @@
   "leadership": {
     "label": "Compañía",
     "title": "Liderazgo",
-    "intro": "Detrás de cada sistema que construimos hay más de veinte años resolviendo problemas donde no hay margen de error.",
-    "bio1": "Ingeniero mecánico de formación, Arois Monsalve lleva más de 20 años trabajando donde las operaciones no pueden detenerse: supervisando el mantenimiento de una refinería, dando soporte técnico a motores de aviación comercial, gestionando la tecnología de una institución pública, enseñando ingeniería en la universidad y coordinando equipos de más de 250 personas en obras que hoy recorren millones de personas, como el Aeropuerto y el Metro de Santiago.",
-    "bio2": "La tecnología siempre fue el hilo conductor. Desde administrar sistemas hasta analizar datos de motores de avión, buscó una y otra vez la forma de que las máquinas hicieran el trabajo pesado, y en cada operación vio lo mismo: equipos talentosos atrapados en procesos manuales que nadie tenía tiempo de mejorar.",
+    "intro": "Más de 20 años resolviendo problemas reales. Hoy, construyendo sistemas para resolverlos mejor.",
+    "bio1": "Ingeniero mecánico de formación, Arois Monsalve lleva más de dos décadas trabajando en entornos donde la continuidad operacional, la precisión y la capacidad de respuesta no son opcionales. Su trayectoria abarca el mantenimiento de una refinería, el soporte técnico a motores de aviación comercial, la gestión tecnológica en una institución pública, la docencia universitaria y la coordinación de equipos de más de 250 personas en proyectos de infraestructura como el Aeropuerto y el Metro de Santiago.",
+    "bio2": "A lo largo de ese camino vio una constante: la tecnología tenía un enorme potencial para mejorar cómo trabajamos, pero muchas organizaciones seguían dependiendo de procesos manuales que consumen tiempo, limitan la productividad y dificultan que sus equipos se concentren en lo que realmente importa.",
     "linkedin": "Ver perfil en LinkedIn",
-    "bio3": "Cuando llegó la inteligencia artificial, todo encajó. Por primera vez, una pasión de toda la vida por la tecnología y dos décadas de experiencia en terreno apuntaban en la misma dirección. De esa convicción nació DYNX Labs: sistemas que le devuelven a cada equipo su recurso más valioso, el tiempo. No para hacer demos. Para que las cosas funcionen."
+    "bio3a": "Con la llegada de la inteligencia artificial, esa convicción encontró por fin su herramienta. La experiencia acumulada en terreno y una pasión de toda la vida por la tecnología convergieron en una misma misión: ",
+    "bio3b": "construir sistemas que transformen problemas operativos reales en soluciones concretas.",
+    "bio4a": "Así nació DYNX Labs. No para sumar tecnología por el simple hecho de hacerlo, ni para crear demostraciones que impresionen y después queden en el olvido. Sino para diseñar e implementar sistemas que funcionen en el mundo real, reduzcan el trabajo repetitivo y devuelvan a las personas algo que ninguna organización puede permitirse desperdiciar: ",
+    "bio4b": "su tiempo",
+    "role": "Founder & CEO · DYNX Labs"
   }
 }

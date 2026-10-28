@@ -1895,4 +1895,5 @@ body.mm-lock{overflow:hidden}
 .lp-person .lp-tlink{margin-top:24px}
 .lp-person-bio p{font-size:17px;color:#cfcfcf;line-height:1.65;max-width:62ch}
 .lp-person-bio p+p{margin-top:20px}
+.lp-person-bio strong{color:#fff;font-weight:600}
 @media(max-width:900px){.lp-person{grid-template-columns:1fr;gap:24px}.lp-sign{text-align:left}}
