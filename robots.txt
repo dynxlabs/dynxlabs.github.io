@@ -4,7 +4,7 @@
 User-agent: *
 Allow: /
 
-Disallow: /assets/
-Disallow: /locales/
+# CSS, JS and translations must stay crawlable: Google needs them to
+# render the pages and to see the Spanish version (?lang=es).
 
 Sitemap: https://dynxlabs.com/sitemap_index.xml
