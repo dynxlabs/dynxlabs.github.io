@@ -86,6 +86,12 @@ const I18n = (() => {
      APPLY TO DOM
   ---------------------------------------------------------- */
   function applyToDOM() {
+    // aria-label with its own key (works alongside data-i18n on the same element)
+    document.querySelectorAll('[data-i18n-label]').forEach(el => {
+      const value = processTokens(get(el.getAttribute('data-i18n-label')));
+      if (!isInvalid(value)) el.setAttribute('aria-label', value);
+    });
+
     const elements = document.querySelectorAll('[data-i18n]');
 
     elements.forEach(el => {
