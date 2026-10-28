@@ -123,7 +123,8 @@
     "insAI": "Artificial Intelligence",
     "insRealCases": "Real Cases",
     "insWorkflows": "Workflows",
-    "viewAllArticles": "View all articles"
+    "viewAllArticles": "View all articles",
+    "leadership": "Leadership"
   },
   "cookie": {
     "text": "We use essential cookies to ensure you get the best experience on our website. By continuing, you agree to our",
@@ -308,7 +309,8 @@
     "sec5": "Manufacturing",
     "sec5Desc": "Production, quality and supply.",
     "sec6": "Professional services",
-    "sec6Desc": "Proposals, invoicing and CRM."
+    "sec6Desc": "Proposals, invoicing and CRM.",
+    "leadLinkedin": "Arois Monsalve on LinkedIn"
   },
   "meta": {
     "home": {
@@ -334,6 +336,10 @@
     "insights": {
       "title": "Insights | DYNX Labs",
       "desc": "Practical guides and real cases on AI agents, automation, data and workflows for businesses."
+    },
+    "leadership": {
+      "title": "Leadership | DYNX Labs",
+      "desc": "Arois Monsalve, Founder & CEO of DYNX Labs: more than 20 years in operations, engineering and technology, now applied to AI automation."
     }
   },
   "a11y": {
@@ -360,5 +366,18 @@
     "manifesto": "Manifesto",
     "listView": "List view",
     "gridView": "Grid view"
+  },
+  "leadership": {
+    "label": "Company",
+    "title": "Leadership",
+    "intro": "More than 20 years solving real problems. Today, building systems to solve them better.",
+    "bio1": "A mechanical engineer by training, Arois Monsalve has spent more than two decades working in environments where operational continuity, precision and responsiveness are not optional. That path spans maintenance at an oil refinery, technical support for commercial aircraft engines, technology management at a public institution, university teaching and the coordination of teams of more than 250 people on infrastructure projects such as Santiago's airport and metro.",
+    "bio2": "Along the way, Arois saw a constant: technology had enormous potential to improve how we work, yet many organizations still relied on manual processes that consume time, limit productivity and keep teams from focusing on what truly matters.",
+    "linkedin": "View LinkedIn profile",
+    "bio3a": "With the arrival of artificial intelligence, that conviction finally found its tool. Hands-on field experience and a lifelong passion for technology converged into a single mission: ",
+    "bio3b": "building systems that turn real operational problems into concrete solutions.",
+    "bio4a": "That is how DYNX Labs was born. Not to add technology for its own sake, nor to create demos that impress and are then forgotten, but to design and deploy systems that work in the real world, reduce repetitive work and give people back something no organization can afford to waste: ",
+    "bio4b": "their time",
+    "role": "Founder & CEO · DYNX Labs"
   }
 }

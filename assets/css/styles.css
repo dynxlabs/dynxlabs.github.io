@@ -1882,3 +1882,18 @@ body.mm-lock{overflow:hidden}
   .lp-faq .faq-item{grid-column:1}
   .lp-faq .faq-question{font-size:17px}
 }
+
+/* Manifesto signature */
+.lp-sign{max-width:none!important;margin-top:40px;text-align:right;font-size:16px!important;letter-spacing:0!important;line-height:1.5!important;color:var(--lp-t2)!important}
+.lp-sign a{color:#fff!important;font-weight:500;border-bottom:1px solid var(--lp-line2);transition:border-color .15s}
+.lp-sign a:hover{border-bottom-color:#fff}
+
+/* Leadership page */
+.lp-person{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px;border-top:1px solid var(--lp-line);padding-top:40px}
+.lp-person h2{font-size:clamp(26px,2.6vw,34px);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+.lp-person-role{display:block;font-size:15px;color:var(--lp-t2);margin-top:8px}
+.lp-person .lp-tlink{margin-top:24px}
+.lp-person-bio p{font-size:17px;color:#cfcfcf;line-height:1.65;max-width:62ch}
+.lp-person-bio p+p{margin-top:20px}
+.lp-person-bio strong{color:#fff;font-weight:600}
+@media(max-width:900px){.lp-person{grid-template-columns:1fr;gap:24px}.lp-sign{text-align:left}}

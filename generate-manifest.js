@@ -98,7 +98,8 @@ const PAGES = [
   { loc: '/insights',  freq: 'weekly',  prio: '0.9' },
   { loc: '/products',  freq: 'monthly', prio: '0.8' },
   { loc: '/research',  freq: 'monthly', prio: '0.7' },
-  { loc: '/faq',       freq: 'yearly',  prio: '0.7' }
+  { loc: '/faq',       freq: 'yearly',  prio: '0.7' },
+  { loc: '/leadership', freq: 'yearly', prio: '0.6' }
 ];
 const urlBlock = (en, es, lastmod, freq, prio) => [en, es].map(loc => `  <url>
     <loc>${loc}</loc>

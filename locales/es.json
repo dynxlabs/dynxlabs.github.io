@@ -123,7 +123,8 @@
     "insAI": "Inteligencia Artificial",
     "insRealCases": "Casos Reales",
     "insWorkflows": "Workflows",
-    "viewAllArticles": "Ver todos los artículos"
+    "viewAllArticles": "Ver todos los artículos",
+    "leadership": "Liderazgo"
   },
   "cookie": {
     "text": "Utilizamos cookies esenciales para garantizar la mejor experiencia en nuestro sitio. Al continuar, aceptas nuestra",
@@ -308,7 +309,8 @@
     "sec5": "Manufactura",
     "sec5Desc": "Producción, calidad y abastecimiento.",
     "sec6": "Servicios profesionales",
-    "sec6Desc": "Propuestas, facturación y CRM."
+    "sec6Desc": "Propuestas, facturación y CRM.",
+    "leadLinkedin": "Arois Monsalve en LinkedIn"
   },
   "meta": {
     "home": {
@@ -334,6 +336,10 @@
     "insights": {
       "title": "Insights | DYNX Labs",
       "desc": "Guías prácticas y casos reales sobre agentes de IA, automatización, datos y workflows para empresas."
+    },
+    "leadership": {
+      "title": "Liderazgo | DYNX Labs",
+      "desc": "Arois Monsalve, Founder & CEO de DYNX Labs: más de 20 años en operaciones, ingeniería y tecnología, hoy al servicio de la automatización con IA."
     }
   },
   "a11y": {
@@ -360,5 +366,18 @@
     "manifesto": "Manifiesto",
     "listView": "Vista de lista",
     "gridView": "Vista de cuadrícula"
+  },
+  "leadership": {
+    "label": "Compañía",
+    "title": "Liderazgo",
+    "intro": "Más de 20 años resolviendo problemas reales. Hoy, construyendo sistemas para resolverlos mejor.",
+    "bio1": "Ingeniero mecánico de formación, Arois Monsalve lleva más de dos décadas trabajando en entornos donde la continuidad operacional, la precisión y la capacidad de respuesta no son opcionales. Su trayectoria abarca el mantenimiento de una refinería, el soporte técnico a motores de aviación comercial, la gestión tecnológica en una institución pública, la docencia universitaria y la coordinación de equipos de más de 250 personas en proyectos de infraestructura como el Aeropuerto y el Metro de Santiago.",
+    "bio2": "A lo largo de ese camino vio una constante: la tecnología tenía un enorme potencial para mejorar cómo trabajamos, pero muchas organizaciones seguían dependiendo de procesos manuales que consumen tiempo, limitan la productividad y dificultan que sus equipos se concentren en lo que realmente importa.",
+    "linkedin": "Ver perfil en LinkedIn",
+    "bio3a": "Con la llegada de la inteligencia artificial, esa convicción encontró por fin su herramienta. La experiencia acumulada en terreno y una pasión de toda la vida por la tecnología convergieron en una misma misión: ",
+    "bio3b": "construir sistemas que transformen problemas operativos reales en soluciones concretas.",
+    "bio4a": "Así nació DYNX Labs. No para sumar tecnología por el simple hecho de hacerlo, ni para crear demostraciones que impresionen y después queden en el olvido. Sino para diseñar e implementar sistemas que funcionen en el mundo real, reduzcan el trabajo repetitivo y devuelvan a las personas algo que ninguna organización puede permitirse desperdiciar: ",
+    "bio4b": "su tiempo",
+    "role": "Founder & CEO · DYNX Labs"
   }
 }
