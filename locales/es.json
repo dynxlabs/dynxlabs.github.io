@@ -308,7 +308,9 @@
     "sec5": "Manufactura",
     "sec5Desc": "Producción, calidad y abastecimiento.",
     "sec6": "Servicios profesionales",
-    "sec6Desc": "Propuestas, facturación y CRM."
+    "sec6Desc": "Propuestas, facturación y CRM.",
+    "leadLabel": "Liderazgo",
+    "leadLinkedin": "Arois Monsalve en LinkedIn"
   },
   "meta": {
     "home": {
