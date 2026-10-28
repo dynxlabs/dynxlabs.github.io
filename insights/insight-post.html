@@ -38,7 +38,7 @@
     .post-page { min-height: 100vh; padding-top: 80px; }
 
     .post-hero {
-      padding: 64px 24px 48px;
+      padding: 96px 24px 48px;
       max-width: 800px;
       margin: 0 auto;
     }
@@ -57,21 +57,16 @@
     .post-hero__back svg { width: 14px; height: 14px; }
 
     .post-hero__badge {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: 4px;
-      border: 1px solid;
+      display: block;
+      font-size: 14px;
+      color: #9a9a9a;
       margin-bottom: 20px;
     }
 
     .post-hero__title {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-size: clamp(2.2rem, 4.6vw, 3.5rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
       color: #fff;
       line-height: 1.15;
       margin-bottom: 16px;
@@ -97,11 +92,10 @@
     .post-hero__meta-dot { opacity: 0.4; }
 
     .post-color-bar {
-      height: 3px;
-      max-width: 800px;
+      height: 1px;
+      max-width: 752px;
       margin: 0 auto;
-      border-radius: 2px;
-      opacity: 0.7;
+      background: #1c1c1c;
     }
 
     .post-content {
@@ -303,10 +297,7 @@
     }
 
     .post-related__card-bar {
-      height: 3px;
-      border-radius: 2px;
-      margin-bottom: 14px;
-      opacity: 0.6;
+      display: none;
     }
 
     .post-related__card-title {
@@ -565,10 +556,6 @@
     return cat[lang] || cat.en;
   }
 
-  function getCategoryColor(catKey) {
-    return (CATEGORIES[catKey] || {}).color || '#2a2a2a';
-  }
-
   function formatDate(dateStr, lang) {
     const d = new Date(dateStr + 'T00:00:00');
     return d.toLocaleDateString(lang === 'es' ? 'es-CL' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -595,7 +582,6 @@
   function renderPost(article, manifest) {
     const lang     = getLang();
     const data     = article[lang] || article.en;
-    const color    = getCategoryColor(article.category);
     const catLabel = getCategoryLabel(article.category, lang);
     const readTime = article.readTime[lang] || article.readTime.en;
     const dateStr  = formatDate(article.date, lang);
@@ -645,7 +631,7 @@
             const rd = r[lang] || r.en;
             return `
               <a href="/insights/${r.slug}" class="post-related__card">
-                <div class="post-related__card-bar" style="background:${getCategoryColor(r.category)}"></div>
+                <div class="post-related__card-bar"></div>
                 <div class="post-related__card-title">${rd.title}</div>
                 <div class="post-related__card-meta">${r.readTime[lang] || r.readTime.en}</div>
               </a>`;
@@ -675,7 +661,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
           ${lang === 'es' ? 'Volver a Insights' : 'Back to Insights'}
         </a>
-        <div class="post-hero__badge" style="background:${color}22; color:${color}; border-color:${color}44">
+        <div class="post-hero__badge">
           ${catLabel}
         </div>
         <h1 class="post-hero__title">${data.title}</h1>
@@ -687,7 +673,7 @@
         </div>
       </div>
 
-      <div class="post-color-bar" style="background:${color}"></div>
+      <div class="post-color-bar"></div>
 
       <div class="post-content">
         ${bodyHtml}
