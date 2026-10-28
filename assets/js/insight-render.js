@@ -75,7 +75,7 @@
 
     const relatedHtml = related.length > 0 ? `
       <hr class="post-divider" />
-      <section class="post-related" aria-label="Related articles">
+      <section class="post-related" aria-label="${lang === 'es' ? 'Artículos relacionados' : 'Related articles'}">
         <div class="post-related__title">${lang === 'es' ? 'Artículos relacionados' : 'Related articles'}</div>
         <div class="post-related__grid">
           ${related.map(r => {

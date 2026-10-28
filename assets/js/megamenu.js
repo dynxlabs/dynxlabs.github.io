@@ -48,7 +48,7 @@
       pk: { es: 'Explora', en: 'Explore' },
       primary: [
         { t: { es: 'Visión general de Productos', en: 'Products overview' }, h: '/products' },
-        { t: { es: 'Research (próximamente)', en: 'Research (coming soon)' }, h: '/research' }
+        { t: { es: 'Investigación (próximamente)', en: 'Research (coming soon)' }, h: '/research' }
       ],
       sk: { es: 'Mientras tanto', en: 'Meanwhile' },
       secondary: [
@@ -90,10 +90,10 @@
   const T = {
     es: { searchPh: 'Buscar soluciones, productos o artículos...', searchAria: 'Buscar en DYNX Labs',
           pills: { todos: 'Todos', soluciones: 'Soluciones', insights: 'Insights', empresa: 'Compañía' },
-          noResults: 'Sin resultados para', select: 'Seleccionar', open: 'Abrir menú', close: 'Cerrar menú' },
+          noResults: 'Sin resultados para', select: 'Seleccionar', open: 'Abrir menú', close: 'Cerrar menú', brand: 'Buscador DYNX' },
     en: { searchPh: 'Search solutions, products or articles...', searchAria: 'Search DYNX Labs',
           pills: { todos: 'All', soluciones: 'Solutions', insights: 'Insights', empresa: 'Company' },
-          noResults: 'No results for', select: 'Select', open: 'Open menu', close: 'Close menu' }
+          noResults: 'No results for', select: 'Select', open: 'Open menu', close: 'Close menu', brand: 'DYNX Search' }
   };
 
   const SERVICES = [
@@ -104,7 +104,7 @@
   const PAGES = [
     { t: { es: 'Inicio', en: 'Home' }, d: { es: 'Automate the Work. Accelerate the Business.', en: 'Automate the Work. Accelerate the Business.' }, h: '/' },
     { t: { es: 'Productos', en: 'Products' }, d: { es: 'Nuestra línea de productos (en desarrollo)', en: 'Our product line (in development)' }, h: '/products' },
-    { t: { es: 'Research', en: 'Research' }, d: { es: 'Investigación aplicada (próximamente)', en: 'Applied research (coming soon)' }, h: '/research' },
+    { t: { es: 'Investigación', en: 'Research' }, d: { es: 'Investigación aplicada (próximamente)', en: 'Applied research (coming soon)' }, h: '/research' },
     { t: { es: 'FAQ', en: 'FAQ' }, d: { es: 'Preguntas frecuentes', en: 'Frequently asked questions' }, h: '/faq' },
     { t: { es: 'Contacto', en: 'Contact' }, d: { es: 'Hablemos de tu proyecto', en: "Let's talk about your project" }, h: '/contact' }
   ];
@@ -162,7 +162,7 @@
         '</div>' +
         '<div class="mm-pills" id="mm-pills"></div>' +
         '<div class="mm-results" id="mm-results"></div>' +
-        '<div class="mm-search-foot"><span id="mm-foot-select"></span><span>DYNX Search</span></div>' +
+        '<div class="mm-search-foot"><span id="mm-foot-select"></span><span id="mm-foot-brand"></span></div>' +
       '</div>';
     document.body.appendChild(searchEl);
     searchInput = searchEl.querySelector('#mm-search-input');
@@ -349,6 +349,7 @@
     if (searchEl.classList.contains('show')) { searchInput.placeholder = T[lang].searchPh; renderPills(); runSearch(); }
     else { searchInput.placeholder = T[lang].searchPh; }
     searchEl.querySelector('#mm-foot-select').textContent = '↵ ' + T[lang].select;
+    searchEl.querySelector('#mm-foot-brand').textContent = T[lang].brand;
     if (drawer.classList.contains('show')) renderDrawer();
     const navSearch = navWrap.querySelector('.mm-nav-search'); if (navSearch) navSearch.setAttribute('aria-label', T[lang].searchAria);
   }
@@ -408,6 +409,7 @@
     renderNav();
     searchInput.placeholder = T[lang].searchPh;
     searchEl.querySelector('#mm-foot-select').textContent = '↵ ' + T[lang].select;
+    searchEl.querySelector('#mm-foot-brand').textContent = T[lang].brand;
     wire();
     loadArticles();
   }

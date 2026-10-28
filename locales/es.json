@@ -5,7 +5,7 @@
     "about": "Nosotros",
     "stack": "Tecnologías",
     "products": "Productos",
-    "research": "Research",
+    "research": "Investigación",
     "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contacto",
@@ -104,7 +104,7 @@
     "method": "Nuestro Método",
     "stack": "Tecnologías",
     "products": "Productos",
-    "research": "Research",
+    "research": "Investigación",
     "insights": "Insights",
     "faq": "FAQ",
     "contact": "Contacto",
@@ -204,7 +204,7 @@
     "title": "¿Listo para Automatizar tus Operaciones?",
     "subtitle": "Completa el formulario y te contactamos en menos de 24 horas — o inicia una conversación directamente por WhatsApp.",
     "fieldCompany": "Nombre de la Empresa",
-    "placeholderCompany": "ACME Corp",
+    "placeholderCompany": "Tu Empresa SpA",
     "fieldContact": "Nombre de Contacto",
     "placeholderContact": "Juan Pérez",
     "fieldRegion": "Región",
@@ -234,7 +234,8 @@
     "waBtn": "Tu competencia ya está automatizando. ¿Y tú?",
     "hint": "Tus datos se tratan con estricta confidencialidad. Nunca los compartiremos con terceros.",
     "successTitle": "Mensaje recibido.",
-    "successSubtitle": "Te contactaremos en menos de 24 horas. Mientras tanto, puedes escribirnos por WhatsApp."
+    "successSubtitle": "Te contactaremos en menos de 24 horas. Mientras tanto, puedes escribirnos por WhatsApp.",
+    "errSubmit": "Algo salió mal. Inténtalo de nuevo o escríbenos por WhatsApp."
   },
   "research": {
     "title": "Investigación",
@@ -334,5 +335,30 @@
       "title": "Insights | DYNX Labs",
       "desc": "Guías prácticas y casos reales sobre agentes de IA, automatización, datos y workflows para empresas."
     }
+  },
+  "a11y": {
+    "home": "DYNX Labs — Inicio",
+    "langSelector": "Selector de idioma",
+    "close": "Cerrar",
+    "submenu": "Submenú",
+    "search": "Buscar",
+    "openMenu": "Abrir menú",
+    "mainNav": "Navegación principal",
+    "cookie": "Consentimiento de cookies",
+    "whatsapp": "Escríbenos por WhatsApp",
+    "social": "Redes sociales",
+    "x": "DYNX Labs en X",
+    "threads": "DYNX Labs en Threads",
+    "telegram": "DYNX Labs en Telegram",
+    "linkedin": "DYNX Labs en LinkedIn",
+    "instagram": "DYNX Labs en Instagram",
+    "sales": "Habla con ventas por WhatsApp",
+    "filters": "Filtros",
+    "closeTerms": "Cerrar Términos de servicio",
+    "closePrivacy": "Cerrar Política de privacidad",
+    "openFilters": "Abrir filtros",
+    "manifesto": "Manifiesto",
+    "listView": "Vista de lista",
+    "gridView": "Vista de cuadrícula"
   }
 }

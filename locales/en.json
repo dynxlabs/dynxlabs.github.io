@@ -234,7 +234,8 @@
     "waBtn": "Your competition is already automating. Are you?",
     "hint": "Your data is handled with strict confidentiality. We will never share it with third parties.",
     "successTitle": "Message received.",
-    "successSubtitle": "We'll be in touch within 24 hours. In the meantime, feel free to reach us on WhatsApp."
+    "successSubtitle": "We'll be in touch within 24 hours. In the meantime, feel free to reach us on WhatsApp.",
+    "errSubmit": "Something went wrong. Please try again or contact us via WhatsApp."
   },
   "research": {
     "title": "Research",
@@ -334,5 +335,30 @@
       "title": "Insights | DYNX Labs",
       "desc": "Practical guides and real cases on AI agents, automation, data and workflows for businesses."
     }
+  },
+  "a11y": {
+    "home": "DYNX Labs — Home",
+    "langSelector": "Language selector",
+    "close": "Close",
+    "submenu": "Submenu",
+    "search": "Search",
+    "openMenu": "Open menu",
+    "mainNav": "Main navigation",
+    "cookie": "Cookie consent",
+    "whatsapp": "Contact us on WhatsApp",
+    "social": "Social media links",
+    "x": "DYNX Labs on X",
+    "threads": "DYNX Labs on Threads",
+    "telegram": "DYNX Labs on Telegram",
+    "linkedin": "DYNX Labs on LinkedIn",
+    "instagram": "DYNX Labs on Instagram",
+    "sales": "Contact Sales on WhatsApp",
+    "filters": "Filters",
+    "closeTerms": "Close Terms of Service",
+    "closePrivacy": "Close Privacy Policy",
+    "openFilters": "Open filters",
+    "manifesto": "Manifesto",
+    "listView": "List view",
+    "gridView": "Grid view"
   }
 }
