@@ -339,7 +339,7 @@
     },
     "leadership": {
       "title": "Liderazgo | DYNX Labs",
-      "desc": "Quién dirige DYNX Labs: Arois Monsalve, Founder & CEO, con más de 15 años en operaciones, ingeniería y gestión de proyectos."
+      "desc": "Arois Monsalve, Founder & CEO de DYNX Labs: más de 20 años en operaciones, ingeniería y tecnología, hoy al servicio de la automatización con IA."
     }
   },
   "a11y": {
@@ -370,9 +370,10 @@
   "leadership": {
     "label": "Compañía",
     "title": "Liderazgo",
-    "intro": "Quién dirige DYNX Labs y la experiencia que hay detrás de cada proyecto.",
-    "bio1": "Arois Monsalve es fundador y CEO de DYNX Labs. Antes de crearla, pasó más de 15 años dentro de operaciones reales: gestión de TI en el sector público, mantenimiento industrial en refinería y aviación, docencia universitaria en ingeniería mecánica y dirección de proyectos de infraestructura y construcción en Venezuela y Chile, participando en proyectos como la ampliación del Aeropuerto de Santiago y el Metro de Santiago.",
-    "bio2": "Es ingeniero mecánico egresado de la UNEFA. En DYNX Labs combina esa experiencia en terreno con inteligencia artificial para que las empresas automaticen el trabajo repetitivo con sistemas que funcionan en el día a día, no solo en una demo.",
-    "linkedin": "Ver perfil en LinkedIn"
+    "intro": "Detrás de cada sistema que construimos hay más de veinte años resolviendo problemas donde no hay margen de error.",
+    "bio1": "Ingeniero mecánico de formación, Arois Monsalve lleva más de 20 años trabajando donde las operaciones no pueden detenerse: supervisando el mantenimiento de una refinería, dando soporte técnico a motores de aviación comercial, gestionando la tecnología de una institución pública, enseñando ingeniería en la universidad y coordinando equipos de más de 250 personas en obras que hoy recorren millones de personas, como el Aeropuerto y el Metro de Santiago.",
+    "bio2": "La tecnología siempre fue el hilo conductor. Desde administrar sistemas hasta analizar datos de motores de avión, buscó una y otra vez la forma de que las máquinas hicieran el trabajo pesado, y en cada operación vio lo mismo: equipos talentosos atrapados en planillas y procesos manuales que nadie tenía tiempo de mejorar.",
+    "linkedin": "Ver perfil en LinkedIn",
+    "bio3": "Cuando llegó la inteligencia artificial, todo encajó. Por primera vez, una pasión de toda la vida por la tecnología y dos décadas de experiencia en terreno apuntaban en la misma dirección. De esa convicción nació DYNX Labs: sistemas que le devuelven a cada equipo su recurso más valioso, el tiempo. No para hacer demos. Para que las cosas funcionen."
   }
 }
