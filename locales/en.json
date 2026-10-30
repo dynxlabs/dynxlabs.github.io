@@ -262,7 +262,9 @@
     "p3Desc": "No-code integration layer that connects your existing tools without writing a single line of code.",
     "notifyBtn": "Notify me via WhatsApp",
     "notifyHint": "We'll let you know when products launch.",
-    "label": "Products"
+    "label": "Products",
+    "orahName": "DYNX Orah",
+    "orahDesc": "Booking and scheduling platform that turns every open hour into a confirmed appointment."
   },
   "insights": {
     "subtitle": "Analysis, real cases and practical guides on AI, automation and intelligent systems.",
@@ -319,7 +321,7 @@
     },
     "products": {
       "title": "Products | DYNX Labs",
-      "desc": "Tools DYNX Labs is building to automate common operations: lead management, real-time dashboards and no-code integrations."
+      "desc": "Tools DYNX Labs is building to automate common operations: booking and scheduling, lead management, real-time dashboards and no-code integrations."
     },
     "research": {
       "title": "Research | DYNX Labs",

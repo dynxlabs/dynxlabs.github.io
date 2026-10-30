@@ -262,7 +262,9 @@
     "p3Desc": "Capa de integración sin código que conecta tus herramientas actuales sin escribir una sola línea de código.",
     "notifyBtn": "Notifícame por WhatsApp",
     "notifyHint": "Te avisaremos cuando los productos estén disponibles.",
-    "label": "Productos"
+    "label": "Productos",
+    "orahName": "DYNX Orah",
+    "orahDesc": "Plataforma de reservas y agendamiento que convierte cada hora disponible en una cita confirmada."
   },
   "insights": {
     "subtitle": "Análisis, casos reales y guías prácticas sobre IA, automatización y sistemas inteligentes.",
@@ -319,7 +321,7 @@
     },
     "products": {
       "title": "Productos | DYNX Labs",
-      "desc": "Herramientas que DYNX Labs está construyendo para automatizar operaciones comunes: gestión de leads, dashboards en tiempo real e integraciones sin código."
+      "desc": "Herramientas que DYNX Labs está construyendo para automatizar operaciones comunes: reservas y agendamiento, gestión de leads, dashboards en tiempo real e integraciones sin código."
     },
     "research": {
       "title": "Investigación | DYNX Labs",
