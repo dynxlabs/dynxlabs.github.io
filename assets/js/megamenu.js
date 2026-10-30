@@ -105,6 +105,7 @@
   const PAGES = [
     { t: { es: 'Inicio', en: 'Home' }, d: { es: 'Automate the Work. Accelerate the Business.', en: 'Automate the Work. Accelerate the Business.' }, h: '/' },
     { t: { es: 'Productos', en: 'Products' }, d: { es: 'Nuestra línea de productos (en desarrollo)', en: 'Our product line (in development)' }, h: '/products' },
+    { t: { es: 'DYNX Orah', en: 'DYNX Orah' }, d: { es: 'Reservas y agendamiento (en desarrollo)', en: 'Booking and scheduling (in development)' }, h: '/products' },
     { t: { es: 'Investigación', en: 'Research' }, d: { es: 'Investigación aplicada (próximamente)', en: 'Applied research (coming soon)' }, h: '/research' },
     { t: { es: 'Liderazgo', en: 'Leadership' }, d: { es: 'Quién dirige DYNX Labs', en: 'Who leads DYNX Labs' }, h: '/leadership' },
     { t: { es: 'FAQ', en: 'FAQ' }, d: { es: 'Preguntas frecuentes', en: 'Frequently asked questions' }, h: '/faq' },

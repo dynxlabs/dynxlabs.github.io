@@ -1856,6 +1856,8 @@ body.mm-lock{overflow:hidden}
 .lp-phero--full .lp-wrap{width:100%}
 .lp-sec--flush{border-top:none;padding-top:0}
 .lp-cell--static h3{margin-top:56px}
+.lp-grid2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.lp-grid2{grid-template-columns:1fr}}
 .lp-cell-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .lp-tag{font-size:12px;color:var(--lp-t2);border:1px solid var(--lp-line2);border-radius:999px;padding:3px 10px}
 .lp-note{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:56px}
