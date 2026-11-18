@@ -22,18 +22,29 @@
 
 ## Qué es DYNX Labs
 
-**DYNX Labs** construye sistemas impulsados por inteligencia artificial que automatizan operaciones, integran herramientas de negocio y transforman los datos en decisiones inteligentes.
+**DYNX Labs** construye software impulsado por IA que permite a los equipos automatizar operaciones, integrar herramientas y tomar decisiones más rápidas basadas en datos confiables.
 
-Nuestra misión es diseñar la transición hacia **operaciones de negocio autónomas**.
+### Soluciones
 
-| Capacidad | Descripción |
+| Solución | Descripción |
 |---|---|
-| **AI Agents** | Agentes autónomos que ejecutan tareas operativas y coordinan flujos de trabajo |
-| **Workflow Automation** | Infraestructura de automatización que elimina procesos repetitivos |
-| **System Integrations** | Conexión de CRMs, plataformas internas y herramientas operativas en un solo ecosistema |
-| **Dashboards & Reporting** | Visibilidad operativa en tiempo real con insights generados por IA |
-| **Business Intelligence** | Sistemas que convierten los datos operativos en decisiones estratégicas |
-| **Custom SaaS Platforms** | Software diseñado específicamente para operaciones de negocio modernas |
+| **AI Agents** | Agentes de inteligencia artificial para operaciones internas que aprenden, se adaptan y ejecutan tareas complejas de forma automática |
+| **Workflow Automation** | Eliminamos procesos repetitivos conectando tus herramientas actuales para crear flujos de trabajo autónomos y eficientes |
+| **Dashboards & Reporting** | Visualización de datos en tiempo real con insights accionables generados automáticamente por IA para decisiones estratégicas |
+| **System Integrations** | Conectamos tus sistemas actuales creando ecosistemas unificados que comunican datos sin fricciones |
+| **Business Intelligence** | Sistemas que transforman datos crudos en decisiones estratégicas automatizadas |
+| **Custom SaaS** | Desarrollo de software como servicio a medida, diseñado específicamente para las necesidades únicas de tu negocio |
+
+### Productos
+
+| Producto | Descripción | Estado |
+|---|---|---|
+| **DYNX Orah** | Plataforma de reservas y agendamiento que convierte cada hora disponible en una cita confirmada | En desarrollo |
+| **DYNX Synapse** | Plataforma de captura, gestión y análisis de leads con IA | En desarrollo |
+| **DYNX Pulse** | Dashboard de inteligencia de negocio en tiempo real que muestra las métricas que realmente importan para tu operación | En desarrollo |
+| **DYNX Connect** | Capa de integración sin código que conecta tus herramientas actuales sin escribir una sola línea de código | En desarrollo |
+
+Textos y estados tomados del sitio publicado ([soluciones](https://dynxlabs.com/es/) y [productos](https://dynxlabs.com/es/products)).
 
 Este repositorio contiene el código fuente del sitio web.
 
@@ -146,7 +157,7 @@ dynxlabs.github.io/
 | Redirecciones permanentes (8 Redirect Rules + lista Bulk de 54) | :green_circle: Activo en 301 |
 | SEO CI (auditoría de 103 comprobaciones) | :green_circle: Activo |
 | Publicación automática de artículos (`build-manifest.yml`) | :green_circle: Activo |
-| Traducción de slugs de artículos al inglés | :white_circle: Planificado |
+| Traducción de slugs de artículos al inglés | :white_circle: Pendiente, sin fecha |
 
 ---
 
