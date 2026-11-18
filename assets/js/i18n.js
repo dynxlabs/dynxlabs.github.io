@@ -16,10 +16,20 @@ const I18n = (() => {
   const DEFAULT = 'en';
   const SITE = 'https://dynxlabs.com';
 
-  // ?lang= in the URL wins (shareable, and how search engines reach the
-  // Spanish version). Persist it right away, before other scripts read it.
+  // A baked /es/ or /en/ route fixes the language from the path (highest
+  // priority). Returns 'es' | 'en' | null.
+  function routeLang() {
+    try {
+      const m = window.location.pathname.match(/^\/(es|en)(\/|$)/);
+      return m ? m[1] : null;
+    } catch (e) { return null; }
+  }
+
+  // Legacy ?lang= support — only on NON-routed (legacy) pages. On a /<lang>/
+  // route the path decides the language and the query must not override it.
   (function persistUrlLang() {
     try {
+      if (routeLang()) return;
       const q = new URLSearchParams(window.location.search).get('lang');
       if (q && SUPPORTED.includes(q)) localStorage.setItem('dynx_lang', q);
     } catch (e) { /* storage unavailable */ }
@@ -29,6 +39,9 @@ const I18n = (() => {
      DETECT LANGUAGE
   ---------------------------------------------------------- */
   function detectLanguage() {
+    // The /es/ or /en/ route wins over storage and query.
+    const route = routeLang();
+    if (route) return route;
     const stored = localStorage.getItem('dynx_lang');
     if (stored && SUPPORTED.includes(stored)) return stored;
     return DEFAULT;
@@ -154,7 +167,9 @@ const I18n = (() => {
   function syncURL(lang) {
     try {
       const url = new URL(window.location.href);
-      if (lang === DEFAULT) url.searchParams.delete('lang');
+      // On a baked /<lang>/ route the path carries the language, so never
+      // append ?lang= (and strip it if it arrived from an old link).
+      if (routeLang() || lang === DEFAULT) url.searchParams.delete('lang');
       else url.searchParams.set('lang', lang);
       if (url.href !== window.location.href) history.replaceState(history.state, '', url.href);
     } catch (e) { /* non-http context */ }

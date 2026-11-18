@@ -1,0 +1,32 @@
+{
+  "name": "dynx-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DYNX Labs builds AI-powered systems that automate operations, integrate business tools, and transform data into intelligent decisions.",
+  "main": "generate-manifest.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node generate-manifest.js && node scripts/build-i18n.js",
+    "build:check": "node scripts/seo/check-build.js",
+    "audit:seo": "node scripts/seo/audit.js",
+    "audit:redirects": "node scripts/seo/audit.js --only=legacy",
+    "test": "npm run build:check && npm run audit:seo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dynxlabs/dynxlabs.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dynxlabs/dynxlabs.github.io/issues"
+  },
+  "homepage": "https://github.com/dynxlabs/dynxlabs.github.io#readme",
+  "dependencies": {
+    "node-html-parser": "^9.0.7",
+    "playwright": "^1.65.0"
+  }
+}

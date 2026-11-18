@@ -9,10 +9,32 @@
   'use strict';
 
   /* ---------- i18n helpers ---------- */
+  // On a baked /es/ or /en/ route the path decides the language (same rule as
+  // i18n.js). Legacy pages keep using the stored preference.
+  function routeLang() {
+    const m = window.location.pathname.match(/^\/(es|en)(\/|$)/);
+    return m ? m[1] : null;
+  }
   function curLang() {
+    const r = routeLang();
+    if (r) return r;
     const l = localStorage.getItem('dynx_lang');
     return l === 'es' ? 'es' : 'en';
   }
+  // Localize a site-internal href to language `l` ('es' | 'en' | null).
+  // Mirrors scripts/rewrite-href.js (the SEO audit, check MNU-01, fails if the
+  // two ever diverge); article links also get their canonical trailing slash.
+  // With l = null (legacy pages) the href is returned unchanged.
+  function localizeHref(href, l) {
+    if (!l || !href || href.charAt(0) !== '/' || href.charAt(1) === '/') return href;
+    if (/^\/(es|en)(\/|#|$)/.test(href)) return href;
+    if (/^\/(assets|favicon|site\.webmanifest|robots\.txt|sitemap|locales)/i.test(href)) return href;
+    if (href === '/') return '/' + l + '/';
+    if (href.indexOf('/#') === 0) return '/' + l + '/' + href.slice(1);
+    const out = '/' + l + '/' + href.replace(/^\/+/, '');
+    return /^\/(es|en)\/insights\/[^\/#?]+$/.test(out) ? out + '/' : out;
+  }
+  const H = h => localizeHref(h, routeLang());
   let lang = curLang();
   const L = o => (o && (o[lang] != null ? o[lang] : o.en)) || '';
 
@@ -201,7 +223,7 @@
   /* ---------- Mega menu ---------- */
   function megaHTML(sec) {
     const col = (items, big) => items.map(it =>
-      '<li><a class="' + (big ? 'mm-p-link' : 'mm-s-link' + (it.arrow || it.ext ? '' : ' mm-s-sub')) + '" href="' + esc(it.h) + '"' + linkAttrs(it) + '>' +
+      '<li><a class="' + (big ? 'mm-p-link' : 'mm-s-link' + (it.arrow || it.ext ? '' : ' mm-s-sub')) + '" href="' + esc(H(it.h)) + '"' + linkAttrs(it) + '>' +
       '<span>' + esc(L(it.t)) + '</span>' + itemIcon(it) + '</a></li>').join('');
     return '<div class="mm-mega-inner">' +
       '<div class="mm-col-p"><div class="mm-kick">' + esc(L(sec.pk)) + '</div><ul>' + col(sec.primary, true) + '</ul></div>' +
@@ -251,7 +273,7 @@
       return;
     }
     resultsEl.innerHTML = curResults.map((it, i) =>
-      '<a class="mm-res' + (i === activeRes ? ' active' : '') + '" href="' + esc(it.h) + '" data-i="' + i + '">' +
+      '<a class="mm-res' + (i === activeRes ? ' active' : '') + '" href="' + esc(H(it.h)) + '" data-i="' + i + '">' +
       '<span class="mm-res-main"><span class="mm-res-t">' + esc(L(it.t)) + ' <span class="mm-tag">' + esc(T[lang].pills[it.c] || it.c) + '</span></span>' +
       '<span class="mm-res-d">' + esc(L(it.d)) + '</span></span>' +
       '<svg class="mm-res-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'
@@ -273,7 +295,7 @@
   /* ---------- Mobile drawer ---------- */
   function renderDrawer() {
     const secs = NAV.map(sec => {
-      const link = it => '<a href="' + esc(it.h) + '"' + linkAttrs(it) + '><span>' + esc(L(it.t)) + '</span>' + itemIcon(it) + '</a>';
+      const link = it => '<a href="' + esc(H(it.h)) + '"' + linkAttrs(it) + '><span>' + esc(L(it.t)) + '</span>' + itemIcon(it) + '</a>';
       return '<div class="mm-dsec">' +
         '<button class="mm-dsec-h" aria-expanded="false"><span>' + esc(L(sec.label)) + '</span>' + SVG.chev + '</button>' +
         '<div class="mm-dsec-b">' +
@@ -283,7 +305,7 @@
     }).join('');
     drawer.innerHTML =
       '<div class="mm-dtop">' +
-        '<a href="/" class="mm-dlogo" aria-label="DYNX Labs"><img src="/assets/icons/logo.svg" alt="DYNX Labs" width="112" height="30"></a>' +
+        '<a href="' + H('/') + '" class="mm-dlogo" aria-label="DYNX Labs"><img src="/assets/icons/logo.svg" alt="DYNX Labs" width="112" height="30"></a>' +
         '<button class="mm-icon" id="mm-drawer-close" aria-label="' + esc(T[lang].close) + '">' + SVG.close + '</button>' +
       '</div>' +
       '<div class="mm-dsearch"><button id="mm-drawer-search">' + SVG.search + '<span>' + esc(T[lang].searchAria) + '...</span></button></div>' +
@@ -293,7 +315,7 @@
           '<button data-lang="es"' + (lang === 'es' ? ' class="on"' : '') + '>Español</button>' +
           '<button data-lang="en"' + (lang === 'en' ? ' class="on"' : '') + '>English</button>' +
         '</div>' +
-        '<a href="/contact" class="mm-dcta">' + (lang === 'es' ? 'Iniciar Proyecto' : 'Start Project') + ' ↗</a>' +
+        '<a href="' + H('/contact') + '" class="mm-dcta">' + (lang === 'es' ? 'Iniciar Proyecto' : 'Start Project') + ' ↗</a>' +
       '</div>';
     drawer.querySelectorAll('.mm-dsec-h').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -339,6 +361,15 @@
   /* ---------- Language ---------- */
   function setLang(l, propagate) {
     l = (l === 'es') ? 'es' : 'en';
+    if (propagate && l !== lang && routeLang()) {
+      // Routed page: the language is the URL, so switching means going to the
+      // equivalent page. Reuse the header selector's link (baked at build
+      // time) so the drawer and the header can never disagree.
+      const a = document.querySelector('a.lang-btn[data-lang="' + l + '"]');
+      window.location.href = (a && a.getAttribute('href')) ||
+        (window.location.pathname.replace(/^\/(es|en)(?=\/|$)/, '/' + l) + window.location.hash);
+      return;
+    }
     if (propagate && window.I18n && typeof I18n.changeLanguage === 'function' && l !== lang) {
       I18n.changeLanguage(l); // will re-fire the event that calls applyLang
       return;
@@ -371,7 +402,7 @@
     searchInput.addEventListener('keydown', e => {
       if (e.key === 'ArrowDown') { e.preventDefault(); if (curResults.length) { activeRes = (activeRes + 1) % curResults.length; markActive(); scrollActive(); } }
       else if (e.key === 'ArrowUp') { e.preventDefault(); if (curResults.length) { activeRes = (activeRes - 1 + curResults.length) % curResults.length; markActive(); scrollActive(); } }
-      else if (e.key === 'Enter') { if (activeRes >= 0 && curResults[activeRes]) { window.location.href = curResults[activeRes].h; } }
+      else if (e.key === 'Enter') { if (activeRes >= 0 && curResults[activeRes]) { window.location.href = H(curResults[activeRes].h); } }
     });
 
     const sm = document.getElementById('mm-search-m'); if (sm) sm.addEventListener('click', openSearch);
@@ -386,7 +417,7 @@
       }
     });
 
-    window.addEventListener('dynx-lang-changed', e => { applyLang((e.detail === 'es') ? 'es' : 'en'); });
+    window.addEventListener('dynx-lang-changed', e => { if (routeLang()) return; applyLang((e.detail === 'es') ? 'es' : 'en'); });
   }
 
   /* ---------- Load manifest (articles) ---------- */

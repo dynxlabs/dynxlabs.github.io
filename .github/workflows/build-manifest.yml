@@ -1,3 +1,15 @@
+# ============================================================
+# DYNX Labs — Regenerate generated content on main
+#
+# Pre-existing workflow (it already committed the Insights manifest,
+# article pages and sitemap). Updated so it also regenerates the
+# bilingual /es and /en pages, and so it refuses to commit output
+# that does not pass the SEO audit.
+#
+# This is the ONLY workflow with write permission. It runs only on
+# pushes to main that touch content sources, or manually.
+# Validation of pull requests lives in seo-ci.yml (read-only).
+# ============================================================
 name: Generate Insights Manifest
 
 on:
@@ -9,32 +21,54 @@ on:
       - 'assets/js/insight-render.js'
       - 'generate-manifest.js'
       - 'scripts/og-images.js'
+      - 'scripts/build-i18n.js'
+      - 'scripts/i18n-bake.js'
+      - 'scripts/rewrite-href.js'
+      - 'locales/**.json'
+      - '*.html'
   workflow_dispatch:
+
+# Needs to commit the regenerated files; nothing else.
+permissions:
+  contents: write
+
+# Never run two regenerations at once, and never cancel one half-way.
+concurrency:
+  group: build-manifest-main
+  cancel-in-progress: false
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: '20'
+          node-version-file: .nvmrc
+          cache: npm
 
-      - name: Generate manifest, article pages and sitemap
-        run: node generate-manifest.js
+      - name: Install dependencies (lockfile, no scripts)
+        run: npm ci --ignore-scripts
+
+      - name: Generate manifest, article pages, sitemap and /es /en pages
+        run: npm run build
 
       - name: Share images for new articles
         run: |
-          npm i --no-save playwright
           npx playwright install --with-deps chromium
           node scripts/og-images.js --missing
 
-      - name: Commit manifest
+      # Gate: generated output that fails the audit is never committed.
+      - name: SEO audit
+        run: npm run audit:seo
+
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add insights/manifest.json insights/*/index.html sitemap.xml assets/images/og
-          git diff --staged --quiet || git commit -m "chore: update insights manifest, article pages and sitemap"
+          git add insights/manifest.json assets/js/insights-data.js sitemap.xml assets/images/og en es
+          git diff --staged --quiet || git commit -m "chore: update insights manifest, article pages, i18n pages and sitemap"
           git push

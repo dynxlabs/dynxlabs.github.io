@@ -83,10 +83,20 @@ function html({ hero, label, title, sub, meta }) {
   manifest.articles
     .filter(a => !only || a.slug === only)
     .forEach(a => {
-      const cat = (manifest.categories[a.category] || {}).en || a.category;
+      // Original (legacy) English image — kept for backward compatibility.
+      const catEn = (manifest.categories[a.category] || {}).en || a.category;
       jobs.push({
         out: path.join(OUT, 'insights', a.slug + '.png'),
-        data: { label: 'Insights · ' + cat, title: a.en.title, meta: (a.readTime && a.readTime.en) || SLOGAN }
+        data: { label: 'Insights · ' + catEn, title: a.en.title, meta: (a.readTime && a.readTime.en) || SLOGAN }
+      });
+      // Localized variants (same design): <slug>.en.png and <slug>.es.png.
+      ['en', 'es'].forEach(lang => {
+        const cat  = (manifest.categories[a.category] || {})[lang] || a.category;
+        const data = (lang === 'es' ? a.es : a.en) || a.en;
+        jobs.push({
+          out: path.join(OUT, 'insights', a.slug + '.' + lang + '.png'),
+          data: { label: 'Insights · ' + cat, title: data.title, meta: (a.readTime && a.readTime[lang]) || SLOGAN }
+        });
       });
     });
 

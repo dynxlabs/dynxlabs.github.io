@@ -8,7 +8,18 @@
   'use strict';
 
   // ─── State ───────────────────────────────────────────
-  let currentLang       = localStorage.getItem('dynx_lang') || 'en';
+  // A /es/ or /en/ insights route fixes the language and the article links.
+  // On the legacy /insights listing there is no route prefix, so we keep the
+  // previous behaviour (storage-based language, legacy article links).
+  function routeLang() {
+    const m = location.pathname.match(/^\/(es|en)\/insights/);
+    return m ? m[1] : null;
+  }
+  function cardHref(slug) {
+    const rl = routeLang();
+    return rl ? `/${rl}/insights/${slug}/` : `/insights/${slug}`;
+  }
+  let currentLang       = routeLang() || localStorage.getItem('dynx_lang') || 'en';
   let currentView       = localStorage.getItem('dynx-insights-view') || 'grid';
   let selectedCategories = [];
   let currentSort       = 'newest';
@@ -89,7 +100,7 @@
       const date    = formatDate(article.date);
 
       return `
-        <a href="/insights/${article.slug}" 
+        <a href="${cardHref(article.slug)}"
            class="insight-card ${isGrid ? 'insight-card--grid' : 'insight-card--list'}"
            data-slug="${article.slug}"
           >
@@ -278,7 +289,7 @@
     });
 
     window.addEventListener('dynx-lang-changed', (e) => {
-      currentLang = e.detail || localStorage.getItem('dynx_lang') || 'en';
+      currentLang = routeLang() || e.detail || localStorage.getItem('dynx_lang') || 'en';
       renderFilters();
       renderCards();
       updateCount();
