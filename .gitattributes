@@ -6,5 +6,7 @@
 /insights/manifest.json text eol=lf
 /assets/js/insights-data.js text eol=lf
 
-# Approved Phase 5.2 deliverables are pinned by SHA256: never convert their bytes.
+# The frozen legacy slug set (slugs.txt) is pinned by SHA256: never convert its bytes.
 /.github/seo/phase-5.2/* -text
+# Production redirect configuration, compared literally by the SEO audit.
+/.github/seo/phase-5.2/production/* text eol=lf
