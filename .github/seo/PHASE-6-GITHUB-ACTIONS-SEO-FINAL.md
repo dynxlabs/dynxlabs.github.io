@@ -2,8 +2,16 @@
 
 - **Proyecto:** sitio web de **[DYNX Labs](https://dynxlabs.com)** (migración SEO internacional ES/EN)
 - **Revisión:** 3, del 18 de noviembre de 2026. La revisión 2 (14/11) incorporó los cuatro ajustes pedidos tras la del 13/11 (apartado 9). La revisión 3 no cambia código: añade la conciliación de recuentos, la verificación del sitemap y la prueba del menú móvil con clics reales (apartado 9.5).
-- **Estado:** implementada y verificada en local. **Nada confirmado, subido ni desplegado.** Pendiente de autorización.
-- **Documentos relacionados:** `SEO-FINAL-AUDIT-REPORT.md` (resultados y evidencia), `PHASE-6-EXECUTIVE-SUMMARY.md`, `PHASE-5.2-LEGACY-REDIRECTS-FINAL.md`
+- **Estado:** publicada. Integrada en `main` con el PR #23 el 18/11/2026. Las redirecciones de la Fase 5.2 están activas en producción desde ese mismo día.
+- **Documentos relacionados:** `SEO-FINAL-AUDIT-REPORT.md` (resultados y evidencia), `PHASE-6-EXECUTIVE-SUMMARY.md`, `phase-5.2/production/PHASE-5.2-PRODUCTION.md`
+
+> **Actualización del 18/11/2026 (limpieza posterior a la publicación).** Este documento describe la Fase 6 tal como se entregó. Después de publicar se hicieron estos cambios:
+>
+> - **Grupo 9 de la auditoría (`legacy-redirects.js`):** ya no comprueba el diseño de staging. Reconstruye las 8 reglas y la lista Bulk que están **en producción** (`phase-5.2/production/`) y simula todas las URLs antiguas: LGC-01 a LGC-11. Los 6 NOT TESTED desaparecen porque el comportamiento HTTP se verificó en producción (939 de 940 escenarios).
+> - **Staging retirado:** se eliminaron el documento de staging y los scripts `validate_redirects.*`, junto con sus pasos de sintaxis en `seo-ci.yml`. Se conservan en el historial de git.
+> - **`sitemap_index.xml` retirado** después de quitarlo de Search Console. SMP-11 comprueba ahora que `sitemap.xml` es el único sitemap. SMP-12 se elimina.
+> - **Recuento actual de la auditoría:** 4 de build y 99 de auditoría. Resultado: 102 PASS, 0 FAIL, 1 WARNING (MET-11) y 0 NOT TESTED.
+> - **Repositorio:** se eliminaron los 29 artículos antiguos (`insights/<slug>/index.html`). `_config.yml` deja de publicar los archivos de desarrollo. `og-images.js` ya no genera la imagen antigua `<slug>.png` para artículos nuevos.
 
 ---
 

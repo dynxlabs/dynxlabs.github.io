@@ -1,0 +1,12 @@
+# GitHub Pages (Jekyll) configuration.
+# The site is plain static HTML; this file only keeps repository files that
+# are not part of the website out of the published site. Files and folders
+# starting with "." or "_" (such as .github/) are never published.
+exclude:
+  - README.md
+  - package.json
+  - package-lock.json
+  - generate-manifest.js
+  - scripts/
+  - insights/posts/
+  - node_modules/

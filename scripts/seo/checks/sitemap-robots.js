@@ -186,21 +186,13 @@ module.exports = function run(ctx, report) {
   }
   report.check(G, 'SMP-10', 'Hreflang del sitemap idéntico al del <head> de cada página', entries.length, mismatch);
 
-  /* ---------- sitemap_index.xml ----------
-     Kept on purpose: the robots.txt live in production still points to it, so
-     crawlers know this URL. It must stay a valid index of the single sitemap. */
-  if (S.isFile('sitemap_index.xml')) {
-    const idx = [];
-    try {
-      const t = parseXml(S.read('sitemap_index.xml'));
-      const sm = t.children.filter(c => c.name === 'sitemap').map(c => (c.children.find(x => x.name === 'loc') || { text: '' }).text.trim());
-      sm.filter(u => u !== `${S.BASE}/sitemap.xml`).forEach(u => idx.push({ where: 'sitemap_index.xml', expected: `${S.BASE}/sitemap.xml`, found: u }));
-    } catch (e) { idx.push({ where: 'sitemap_index.xml', expected: 'XML bien formado', found: e.message }); }
-    report.check(G, 'SMP-11', 'sitemap_index.xml bien formado y apunta solo a sitemap.xml', 1, idx);
-    report.check(G, 'SMP-12', 'sitemap_index.xml sin <lastmod> escrito a mano (fecha no verificable)', 1,
-      /<lastmod>/.test(S.read('sitemap_index.xml'))
-        ? [{ where: 'sitemap_index.xml', expected: 'sin <lastmod>', found: 'fecha fija escrita a mano' }] : []);
-  }
+  /* ---------- single sitemap ----------
+     sitemap_index.xml was retired on 18/11/2026 after it was removed from
+     Google Search Console; sitemap.xml is the only sitemap (robots.txt,
+     Search Console and Bing). Any other sitemap file would be a stale copy. */
+  const extraSitemaps = ['sitemap_index.xml', 'sitemap-index.xml', 'sitemap1.xml'].filter(f => S.isFile(f));
+  report.check(G, 'SMP-11', 'Un único sitemap publicado (sitemap.xml); sitemap_index.xml retirado', 1,
+    extraSitemaps.map(f => ({ where: f, expected: 'sin sitemaps adicionales', found: 'archivo presente' })));
 
   /* ---------- robots.txt ---------- */
   const robotsTxt = S.isFile('robots.txt') ? S.read('robots.txt') : null;

@@ -105,7 +105,7 @@ jobs:
           retention-days: 14
 
   legacy-redirects:
-    name: Legacy redirects (static consistency with Phase 5.2)
+    name: Legacy redirects (production configuration, Phase 5.2)
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
@@ -126,26 +126,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Compares the approved document, slugs.txt, the source posts, the
-      # build and the sitemap. It never contacts Cloudflare: real HTTP
-      # behaviour stays NOT TESTED until a staging hostname exists.
-      - name: Consistency with the approved design
+      # Rebuilds the production rules from slugs.txt and the main pages,
+      # compares them with .github/seo/phase-5.2/production/ and simulates
+      # every legacy URL. It never contacts Cloudflare (verified live on
+      # 18/11/2026, see PHASE-5.2-PRODUCTION.md).
+      - name: Consistency with the production configuration
         run: node scripts/seo/audit.js --only=legacy
-
-      - name: Syntax of the Bash validation script
-        run: bash -n .github/seo/phase-5.2/validate_redirects.sh
-
-      - name: Syntax of the PowerShell validation script
-        shell: pwsh
-        run: |
-          $tokens = $null; $errors = $null
-          [System.Management.Automation.Language.Parser]::ParseFile(
-            (Resolve-Path '.github/seo/phase-5.2/validate_redirects.ps1'), [ref]$tokens, [ref]$errors) | Out-Null
-          if ($errors.Count -gt 0) {
-            $errors | ForEach-Object { Write-Host "::error file=.github/seo/phase-5.2/validate_redirects.ps1,line=$($_.Extent.StartLineNumber)::$($_.Message)" }
-            exit 1
-          }
-          Write-Host "validate_redirects.ps1: 0 syntax errors"
 
   # Single required status: green only if every job above succeeded.
   result:
@@ -168,7 +154,7 @@ jobs:
             echo "|---|---|"
             echo "| Build and reproducibility | $BUILD |"
             echo "| SEO audit | $AUDIT |"
-            echo "| Legacy redirects (static) | $LEGACY |"
+            echo "| Legacy redirects (production configuration) | $LEGACY |"
           } >> "$GITHUB_STEP_SUMMARY"
           if [ "$BUILD" != "success" ] || [ "$AUDIT" != "success" ] || [ "$LEGACY" != "success" ]; then
             echo "::error::At least one SEO CI job did not succeed."

@@ -10,8 +10,10 @@
      node scripts/og-images.js <slug>     # one article
      node scripts/og-images.js --missing  # only images that don't exist yet (CI)
 
-   Article pages point to assets/images/og/insights/<slug>.png; the
+   Article pages point to assets/images/og/insights/<slug>.<es|en>.png; the
    GitHub Action runs this with --missing so new articles get theirs.
+   The 29 pre-migration <slug>.png images stay in the repository (old social
+   shares still reference them) but are no longer generated.
    ============================================================ */
 
 'use strict';
@@ -83,13 +85,7 @@ function html({ hero, label, title, sub, meta }) {
   manifest.articles
     .filter(a => !only || a.slug === only)
     .forEach(a => {
-      // Original (legacy) English image — kept for backward compatibility.
-      const catEn = (manifest.categories[a.category] || {}).en || a.category;
-      jobs.push({
-        out: path.join(OUT, 'insights', a.slug + '.png'),
-        data: { label: 'Insights · ' + catEn, title: a.en.title, meta: (a.readTime && a.readTime.en) || SLOGAN }
-      });
-      // Localized variants (same design): <slug>.en.png and <slug>.es.png.
+      // One image per language: <slug>.en.png and <slug>.es.png.
       ['en', 'es'].forEach(lang => {
         const cat  = (manifest.categories[a.category] || {})[lang] || a.category;
         const data = (lang === 'es' ? a.es : a.en) || a.en;

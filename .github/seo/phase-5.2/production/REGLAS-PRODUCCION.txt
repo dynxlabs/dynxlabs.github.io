@@ -1,0 +1,122 @@
+### S1 — ES · artículo antiguo sin barra
+Tipo: Dynamic · Código: 301 · Preserve query string: OFF
+Expresión (1611 caracteres):
+(http.host in {"dynxlabs.com" "www.dynxlabs.com" "dynxlabs.com." "www.dynxlabs.com."}) and any(http.request.uri.args["lang"][*] == "es") and (http.request.uri.path in {"/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer" "/insights/agentic-ai-de-asistentes-a-ejecutores" "/insights/ai-agents-reemplazando-tareas-administrativas" "/insights/ai-agents-y-apis-capa-de-ejecucion" "/insights/ai-governance-reglas-antes-de-escalar" "/insights/ciberseguridad-e-ia-amenazas-defensas" "/insights/como-escribir-un-buen-prompt" "/insights/como-medir-roi-automatizacion" "/insights/como-reducir-tiempo-respuesta-cliente-con-ia" "/insights/data-quality-base-de-toda-ia" "/insights/de-excel-a-dashboard-en-tiempo-real" "/insights/de-silos-a-flujo-unico-integracion-datos" "/insights/diferencia-automatizacion-inteligencia-artificial" "/insights/human-in-the-loop-autonomia-ia" "/insights/ia-en-ventas-b2b-lead-scoring-cierre" "/insights/ia-para-rrhh-screening-onboarding" "/insights/knowledge-management-con-ia" "/insights/low-code-no-code-automatizacion-sin-it" "/insights/multimodal-ai-texto-imagen-voz" "/insights/por-que-proyectos-ia-no-pasan-del-piloto" "/insights/procesamiento-inteligente-documentos" "/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion" "/insights/que-es-un-pipeline-de-datos" "/insights/que-es-un-trigger-y-por-que-importa" "/insights/que-es-un-workflow-y-por-que-importa" "/insights/quick-wins-por-donde-empezar-a-automatizar" "/insights/rag-empresarial-conecta-ia-a-tu-informacion" "/insights/sistemas-multi-agente-orquestacion" "/insights/slms-vs-llms-modelo-pequeno-mejor"})
+
+Destino:
+concat("https://dynxlabs.com/es", http.request.uri.path, "/")
+
+### S2 — ES · raíz, principales y artículo antiguo con barra
+Tipo: Dynamic · Código: 301 · Preserve query string: OFF
+Expresión (1712 caracteres):
+(http.host in {"dynxlabs.com" "www.dynxlabs.com" "dynxlabs.com." "www.dynxlabs.com."}) and any(http.request.uri.args["lang"][*] == "es") and (http.request.uri.path in {"/" "/products" "/research" "/faq" "/contact" "/leadership" "/insights" "/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer/" "/insights/agentic-ai-de-asistentes-a-ejecutores/" "/insights/ai-agents-reemplazando-tareas-administrativas/" "/insights/ai-agents-y-apis-capa-de-ejecucion/" "/insights/ai-governance-reglas-antes-de-escalar/" "/insights/ciberseguridad-e-ia-amenazas-defensas/" "/insights/como-escribir-un-buen-prompt/" "/insights/como-medir-roi-automatizacion/" "/insights/como-reducir-tiempo-respuesta-cliente-con-ia/" "/insights/data-quality-base-de-toda-ia/" "/insights/de-excel-a-dashboard-en-tiempo-real/" "/insights/de-silos-a-flujo-unico-integracion-datos/" "/insights/diferencia-automatizacion-inteligencia-artificial/" "/insights/human-in-the-loop-autonomia-ia/" "/insights/ia-en-ventas-b2b-lead-scoring-cierre/" "/insights/ia-para-rrhh-screening-onboarding/" "/insights/knowledge-management-con-ia/" "/insights/low-code-no-code-automatizacion-sin-it/" "/insights/multimodal-ai-texto-imagen-voz/" "/insights/por-que-proyectos-ia-no-pasan-del-piloto/" "/insights/procesamiento-inteligente-documentos/" "/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/" "/insights/que-es-un-pipeline-de-datos/" "/insights/que-es-un-trigger-y-por-que-importa/" "/insights/que-es-un-workflow-y-por-que-importa/" "/insights/quick-wins-por-donde-empezar-a-automatizar/" "/insights/rag-empresarial-conecta-ia-a-tu-informacion/" "/insights/sistemas-multi-agente-orquestacion/" "/insights/slms-vs-llms-modelo-pequeno-mejor/"})
+
+Destino:
+concat("https://dynxlabs.com/es", http.request.uri.path)
+
+### S3 — ES · artículo antiguo /index.html
+Tipo: Dynamic · Código: 301 · Preserve query string: OFF
+Expresión (1930 caracteres):
+(http.host in {"dynxlabs.com" "www.dynxlabs.com" "dynxlabs.com." "www.dynxlabs.com."}) and any(http.request.uri.args["lang"][*] == "es") and (http.request.uri.path in {"/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer/index.html" "/insights/agentic-ai-de-asistentes-a-ejecutores/index.html" "/insights/ai-agents-reemplazando-tareas-administrativas/index.html" "/insights/ai-agents-y-apis-capa-de-ejecucion/index.html" "/insights/ai-governance-reglas-antes-de-escalar/index.html" "/insights/ciberseguridad-e-ia-amenazas-defensas/index.html" "/insights/como-escribir-un-buen-prompt/index.html" "/insights/como-medir-roi-automatizacion/index.html" "/insights/como-reducir-tiempo-respuesta-cliente-con-ia/index.html" "/insights/data-quality-base-de-toda-ia/index.html" "/insights/de-excel-a-dashboard-en-tiempo-real/index.html" "/insights/de-silos-a-flujo-unico-integracion-datos/index.html" "/insights/diferencia-automatizacion-inteligencia-artificial/index.html" "/insights/human-in-the-loop-autonomia-ia/index.html" "/insights/ia-en-ventas-b2b-lead-scoring-cierre/index.html" "/insights/ia-para-rrhh-screening-onboarding/index.html" "/insights/knowledge-management-con-ia/index.html" "/insights/low-code-no-code-automatizacion-sin-it/index.html" "/insights/multimodal-ai-texto-imagen-voz/index.html" "/insights/por-que-proyectos-ia-no-pasan-del-piloto/index.html" "/insights/procesamiento-inteligente-documentos/index.html" "/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/index.html" "/insights/que-es-un-pipeline-de-datos/index.html" "/insights/que-es-un-trigger-y-por-que-importa/index.html" "/insights/que-es-un-workflow-y-por-que-importa/index.html" "/insights/quick-wins-por-donde-empezar-a-automatizar/index.html" "/insights/rag-empresarial-conecta-ia-a-tu-informacion/index.html" "/insights/sistemas-multi-agente-orquestacion/index.html" "/insights/slms-vs-llms-modelo-pequeno-mejor/index.html"})
+
+Destino:
+wildcard_replace(http.request.uri.path, "/insights/*/index.html", "https://dynxlabs.com/es/insights/${1}/", "s")
+
+### S4 — EN · artículo antiguo sin barra
+Tipo: Dynamic · Código: 301 · Preserve query string: OFF
+Expresión (1561 caracteres):
+(http.host in {"dynxlabs.com" "www.dynxlabs.com" "dynxlabs.com." "www.dynxlabs.com."}) and (http.request.uri.path in {"/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer" "/insights/agentic-ai-de-asistentes-a-ejecutores" "/insights/ai-agents-reemplazando-tareas-administrativas" "/insights/ai-agents-y-apis-capa-de-ejecucion" "/insights/ai-governance-reglas-antes-de-escalar" "/insights/ciberseguridad-e-ia-amenazas-defensas" "/insights/como-escribir-un-buen-prompt" "/insights/como-medir-roi-automatizacion" "/insights/como-reducir-tiempo-respuesta-cliente-con-ia" "/insights/data-quality-base-de-toda-ia" "/insights/de-excel-a-dashboard-en-tiempo-real" "/insights/de-silos-a-flujo-unico-integracion-datos" "/insights/diferencia-automatizacion-inteligencia-artificial" "/insights/human-in-the-loop-autonomia-ia" "/insights/ia-en-ventas-b2b-lead-scoring-cierre" "/insights/ia-para-rrhh-screening-onboarding" "/insights/knowledge-management-con-ia" "/insights/low-code-no-code-automatizacion-sin-it" "/insights/multimodal-ai-texto-imagen-voz" "/insights/por-que-proyectos-ia-no-pasan-del-piloto" "/insights/procesamiento-inteligente-documentos" "/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion" "/insights/que-es-un-pipeline-de-datos" "/insights/que-es-un-trigger-y-por-que-importa" "/insights/que-es-un-workflow-y-por-que-importa" "/insights/quick-wins-por-donde-empezar-a-automatizar" "/insights/rag-empresarial-conecta-ia-a-tu-informacion" "/insights/sistemas-multi-agente-orquestacion" "/insights/slms-vs-llms-modelo-pequeno-mejor"})
+
+Destino:
+concat("https://dynxlabs.com/en", http.request.uri.path, "/")
+
+### S5 — EN · principales y artículo antiguo con barra (y raíz solo con lang=en)
+Tipo: Dynamic · Código: 301 · Preserve query string: OFF
+Expresión (1744 caracteres):
+(http.host in {"dynxlabs.com" "www.dynxlabs.com" "dynxlabs.com." "www.dynxlabs.com."}) and ((http.request.uri.path in {"/products" "/research" "/faq" "/contact" "/leadership" "/insights" "/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer/" "/insights/agentic-ai-de-asistentes-a-ejecutores/" "/insights/ai-agents-reemplazando-tareas-administrativas/" "/insights/ai-agents-y-apis-capa-de-ejecucion/" "/insights/ai-governance-reglas-antes-de-escalar/" "/insights/ciberseguridad-e-ia-amenazas-defensas/" "/insights/como-escribir-un-buen-prompt/" "/insights/como-medir-roi-automatizacion/" "/insights/como-reducir-tiempo-respuesta-cliente-con-ia/" "/insights/data-quality-base-de-toda-ia/" "/insights/de-excel-a-dashboard-en-tiempo-real/" "/insights/de-silos-a-flujo-unico-integracion-datos/" "/insights/diferencia-automatizacion-inteligencia-artificial/" "/insights/human-in-the-loop-autonomia-ia/" "/insights/ia-en-ventas-b2b-lead-scoring-cierre/" "/insights/ia-para-rrhh-screening-onboarding/" "/insights/knowledge-management-con-ia/" "/insights/low-code-no-code-automatizacion-sin-it/" "/insights/multimodal-ai-texto-imagen-voz/" "/insights/por-que-proyectos-ia-no-pasan-del-piloto/" "/insights/procesamiento-inteligente-documentos/" "/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/" "/insights/que-es-un-pipeline-de-datos/" "/insights/que-es-un-trigger-y-por-que-importa/" "/insights/que-es-un-workflow-y-por-que-importa/" "/insights/quick-wins-por-donde-empezar-a-automatizar/" "/insights/rag-empresarial-conecta-ia-a-tu-informacion/" "/insights/sistemas-multi-agente-orquestacion/" "/insights/slms-vs-llms-modelo-pequeno-mejor/"}) or (http.request.uri.path eq "/" and any(http.request.uri.args["lang"][*] == "en")))
+
+Destino:
+concat("https://dynxlabs.com/en", http.request.uri.path)
+
+### S6 — EN · artículo antiguo /index.html
+Tipo: Dynamic · Código: 301 · Preserve query string: OFF
+Expresión (1880 caracteres):
+(http.host in {"dynxlabs.com" "www.dynxlabs.com" "dynxlabs.com." "www.dynxlabs.com."}) and (http.request.uri.path in {"/insights/5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer/index.html" "/insights/agentic-ai-de-asistentes-a-ejecutores/index.html" "/insights/ai-agents-reemplazando-tareas-administrativas/index.html" "/insights/ai-agents-y-apis-capa-de-ejecucion/index.html" "/insights/ai-governance-reglas-antes-de-escalar/index.html" "/insights/ciberseguridad-e-ia-amenazas-defensas/index.html" "/insights/como-escribir-un-buen-prompt/index.html" "/insights/como-medir-roi-automatizacion/index.html" "/insights/como-reducir-tiempo-respuesta-cliente-con-ia/index.html" "/insights/data-quality-base-de-toda-ia/index.html" "/insights/de-excel-a-dashboard-en-tiempo-real/index.html" "/insights/de-silos-a-flujo-unico-integracion-datos/index.html" "/insights/diferencia-automatizacion-inteligencia-artificial/index.html" "/insights/human-in-the-loop-autonomia-ia/index.html" "/insights/ia-en-ventas-b2b-lead-scoring-cierre/index.html" "/insights/ia-para-rrhh-screening-onboarding/index.html" "/insights/knowledge-management-con-ia/index.html" "/insights/low-code-no-code-automatizacion-sin-it/index.html" "/insights/multimodal-ai-texto-imagen-voz/index.html" "/insights/por-que-proyectos-ia-no-pasan-del-piloto/index.html" "/insights/procesamiento-inteligente-documentos/index.html" "/insights/que-es-un-llm-y-como-puede-trabajar-en-tu-operacion/index.html" "/insights/que-es-un-pipeline-de-datos/index.html" "/insights/que-es-un-trigger-y-por-que-importa/index.html" "/insights/que-es-un-workflow-y-por-que-importa/index.html" "/insights/quick-wins-por-donde-empezar-a-automatizar/index.html" "/insights/rag-empresarial-conecta-ia-a-tu-informacion/index.html" "/insights/sistemas-multi-agente-orquestacion/index.html" "/insights/slms-vs-llms-modelo-pequeno-mejor/index.html"})
+
+Destino:
+wildcard_replace(http.request.uri.path, "/insights/*/index.html", "https://dynxlabs.com/en/insights/${1}/", "s")
+
+### S7 — Variante /index.html de artículo nuevo
+Tipo: Dynamic · Código: 301 · Preserve query string: ON
+Expresión (227 caracteres):
+(http.host in {"dynxlabs.com" "www.dynxlabs.com" "dynxlabs.com." "www.dynxlabs.com."}) and (http.request.uri.path strict wildcard "/es/insights/*/index.html" or http.request.uri.path strict wildcard "/en/insights/*/index.html")
+
+Destino:
+wildcard_replace(http.request.uri.path, "/*/insights/*/index.html", "https://dynxlabs.com/${1}/insights/${2}/", "s")
+
+### S8 — Host canónico (www y hosts con punto final)
+Tipo: Dynamic · Código: 301 · Preserve query string: ON
+Expresión (596 caracteres):
+(http.host in {"dynxlabs.com." "www.dynxlabs.com."}) or (http.host eq "www.dynxlabs.com" and not (http.request.uri.path in {"/" "/index.html" "/index" "/products.html" "/research.html" "/faq.html" "/contact.html" "/leadership.html" "/insights.html" "/insights/insight-post" "/insights/insight-post.html" "/es/index.html" "/es/index" "/es/products.html" "/es/research.html" "/es/faq.html" "/es/contact.html" "/es/leadership.html" "/es/insights.html" "/en/index.html" "/en/index" "/en/products.html" "/en/research.html" "/en/faq.html" "/en/contact.html" "/en/leadership.html" "/en/insights.html"}))
+
+Destino:
+concat("https://dynxlabs.com", http.request.uri.path)
+
+### Lista Bulk `dynx_redirects` (54 entradas; columnas: origen,destino,código,preserve_query,include_subdomains,subpath,preserve_path_suffix)
+dynxlabs.com/,https://dynxlabs.com/es/,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/index.html,https://dynxlabs.com/es/,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/index,https://dynxlabs.com/es/,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/products.html,https://dynxlabs.com/en/products,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/research.html,https://dynxlabs.com/en/research,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/faq.html,https://dynxlabs.com/en/faq,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/contact.html,https://dynxlabs.com/en/contact,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/leadership.html,https://dynxlabs.com/en/leadership,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/insights.html,https://dynxlabs.com/en/insights,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/insights/insight-post,https://dynxlabs.com/en/insights,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/insights/insight-post.html,https://dynxlabs.com/en/insights,301,FALSE,FALSE,FALSE,FALSE
+dynxlabs.com/es/index.html,https://dynxlabs.com/es/,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/es/index,https://dynxlabs.com/es/,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/es/products.html,https://dynxlabs.com/es/products,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/es/research.html,https://dynxlabs.com/es/research,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/es/faq.html,https://dynxlabs.com/es/faq,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/es/contact.html,https://dynxlabs.com/es/contact,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/es/leadership.html,https://dynxlabs.com/es/leadership,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/es/insights.html,https://dynxlabs.com/es/insights,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/en/index.html,https://dynxlabs.com/en/,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/en/index,https://dynxlabs.com/en/,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/en/products.html,https://dynxlabs.com/en/products,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/en/research.html,https://dynxlabs.com/en/research,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/en/faq.html,https://dynxlabs.com/en/faq,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/en/contact.html,https://dynxlabs.com/en/contact,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/en/leadership.html,https://dynxlabs.com/en/leadership,301,TRUE,FALSE,FALSE,FALSE
+dynxlabs.com/en/insights.html,https://dynxlabs.com/en/insights,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/,https://dynxlabs.com/es/,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/index.html,https://dynxlabs.com/es/,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/index,https://dynxlabs.com/es/,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/products.html,https://dynxlabs.com/en/products,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/research.html,https://dynxlabs.com/en/research,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/faq.html,https://dynxlabs.com/en/faq,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/contact.html,https://dynxlabs.com/en/contact,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/leadership.html,https://dynxlabs.com/en/leadership,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/insights.html,https://dynxlabs.com/en/insights,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/insights/insight-post,https://dynxlabs.com/en/insights,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/insights/insight-post.html,https://dynxlabs.com/en/insights,301,FALSE,FALSE,FALSE,FALSE
+www.dynxlabs.com/es/index.html,https://dynxlabs.com/es/,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/es/index,https://dynxlabs.com/es/,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/es/products.html,https://dynxlabs.com/es/products,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/es/research.html,https://dynxlabs.com/es/research,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/es/faq.html,https://dynxlabs.com/es/faq,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/es/contact.html,https://dynxlabs.com/es/contact,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/es/leadership.html,https://dynxlabs.com/es/leadership,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/es/insights.html,https://dynxlabs.com/es/insights,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/en/index.html,https://dynxlabs.com/en/,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/en/index,https://dynxlabs.com/en/,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/en/products.html,https://dynxlabs.com/en/products,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/en/research.html,https://dynxlabs.com/en/research,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/en/faq.html,https://dynxlabs.com/en/faq,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/en/contact.html,https://dynxlabs.com/en/contact,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/en/leadership.html,https://dynxlabs.com/en/leadership,301,TRUE,FALSE,FALSE,FALSE
+www.dynxlabs.com/en/insights.html,https://dynxlabs.com/en/insights,301,TRUE,FALSE,FALSE,FALSE
+
+### Regla Bulk `dynx-redirects` (97 caracteres)
+(http.host in {"dynxlabs.com" "www.dynxlabs.com"}) and (http.request.full_uri in $dynx_redirects)
