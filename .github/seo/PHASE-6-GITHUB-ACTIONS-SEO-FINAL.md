@@ -11,7 +11,7 @@
 
 | Dato | Valor |
 |---|---|
-| Clon aislado | `C:\Users\monsa\AppData\Local\Temp\claude\a219d8d0f0860508\f2b574c3-5427-444a-bddb-d595a0fc01bf\scratchpad\dynx-site` |
+| Clon aislado | Clon local del repositorio en una carpeta de trabajo temporal del equipo de desarrollo (ruta local omitida) |
 | Repositorio de origen | `dynxlabs/dynxlabs.github.io` |
 | Commit base | `1e0190a439149e72585deac536c91dd6cb484400` |
 | Rama de trabajo | `seo/i18n-migration-phase-6`, creada sin commit sobre el commit base |
