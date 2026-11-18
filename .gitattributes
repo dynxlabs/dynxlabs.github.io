@@ -1,0 +1,10 @@
+# Generated site output is always written with LF by the build (npm run build).
+# Keeping LF in the working tree on every platform makes the build byte-reproducible.
+/en/** text eol=lf
+/es/** text eol=lf
+/sitemap.xml text eol=lf
+/insights/manifest.json text eol=lf
+/assets/js/insights-data.js text eol=lf
+
+# Approved Phase 5.2 deliverables are pinned by SHA256: never convert their bytes.
+/.github/seo/phase-5.2/* -text
