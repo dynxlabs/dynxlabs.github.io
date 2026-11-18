@@ -1,4 +1,12 @@
 {
+  "breadcrumb": {
+    "products": "Products",
+    "faq": "FAQ",
+    "research": "Research",
+    "insights": "Insights",
+    "contact": "Contact",
+    "leadership": "Leadership"
+  },
   "nav": {
     "services": "Services",
     "method": "Our Method",
