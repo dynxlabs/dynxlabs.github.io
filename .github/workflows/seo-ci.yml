@@ -1,0 +1,176 @@
+# ============================================================
+# DYNX Labs — SEO CI
+#
+# Builds the site from a clean install and audits the generated
+# /es and /en pages before anything can reach production.
+#
+# Read-only by design: it never commits, never pushes and never
+# deploys. It needs no secrets and no write permission.
+#
+# Run the same checks locally:
+#   npm ci
+#   npm test                 (build:check + audit:seo)
+# ============================================================
+name: SEO CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least privilege: the default token can only read the repository.
+permissions:
+  contents: read
+
+# One run per branch / pull request; a newer push cancels the older run.
+# Safe to cancel because this workflow has no side effects.
+concurrency:
+  group: seo-ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  # The build never needs a browser; only scripts/og-images.js does.
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+
+jobs:
+  build:
+    name: Build and reproducibility
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies (lockfile, no scripts)
+        run: npm ci --ignore-scripts
+
+      # Builds twice from the committed sources and fails if: the build
+      # errors, the second run changes anything (not idempotent), the
+      # committed /es /en sitemap.xml manifest.json differ from what the
+      # sources produce (drift), or the build writes outside its outputs.
+      - name: Build twice and verify reproducibility
+        run: npm run build:check
+
+  seo-audit:
+    name: SEO audit (${{ matrix.group.name }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        group:
+          - { id: 'architecture,canonical', name: 'architecture, canonical, hreflang' }
+          - { id: 'jsonld',                 name: 'Schema.org JSON-LD' }
+          - { id: 'sitemap,metadata',       name: 'sitemap, robots, metadata' }
+          - { id: 'links,html',             name: 'internal links, resources, HTML' }
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies (lockfile, no scripts)
+        run: npm ci --ignore-scripts
+
+      - name: Build
+        run: npm run build
+
+      # Exit code 1 on any FAIL. WARNING and NOT TESTED never pass as PASS.
+      - name: Audit
+        run: node scripts/seo/audit.js --only=${{ matrix.group.id }} --json=seo-report/audit.json --md=seo-report/audit.md
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: seo-report-${{ strategy.job-index }}
+          path: seo-report/
+          if-no-files-found: warn
+          retention-days: 14
+
+  legacy-redirects:
+    name: Legacy redirects (static consistency with Phase 5.2)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies (lockfile, no scripts)
+        run: npm ci --ignore-scripts
+
+      - name: Build
+        run: npm run build
+
+      # Compares the approved document, slugs.txt, the source posts, the
+      # build and the sitemap. It never contacts Cloudflare: real HTTP
+      # behaviour stays NOT TESTED until a staging hostname exists.
+      - name: Consistency with the approved design
+        run: node scripts/seo/audit.js --only=legacy
+
+      - name: Syntax of the Bash validation script
+        run: bash -n .github/seo/phase-5.2/validate_redirects.sh
+
+      - name: Syntax of the PowerShell validation script
+        shell: pwsh
+        run: |
+          $tokens = $null; $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile(
+            (Resolve-Path '.github/seo/phase-5.2/validate_redirects.ps1'), [ref]$tokens, [ref]$errors) | Out-Null
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Host "::error file=.github/seo/phase-5.2/validate_redirects.ps1,line=$($_.Extent.StartLineNumber)::$($_.Message)" }
+            exit 1
+          }
+          Write-Host "validate_redirects.ps1: 0 syntax errors"
+
+  # Single required status: green only if every job above succeeded.
+  result:
+    name: SEO CI result
+    if: always()
+    needs: [build, seo-audit, legacy-redirects]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - name: Summarize
+        env:
+          BUILD: ${{ needs.build.result }}
+          AUDIT: ${{ needs.seo-audit.result }}
+          LEGACY: ${{ needs.legacy-redirects.result }}
+        run: |
+          {
+            echo "## SEO CI"
+            echo ""
+            echo "| Job | Result |"
+            echo "|---|---|"
+            echo "| Build and reproducibility | $BUILD |"
+            echo "| SEO audit | $AUDIT |"
+            echo "| Legacy redirects (static) | $LEGACY |"
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$BUILD" != "success" ] || [ "$AUDIT" != "success" ] || [ "$LEGACY" != "success" ]; then
+            echo "::error::At least one SEO CI job did not succeed."
+            exit 1
+          fi
