@@ -40,9 +40,15 @@ const LEGAL_PAGES = [
 ];
 const LEGAL_FILES = [];
 const LEGAL_PATHS = new Set();
+const LEGAL_ALTS = {}; // sitemap loc URL -> { es, en, x-default } (legal slug differs per language)
 for (const lang of LANGS) for (const lg of LEGAL_PAGES) {
   LEGAL_FILES.push(`${lang}/${lg[lang]}/index.html`);
   LEGAL_PATHS.add(`/${lang}/${lg[lang]}/`);
+}
+for (const lg of LEGAL_PAGES) {
+  const es = `${BASE}/es/${lg.es}/`, en = `${BASE}/en/${lg.en}/`;
+  const alts = { es, en, 'x-default': XDEFAULT === 'es' ? es : en };
+  LEGAL_ALTS[es] = alts; LEGAL_ALTS[en] = alts;
 }
 
 const GLOBAL_IDS = {
@@ -181,7 +187,7 @@ function listFiles(dirRel) {
 }
 
 module.exports = {
-  ROOT, BASE, LANGS, XDEFAULT, OG_LOCALE, MAIN_PAGES, GLOBAL_IDS, LEGAL_FILES, LEGAL_PATHS,
+  ROOT, BASE, LANGS, XDEFAULT, OG_LOCALE, MAIN_PAGES, GLOBAL_IDS, LEGAL_FILES, LEGAL_PATHS, LEGAL_ALTS,
   rel, abs, read, isFile, isDir, loadPosts, loadLocale, expectedPages, other,
   doc, jsonLdBlocks, walkLd, typesOf, resolvePath, internalPath, norm, plain, listFiles
 };
