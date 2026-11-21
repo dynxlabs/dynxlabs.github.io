@@ -236,6 +236,8 @@ const CookieBanner = (() => {
 
   function handleConsent(accepted) {
     localStorage.setItem(STORAGE_KEY, accepted ? 'accepted' : 'declined');
+    // Update Google Consent Mode so GA4 analytics storage follows the choice.
+    if (typeof window.dynxSetAnalyticsConsent === 'function') window.dynxSetAnalyticsConsent(accepted);
     if (banner) banner.classList.remove('visible');
   }
 
