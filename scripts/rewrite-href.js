@@ -22,6 +22,7 @@ function rewriteHref(href, lang) {
   // Privacy policy uses a different slug per language (/es/privacidad vs /en/privacy);
   // map the language-neutral token here so every page links to the right one.
   if (href === '/privacy-policy') return lang === 'es' ? '/es/privacidad/' : '/en/privacy/';
+  if (href === '/terms-of-service') return lang === 'es' ? '/es/terminos/' : '/en/terms/';
 
   const sameOrigin = href.match(/^https?:\/\/(?:www\.)?dynxlabs\.com(\/[^\s]*)?$/i);
   if (/^(mailto:|tel:|sms:|https?:)/i.test(href) && !sameOrigin) return href; // external

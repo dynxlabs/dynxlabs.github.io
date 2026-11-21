@@ -238,7 +238,10 @@ function sitemapPair(esUrl, enUrl) {
 
 const mainPairs    = MAIN_SLUGS.map(s => sitemapPair(`${SITE}/es/${s}`, `${SITE}/en/${s}`));
 // Hand-authored legal pages (dedicated per-language slug, directory URLs with trailing slash).
-const legalPairs   = [sitemapPair(`${SITE}/es/privacidad/`, `${SITE}/en/privacy/`)];
+const legalPairs   = [
+  sitemapPair(`${SITE}/es/privacidad/`, `${SITE}/en/privacy/`),
+  sitemapPair(`${SITE}/es/terminos/`,   `${SITE}/en/terms/`)
+];
 const articlePairs = articles.map(a => sitemapPair(R.articleUrl(a.slug, 'es'), R.articleUrl(a.slug, 'en')));
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

@@ -244,7 +244,8 @@
     "hint": "Your data is handled with strict confidentiality. We will never share it with third parties.",
     "successTitle": "Message received.",
     "successSubtitle": "We'll be in touch within 48 hours. In the meantime, feel free to reach us on WhatsApp.",
-    "errSubmit": "Something went wrong. Please try again or contact us via WhatsApp."
+    "errSubmit": "Something went wrong. Please try again or contact us via WhatsApp.",
+    "note": "Tell us about your operation and goals, and we’ll prepare a personalized proposal, with no commitment. Your data is handled with strict confidentiality and is never shared with third parties."
   },
   "research": {
     "title": "Research",

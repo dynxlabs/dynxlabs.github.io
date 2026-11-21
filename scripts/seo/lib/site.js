@@ -36,7 +36,8 @@ const MAIN_PAGES = [
 // given rich JSON-LD); they are allowlisted for the stray-file check and recognised as valid,
 // already-canonical link targets.
 const LEGAL_PAGES = [
-  { es: 'privacidad', en: 'privacy' }
+  { es: 'privacidad', en: 'privacy' },
+  { es: 'terminos',   en: 'terms' }
 ];
 const LEGAL_FILES = [];
 const LEGAL_PATHS = new Set();

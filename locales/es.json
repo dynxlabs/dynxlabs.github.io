@@ -244,7 +244,8 @@
     "hint": "Tus datos se tratan con estricta confidencialidad. Nunca los compartiremos con terceros.",
     "successTitle": "Mensaje recibido.",
     "successSubtitle": "Te contactaremos en menos de 48 horas. Mientras tanto, puedes escribirnos por WhatsApp.",
-    "errSubmit": "Algo salió mal. Inténtalo de nuevo o escríbenos por WhatsApp."
+    "errSubmit": "Algo salió mal. Inténtalo de nuevo o escríbenos por WhatsApp.",
+    "note": "Cuéntanos sobre tu operación y tus objetivos, y preparamos una propuesta personalizada, sin compromiso. Tus datos se tratan con estricta confidencialidad y nunca se comparten con terceros."
   },
   "research": {
     "title": "Investigación",
