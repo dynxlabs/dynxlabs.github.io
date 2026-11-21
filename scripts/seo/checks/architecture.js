@@ -45,6 +45,8 @@ module.exports = function run(ctx, report) {
 
   // ARC-06 nothing unexpected inside /es and /en (stray files, wrong routes, nested language dirs)
   const expected = new Set(pages.map(p => p.file));
+  // Hand-authored legal pages are allowed but not part of the generated model.
+  S.LEGAL_FILES.forEach(f => expected.add(f));
   const stray = [];
   let total = 0;
   for (const lang of S.LANGS) {

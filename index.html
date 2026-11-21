@@ -319,7 +319,7 @@
       <div class="ftr-col">
         <h3 class="ftr-title" data-i18n="footer.termsTitle">Terms &amp; Policies</h3>
         <ul class="ftr-links">
-          <li><button type="button" data-modal-open="modal-privacy" data-i18n="footer.privacy">Privacy Policy</button></li>
+          <li><a href="/privacy-policy" data-i18n="footer.privacy">Privacy Policy</a></li>
           <li><button type="button" data-modal-open="modal-terms"   data-i18n="footer.terms">Terms of Service</button></li>
           <li><button type="button" data-cookie-settings data-i18n="footer.cookies">Cookies</button></li>
         </ul>
@@ -342,51 +342,6 @@
     </div>
   </div>
 </footer>
-
-<!-- ═══════════════════════════════════════════════════════════
-     MODAL — PRIVACY POLICY
-═══════════════════════════════════════════════════════════════ -->
-<div id="modal-privacy"
-     class="modal-overlay"
-     role="dialog"
-     aria-modal="true"
-     aria-labelledby="modal-privacy-title"
-     aria-hidden="true">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h2 id="modal-privacy-title" class="modal-title" data-i18n="privacy.title">Privacy Policy</h2>
-      <button class="modal-close"
-              data-modal-close
-              aria-label="Close Privacy Policy" data-i18n-label="a11y.closePrivacy">&#x2715;</button>
-    </div>
-    <p class="modal-date" data-i18n="privacy.lastUpdated">Last updated: January 2026</p>
-
-    <div class="modal-section">
-      <h3 class="modal-section-title" data-i18n="privacy.section1Title">Information We Collect</h3>
-      <p class="modal-section-content" data-i18n="privacy.section1Content">
-        We collect data provided directly by you — name, email, and messages. We do not use tracking cookies or collect personal data without explicit consent.
-      </p>
-    </div>
-    <div class="modal-section">
-      <h3 class="modal-section-title" data-i18n="privacy.section2Title">How We Use Your Information</h3>
-      <p class="modal-section-content" data-i18n="privacy.section2Content">
-        Your information is used exclusively to respond to inquiries, provide contracted services, and communicate about active projects. We do not sell or share your data with third parties under any circumstances.
-      </p>
-    </div>
-    <div class="modal-section">
-      <h3 class="modal-section-title" data-i18n="privacy.section3Title">Third-Party Services</h3>
-      <p class="modal-section-content" data-i18n="privacy.section3Content">
-        Our solutions integrate AI models from world leaders — Anthropic, OpenAI, and Google — and cloud infrastructure from AWS and Google Cloud. These services operate under their respective privacy policies.
-      </p>
-    </div>
-    <div class="modal-section">
-      <h3 class="modal-section-title" data-i18n="privacy.section4Title">Your Rights</h3>
-      <p class="modal-section-content" data-i18n="privacy.section4Content">
-        You have the right to request access to, correction of, or deletion of your personal information at any time by contacting us directly.
-      </p>
-    </div>
-  </div>
-</div>
 
 <!-- ═══════════════════════════════════════════════════════════
      MODAL — TERMS OF SERVICE
@@ -442,7 +397,7 @@
      aria-label="Cookie consent" data-i18n-label="a11y.cookie">
   <p class="cookie-text">
     <span data-i18n="cookie.text">We use essential cookies to ensure you get the best experience on our website. By continuing, you agree to our</span>
-    <button data-modal-open="modal-privacy" style="background:none;border:none;color:#fff;text-decoration:underline;cursor:pointer;font-size:inherit;padding:0;margin-left:4px;" data-i18n="cookie.policyLink">Privacy Policy</button>.
+    <a href="/privacy-policy" style="color:#fff;text-decoration:underline;margin-left:4px;" data-i18n="cookie.policyLink">Privacy Policy</a>.
   </p>
   <div class="cookie-actions">
     <button id="cookie-accept"  class="cookie-btn cookie-btn-accept"  data-i18n="cookie.accept">Accept</button>

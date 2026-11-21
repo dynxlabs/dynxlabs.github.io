@@ -31,6 +31,20 @@ const MAIN_PAGES = [
   { slug: 'insights',   file: 'insights.html',   meta: 'insights' }
 ];
 
+// Hand-authored legal pages: dedicated per-language directory page (different slug per language).
+// They are NOT part of the generated content model (no locale meta, not in the sitemap, not
+// given rich JSON-LD); they are allowlisted for the stray-file check and recognised as valid,
+// already-canonical link targets.
+const LEGAL_PAGES = [
+  { es: 'privacidad', en: 'privacy' }
+];
+const LEGAL_FILES = [];
+const LEGAL_PATHS = new Set();
+for (const lang of LANGS) for (const lg of LEGAL_PAGES) {
+  LEGAL_FILES.push(`${lang}/${lg[lang]}/index.html`);
+  LEGAL_PATHS.add(`/${lang}/${lg[lang]}/`);
+}
+
 const GLOBAL_IDS = {
   organization: `${BASE}/#organization`,
   person:       `${BASE}/#person-arois`,
@@ -167,7 +181,7 @@ function listFiles(dirRel) {
 }
 
 module.exports = {
-  ROOT, BASE, LANGS, XDEFAULT, OG_LOCALE, MAIN_PAGES, GLOBAL_IDS,
+  ROOT, BASE, LANGS, XDEFAULT, OG_LOCALE, MAIN_PAGES, GLOBAL_IDS, LEGAL_FILES, LEGAL_PATHS,
   rel, abs, read, isFile, isDir, loadPosts, loadLocale, expectedPages, other,
   doc, jsonLdBlocks, walkLd, typesOf, resolvePath, internalPath, norm, plain, listFiles
 };

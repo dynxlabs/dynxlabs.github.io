@@ -19,6 +19,10 @@ function rewriteHref(href, lang) {
   if (!href) return href;
   if (href.startsWith('#')) return href;                      // same-page anchor
 
+  // Privacy policy uses a different slug per language (/es/privacidad vs /en/privacy);
+  // map the language-neutral token here so every page links to the right one.
+  if (href === '/privacy-policy') return lang === 'es' ? '/es/privacidad/' : '/en/privacy/';
+
   const sameOrigin = href.match(/^https?:\/\/(?:www\.)?dynxlabs\.com(\/[^\s]*)?$/i);
   if (/^(mailto:|tel:|sms:|https?:)/i.test(href) && !sameOrigin) return href; // external
   if (sameOrigin) href = sameOrigin[1] || '/';                // reduce our own absolute URL to a path

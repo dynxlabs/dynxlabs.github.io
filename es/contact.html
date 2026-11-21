@@ -58,6 +58,7 @@
   ═══════════════════════════════════════════════ -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/css/styles.css" >
+  <link rel="stylesheet" href="/assets/css/form.css" >
 
   <!-- ═══════════════════════════════════════════════
        FORM STYLES — scopeados bajo .contact-wrap
@@ -431,150 +432,11 @@
   <div class="section-header">
     <div class="lp-label">Comenzar</div>
     <h1 class="section-title">¿Listo para Automatizar tus Operaciones?</h1>
-    <p class="section-subtitle">Completa el formulario y te contactamos en menos de 24 horas — o inicia una conversación directamente por WhatsApp.</p>
+    <p class="section-subtitle">Completa el formulario y te contactamos en menos de 48 horas — o inicia una conversación directamente por WhatsApp.</p>
   </div>
 
   <!-- Card -->
-  <div class="form-card">
-
-    <!-- Success -->
-    <div class="success-msg" id="successMsg" role="alert" aria-live="polite">
-      <div class="success-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#B3B3B3" aria-hidden="true">
-          <path d="M20 6L9 17l-5-5"></path>
-        </svg>
-      </div>
-      <p class="success-title">Mensaje recibido.</p>
-      <p class="success-subtitle">Te contactaremos en menos de 24 horas. Mientras tanto, puedes escribirnos por WhatsApp.</p>
-    </div>
-
-    <!-- Form -->
-    <div class="form-content" id="formContent">
-      <form id="contactForm" novalidate>
-
-        <div class="form-grid">
-
-          <!-- Company -->
-          <div class="form-group">
-            <label for="company">Nombre de la Empresa</label>
-            <input type="text" id="company" name="company" placeholder="Tu Empresa SpA" autocomplete="organization">
-            <span class="error-msg" id="err-company">Campo obligatorio</span>
-          </div>
-
-          <!-- Contact Name -->
-          <div class="form-group">
-            <label for="contact_name">Nombre de Contacto</label>
-            <input type="text" id="contact_name" name="contact_name" placeholder="Juan Pérez" autocomplete="name">
-            <span class="error-msg" id="err-contact_name">Campo obligatorio</span>
-          </div>
-
-          <!-- Region -->
-          <div class="form-group">
-            <label for="region">Región</label>
-            <div class="select-wrapper">
-              <select id="region" name="region">
-                <option value disabled selected>Selecciona una región</option>
-                <option value="Arica y Parinacota">Arica y Parinacota</option>
-                <option value="Tarapacá">Tarapacá</option>
-                <option value="Antofagasta">Antofagasta</option>
-                <option value="Atacama">Atacama</option>
-                <option value="Coquimbo">Coquimbo</option>
-                <option value="Valparaíso">Valparaíso</option>
-                <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
-                <option value="O'Higgins">O'Higgins</option>
-                <option value="Maule">Maule</option>
-                <option value="Ñuble">Ñuble</option>
-                <option value="Biobío">Biobío</option>
-                <option value="La Araucanía">La Araucanía</option>
-                <option value="Los Ríos">Los Ríos</option>
-                <option value="Los Lagos">Los Lagos</option>
-                <option value="Aysén">Aysén</option>
-                <option value="Magallanes">Magallanes</option>
-              </select>
-            </div>
-            <span class="error-msg" id="err-region">Campo obligatorio</span>
-          </div>
-
-          <!-- Comuna / Location -->
-          <div class="form-group">
-            <label for="comuna">Comuna</label>
-            <div class="select-wrapper">
-              <select id="comuna" name="comuna" disabled>
-                <option value disabled selected>Selecciona primero la región</option>
-              </select>
-            </div>
-            <span class="error-msg" id="err-comuna">Campo obligatorio</span>
-          </div>
-
-          <!-- Phone -->
-          <div class="form-group">
-            <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" name="phone" placeholder="+56 9 1234 5678" autocomplete="tel" maxlength="16" >
-            <span class="error-msg" id="err-phone">Campo obligatorio</span>
-          </div>
-
-          <!-- Email -->
-          <div class="form-group">
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" name="email" placeholder="juan@empresa.com" autocomplete="email">
-            <span class="error-msg" id="err-email">Ingresa un correo válido</span>
-          </div>
-
-          <!-- Process -->
-          <div class="form-group full">
-            <label for="process">¿Qué proceso quieres automatizar?</label>
-            <div class="select-wrapper">
-              <select id="process" name="process">
-                <option value disabled selected>Selecciona una opción</option>
-                <option value="Reports & Dashboards">Reportes y Dashboards</option>
-                <option value="Tool & System Integrations">Integración de Herramientas y Sistemas</option>
-                <option value="Customer Management (CRM)">Gestión de Clientes (CRM)</option>
-                <option value="Billing & Administrative">Facturación y Procesos Administrativos</option>
-                <option value="Customer Support">Atención al Cliente</option>
-                <option value="Inventory Management">Gestión de Inventario</option>
-                <option value="Marketing & Communications">Marketing y Comunicaciones</option>
-                <option value="Other">Otro</option>
-              </select>
-            </div>
-            <span class="error-msg" id="err-process">Campo obligatorio</span>
-          </div>
-
-          <!-- Other (conditional) -->
-          <div class="form-group full" id="otherGroup" style="display:none;">
-            <label for="otherText">Cuéntanos más</label>
-            <textarea id="otherText" name="otherText" placeholder="Describe brevemente qué necesitas automatizar..."></textarea>
-            <span class="error-msg" id="err-otherText">Campo obligatorio</span>
-          </div>
-
-        </div>
-
-        <!-- Submit -->
-        <button type="submit" class="btn-submit">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-          <span>Quiero Automatizar mi Negocio</span>
-        </button>
-
-        <!-- Divider -->
-        <div class="form-divider">
-          <span>o si prefieres hablar ahora</span>
-        </div>
-
-        <!-- WhatsApp -->
-        <a href="https://wa.me/56984657801" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-          </svg>
-          <span>Tu competencia ya está automatizando. ¿Y tú?</span>
-        </a>
-
-        <p class="form-hint">Tus datos se tratan con estricta confidencialidad. Nunca los compartiremos con terceros.</p>
-
-      </form>
-    </div>
-
-  </div>
+  <div class="form-card"></div>
 </section>
 </main>
 
@@ -650,7 +512,7 @@
       <div class="ftr-col">
         <h3 class="ftr-title">Términos y políticas</h3>
         <ul class="ftr-links">
-          <li><button type="button" data-modal-open="modal-privacy">Política de Privacidad</button></li>
+          <li><a href="/es/privacidad/">Política de Privacidad</a></li>
           <li><button type="button" data-modal-open="modal-terms">Términos de Servicio</button></li>
           <li><button type="button" data-cookie-settings>Cookies</button></li>
         </ul>
@@ -677,20 +539,6 @@
 <!-- ═══════════════════════════════════════════════════════════
      MODALS
 ═══════════════════════════════════════════════════════════════ -->
-<div id="modal-privacy" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title" aria-hidden="true">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h2 id="modal-privacy-title" class="modal-title">Política de Privacidad</h2>
-      <button class="modal-close" data-modal-close aria-label="Cerrar">&#x2715;</button>
-    </div>
-    <p class="modal-date">Última actualización: Junio 2026</p>
-    <div class="modal-section"><h3 class="modal-section-title">Información Recopilada</h3><p class="modal-section-content">Recopilamos datos proporcionados directamente por ti a través de nuestro sitio web y canal de WhatsApp Business. Esto incluye: nombre, nombre de empresa, email, teléfono, región, comuna y descripción del proceso o necesidad que deseas automatizar. No utilizamos cookies de rastreo ni recolectamos datos personales sin consentimiento explícito.</p></div>
-    <div class="modal-section"><h3 class="modal-section-title">Uso de la Información</h3><p class="modal-section-content">Tu información se utiliza exclusivamente para preparar cotizaciones personalizadas, responder consultas, proveer los servicios contratados y comunicarnos sobre proyectos activos. No vendemos ni compartimos tus datos con terceros bajo ninguna circunstancia, salvo los proveedores de infraestructura descritos a continuación.</p></div>
-    <div class="modal-section"><h3 class="modal-section-title">Almacenamiento y Servicios de Terceros</h3><p class="modal-section-content">Los datos recopilados a través de nuestros canales digitales se almacenan en Google Sheets, operado bajo la infraestructura de Google LLC, con acceso restringido exclusivamente al equipo interno de DYNX Labs. Nuestras soluciones también integran modelos de IA de Anthropic, OpenAI y Google, e infraestructura cloud de AWS y Google Cloud. El canal de WhatsApp opera a través de la API oficial de Meta (WhatsApp Business Platform). Estos servicios operan bajo sus respectivas políticas de privacidad y no utilizan tus datos para entrenar sus modelos.</p></div>
-    <div class="modal-section"><h3 class="modal-section-title">Tus Derechos</h3><p class="modal-section-content">De acuerdo con la Ley N° 21.719 de Protección de Datos Personales de Chile, tienes derecho a solicitar en cualquier momento el acceso, corrección, eliminación u oposición al tratamiento de tu información personal contactándonos directamente. Responderemos en los plazos legalmente establecidos.</p></div>
-  </div>
-</div>
-
 <div id="modal-terms" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-terms-title" aria-hidden="true">
   <div class="modal-box">
     <div class="modal-header">
@@ -709,7 +557,7 @@
 <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Consentimiento de cookies">
   <p class="cookie-text">
     <span>Utilizamos cookies esenciales para garantizar la mejor experiencia en nuestro sitio. Al continuar, aceptas nuestra</span>
-    <button data-modal-open="modal-privacy" style="background:none;border:none;color:#fff;text-decoration:underline;cursor:pointer;font-size:inherit;padding:0;margin-left:4px;">Política de Privacidad</button>.
+    <a href="/es/privacidad/" style="color:#fff;text-decoration:underline;margin-left:4px;">Política de Privacidad</a>.
   </p>
   <div class="cookie-actions">
     <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Aceptar</button>
@@ -724,197 +572,8 @@
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/megamenu.js"></script>
 
-<script>
-// ─── DATOS: REGIONES → COMUNAS ───────────────────────────────
-const COMUNAS = {
-  "Arica y Parinacota": ["Arica","Camarones","General Lagos","Putre"],
-  "Tarapacá": ["Alto Hospicio","Camiña","Colchane","Huara","Iquique","Pica","Pozo Almonte"],
-  "Antofagasta": ["Antofagasta","Calama","Mejillones","Ollagüe","San Pedro de Atacama","Sierra Gorda","Taltal","Tocopilla","María Elena"],
-  "Atacama": ["Alto del Carmen","Caldera","Chañaral","Copiapó","Diego de Almagro","Freirina","Huasco","Tierra Amarilla","Vallenar"],
-  "Coquimbo": ["Andacollo","Canela","Combarbalá","Coquimbo","Illapel","La Higuera","La Serena","Los Vilos","Monte Patria","Ovalle","Paiguano","Punitaqui","Río Hurtado","Salamanca","Vicuña"],
-  "Valparaíso": ["Algarrobo","Cabildo","Calera","Calle Larga","Cartagena","Casablanca","Catemu","Concón","El Quisco","El Tabo","Hijuelas","Isla de Pascua","Juan Fernández","La Cruz","La Ligua","Limache","Llaillay","Los Andes","Nogales","Olmué","Panquehue","Papudo","Petorca","Puchuncaví","Putaendo","Quillota","Quilpué","Quintero","Rinconada","San Antonio","San Esteban","San Felipe","Santa María","Santo Domingo","Valparaíso","Villa Alemana","Viña del Mar","Zapallar"],
-  "Metropolitana de Santiago": ["Alhué","Buin","Calera de Tango","Cerrillos","Cerro Navia","Colina","Conchalí","Curacaví","El Bosque","El Monte","Estación Central","Huechuraba","Independencia","Isla de Maipo","La Cisterna","La Florida","La Granja","La Pintana","La Reina","Lampa","Las Condes","Lo Barnechea","Lo Espejo","Lo Prado","Macul","Maipú","María Pinto","Melipilla","Ñuñoa","Padre Hurtado","Paine","Pedro Aguirre Cerda","Peñaflor","Peñalolén","Pirque","Providencia","Pudahuel","Puente Alto","Quilicura","Quinta Normal","Recoleta","Renca","San Bernardo","San Joaquín","San José de Maipo","San Miguel","San Pedro","San Ramón","Santiago","Talagante","Tiltil","Vitacura"],
-  "O'Higgins": ["Chépica","Chimbarongo","Codegua","Coinco","Coltauco","Doñihue","Graneros","La Estrella","Las Cabras","Litueche","Lolol","Machali","Malloa","Marchigüe","Mostazal","Nancagua","Navidad","Olivar","Palmilla","Paredones","Peralillo","Peumo","Pichidegua","Pichilemu","Placilla","Pumanque","Quinta de Tilcoco","Rancagua","Rengo","Requinoa","San Fernando","San Vicente","Santa Cruz"],
-  "Maule": ["Cauquenes","Chanco","Colbún","Constitución","Curepto","Curicó","Empedrado","Hualañé","Licantén","Linares","Longaví","Maule","Molina","Parral","Pelarco","Pelluhue","Pencahue","Rauco","Retiro","Río Claro","Romeral","Sagrada Familia","San Clemente","San Javier","San Rafael","Talca","Teno","Vichuquén","Villa Alegre","Yerbas Buenas"],
-  "Ñuble": ["Bulnes","Chillán","Chillán Viejo","Cobquecura","Coelemu","Coihueco","El Carmen","Ninhue","Ñiquén","Pemuco","Pinto","Portezuelo","Quillón","Quirihue","Ranquil","San Carlos","San Fabián","San Ignacio","San Nicolás","Treguaco","Yungay"],
-  "Biobío": ["Alto Biobío","Antuco","Arauco","Cabrero","Cañete","Chiguayante","Concepción","Contulmo","Coronel","Curanilahue","Florida","Hualpén","Hualqui","Laja","Lebu","Los Álamos","Los Ángeles","Lota","Mulchén","Nacimiento","Negrete","Penco","Quilaco","Quilleco","San Pedro de la Paz","San Rosendo","Santa Bárbara","Santa Juana","Talcahuano","Tirúa","Tomé","Tucapel","Yumbel"],
-  "La Araucanía": ["Angol","Carahue","Cholchol","Collipulli","Cunco","Curacautín","Curarrehue","Ercilla","Freire","Galvarino","Gorbea","Lautaro","Loncoche","Lonquimay","Los Sauces","Lumaco","Melipeuco","Nueva Imperial","Padre las Casas","Perquenco","Pitrufquén","Pucón","Purén","Renaico","Saavedra","Temuco","Teodoro Schmidt","Toltén","Traiguén","Victoria","Vilcún","Villarrica"],
-  "Los Ríos": ["Corral","Futrono","La Unión","Lago Ranco","Lanco","Los Lagos","Máfil","Mariquina","Paillaco","Panguipulli","Río Bueno","Valdivia"],
-  "Los Lagos": ["Ancud","Calbuco","Castro","Chaitén","Chonchi","Cochamó","Curaco de Vélez","Dalcahue","Fresia","Frutillar","Futaleufú","Hualaihué","Llanquihue","Los Muermos","Maullín","Osorno","Palena","Puerto Montt","Puerto Octay","Puerto Varas","Puqueldón","Purranque","Puyehue","Queilén","Quellón","Quemchi","Quinchao","Río Negro","San Juan de la Costa","San Pablo"],
-  "Aysén": ["Aysén","Chile Chico","Cisnes","Cochrane","Coihaique","Guaitecas","Lago Verde","O'Higgins","Río Ibáñez","Tortel"],
-  "Magallanes": ["Antártica","cabo de Hornos","Laguna Blanca","Natales","Punta Arenas","Río Verde","San Gregorio","Timaukel","Torres del Paine"]
-};
-
-// ─── POBLAR COMUNAS AL CAMBIAR REGIÓN ───────────────────────
-const regionSel = document.getElementById('region');
-const comunaSel = document.getElementById('comuna');
-
-regionSel.addEventListener('change', function () {
-  const comunas = COMUNAS[this.value] || [];
-  comunaSel.innerHTML = '';
-
-  // placeholder
-  const ph = document.createElement('option');
-  ph.value = '';
-  ph.disabled = true;
-  ph.selected = true;
-  // respeta idioma actual via i18n si está disponible
-  ph.textContent = (typeof I18n !== 'undefined' && I18n.get('contact.selectComunaList'))
-    || (document.documentElement.lang === 'es' ? 'Selecciona una comuna' : 'Select location');
-  comunaSel.appendChild(ph);
-
-  comunas.forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c;
-    opt.textContent = c;
-    comunaSel.appendChild(opt);
-  });
-
-  comunaSel.disabled = false;
-  // limpiar error si había
-  comunaSel.classList.remove('error');
-  document.getElementById('err-comuna').classList.remove('show');
-});
-
-// ─── AUTOFORMATO TELÉFONO: +56 X XXXX XXXX ──────────────────
-const phoneInput = document.getElementById('phone');
-
-phoneInput.addEventListener('input', function () {
-  // extraer solo dígitos (excluir el 56 del prefijo)
-  let digits = this.value.replace(/\D/g, '');
-
-  // si el usuario escribió 56 al inicio, quitarlo para no duplicar
-  if (digits.startsWith('56')) digits = digits.slice(2);
-
-  // limitar a 9 dígitos (formato chileno)
-  digits = digits.slice(0, 9);
-
-  let formatted = '+56';
-  if (digits.length > 0) formatted += ' ' + digits.slice(0, 1);
-  if (digits.length > 1) formatted += ' ' + digits.slice(1, 5);
-  if (digits.length > 5) formatted += ' ' + digits.slice(5, 9);
-
-  this.value = formatted;
-});
-
-phoneInput.addEventListener('keydown', function (e) {
-  // permitir borrar incluso el prefijo para que el usuario no quede atrapado
-  if (e.key === 'Backspace' && this.value === '+56') {
-    this.value = '';
-  }
-});
-
-phoneInput.addEventListener('focus', function () {
-  if (this.value === '') this.value = '+56 ';
-});
-
-phoneInput.addEventListener('blur', function () {
-  if (this.value === '+56 ' || this.value === '+56') this.value = '';
-});
-
-// ─── EMAIL: FORZAR MINÚSCULAS ────────────────────────────────
-const emailInput = document.getElementById('email');
-
-emailInput.addEventListener('input', function () {
-  const pos = this.selectionStart;
-  this.value = this.value.toLowerCase();
-  this.setSelectionRange(pos, pos);
-});
-
-// ─── SHOW/HIDE "OTHER" TEXTAREA ─────────────────────────────
-document.getElementById('process').addEventListener('change', function () {
-  const og = document.getElementById('otherGroup');
-  og.style.display = this.value === 'Other' ? 'block' : 'none';
-  if (this.value !== 'Other') {
-    document.getElementById('otherText').value = '';
-    document.getElementById('err-otherText').classList.remove('show');
-    document.getElementById('otherText').classList.remove('error');
-  }
-});
-
-// ─── VALIDACIÓN Y ENVÍO ──────────────────────────────────────
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const processVal = document.getElementById('process').value;
-  const otherVisible = document.getElementById('otherGroup').style.display !== 'none';
-
-  const fields = [
-    { id: 'company',      errId: 'err-company',      type: 'text' },
-    { id: 'contact_name', errId: 'err-contact_name', type: 'text' },
-    { id: 'region',       errId: 'err-region',       type: 'select' },
-    { id: 'comuna',       errId: 'err-comuna',       type: 'select' },
-    { id: 'phone',        errId: 'err-phone',        type: 'phone' },
-    { id: 'email',        errId: 'err-email',        type: 'email' },
-    { id: 'process',      errId: 'err-process',      type: 'select' },
-  ];
-
-  if (otherVisible) {
-    fields.push({ id: 'otherText', errId: 'err-otherText', type: 'text' });
-  }
-
-  let valid = true;
-
-  fields.forEach(f => {
-    const el  = document.getElementById(f.id);
-    const err = document.getElementById(f.errId);
-    const val = el.value.trim();
-
-    el.classList.remove('error');
-    err.classList.remove('show');
-
-    if (!val) {
-      el.classList.add('error'); err.classList.add('show'); valid = false;
-    } else if (f.type === 'email') {
-      // debe contener @ y al menos un punto después
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
-        el.classList.add('error'); err.classList.add('show'); valid = false;
-      }
-    } else if (f.type === 'phone') {
-      // mínimo +56 X XXXX (10 chars) y contener al menos 8 dígitos después de +56
-      const digits = val.replace(/\D/g, '');
-      if (digits.length < 10) { // 56 + 8 dígitos mínimo
-        el.classList.add('error'); err.classList.add('show'); valid = false;
-      }
-    }
-  });
-
-  if (!valid) return;
-
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.style.opacity = '0.6';
-
-  const formData = {
-    company:   document.getElementById('company').value.trim(),
-    contact:   document.getElementById('contact_name').value.trim(),
-    region:    document.getElementById('region').value,
-    comuna:    document.getElementById('comuna').value,
-    phone:     document.getElementById('phone').value.trim(),
-    email:     document.getElementById('email').value.trim(),
-    process:   document.getElementById('process').value,
-    otherText: otherVisible ? document.getElementById('otherText').value.trim() : ''
-  };
-
-  // ── Reemplaza con la URL de tu Google Apps Script ──
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwko8d-PGXh2MSsSBsp6K-BM6XYhC9xuNx5MAIvhRgYJlKxPBfa2EvGeiWWzAIGnDYVuQ/exec';
-  // ──────────────────────────────────────────────────
-
-  fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(formData) })
-    .then(res => res.json())
-    .then(data => {
-      if (data.status === 'ok') {
-        document.getElementById('formContent').classList.add('hide');
-        document.getElementById('successMsg').classList.add('show');
-      } else { throw new Error(); }
-    })
-    .catch(() => {
-      btn.disabled = false;
-      btn.style.opacity = '1';
-      alert((typeof I18n !== 'undefined' && I18n.get('contact.errSubmit')) || 'Something went wrong. Please try again or contact us via WhatsApp.');
-    });
-});
-</script>
+<script src="/assets/js/comunas.js"></script>
+<script src="/assets/js/form.js"></script>
 
 </body>
 </html>

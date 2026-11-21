@@ -211,7 +211,7 @@
   "contact": {
     "badge": "Get Started",
     "title": "Ready to Automate Your Operations?",
-    "subtitle": "Fill out the form and we'll reach out within 24 hours — or start a conversation directly on WhatsApp.",
+    "subtitle": "Fill out the form and we'll reach out within 48 hours — or start a conversation directly on WhatsApp.",
     "fieldCompany": "Company Name",
     "placeholderCompany": "ACME Corp",
     "fieldContact": "Contact Name",
@@ -243,7 +243,7 @@
     "waBtn": "Your competition is already automating. Are you?",
     "hint": "Your data is handled with strict confidentiality. We will never share it with third parties.",
     "successTitle": "Message received.",
-    "successSubtitle": "We'll be in touch within 24 hours. In the meantime, feel free to reach us on WhatsApp.",
+    "successSubtitle": "We'll be in touch within 48 hours. In the meantime, feel free to reach us on WhatsApp.",
     "errSubmit": "Something went wrong. Please try again or contact us via WhatsApp."
   },
   "research": {
