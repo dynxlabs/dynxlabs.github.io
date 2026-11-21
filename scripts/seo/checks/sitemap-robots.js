@@ -103,6 +103,8 @@ module.exports = function run(ctx, report) {
   const { S, pages, posts } = ctx;
   const indexable = pages.filter(p => p.indexable);
   const expected = new Set(indexable.map(p => p.url));
+  // Hand-authored legal pages are in the sitemap but not in the generated model.
+  S.LEGAL_PATHS.forEach(pth => expected.add(S.BASE + pth));
   const byUrl = new Map(pages.map(p => [p.url, p]));
 
   /* ---------- sitemap.xml ---------- */
@@ -160,7 +162,8 @@ module.exports = function run(ctx, report) {
   for (const e of entries) {
     const m = e.loc.match(/^https:\/\/dynxlabs\.com\/(es|en)\/(.*)$/);
     if (!m) continue;
-    const want = { es: `${S.BASE}/es/${m[2]}`, en: `${S.BASE}/en/${m[2]}`, 'x-default': `${S.BASE}/${S.XDEFAULT}/${m[2]}` };
+    // Legal pages have a different slug per language, so their alternates come from an explicit map.
+    const want = S.LEGAL_ALTS[e.loc] || { es: `${S.BASE}/es/${m[2]}`, en: `${S.BASE}/en/${m[2]}`, 'x-default': `${S.BASE}/${S.XDEFAULT}/${m[2]}` };
     for (const hl of ['es', 'en', 'x-default']) {
       if (e.alts[hl] !== want[hl]) altProblems.push({ where: e.loc, expected: `${hl} → ${want[hl]}`, found: String(e.alts[hl]) });
     }
