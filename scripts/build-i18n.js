@@ -117,13 +117,10 @@ function insightCards(lang) {
            class="insight-card insight-card--grid"
            data-slug="${article.slug}"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">${escapeText(catLabel)}</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              ${escapeText(catLabel)}
-            </span>
             <h3 class="insight-card__title">${escapeText(data.title)}</h3>
             <p class="insight-card__summary">${escapeText(data.summary)}</p>
             <div class="insight-card__meta">

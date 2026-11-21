@@ -620,6 +620,78 @@
 
     .insight-card__dot { opacity: 0.4; }
 
+    /* Grid card: category band (grid + soft light), shimmer on hover, border glow and click ring */
+    .insight-card--grid {
+      --x: -999px; --y: -999px; --near: 0; --wx: 0px; --wy: 0px; --wr: 0px; --wa: 0; --press: 1;
+      position: relative;
+      isolation: isolate;
+      transform: scale(var(--press));
+    }
+    .insight-card--grid .insight-card__band {
+      position: relative;
+      height: 96px;
+      overflow: hidden;
+      border-bottom: 1px solid #1c1c1c;
+      background-color: #050505;
+      background-image: linear-gradient(#262626 1px, transparent 1px), linear-gradient(90deg, #262626 1px, transparent 1px);
+      background-size: 32px 32px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .insight-card--grid .insight-card__band::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(80% 70% at 85% 15%, rgba(255,255,255,0.07), transparent 60%);
+      pointer-events: none;
+    }
+    .insight-card__cat {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: rgba(244,244,245,0.62);
+      background: linear-gradient(100deg, rgba(244,244,245,0.42) 40%, #ffffff 50%, rgba(244,244,245,0.42) 60%) no-repeat;
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      pointer-events: none;
+    }
+    .insight-card--grid:hover .insight-card__cat { animation: insight-shimmer 3s ease-in-out infinite; }
+    @keyframes insight-shimmer {
+      0%   { background-position: 100% 0; }
+      60%  { background-position: 0% 0; }
+      100% { background-position: 0% 0; }
+    }
+    .insight-card--grid::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      border-radius: inherit;
+      padding: 1px;
+      pointer-events: none;
+      background:
+        radial-gradient(320px circle at var(--x) var(--y), rgba(255,255,255,calc(0.5 * var(--near))), rgba(255,255,255,0) 100%),
+        radial-gradient(circle at var(--wx) var(--wy), rgba(255,255,255,0) calc(var(--wr) - 200px), rgba(255,255,255,calc(0.03 * var(--wa))) calc(var(--wr) - 110px), rgba(255,255,255,calc(0.07 * var(--wa))) calc(var(--wr) - 50px), rgba(255,255,255,calc(0.10 * var(--wa))) calc(var(--wr) - 14px), rgba(255,255,255,0) var(--wr));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    }
+    @property --wr { syntax: '<length>'; inherits: false; initial-value: 0px; }
+    @property --wa { syntax: '<number>'; inherits: false; initial-value: 0; }
+    @property --press { syntax: '<number>'; inherits: false; initial-value: 1; }
+    @media (prefers-reduced-motion: reduce) {
+      .insight-card--grid:hover .insight-card__cat { animation: none; -webkit-text-fill-color: rgba(244,244,245,0.62); background: none; }
+    }
+
     /* Empty state */
     .insights-empty {
       grid-column: 1 / -1;
@@ -852,13 +924,10 @@
            class="insight-card insight-card--grid"
            data-slug="multimodal-ai-texto-imagen-voz"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Multimodal AI: When Your AI Understands Text, Image, and Voice</h3>
             <p class="insight-card__summary">Most business information is not text — it is photos, voice notes, scanned documents, and video calls. Multimodal AI processes all of these together, eliminating the manual conversions your team does dozens of times per day.</p>
             <div class="insight-card__meta">
@@ -872,13 +941,10 @@
            class="insight-card insight-card--grid"
            data-slug="slms-vs-llms-modelo-pequeno-mejor"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">SLMs vs LLMs: When a Smaller Model Is the Better Choice</h3>
             <p class="insight-card__summary">The assumption that bigger AI models are always better is costing companies money, speed, and privacy. Small Language Models handle 80% of business tasks at a fraction of the cost — if you know when to use them.</p>
             <div class="insight-card__meta">
@@ -892,13 +958,10 @@
            class="insight-card insight-card--grid"
            data-slug="ciberseguridad-e-ia-amenazas-defensas"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Cybersecurity and AI: Threats and Defenses in 2026</h3>
             <p class="insight-card__summary">AI is making cyberattacks more personalized, scalable, and harder to detect — while simultaneously powering the best defenses. Understanding both sides of this arms race is essential for any business operating online.</p>
             <div class="insight-card__meta">
@@ -912,13 +975,10 @@
            class="insight-card insight-card--grid"
            data-slug="ai-governance-reglas-antes-de-escalar"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">AI Governance: Setting the Rules Before You Scale</h3>
             <p class="insight-card__summary">Most companies adopt AI tools faster than they write the rules for using them. That gap between adoption and governance is where the biggest risks hide — data leaks, compliance violations, and decisions nobody can explain.</p>
             <div class="insight-card__meta">
@@ -932,13 +992,10 @@
            class="insight-card insight-card--grid"
            data-slug="ia-para-rrhh-screening-onboarding"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Real Cases</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Real Cases
-            </span>
             <h3 class="insight-card__title">AI for HR: Ethical and Practical Applications in Screening, Onboarding, and Engagement</h3>
             <p class="insight-card__summary">AI can transform HR operations — from screening resumes to predicting attrition — but only when deployed with clear ethical guardrails. Here's where it adds real value and where human judgment must stay in the loop.</p>
             <div class="insight-card__meta">
@@ -952,13 +1009,10 @@
            class="insight-card insight-card--grid"
            data-slug="knowledge-management-con-ia"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Knowledge Management With AI: Help Your Team Find What They Need</h3>
             <p class="insight-card__summary">The information exists — in Slack threads, Google Docs, email chains, and people's heads. AI-powered knowledge management makes it findable. Here's how semantic search, retrieval-augmented generation, and internal assistants actually work.</p>
             <div class="insight-card__meta">
@@ -972,13 +1026,10 @@
            class="insight-card insight-card--grid"
            data-slug="procesamiento-inteligente-documentos"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">Intelligent Document Processing: Extracting Data From Invoices, Contracts, and Forms Automatically</h3>
             <p class="insight-card__summary">Your team is still copying numbers from PDFs into spreadsheets. Intelligent Document Processing uses AI to extract, classify, and validate data from any document — invoices, contracts, forms. Here's how it works and when it's worth it.</p>
             <div class="insight-card__meta">
@@ -992,13 +1043,10 @@
            class="insight-card insight-card--grid"
            data-slug="ia-en-ventas-b2b-lead-scoring-cierre"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Real Cases</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Real Cases
-            </span>
             <h3 class="insight-card__title">AI in B2B Sales: From Lead Scoring to AI-Assisted Closing</h3>
             <p class="insight-card__summary">AI is reshaping B2B sales from first touch to signed contract. Learn how machine learning scores leads, AI assistants coach reps in real time, and CRM intelligence predicts which deals will close — with concrete metrics.</p>
             <div class="insight-card__meta">
@@ -1012,13 +1060,10 @@
            class="insight-card insight-card--grid"
            data-slug="low-code-no-code-automatizacion-sin-it"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">Low-Code and No-Code: Democratizing Automation Without Depending on IT</h3>
             <p class="insight-card__summary">Business teams are building their own automations — and IT can't keep up with the demand anyway. Here's how no-code and low-code platforms work, when each makes sense, and how to enable teams without creating chaos.</p>
             <div class="insight-card__meta">
@@ -1032,13 +1077,10 @@
            class="insight-card insight-card--grid"
            data-slug="por-que-proyectos-ia-no-pasan-del-piloto"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Why 70% of AI Projects Never Make It Past the Pilot</h3>
             <p class="insight-card__summary">The demo impressed everyone. The pilot showed promise. Then nothing happened. Most AI initiatives die in the gap between proof-of-concept and production. Here are the five reasons why — and how to build pilots that actually ship.</p>
             <div class="insight-card__meta">
@@ -1052,13 +1094,10 @@
            class="insight-card insight-card--grid"
            data-slug="quick-wins-por-donde-empezar-a-automatizar"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">The Quick Wins Framework: Where to Start Automating</h3>
             <p class="insight-card__summary">The most common automation mistake is starting with the most complex process. The Quick Wins framework helps you identify and prioritize the low-effort, high-impact tasks that build momentum and prove value fast.</p>
             <div class="insight-card__meta">
@@ -1072,13 +1111,10 @@
            class="insight-card insight-card--grid"
            data-slug="como-medir-roi-automatizacion"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">How to Measure the Real ROI of an Automation Project</h3>
             <p class="insight-card__summary">"We saved time" isn't a business case. To justify automation investments and prioritize the next project, you need hard numbers. Here's the formula, the hidden costs, the hidden benefits, and a real calculation example.</p>
             <div class="insight-card__meta">
@@ -1092,13 +1128,10 @@
            class="insight-card insight-card--grid"
            data-slug="que-es-un-pipeline-de-datos"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">What Is a Data Pipeline and Why Does Your Team Need One?</h3>
             <p class="insight-card__summary">If someone on your team spends hours assembling a report from multiple sources with the same structure every week, that's not a report — it's a manual data pipeline waiting to be automated. Here's what pipelines are and how to build yours.</p>
             <div class="insight-card__meta">
@@ -1112,13 +1145,10 @@
            class="insight-card insight-card--grid"
            data-slug="de-silos-a-flujo-unico-integracion-datos"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">From Data Silos to a Single Flow: Integration for Non-Technical Teams</h3>
             <p class="insight-card__summary">Every department buys its own tools, and soon your company's data lives in a dozen disconnected systems. Integration doesn't require engineering — it requires understanding where data flows and where it breaks. Here's how non-technical teams can fix it.</p>
             <div class="insight-card__meta">
@@ -1132,13 +1162,10 @@
            class="insight-card insight-card--grid"
            data-slug="rag-empresarial-conecta-ia-a-tu-informacion"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">RAG for Business: How to Connect Your AI to Your Own Information</h3>
             <p class="insight-card__summary">Your AI assistant doesn't know your company's data — and that's why its answers feel generic. RAG (Retrieval-Augmented Generation) bridges the gap by connecting LLMs to your own documents, policies, and knowledge bases. Here's how it works and how to implement it.</p>
             <div class="insight-card__meta">
@@ -1152,13 +1179,10 @@
            class="insight-card insight-card--grid"
            data-slug="data-quality-base-de-toda-ia"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Your AI Is Only as Good as Your Data: A Practical Guide to Data Quality</h3>
             <p class="insight-card__summary">Most AI projects fail because of bad data, not bad models. Learn the five dimensions of data quality — accuracy, completeness, consistency, timeliness, and validity — and how to audit and fix your data before starting any AI initiative.</p>
             <div class="insight-card__meta">
@@ -1172,13 +1196,10 @@
            class="insight-card insight-card--grid"
            data-slug="human-in-the-loop-autonomia-ia"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Human-in-the-Loop: When to Let AI Decide and When to Keep Control</h3>
             <p class="insight-card__summary">Not every AI decision should be autonomous. Learn a practical framework — based on reversibility, error cost, and confidence thresholds — to decide where AI runs freely and where humans stay in the loop.</p>
             <div class="insight-card__meta">
@@ -1192,13 +1213,10 @@
            class="insight-card insight-card--grid"
            data-slug="ai-agents-y-apis-capa-de-ejecucion"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">AI Agents + APIs: The Execution Layer Your Automation Is Missing</h3>
             <p class="insight-card__summary">AI agents become powerful when they can call APIs and take real action in your systems. Learn the architecture behind tool-calling agents, see integration patterns with Make, Zapier, and custom code, and understand why API design is critical for reliability.</p>
             <div class="insight-card__meta">
@@ -1212,13 +1230,10 @@
            class="insight-card insight-card--grid"
            data-slug="sistemas-multi-agente-orquestacion"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Multi-Agent Systems: When One Agent Isn't Enough</h3>
             <p class="insight-card__summary">Complex business processes need more than a single AI agent. Learn how multi-agent orchestration works, when to use it, and the patterns — sequential, parallel, hierarchical — that keep specialized agents working together.</p>
             <div class="insight-card__meta">
@@ -1232,13 +1247,10 @@
            class="insight-card insight-card--grid"
            data-slug="agentic-ai-de-asistentes-a-ejecutores"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Agentic AI: From Assistants to Autonomous Executors</h3>
             <p class="insight-card__summary">AI agents don't just suggest — they act. Learn the difference between chatbots, copilots, and autonomous agents, see real examples of multi-step execution, and evaluate whether your team is ready to deploy them.</p>
             <div class="insight-card__meta">
@@ -1252,13 +1264,10 @@
            class="insight-card insight-card--grid"
            data-slug="como-escribir-un-buen-prompt"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">How to Write a Good Prompt: A Practical Framework for Better AI Results</h3>
             <p class="insight-card__summary">Most AI output problems are prompt problems. Learn the 5-part structure (role, task, context, constraints, format) that turns vague requests into precise, repeatable results.</p>
             <div class="insight-card__meta">
@@ -1272,13 +1281,10 @@
            class="insight-card insight-card--grid"
            data-slug="ai-agents-reemplazando-tareas-administrativas"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">How AI Agents Are Replacing Administrative Tasks in 2026</h3>
             <p class="insight-card__summary">AI agents go beyond chatbots — they execute multi-step tasks, make decisions from data, and operate autonomously. Here's how companies are deploying them to eliminate 40+ hours of admin work per month.</p>
             <div class="insight-card__meta">
@@ -1292,13 +1298,10 @@
            class="insight-card insight-card--grid"
            data-slug="como-reducir-tiempo-respuesta-cliente-con-ia"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">How to Reduce Customer Response Time From Hours to Seconds With AI</h3>
             <p class="insight-card__summary">Companies using AI-powered response systems cut average reply time from 4 hours to under 30 seconds. We break down the architecture, tools, and implementation steps to build your own 24/7 support system.</p>
             <div class="insight-card__meta">
@@ -1312,13 +1315,10 @@
            class="insight-card insight-card--grid"
            data-slug="de-excel-a-dashboard-en-tiempo-real"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Real Cases</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Real Cases
-            </span>
             <h3 class="insight-card__title">From Manual Excel to Real-Time Dashboard in 3 Days: A Case Study</h3>
             <p class="insight-card__summary">A logistics company spent 6 hours every week copying data between spreadsheets. We automated the entire pipeline — ingestion, transformation, and visualization — in 3 working days. Full technical breakdown inside.</p>
             <div class="insight-card__meta">
@@ -1332,13 +1332,10 @@
            class="insight-card insight-card--grid"
            data-slug="que-es-un-llm-y-como-puede-trabajar-en-tu-operacion"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">What Is an LLM and How Can It Work Inside Your Business Operation?</h3>
             <p class="insight-card__summary">Large Language Models power the AI tools you already use — from ChatGPT to code assistants. Understanding their strengths and limits helps you decide where to deploy them for real business impact.</p>
             <div class="insight-card__meta">
@@ -1352,13 +1349,10 @@
            class="insight-card insight-card--grid"
            data-slug="diferencia-automatizacion-inteligencia-artificial"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Artificial Intelligence</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Artificial Intelligence
-            </span>
             <h3 class="insight-card__title">Automation vs Artificial Intelligence: What's the Real Difference?</h3>
             <p class="insight-card__summary">Automation follows rules. AI learns patterns. Confusing them leads to wrong tool choices and failed projects. This guide explains the distinction with real examples so you can plan your operations correctly.</p>
             <div class="insight-card__meta">
@@ -1372,13 +1366,10 @@
            class="insight-card insight-card--grid"
            data-slug="que-es-un-workflow-y-por-que-importa"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Workflows</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Workflows
-            </span>
             <h3 class="insight-card__title">What Is a Workflow and Why Does It Matter for Your Business?</h3>
             <p class="insight-card__summary">Before automating anything, you need to map the workflow behind it. This practical guide explains what workflows are, how to document them, and how to identify which ones are ready for automation.</p>
             <div class="insight-card__meta">
@@ -1392,13 +1383,10 @@
            class="insight-card insight-card--grid"
            data-slug="que-es-un-trigger-y-por-que-importa"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">What Is a Trigger and Why Is It the Foundation of Every Automation?</h3>
             <p class="insight-card__summary">Every automation starts with a trigger — the event that sets the workflow in motion. Learn how triggers work in tools like Make, Zapier, and n8n, and how to choose the right one for each use case.</p>
             <div class="insight-card__meta">
@@ -1412,13 +1400,10 @@
            class="insight-card insight-card--grid"
            data-slug="5-tareas-repetitivas-que-tu-equipo-no-deberia-hacer"
           >
-          <div class="insight-card__color-bar">
-            <div class="insight-card__color-overlay"></div>
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">Automation</p>
           </div>
           <div class="insight-card__body">
-            <span class="insight-card__badge">
-              Automation
-            </span>
             <h3 class="insight-card__title">5 Repetitive Tasks Your Team Is Still Doing Manually (And How to Automate Them Today)</h3>
             <p class="insight-card__summary">Data entry, report generation, invoice processing, email follow-ups, and file organization — five tasks that cost teams 15+ hours per week. Each one can be automated in under a day with the right tools.</p>
             <div class="insight-card__meta">
