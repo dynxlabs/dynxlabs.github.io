@@ -211,7 +211,7 @@
   "contact": {
     "badge": "Comenzar",
     "title": "¿Listo para Automatizar tus Operaciones?",
-    "subtitle": "Completa el formulario y te contactamos en menos de 24 horas — o inicia una conversación directamente por WhatsApp.",
+    "subtitle": "Completa el formulario y te contactamos en menos de 48 horas — o inicia una conversación directamente por WhatsApp.",
     "fieldCompany": "Nombre de la Empresa",
     "placeholderCompany": "Tu Empresa SpA",
     "fieldContact": "Nombre de Contacto",
@@ -243,7 +243,7 @@
     "waBtn": "Tu competencia ya está automatizando. ¿Y tú?",
     "hint": "Tus datos se tratan con estricta confidencialidad. Nunca los compartiremos con terceros.",
     "successTitle": "Mensaje recibido.",
-    "successSubtitle": "Te contactaremos en menos de 24 horas. Mientras tanto, puedes escribirnos por WhatsApp.",
+    "successSubtitle": "Te contactaremos en menos de 48 horas. Mientras tanto, puedes escribirnos por WhatsApp.",
     "errSubmit": "Algo salió mal. Inténtalo de nuevo o escríbenos por WhatsApp."
   },
   "research": {

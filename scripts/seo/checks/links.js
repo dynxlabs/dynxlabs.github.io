@@ -45,6 +45,8 @@ module.exports = function run(ctx, report) {
       const r = S.resolvePath(pathOnly);
       if (r.status === 'missing') { broken.push({ where, expected: 'página existente', found: '404' }); continue; }
       if (r.status === 'redirect') { nonCanonical.push({ where, expected: `${pathOnly}/ (con barra final)`, found: pathOnly }); continue; }
+      // Hand-authored legal pages are valid, already-canonical targets (served at /<lang>/<slug>/) but not in the generated model.
+      if (S.LEGAL_PATHS.has(pathOnly)) continue;
       const target = byPath.get(pathOnly);
       if (!target) { nonCanonical.push({ where, expected: 'forma canónica de la URL', found: pathOnly }); continue; }
       if (target.kind === '404' && p.kind !== '404') to404.push({ where, expected: 'página real', found: 'página 404' });
