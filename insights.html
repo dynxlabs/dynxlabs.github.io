@@ -462,6 +462,78 @@
 
     .insight-card__dot { opacity: 0.4; }
 
+    /* Grid card: category band (grid + soft light), shimmer on hover, border glow and click ring */
+    .insight-card--grid {
+      --x: -999px; --y: -999px; --near: 0; --wx: 0px; --wy: 0px; --wr: 0px; --wa: 0; --press: 1;
+      position: relative;
+      isolation: isolate;
+      transform: scale(var(--press));
+    }
+    .insight-card--grid .insight-card__band {
+      position: relative;
+      height: 96px;
+      overflow: hidden;
+      border-bottom: 1px solid #1c1c1c;
+      background-color: #050505;
+      background-image: linear-gradient(#262626 1px, transparent 1px), linear-gradient(90deg, #262626 1px, transparent 1px);
+      background-size: 32px 32px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .insight-card--grid .insight-card__band::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(80% 70% at 85% 15%, rgba(255,255,255,0.07), transparent 60%);
+      pointer-events: none;
+    }
+    .insight-card__cat {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: rgba(244,244,245,0.62);
+      background: linear-gradient(100deg, rgba(244,244,245,0.42) 40%, #ffffff 50%, rgba(244,244,245,0.42) 60%) no-repeat;
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      pointer-events: none;
+    }
+    .insight-card--grid:hover .insight-card__cat { animation: insight-shimmer 3s ease-in-out infinite; }
+    @keyframes insight-shimmer {
+      0%   { background-position: 100% 0; }
+      60%  { background-position: 0% 0; }
+      100% { background-position: 0% 0; }
+    }
+    .insight-card--grid::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      border-radius: inherit;
+      padding: 1px;
+      pointer-events: none;
+      background:
+        radial-gradient(320px circle at var(--x) var(--y), rgba(255,255,255,calc(0.5 * var(--near))), rgba(255,255,255,0) 100%),
+        radial-gradient(circle at var(--wx) var(--wy), rgba(255,255,255,0) calc(var(--wr) - 200px), rgba(255,255,255,calc(0.03 * var(--wa))) calc(var(--wr) - 110px), rgba(255,255,255,calc(0.07 * var(--wa))) calc(var(--wr) - 50px), rgba(255,255,255,calc(0.10 * var(--wa))) calc(var(--wr) - 14px), rgba(255,255,255,0) var(--wr));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    }
+    @property --wr { syntax: '<length>'; inherits: false; initial-value: 0px; }
+    @property --wa { syntax: '<number>'; inherits: false; initial-value: 0; }
+    @property --press { syntax: '<number>'; inherits: false; initial-value: 1; }
+    @media (prefers-reduced-motion: reduce) {
+      .insight-card--grid:hover .insight-card__cat { animation: none; -webkit-text-fill-color: rgba(244,244,245,0.62); background: none; }
+    }
+
     /* Empty state */
     .insights-empty {
       grid-column: 1 / -1;

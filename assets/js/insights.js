@@ -99,9 +99,30 @@
       const readTime = article.readTime[currentLang] || article.readTime.en;
       const date    = formatDate(article.date);
 
+      if (isGrid) {
+        return `
+        <a href="${cardHref(article.slug)}"
+           class="insight-card insight-card--grid"
+           data-slug="${article.slug}"
+          >
+          <div class="insight-card__band" aria-hidden="true">
+            <p class="insight-card__cat">${catLabel}</p>
+          </div>
+          <div class="insight-card__body">
+            <h3 class="insight-card__title">${title}</h3>
+            <p class="insight-card__summary">${summary}</p>
+            <div class="insight-card__meta">
+              <span class="insight-card__date">${date}</span>
+              <span class="insight-card__dot">·</span>
+              <span class="insight-card__read">${readTime}</span>
+            </div>
+          </div>
+        </a>`;
+      }
+
       return `
         <a href="${cardHref(article.slug)}"
-           class="insight-card ${isGrid ? 'insight-card--grid' : 'insight-card--list'}"
+           class="insight-card insight-card--list"
            data-slug="${article.slug}"
           >
           <div class="insight-card__color-bar">
@@ -112,7 +133,6 @@
               ${catLabel}
             </span>
             <h3 class="insight-card__title">${title}</h3>
-            ${isGrid ? `<p class="insight-card__summary">${summary}</p>` : ''}
             <div class="insight-card__meta">
               <span class="insight-card__date">${date}</span>
               <span class="insight-card__dot">·</span>
@@ -121,6 +141,46 @@
           </div>
         </a>`;
     }).join('');
+    initCardEffects();
+  }
+
+  // ─── Grid card effects: border glow near the cursor and a soft click ring ───
+  let cardFxReady = false;
+  const cardFxReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function initCardEffects() {
+    if (cardFxReady) return;
+    cardFxReady = true;
+    const pointer = { x: -1e5, y: -1e5, inside: false };
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      document.querySelectorAll('.insight-card--grid').forEach(card => {
+        const r = card.getBoundingClientRect();
+        const x = pointer.x - r.left, y = pointer.y - r.top;
+        const dx = Math.max(r.left - pointer.x, 0, pointer.x - r.right);
+        const dy = Math.max(r.top - pointer.y, 0, pointer.y - r.bottom);
+        const near = pointer.inside ? Math.max(0, 1 - Math.hypot(dx, dy) / 220) : 0;
+        card.style.setProperty('--x', x.toFixed(1) + 'px');
+        card.style.setProperty('--y', y.toFixed(1) + 'px');
+        card.style.setProperty('--near', near.toFixed(3));
+      });
+    };
+    const wake = () => { if (!raf) raf = requestAnimationFrame(update); };
+    window.addEventListener('pointermove', e => { pointer.x = e.clientX; pointer.y = e.clientY; pointer.inside = true; wake(); }, { passive: true });
+    document.addEventListener('pointerout', e => { if (!e.relatedTarget) { pointer.inside = false; wake(); } });
+    window.addEventListener('scroll', wake, { passive: true });
+    document.addEventListener('pointerdown', e => {
+      if (cardFxReduced) return;
+      const card = e.target instanceof Element ? e.target.closest('.insight-card--grid') : null;
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left, y = e.clientY - r.top;
+      card.style.setProperty('--wx', x.toFixed(1) + 'px');
+      card.style.setProperty('--wy', y.toFixed(1) + 'px');
+      const reach = Math.max(Math.hypot(x, y), Math.hypot(r.width - x, y), Math.hypot(x, r.height - y), Math.hypot(r.width - x, r.height - y)) + 40;
+      card.animate([{ '--wr': '0px', '--wa': 0.5 }, { '--wr': reach + 'px', '--wa': 0 }], { duration: 1600, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'forwards' });
+      card.animate([{ '--press': 0.994 }, { '--press': 1 }], { duration: 260, easing: 'cubic-bezier(.22,1,.36,1)' });
+    });
   }
 
   // ─── Render Sidebar Filters ───────────────────────────
