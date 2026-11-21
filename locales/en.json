@@ -138,7 +138,9 @@
     "text": "We use essential cookies to ensure you get the best experience on our website. By continuing, you agree to our",
     "policyLink": "Privacy Policy",
     "accept": "Accept",
-    "decline": "Decline"
+    "decline": "Decline",
+    "and": "and our",
+    "cookiesLink": "Cookie Policy"
   },
   "whatsapp": {
     "ariaLabel": "Contact us on WhatsApp",

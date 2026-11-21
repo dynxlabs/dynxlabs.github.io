@@ -23,6 +23,8 @@ function rewriteHref(href, lang) {
   // map the language-neutral token here so every page links to the right one.
   if (href === '/privacy-policy') return lang === 'es' ? '/es/privacidad/' : '/en/privacy/';
   if (href === '/terms-of-service') return lang === 'es' ? '/es/terminos/' : '/en/terms/';
+  // Cookie policy = the cookies section of the privacy policy.
+  if (href === '/cookie-policy') return lang === 'es' ? '/es/privacidad/#sec-6' : '/en/privacy/#sec-6';
 
   const sameOrigin = href.match(/^https?:\/\/(?:www\.)?dynxlabs\.com(\/[^\s]*)?$/i);
   if (/^(mailto:|tel:|sms:|https?:)/i.test(href) && !sameOrigin) return href; // external

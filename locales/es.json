@@ -138,7 +138,9 @@
     "text": "Utilizamos cookies esenciales para garantizar la mejor experiencia en nuestro sitio. Al continuar, aceptas nuestra",
     "policyLink": "Política de Privacidad",
     "accept": "Aceptar",
-    "decline": "Rechazar"
+    "decline": "Rechazar",
+    "and": "y nuestra",
+    "cookiesLink": "Política de Cookies"
   },
   "whatsapp": {
     "ariaLabel": "Contáctanos por WhatsApp",
