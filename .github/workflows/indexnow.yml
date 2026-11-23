@@ -1,0 +1,55 @@
+# ============================================================
+# DYNX Labs — IndexNow ping
+#
+# After content reaches main, tell IndexNow which URLs changed so
+# Bing (and other participating engines) re-fetch them quickly
+# instead of waiting for their next sitemap read.
+#
+# Key file at /<KEY>.txt proves ownership of the domain.
+# ============================================================
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+      - 'insights/manifest.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-main
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 2
+
+      - name: Collect changed public URLs
+        id: urls
+        run: |
+          set -euo pipefail
+          # Files touched by the push commit.
+          git diff --name-only HEAD~1 HEAD > /tmp/changed.txt || true
+          node scripts/indexnow-urls.js /tmp/changed.txt > /tmp/urls.json
+          COUNT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('/tmp/urls.json','utf8')).urlList.length)")
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "URLs a avisar: $COUNT"
+          cat /tmp/urls.json
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.count != '0'
+        run: |
+          curl -sS -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data-binary @/tmp/urls.json \
+            -w "HTTP %{http_code}\n"
