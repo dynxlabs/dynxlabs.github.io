@@ -10,3 +10,8 @@ exclude:
   - scripts/
   - insights/posts/
   - node_modules/
+
+# Jekyll ignores folders starting with "." by default; include .well-known/
+# so files like security.txt (RFC 9116) are served at their public URL.
+include:
+  - .well-known
