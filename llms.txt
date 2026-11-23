@@ -22,6 +22,18 @@ Sitio oficial: https://dynxlabs.com
 - DYNX Pulse: dashboard de inteligencia de negocio en tiempo real que muestra las métricas que importan para tu operación.
 - DYNX Connect: capa de integración sin código que conecta tus herramientas actuales sin escribir una sola línea de código.
 
+### Fundador
+
+- Arois Monsalve, Founder & CEO: más de 20 años en operaciones, ingeniería y tecnología, hoy al servicio de la automatización con IA. Perfil: https://dynxlabs.com/es/leadership
+
+### Industrias
+
+- Retail y e-commerce, Logística, Finanzas, Salud, Manufactura y Servicios profesionales.
+
+### Cómo trabajamos
+
+- Descubrimiento y análisis, Diseño estratégico e Implementación.
+
 ### Páginas clave
 
 - Productos: https://dynxlabs.com/es/products
@@ -58,6 +70,18 @@ Sitio oficial: https://dynxlabs.com
 - DYNX Synapse: lead capture, management, and analysis platform with AI.
 - DYNX Pulse: real-time business intelligence dashboard that surfaces the metrics that actually matter to your operation.
 - DYNX Connect: no-code integration layer that connects your existing tools without writing a single line of code.
+
+### Founder
+
+- Arois Monsalve, Founder & CEO: more than 20 years in operations, engineering and technology, now applied to AI automation. Profile: https://dynxlabs.com/en/leadership
+
+### Industries
+
+- Retail & e-commerce, Logistics, Finance, Healthcare, Manufacturing and Professional services.
+
+### How we work
+
+- Discovery & Analysis, Strategic Design and Implementation.
 
 ### Key pages
 
