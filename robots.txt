@@ -6,4 +6,24 @@ Allow: /
 
 # CSS, JS and images must stay crawlable so Google can render the pages.
 
+# Training crawlers: blocked (decision 23/11/2026).
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Search and citation crawlers: allowed.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 Sitemap: https://dynxlabs.com/sitemap.xml
