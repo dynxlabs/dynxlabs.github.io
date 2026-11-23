@@ -22,7 +22,7 @@ Versión en inglés: https://dynxlabs.com/en/
 - DYNX Pulse: dashboard de inteligencia de negocio en tiempo real que muestra las métricas que importan para tu operación.
 - DYNX Connect: capa de integración sin código que conecta tus herramientas actuales.
 
-## Páginas clave
+## Páginas clave (español)
 
 - Productos: https://dynxlabs.com/es/products
 - Investigación: https://dynxlabs.com/es/research
@@ -32,6 +32,37 @@ Versión en inglés: https://dynxlabs.com/en/
 - Liderazgo: https://dynxlabs.com/es/leadership
 - Política de Privacidad: https://dynxlabs.com/es/privacidad/
 - Términos de Servicio: https://dynxlabs.com/es/terminos/
+
+## English
+
+> DYNX Labs (Dynamic Neuromorphic Labs SpA, Chile) builds AI-powered software that helps teams automate operations, integrate tools, and make faster decisions with reliable data.
+
+### Solutions
+
+- AI Agents
+- Workflow Automation
+- Dashboards & Reporting
+- System Integrations
+- Business Intelligence
+- Custom SaaS
+
+### Products
+
+- DYNX Orah: booking and scheduling platform that turns every open hour into a confirmed appointment.
+- DYNX Synapse: lead capture, management, and analysis platform with AI.
+- DYNX Pulse: real-time business intelligence dashboard that surfaces the metrics that actually matter to your operation.
+- DYNX Connect: no-code integration layer that connects your existing tools without writing a single line of code.
+
+### Key pages (English)
+
+- Products: https://dynxlabs.com/en/products
+- Research: https://dynxlabs.com/en/research
+- Insights (articles): https://dynxlabs.com/en/insights
+- FAQ: https://dynxlabs.com/en/faq
+- Contact: https://dynxlabs.com/en/contact
+- Leadership: https://dynxlabs.com/en/leadership
+- Privacy Policy: https://dynxlabs.com/en/privacy/
+- Terms of Service: https://dynxlabs.com/en/terms/
 
 ## Contacto
 
