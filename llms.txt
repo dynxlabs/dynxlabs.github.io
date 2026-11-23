@@ -1,0 +1,44 @@
+# DYNX Labs
+
+> DYNX Labs (Dynamic Neuromorphic Labs SpA, Chile) construye software impulsado por IA que ayuda a los equipos a automatizar operaciones, integrar herramientas y tomar decisiones más rápidas con datos confiables.
+
+Sitio oficial: https://dynxlabs.com
+Versión en español: https://dynxlabs.com/es/
+Versión en inglés: https://dynxlabs.com/en/
+
+## Soluciones
+
+- AI Agents: agentes de IA que ejecutan tareas operativas.
+- Workflow Automation: automatización de procesos y flujos de trabajo.
+- Dashboards & Reporting: paneles e informes en tiempo real.
+- System Integrations: integración de sistemas y herramientas.
+- Business Intelligence: análisis y procesamiento de información.
+- Custom SaaS: software a medida y servicios SaaS.
+
+## Productos
+
+- DYNX Orah: plataforma de reservas y agendamiento.
+- DYNX Synapse: plataforma de automatización con IA.
+- DYNX Pulse
+- DYNX Connect
+
+## Páginas clave
+
+- Productos: https://dynxlabs.com/es/products
+- Investigación: https://dynxlabs.com/es/research
+- Insights (artículos): https://dynxlabs.com/es/insights
+- Preguntas frecuentes: https://dynxlabs.com/es/faq
+- Contacto: https://dynxlabs.com/es/contact
+- Liderazgo: https://dynxlabs.com/es/leadership
+- Política de Privacidad: https://dynxlabs.com/es/privacidad/
+- Términos de Servicio: https://dynxlabs.com/es/terminos/
+
+## Contacto
+
+- Formulario: https://dynxlabs.com/es/contact
+- WhatsApp: https://wa.me/56984657801
+- Privacidad y derechos de datos: privacy@dynxlabs.com
+
+## Sitemap
+
+- https://dynxlabs.com/sitemap.xml
