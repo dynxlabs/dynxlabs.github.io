@@ -18,7 +18,7 @@ Versión en inglés: https://dynxlabs.com/en/
 ## Productos
 
 - DYNX Orah: plataforma de reservas y agendamiento.
-- DYNX Synapse: plataforma de automatización con IA.
+- DYNX Synapse: plataforma de captura, gestión y análisis de leads con IA.
 - DYNX Pulse: dashboard de inteligencia de negocio en tiempo real que muestra las métricas que importan para tu operación.
 - DYNX Connect: capa de integración sin código que conecta tus herramientas actuales.
 
