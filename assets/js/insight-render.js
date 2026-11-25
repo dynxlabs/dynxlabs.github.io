@@ -75,6 +75,7 @@
       "headline": data.title,
       "description": data.summary,
       "datePublished": article.date,
+      "dateModified": article.dateModified || article.date,
       "inLanguage": L,
       "articleSection": catLabel,
       "author": { "@type": "Person", "@id": PERSON_ID, "name": "Arois Monsalve", "jobTitle": PERSON_JOBTITLE },
