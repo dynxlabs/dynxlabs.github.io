@@ -85,7 +85,7 @@ function bakeLangToggle(root, lang, tail) {
     const cls    = `lang-btn${active ? ' active' : ''}`;
     btn.insertAdjacentHTML(
       'afterend',
-      `<a href="${href}" class="${cls}" data-lang="${btnLang}" aria-pressed="${active}" hreflang="${btnLang}">${label}</a>`
+      `<a href="${href}" class="${cls}" data-lang="${btnLang}"${active ? ' aria-current="true"' : ''} hreflang="${btnLang}">${label}</a>`
     );
     btn.remove();
   });

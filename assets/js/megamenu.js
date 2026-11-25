@@ -182,7 +182,7 @@
       '<div class="mm-search-box" role="document">' +
         '<div class="mm-search-top">' +
           '<span class="mm-ic20">' + SVG.search + '</span>' +
-          '<input id="mm-search-input" type="text" autocomplete="off">' +
+          '<input id="mm-search-input" type="text" autocomplete="off" aria-label="' + T[lang].searchAria + '">' +
           '<button class="mm-esc" id="mm-search-esc">ESC</button>' +
         '</div>' +
         '<div class="mm-pills" id="mm-pills"></div>' +
@@ -442,6 +442,7 @@
     buildSearch();
     renderNav();
     searchInput.placeholder = T[lang].searchPh;
+    searchInput.setAttribute('aria-label', T[lang].searchAria);
     searchEl.querySelector('#mm-foot-select').textContent = '↵ ' + T[lang].select;
     searchEl.querySelector('#mm-foot-brand').textContent = T[lang].brand;
     wire();
