@@ -152,7 +152,10 @@ const I18n = (() => {
     document.querySelectorAll('.lang-btn').forEach(btn => {
       const active = btn.getAttribute('data-lang') === lang;
       btn.classList.toggle('active', active);
-      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      // Language links use aria-current (valid on links); aria-pressed is button-only.
+      if (active) btn.setAttribute('aria-current', 'true');
+      else btn.removeAttribute('aria-current');
+      btn.removeAttribute('aria-pressed');
     });
   }
 
