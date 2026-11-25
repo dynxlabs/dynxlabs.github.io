@@ -31,9 +31,9 @@
     .nf-row{display:flex;align-items:center;gap:28px}
     .nf-code{font-size:clamp(40px,6vw,64px);font-weight:500;letter-spacing:-.03em;line-height:1;color:#fff}
     .nf-div{width:1px;align-self:stretch;min-height:56px;background:#3a3a3a}
-    .nf-col{display:flex;flex-direction:column;gap:6px}
-    .nf-kicker{font-size:14px;font-weight:400;letter-spacing:.02em;color:#6b6b6b}
-    .nf-msg{font-size:clamp(18px,2.4vw,26px);font-weight:400;letter-spacing:-.01em;color:#fff;margin:0;max-width:22ch}
+    .nf-col{display:flex;flex-direction:column;position:relative;min-width:0}
+    .nf-kicker{font-size:14px;font-weight:400;letter-spacing:.02em;color:#6b6b6b;position:absolute;bottom:100%;left:0;margin-bottom:8px}
+    .nf-section .nf-msg{font-size:clamp(20px,2vw,28px);font-weight:400;letter-spacing:-.01em;color:#fff;margin:0}
     @media(max-width:480px){.nf-row{gap:20px}.nf-div{min-height:48px}}
   </style>
 </head>
