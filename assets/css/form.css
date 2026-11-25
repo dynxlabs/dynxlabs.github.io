@@ -11,7 +11,7 @@
 .contact-wrap .cx-block-sub { font-size: .8rem; color: #808080; margin-left: auto; }
 
 .contact-wrap .cx-req { color: #E6E6E6; margin-left: 2px; }
-.contact-wrap .cx-opt { color: #5f5f5f; font-weight: 400; text-transform: none; letter-spacing: 0; font-size: .72rem; margin-left: 6px; }
+.contact-wrap .cx-opt { color: #8a8a8a; font-weight: 400; text-transform: none; letter-spacing: 0; font-size: .72rem; margin-left: 6px; }
 
 /* phone with dial prefix */
 .contact-wrap .cx-phone { display: flex; align-items: stretch; gap: .5rem; }
@@ -83,7 +83,7 @@
 .contact-wrap .cx-check input[type="checkbox"].error { border-color: rgba(255,80,80,0.7) !important; }
 .contact-wrap .cx-link { background: none; border: 0; padding: 0; color: #FFFFFF; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; font: inherit; }
 
-.contact-wrap .cx-count { font-size: .7rem; color: #5f5f5f; text-align: right; margin-top: -.25rem; font-variant-numeric: tabular-nums; }
+.contact-wrap .cx-count { font-size: .7rem; color: #8a8a8a; text-align: right; margin-top: -.25rem; font-variant-numeric: tabular-nums; }
 .contact-wrap .cx-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
 
 .contact-wrap .btn-submit .cx-spin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(0,0,0,0.2); border-top-color: #000; animation: cxspin .7s linear infinite; display: none; }
