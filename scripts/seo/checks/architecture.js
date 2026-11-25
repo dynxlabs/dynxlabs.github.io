@@ -47,6 +47,8 @@ module.exports = function run(ctx, report) {
   const expected = new Set(pages.map(p => p.file));
   // Hand-authored legal pages are allowed but not part of the generated model.
   S.LEGAL_FILES.forEach(f => expected.add(f));
+  // RSS feeds are generated but not part of the page model.
+  S.FEED_FILES.forEach(f => expected.add(f));
   const stray = [];
   let total = 0;
   for (const lang of S.LANGS) {

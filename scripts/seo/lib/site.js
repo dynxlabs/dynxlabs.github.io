@@ -39,6 +39,9 @@ const LEGAL_PAGES = [
   { es: 'privacidad', en: 'privacy' },
   { es: 'terminos',   en: 'terms' }
 ];
+// RSS feeds generated at /es/insights/feed.xml and /en/insights/feed.xml
+// (not part of the generated page model, allowed in ARC-06).
+const FEED_FILES = LANGS.map(lang => `${lang}/insights/feed.xml`);
 const LEGAL_FILES = [];
 const LEGAL_PATHS = new Set();
 const LEGAL_ALTS = {}; // sitemap loc URL -> { es, en, x-default } (legal slug differs per language)
@@ -188,7 +191,7 @@ function listFiles(dirRel) {
 }
 
 module.exports = {
-  ROOT, BASE, LANGS, XDEFAULT, OG_LOCALE, MAIN_PAGES, GLOBAL_IDS, LEGAL_FILES, LEGAL_PATHS, LEGAL_ALTS,
+  ROOT, BASE, LANGS, XDEFAULT, OG_LOCALE, MAIN_PAGES, GLOBAL_IDS, FEED_FILES, LEGAL_FILES, LEGAL_PATHS, LEGAL_ALTS,
   rel, abs, read, isFile, isDir, loadPosts, loadLocale, expectedPages, other,
   doc, jsonLdBlocks, walkLd, typesOf, resolvePath, internalPath, norm, plain, listFiles
 };

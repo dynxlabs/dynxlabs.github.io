@@ -295,6 +295,11 @@ function bake(lang, dict, page) {
     a.setAttribute('href', rewriteHref(a.getAttribute('href'), lang));
   });
 
+  // ---- RSS feed discovery link -> absolute same-language path ----
+  root.querySelectorAll('link[rel="alternate"][type="application/rss+xml"]').forEach(l => {
+    l.setAttribute('href', `/${lang}/insights/feed.xml`);
+  });
+
   // ---- language toggle: turn buttons into real cross-language links ----
   bakeLangToggle(root, lang, pageSlug);
 
