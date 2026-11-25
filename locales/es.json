@@ -208,7 +208,8 @@
     "title": "Ruta No Encontrada",
     "subtitle": "La página que buscas no existe o ha sido movida.",
     "cta": "Volver al Inicio",
-    "faqBtn": "Ver FAQ"
+    "faqBtn": "Ver FAQ",
+    "sorry": "Lo sentimos"
   },
   "contact": {
     "badge": "Comenzar",
@@ -353,6 +354,10 @@
     "leadership": {
       "title": "Liderazgo | DYNX Labs",
       "desc": "Arois Monsalve, Founder & CEO de DYNX Labs: más de 20 años en operaciones, ingeniería y tecnología, hoy al servicio de la automatización con IA."
+    },
+    "notFound": {
+      "title": "404 — Página no encontrada | DYNX Labs",
+      "desc": "La página que buscas no existe o ha sido movida. Vuelve al inicio de DYNX Labs."
     }
   },
   "a11y": {

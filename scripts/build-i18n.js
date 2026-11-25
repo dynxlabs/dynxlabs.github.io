@@ -52,7 +52,7 @@ const PAGES = [
   { src: 'insights.html',   out: 'insights.html',   meta: 'insights' },
   { src: 'contact.html',    out: 'contact.html',    meta: 'contact' },
   { src: 'leadership.html', out: 'leadership.html', meta: 'leadership' },
-  { src: '404.html',        out: '404.html',        meta: null }
+  { src: '404.html',        out: '404.html',        meta: 'notFound' }
 ];
 
 /* ---------- helpers ---------- */
