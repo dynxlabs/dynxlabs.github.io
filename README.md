@@ -39,6 +39,7 @@
 
 | Producto | Descripción | Estado |
 |---|---|---|
+| **DYNX Orah** | Plataforma de reservas y agendamiento que convierte cada hora disponible en una cita confirmada | En desarrollo |
 | **DYNX Synapse** | Plataforma de captura, gestión y análisis de leads con IA | En desarrollo |
 | **DYNX Pulse** | Dashboard de inteligencia de negocio en tiempo real que muestra las métricas que realmente importan para tu operación | En desarrollo |
 | **DYNX Connect** | Capa de integración sin código que conecta tus herramientas actuales sin escribir una sola línea de código | En desarrollo |
