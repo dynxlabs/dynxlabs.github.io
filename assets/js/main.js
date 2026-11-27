@@ -355,6 +355,18 @@ const WhatsAppFloat = (() => {
         clearTimeout(pulseTimer);
       }, { once: true });
     });
+
+    // En la home, el botón se oculta mientras el hero está en pantalla y aparece al bajar
+    const hero = document.querySelector('.lp-hero');
+    if (hero) {
+      const updateVisibility = () => {
+        const pastHero = hero.getBoundingClientRect().bottom <= 0;
+        btn.classList.toggle('is-hidden', !pastHero);
+      };
+      updateVisibility();
+      window.addEventListener('scroll', updateVisibility, { passive: true });
+      window.addEventListener('resize', updateVisibility);
+    }
   }
 
   return { init };
