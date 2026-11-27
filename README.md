@@ -308,7 +308,6 @@ curl -sI https://dynxlabs.com/en/insights/feed.xml
 | Decidir el destino de `/products` (inglés o español) | Decisión pendiente |
 | Revisión de resultados en Search Console y Bing | 21/12/2026 |
 | Casos de éxito | Pendiente de clientes |
-| Focus visible explícito en todos los enlaces e iconos (mejora más allá de WCAG AA) | Opcional |
 
 ---
 
